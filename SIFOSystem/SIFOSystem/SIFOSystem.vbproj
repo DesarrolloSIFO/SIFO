@@ -95,6 +95,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Prueba2.Designer.vb">
+      <DependentUpon>Prueba2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Prueba2.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
