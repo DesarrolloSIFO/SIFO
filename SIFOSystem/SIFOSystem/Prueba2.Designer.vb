@@ -25,10 +25,18 @@ Partial Class FrmFactura
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmFactura))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button8 = New System.Windows.Forms.Button()
+        Me.Button7 = New System.Windows.Forms.Button()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -37,14 +45,6 @@ Partial Class FrmFactura
         Me.BtnMinimizar = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button7 = New System.Windows.Forms.Button()
-        Me.Button8 = New System.Windows.Forms.Button()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -70,6 +70,75 @@ Partial Class FrmFactura
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(616, 295)
         Me.Panel1.TabIndex = 0
+        '
+        'Button8
+        '
+        Me.Button8.BackgroundImage = CType(resources.GetObject("Button8.BackgroundImage"), System.Drawing.Image)
+        Me.Button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button8.Location = New System.Drawing.Point(518, 157)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(35, 35)
+        Me.Button8.TabIndex = 11
+        Me.ToolTip1.SetToolTip(Me.Button8, "Actualizar")
+        Me.Button8.UseVisualStyleBackColor = True
+        '
+        'Button7
+        '
+        Me.Button7.BackgroundImage = CType(resources.GetObject("Button7.BackgroundImage"), System.Drawing.Image)
+        Me.Button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button7.Location = New System.Drawing.Point(517, 208)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(36, 35)
+        Me.Button7.TabIndex = 10
+        Me.ToolTip1.SetToolTip(Me.Button7, "Eliminar")
+        Me.Button7.UseVisualStyleBackColor = True
+        '
+        'Button6
+        '
+        Me.Button6.BackgroundImage = CType(resources.GetObject("Button6.BackgroundImage"), System.Drawing.Image)
+        Me.Button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button6.Location = New System.Drawing.Point(517, 106)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(36, 35)
+        Me.Button6.TabIndex = 9
+        Me.ToolTip1.SetToolTip(Me.Button6, "Guardar")
+        Me.Button6.UseVisualStyleBackColor = True
+        '
+        'Button5
+        '
+        Me.Button5.BackgroundImage = CType(resources.GetObject("Button5.BackgroundImage"), System.Drawing.Image)
+        Me.Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.Button5.Location = New System.Drawing.Point(517, 56)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(36, 36)
+        Me.Button5.TabIndex = 8
+        Me.ToolTip1.SetToolTip(Me.Button5, "Agregar")
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(32, 247)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(104, 19)
+        Me.Label5.TabIndex = 7
+        Me.Label5.Text = "Fecha Factura"
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker1.Location = New System.Drawing.Point(184, 247)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(110, 20)
+        Me.DateTimePicker1.TabIndex = 6
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(184, 185)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox3.TabIndex = 5
         '
         'GroupBox1
         '
@@ -110,6 +179,16 @@ Partial Class FrmFactura
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(100, 20)
         Me.TextBox2.TabIndex = 3
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(32, 184)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(142, 19)
+        Me.Label4.TabIndex = 2
+        Me.Label4.Text = "Identidad Empleado"
         '
         'Label2
         '
@@ -153,6 +232,7 @@ Partial Class FrmFactura
         '
         Me.Button2.BackgroundImage = CType(resources.GetObject("Button2.BackgroundImage"), System.Drawing.Image)
         Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.Button2.Enabled = False
         Me.Button2.Location = New System.Drawing.Point(529, 1)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(44, 23)
@@ -188,85 +268,6 @@ Partial Class FrmFactura
         Me.Label3.Size = New System.Drawing.Size(94, 26)
         Me.Label3.TabIndex = 3
         Me.Label3.Text = "Factura"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(32, 184)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(142, 19)
-        Me.Label4.TabIndex = 2
-        Me.Label4.Text = "Identidad Empleado"
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(184, 185)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox3.TabIndex = 5
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(184, 247)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(110, 20)
-        Me.DateTimePicker1.TabIndex = 6
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(32, 247)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(104, 19)
-        Me.Label5.TabIndex = 7
-        Me.Label5.Text = "Fecha Factura"
-        '
-        'Button5
-        '
-        Me.Button5.BackgroundImage = CType(resources.GetObject("Button5.BackgroundImage"), System.Drawing.Image)
-        Me.Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.Button5.Location = New System.Drawing.Point(517, 56)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(36, 36)
-        Me.Button5.TabIndex = 8
-        Me.ToolTip1.SetToolTip(Me.Button5, "Agregar")
-        Me.Button5.UseVisualStyleBackColor = True
-        '
-        'Button6
-        '
-        Me.Button6.BackgroundImage = CType(resources.GetObject("Button6.BackgroundImage"), System.Drawing.Image)
-        Me.Button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button6.Location = New System.Drawing.Point(517, 106)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(36, 35)
-        Me.Button6.TabIndex = 9
-        Me.ToolTip1.SetToolTip(Me.Button6, "Guardar")
-        Me.Button6.UseVisualStyleBackColor = True
-        '
-        'Button7
-        '
-        Me.Button7.BackgroundImage = CType(resources.GetObject("Button7.BackgroundImage"), System.Drawing.Image)
-        Me.Button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button7.Location = New System.Drawing.Point(517, 208)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(36, 35)
-        Me.Button7.TabIndex = 10
-        Me.ToolTip1.SetToolTip(Me.Button7, "Eliminar")
-        Me.Button7.UseVisualStyleBackColor = True
-        '
-        'Button8
-        '
-        Me.Button8.BackgroundImage = CType(resources.GetObject("Button8.BackgroundImage"), System.Drawing.Image)
-        Me.Button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button8.Location = New System.Drawing.Point(518, 157)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(35, 35)
-        Me.Button8.TabIndex = 11
-        Me.ToolTip1.SetToolTip(Me.Button8, "Actualizar")
-        Me.Button8.UseVisualStyleBackColor = True
         '
         'FrmFactura
         '
