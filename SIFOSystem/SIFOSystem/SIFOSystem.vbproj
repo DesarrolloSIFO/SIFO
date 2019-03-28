@@ -112,6 +112,9 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Prueba2.resx">
+      <DependentUpon>Prueba2.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\Application.myapp">
