@@ -73,6 +73,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Conexion\Conexion.vb" />
     <Compile Include="Forms\FrmDetalleFactura.Designer.vb">
       <DependentUpon>FrmDetalleFactura.vb</DependentUpon>
     </Compile>
@@ -303,7 +304,6 @@
     <None Include="Imagenes\Resources\image %281%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Conexion\" />
     <Folder Include="Reportes\" />
   </ItemGroup>
   <ItemGroup>
