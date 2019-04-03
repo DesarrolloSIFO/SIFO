@@ -10,5 +10,10 @@
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Close()
+        FrmGestión.Visible = True
+    End Sub
+
+    Private Sub FrmFactura_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        FrmGestión.Visible = False
     End Sub
 End Class

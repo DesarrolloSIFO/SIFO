@@ -23,7 +23,7 @@ Partial Class FrmGestión
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmGestión))
-        Dim ListViewItem5 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"1", "Anthony Fabiel", "1709-2000-00097", "San Lorenzo"}, -1)
+        Dim ListViewItem1 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"1", "Anthony Fabiel", "1709-2000-00097", "San Lorenzo"}, -1)
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PbxPacientes = New System.Windows.Forms.PictureBox()
@@ -38,6 +38,8 @@ Partial Class FrmGestión
         Me.PnlAgregar = New System.Windows.Forms.Panel()
         Me.PnlMostrar = New System.Windows.Forms.Panel()
         Me.GbxDatos = New System.Windows.Forms.GroupBox()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -60,8 +62,7 @@ Partial Class FrmGestión
         Me.BtnMostrarMenos = New System.Windows.Forms.Button()
         Me.GbxClientes = New System.Windows.Forms.GroupBox()
         Me.PnlClientes = New System.Windows.Forms.Panel()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.BtnFacturación = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         CType(Me.PbxPacientes, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbxLogo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -176,6 +177,7 @@ Partial Class FrmGestión
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(140, Byte), Integer), CType(CType(198, Byte), Integer))
         Me.Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), System.Drawing.Image)
         Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel1.Controls.Add(Me.BtnFacturación)
         Me.Panel1.Controls.Add(Me.BtnClientes)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Location = New System.Drawing.Point(229, -5)
@@ -258,6 +260,36 @@ Partial Class FrmGestión
         Me.GbxDatos.TabIndex = 12
         Me.GbxDatos.TabStop = False
         Me.GbxDatos.Text = "Datos del cliente"
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button3.Location = New System.Drawing.Point(634, 215)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(110, 35)
+        Me.Button3.TabIndex = 15
+        Me.Button3.Text = "Limpiar"
+        Me.Button3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Button3.UseVisualStyleBackColor = False
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button2.Location = New System.Drawing.Point(506, 215)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(110, 35)
+        Me.Button2.TabIndex = 14
+        Me.Button2.Text = "Agregar"
+        Me.Button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'Label11
         '
@@ -385,7 +417,7 @@ Partial Class FrmGestión
         Me.LsvClientes.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ChIdCliente, Me.ChNombres, Me.ChIdentidad, Me.ChCiudad})
         Me.LsvClientes.Font = New System.Drawing.Font("Microsoft JhengHei", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LsvClientes.GridLines = True
-        Me.LsvClientes.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem5})
+        Me.LsvClientes.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem1})
         Me.LsvClientes.Location = New System.Drawing.Point(64, 35)
         Me.LsvClientes.Name = "LsvClientes"
         Me.LsvClientes.Size = New System.Drawing.Size(622, 208)
@@ -447,35 +479,20 @@ Partial Class FrmGestión
         Me.PnlClientes.Size = New System.Drawing.Size(799, 341)
         Me.PnlClientes.TabIndex = 15
         '
-        'Button2
+        'BtnFacturación
         '
-        Me.Button2.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button2.Location = New System.Drawing.Point(506, 215)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(110, 35)
-        Me.Button2.TabIndex = 14
-        Me.Button2.Text = "Agregar"
-        Me.Button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.Button2.UseVisualStyleBackColor = False
-        '
-        'Button3
-        '
-        Me.Button3.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.Button3.FlatAppearance.BorderSize = 0
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button3.Location = New System.Drawing.Point(634, 215)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(110, 35)
-        Me.Button3.TabIndex = 15
-        Me.Button3.Text = "Limpiar"
-        Me.Button3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.BtnFacturación.BackColor = System.Drawing.Color.Transparent
+        Me.BtnFacturación.BackgroundImage = Global.SIFOSystem.My.Resources.Resources.image
+        Me.BtnFacturación.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnFacturación.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnFacturación.FlatAppearance.BorderSize = 0
+        Me.BtnFacturación.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnFacturación.ForeColor = System.Drawing.Color.Transparent
+        Me.BtnFacturación.Location = New System.Drawing.Point(137, 50)
+        Me.BtnFacturación.Name = "BtnFacturación"
+        Me.BtnFacturación.Size = New System.Drawing.Size(45, 45)
+        Me.BtnFacturación.TabIndex = 4
+        Me.BtnFacturación.UseVisualStyleBackColor = False
         '
         'FrmGestión
         '
@@ -556,4 +573,5 @@ Partial Class FrmGestión
     Friend WithEvents PnlClientes As Panel
     Friend WithEvents Button3 As Button
     Friend WithEvents Button2 As Button
+    Friend WithEvents BtnFacturación As Button
 End Class

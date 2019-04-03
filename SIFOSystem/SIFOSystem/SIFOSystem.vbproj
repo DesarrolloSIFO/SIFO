@@ -73,11 +73,59 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmGestionDeClientes.vb">
+    <Compile Include="Forms\FrmDetalleFactura.Designer.vb">
+      <DependentUpon>FrmDetalleFactura.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmDetalleFactura.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmGestionDeClientes.Designer.vb">
+    <Compile Include="Forms\FrmEmpleado.Designer.vb">
+      <DependentUpon>FrmEmpleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmEmpleado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmFactura.Designer.vb">
+      <DependentUpon>FrmFactura.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmFactura.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCategoria.Designer.vb">
+      <DependentUpon>FrmCategoria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmCategoria.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCiudad.Designer.vb">
+      <DependentUpon>FrmCiudad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmCiudad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmGestionDeClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmGestionDeClientes.Designer.vb">
       <DependentUpon>FrmGestionDeClientes.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmProducto.Designer.vb">
+      <DependentUpon>FrmProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmProducto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmTipoExamen.Designer.vb">
+      <DependentUpon>FrmTipoExamen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmTipoExamen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmUsuario.Designer.vb">
+      <DependentUpon>FrmUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmUsuario.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -95,16 +143,19 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Prueba2.Designer.vb">
+    <Compile Include="Forms\Prueba2.Designer.vb">
       <DependentUpon>Prueba2.vb</DependentUpon>
     </Compile>
-    <Compile Include="Prueba2.vb">
+    <Compile Include="Forms\Prueba2.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="FrmGestionDeClientes.resx">
+    <EmbeddedResource Include="Forms\FrmGestionDeClientes.resx">
       <DependentUpon>FrmGestionDeClientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmUsuario.resx">
+      <DependentUpon>FrmUsuario.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -112,7 +163,7 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Prueba2.resx">
+    <EmbeddedResource Include="Forms\Prueba2.resx">
       <DependentUpon>Prueba2.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
@@ -129,112 +180,116 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\image.png" />
+    <None Include="Imagenes\Resources\image.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\back.png" />
+    <None Include="Imagenes\Resources\back.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\btn_consultas.png" />
+    <None Include="Imagenes\Resources\btn_consultas.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\btn_mantenimiento.png" />
+    <None Include="Imagenes\Resources\btn_mantenimiento.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\btn_pacientes.png" />
+    <None Include="Imagenes\Resources\btn_pacientes.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icon.png" />
+    <None Include="Imagenes\Resources\icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icon_delete.png" />
+    <None Include="Imagenes\Resources\icon_delete.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icon_encargos.png" />
+    <None Include="Imagenes\Resources\icon_encargos.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\iconAgregarMantenimiento.png" />
+    <None Include="Imagenes\Resources\iconAgregarMantenimiento.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\iconCiudad.png" />
+    <None Include="Imagenes\Resources\iconCiudad.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\iconCiudadWhite.png" />
+    <None Include="Imagenes\Resources\iconCiudadWhite.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\iconfinder_close_309090.png" />
+    <None Include="Imagenes\Resources\iconfinder_close_309090.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\iconfinder_delete_326606.png" />
+    <None Include="Imagenes\Resources\iconfinder_delete_326606.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\iconfinder_icon-81-document-add_314764.png" />
+    <None Include="Imagenes\Resources\iconfinder_icon-81-document-add_314764.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\iconfinder_icon-136-document-edit_314724.png" />
+    <None Include="Imagenes\Resources\iconfinder_icon-136-document-edit_314724.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\iconfinder_view-list_326721.png" />
+    <None Include="Imagenes\Resources\iconfinder_view-list_326721.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\iconMostrarMantenimiento.png" />
+    <None Include="Imagenes\Resources\iconMostrarMantenimiento.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icono-peritaje.jpeg" />
+    <None Include="Imagenes\Resources\icono-peritaje.jpeg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\iconos-ECO-vivendoo-03.png" />
+    <None Include="Imagenes\Resources\iconos-ECO-vivendoo-03.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\iconPaises.png" />
+    <None Include="Imagenes\Resources\iconPaises.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\iconTipoLentes.png" />
+    <None Include="Imagenes\Resources\iconTipoLentes.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\iconTipoLentesWhite.png" />
+    <None Include="Imagenes\Resources\iconTipoLentesWhite.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\iconUsuarios.png" />
+    <None Include="Imagenes\Resources\iconUsuarios.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\iconUsuariosWhite.png" />
+    <None Include="Imagenes\Resources\iconUsuariosWhite.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\if_icons_exit2_1564506.png" />
+    <None Include="Imagenes\Resources\if_icons_exit2_1564506.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\if_plus-24_103172.png" />
+    <None Include="Imagenes\Resources\if_plus-24_103172.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\if_show-sidebar_3671860.png" />
+    <None Include="Imagenes\Resources\if_show-sidebar_3671860.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\if_show-sidebar_3671860_white.png" />
+    <None Include="Imagenes\Resources\if_show-sidebar_3671860_white.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\if_user-alt_285645.png" />
+    <None Include="Imagenes\Resources\if_user-alt_285645.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\LOGO_OPTICA_sin_fondo.png" />
+    <None Include="Imagenes\Resources\LOGO_OPTICA_sin_fondo.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\onpatient_icon_black_256x256.d85cee020455.png" />
+    <None Include="Imagenes\Resources\onpatient_icon_black_256x256.d85cee020455.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\patients-icon.png" />
+    <None Include="Imagenes\Resources\patients-icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\plus_white.png" />
+    <None Include="Imagenes\Resources\plus_white.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\postinstall-web.png" />
+    <None Include="Imagenes\Resources\postinstall-web.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Captura de pantalla 2019-03-28 a la%28s%29 08.12.10.png" />
+    <None Include="Imagenes\Resources\Captura de pantalla 2019-03-28 a la%28s%29 08.12.10.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\image %281%29.png" />
+    <None Include="Imagenes\Resources\image %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Conexion\" />
+    <Folder Include="Reportes\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
