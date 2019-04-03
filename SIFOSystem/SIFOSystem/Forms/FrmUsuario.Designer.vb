@@ -22,13 +22,14 @@ Partial Class FrmUsuario
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmUsuario))
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GbxExamen = New System.Windows.Forms.GroupBox()
+        Me.BtnLimpiar = New System.Windows.Forms.Button()
+        Me.BtnAgregar = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -54,29 +55,29 @@ Partial Class FrmUsuario
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(231, Byte), Integer))
         Me.Panel2.Controls.Add(Me.Label2)
-        Me.Panel2.Location = New System.Drawing.Point(0, 117)
+        Me.Panel2.Location = New System.Drawing.Point(2, 116)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(801, 74)
+        Me.Panel2.Size = New System.Drawing.Size(801, 39)
         Me.Panel2.TabIndex = 32
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Microsoft JhengHei", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label2.Location = New System.Drawing.Point(337, 29)
+        Me.Label2.Location = New System.Drawing.Point(350, 7)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(81, 20)
+        Me.Label2.Size = New System.Drawing.Size(88, 24)
         Me.Label2.TabIndex = 0
-        Me.Label2.Text = "USUARIO"
+        Me.Label2.Text = "Usuarios"
         '
         'GbxExamen
         '
         Me.GbxExamen.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.GbxExamen.Controls.Add(Me.BtnLimpiar)
+        Me.GbxExamen.Controls.Add(Me.BtnAgregar)
         Me.GbxExamen.Controls.Add(Me.Label4)
         Me.GbxExamen.Controls.Add(Me.Label3)
-        Me.GbxExamen.Controls.Add(Me.Button3)
-        Me.GbxExamen.Controls.Add(Me.Button2)
         Me.GbxExamen.Controls.Add(Me.Label11)
         Me.GbxExamen.Controls.Add(Me.Label9)
         Me.GbxExamen.Controls.Add(Me.Label8)
@@ -90,100 +91,103 @@ Partial Class FrmUsuario
         Me.GbxExamen.Controls.Add(Me.TextBox2)
         Me.GbxExamen.Controls.Add(Me.TextBox1)
         Me.GbxExamen.Font = New System.Drawing.Font("Microsoft JhengHei", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GbxExamen.Location = New System.Drawing.Point(10, 197)
+        Me.GbxExamen.Location = New System.Drawing.Point(5, 158)
         Me.GbxExamen.Name = "GbxExamen"
-        Me.GbxExamen.Size = New System.Drawing.Size(783, 291)
+        Me.GbxExamen.Size = New System.Drawing.Size(783, 322)
         Me.GbxExamen.TabIndex = 33
         Me.GbxExamen.TabStop = False
-        Me.GbxExamen.Text = "DATOS USUARIO"
+        Me.GbxExamen.Text = "Datos del usuario"
+        '
+        'BtnLimpiar
+        '
+        Me.BtnLimpiar.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.BtnLimpiar.FlatAppearance.BorderSize = 0
+        Me.BtnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnLimpiar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnLimpiar.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnLimpiar.Image = CType(resources.GetObject("BtnLimpiar.Image"), System.Drawing.Image)
+        Me.BtnLimpiar.Location = New System.Drawing.Point(641, 263)
+        Me.BtnLimpiar.Name = "BtnLimpiar"
+        Me.BtnLimpiar.Size = New System.Drawing.Size(112, 44)
+        Me.BtnLimpiar.TabIndex = 35
+        Me.BtnLimpiar.Text = "Limpiar"
+        Me.BtnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.BtnLimpiar.UseVisualStyleBackColor = False
+        '
+        'BtnAgregar
+        '
+        Me.BtnAgregar.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.BtnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.BtnAgregar.FlatAppearance.BorderSize = 0
+        Me.BtnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnAgregar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnAgregar.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnAgregar.Image = CType(resources.GetObject("BtnAgregar.Image"), System.Drawing.Image)
+        Me.BtnAgregar.Location = New System.Drawing.Point(507, 263)
+        Me.BtnAgregar.Name = "BtnAgregar"
+        Me.BtnAgregar.Size = New System.Drawing.Size(112, 44)
+        Me.BtnAgregar.TabIndex = 34
+        Me.BtnAgregar.Text = "Agregar"
+        Me.BtnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.BtnAgregar.UseVisualStyleBackColor = False
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft JhengHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(53, 19)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(97, 16)
+        Me.Label4.Size = New System.Drawing.Size(126, 20)
         Me.Label4.TabIndex = 17
         Me.Label4.Text = "Codigo Usuario"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft JhengHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(49, 133)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(74, 16)
+        Me.Label3.Size = New System.Drawing.Size(155, 20)
         Me.Label3.TabIndex = 16
-        Me.Label3.Text = "User Name "
-        '
-        'Button3
-        '
-        Me.Button3.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.Button3.FlatAppearance.BorderSize = 0
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button3.Location = New System.Drawing.Point(634, 215)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(110, 35)
-        Me.Button3.TabIndex = 15
-        Me.Button3.Text = "Limpiar"
-        Me.Button3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.Button3.UseVisualStyleBackColor = False
-        '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button2.Location = New System.Drawing.Point(506, 215)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(110, 35)
-        Me.Button2.TabIndex = 14
-        Me.Button2.Text = "Agregar"
-        Me.Button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.Label3.Text = "Nombre de usuario"
         '
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Microsoft JhengHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.Location = New System.Drawing.Point(491, 103)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(41, 16)
+        Me.Label11.Size = New System.Drawing.Size(53, 20)
         Me.Label11.TabIndex = 13
         Me.Label11.Text = "Fecha"
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft JhengHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.Location = New System.Drawing.Point(491, 20)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(43, 16)
+        Me.Label9.Size = New System.Drawing.Size(56, 20)
         Me.Label9.TabIndex = 11
         Me.Label9.Text = "Activo"
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft JhengHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.Location = New System.Drawing.Point(53, 201)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(72, 16)
+        Me.Label8.Size = New System.Drawing.Size(96, 20)
         Me.Label8.TabIndex = 10
         Me.Label8.Text = "Contrasena"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft JhengHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.Location = New System.Drawing.Point(53, 75)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(131, 16)
+        Me.Label7.Size = New System.Drawing.Size(171, 20)
         Me.Label7.TabIndex = 9
         Me.Label7.Text = "Numero de identidad"
         '
@@ -215,14 +219,14 @@ Partial Class FrmUsuario
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(494, 38)
+        Me.ComboBox1.Location = New System.Drawing.Point(494, 46)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(250, 25)
         Me.ComboBox1.TabIndex = 4
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(53, 220)
+        Me.TextBox4.Location = New System.Drawing.Point(53, 226)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(336, 25)
         Me.TextBox4.TabIndex = 3
@@ -236,54 +240,57 @@ Partial Class FrmUsuario
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(53, 94)
+        Me.TextBox2.Location = New System.Drawing.Point(53, 100)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(336, 25)
         Me.TextBox2.TabIndex = 1
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(53, 38)
+        Me.TextBox1.Location = New System.Drawing.Point(53, 44)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(336, 25)
         Me.TextBox1.TabIndex = 0
         '
         'PbxLogo
         '
-        Me.PbxLogo.Location = New System.Drawing.Point(0, 12)
+        Me.PbxLogo.Image = CType(resources.GetObject("PbxLogo.Image"), System.Drawing.Image)
+        Me.PbxLogo.Location = New System.Drawing.Point(0, -1)
         Me.PbxLogo.Name = "PbxLogo"
-        Me.PbxLogo.Size = New System.Drawing.Size(231, 83)
+        Me.PbxLogo.Size = New System.Drawing.Size(231, 117)
         Me.PbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PbxLogo.TabIndex = 30
         Me.PbxLogo.TabStop = False
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(140, Byte), Integer), CType(CType(198, Byte), Integer))
+        Me.Panel1.BackColor = System.Drawing.Color.Transparent
+        Me.Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), System.Drawing.Image)
         Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Location = New System.Drawing.Point(230, -37)
+        Me.Panel1.Location = New System.Drawing.Point(230, -4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(571, 155)
+        Me.Panel1.Size = New System.Drawing.Size(571, 120)
         Me.Panel1.TabIndex = 31
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Microsoft JhengHei", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft JhengHei", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.Info
-        Me.Label1.Location = New System.Drawing.Point(212, 102)
+        Me.Label1.Location = New System.Drawing.Point(196, 52)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(67, 17)
+        Me.Label1.Size = New System.Drawing.Size(171, 27)
         Me.Label1.TabIndex = 3
-        Me.Label1.Text = "USUARIO"
+        Me.Label1.Text = "Gestión Usuario"
         '
         'FrmUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.ClientSize = New System.Drawing.Size(800, 492)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.GbxExamen)
         Me.Controls.Add(Me.PbxLogo)
@@ -305,8 +312,6 @@ Partial Class FrmUsuario
     Friend WithEvents Label2 As Label
     Friend WithEvents GbxExamen As GroupBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button2 As Button
     Friend WithEvents Label11 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label8 As Label
@@ -323,4 +328,6 @@ Partial Class FrmUsuario
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents Label4 As Label
+    Friend WithEvents BtnLimpiar As Button
+    Friend WithEvents BtnAgregar As Button
 End Class

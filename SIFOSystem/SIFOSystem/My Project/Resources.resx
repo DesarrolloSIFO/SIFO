@@ -118,112 +118,220 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="iconfinder_icon-136-document-edit_314724" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconfinder_icon-136-document-edit_314724.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="iconfinder_icon-136-document-edit_3147241" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\Resources\resources\iconfinder_icon-136-document-edit_314724.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="iconfinder_icon-81-document-add_314764" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconfinder_icon-81-document-add_314764.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconos-ECO-vivendoo-03" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconos-ECO-vivendoo-03.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconAgregarMantenimiento" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconAgregarMantenimiento.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="if_show-sidebar_3671860" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\if_show-sidebar_3671860.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconCiudadWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconCiudadWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconfinder_delete_326606" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconfinder_delete_326606.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconPaises" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconPaises.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_encargos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_encargos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btn_consultas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btn_consultas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="if_show-sidebar_3671860_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\if_show-sidebar_3671860_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="back" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="image" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="if_icons_exit2_1564506" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\if_icons_exit2_1564506.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconMostrarMantenimiento" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconMostrarMantenimiento.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="plus_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\plus_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="if_plus-24_103172" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\if_plus-24_103172.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconfinder_close_309090" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconfinder_close_309090.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconUsuarios" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconUsuarios.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icono-peritaje" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icono-peritaje.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btn_pacientes" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btn_pacientes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="onpatient_icon_black_256x256.d85cee020455" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\onpatient_icon_black_256x256.d85cee020455.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LOGO_OPTICA_sin_fondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LOGO_OPTICA_sin_fondo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="patients-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\patients-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconUsuariosWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconUsuariosWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconTipoLentes" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconTipoLentes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconCiudad" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconCiudad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="if_show-sidebar_3671860_white1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\Resources\resources\if_show-sidebar_3671860_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="postinstall-web" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\postinstall-web.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="iconTipoLentesWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconTipoLentesWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="iconfinder_view-list_3267211" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\Resources\resources\iconfinder_view-list_326721.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconCiudadWhite1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\Resources\resources\iconCiudadWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconCiudadWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconCiudadWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconfinder_close_3090901" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\Resources\resources\iconfinder_close_309090.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\Resources\resources\icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btn_mantenimiento" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btn_mantenimiento.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="if_user-alt_285645" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\if_user-alt_285645.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon_delete1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\Resources\resources\icon_delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconfinder_delete_326606" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconfinder_delete_326606.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconAgregarMantenimiento" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconAgregarMantenimiento.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconTipoLentes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconTipoLentes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconTipoLentes1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\Resources\resources\iconTipoLentes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconos-ECO-vivendoo-031" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\Resources\resources\iconos-ECO-vivendoo-03.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iconfinder_view-list_326721" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconfinder_view-list_326721.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Captura de pantalla 2019-03-28 a la(s) 08.12.10" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Captura de pantalla 2019-03-28 a la(s) 08.12.10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon_encargos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_encargos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LOGO_OPTICA_sin_fondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LOGO_OPTICA_sin_fondo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_pacientes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_pacientes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconfinder_icon-136-document-edit_314724" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconfinder_icon-136-document-edit_314724.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Captura de pantalla 2019-03-28 a la(s) 08.122" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\Resources\resources\Captura de pantalla 2019-03-28 a la(s) 08.12.10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="patients-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\Resources\resources\patients-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconMostrarMantenimiento" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconMostrarMantenimiento.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconCiudad1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\Resources\resources\iconCiudad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_consultas1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\Resources\resources\btn_consultas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconfinder_delete_3266061" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\Resources\resources\iconfinder_delete_326606.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="image" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconos-ECO-vivendoo-03" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconos-ECO-vivendoo-03.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconUsuarios1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\Resources\resources\iconUsuarios.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_pacientes1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\Resources\resources\btn_pacientes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="postinstall-web1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\Resources\resources\postinstall-web.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="image (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\image (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_show-sidebar_3671860" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\if_show-sidebar_3671860.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_plus-24_1031721" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\Resources\resources\if_plus-24_103172.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Captura de pantalla 2019-03-28 a la(s) 08.121" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\Resources\resources\Captura de pantalla 2019-03-28 a la(s) 08.12.10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icono-peritaje1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\Resources\resources\icono-peritaje.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconfinder_icon-81-document-add_3147641" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\Resources\resources\iconfinder_icon-81-document-add_314764.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_encargos1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\Resources\resources\icon_encargos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconMostrarMantenimiento1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\Resources\resources\iconMostrarMantenimiento.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconPaises1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\Resources\resources\iconPaises.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconfinder_close_309090" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconfinder_close_309090.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_plus-24_103172" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\if_plus-24_103172.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_icons_exit2_1564506" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\if_icons_exit2_1564506.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconAgregarMantenimiento1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\Resources\resources\iconAgregarMantenimiento.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_consultas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_consultas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="plus_white1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\Resources\resources\plus_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="back1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\Resources\resources\back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconTipoLentesWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconTipoLentesWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="back" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_show-sidebar_3671860_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\if_show-sidebar_3671860_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconUsuarios" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconUsuarios.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_user-alt_285645" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\if_user-alt_285645.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconCiudad" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconCiudad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="onpatient_icon_black_256x2561" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\Resources\resources\onpatient_icon_black_256x256.d85cee020455.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="onpatient_icon_black_256x256.d85cee020455" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\onpatient_icon_black_256x256.d85cee020455.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="patients-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\patients-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_show-sidebar_36718601" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\Resources\resources\if_show-sidebar_3671860.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Captura de pantalla 2019-03-28 a la(s) 08.12.10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Captura de pantalla 2019-03-28 a la(s) 08.12.10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconPaises" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconPaises.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="plus_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\plus_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_icons_exit2_15645061" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\Resources\resources\if_icons_exit2_1564506.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconUsuariosWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconUsuariosWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconfinder_icon-81-document-add_314764" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconfinder_icon-81-document-add_314764.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconUsuariosWhite1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\Resources\resources\iconUsuariosWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LOGO_OPTICA_sin_fondo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\Resources\resources\LOGO_OPTICA_sin_fondo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconTipoLentesWhite1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\Resources\resources\iconTipoLentesWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btn_mantenimiento1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\Resources\resources\btn_mantenimiento.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icono-peritaje" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icono-peritaje.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_user-alt_2856451" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\Resources\resources\if_user-alt_285645.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Captura de pantalla 2019-03-28 a la(s) 08.123" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\Resources\resources\Captura de pantalla 2019-03-28 a la(s) 08.12.10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
