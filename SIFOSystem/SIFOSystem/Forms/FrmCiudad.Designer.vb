@@ -45,10 +45,10 @@ Partial Class FrmCiudad
         Me.LsvCiudades = New System.Windows.Forms.ListView()
         Me.ChCodigoCiudad = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChNombreCiudad = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.EpMensajeCiudad = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.CmsOpciones = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EpMensajeCiudad = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.Panel2.SuspendLayout()
         CType(Me.PbxLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -56,17 +56,18 @@ Partial Class FrmCiudad
         Me.EpMensaje.SuspendLayout()
         Me.TbMenu.SuspendLayout()
         Me.TbListado.SuspendLayout()
-        CType(Me.EpMensajeCiudad, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CmsOpciones.SuspendLayout()
+        CType(Me.EpMensajeCiudad, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(231, Byte), Integer))
         Me.Panel2.Controls.Add(Me.Label2)
-        Me.Panel2.Location = New System.Drawing.Point(-2, 114)
+        Me.Panel2.Location = New System.Drawing.Point(-3, 140)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(804, 39)
+        Me.Panel2.Size = New System.Drawing.Size(1072, 48)
         Me.Panel2.TabIndex = 32
         '
         'Label2
@@ -74,18 +75,20 @@ Partial Class FrmCiudad
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft JhengHei", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label2.Location = New System.Drawing.Point(369, 8)
+        Me.Label2.Location = New System.Drawing.Point(492, 10)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(74, 24)
+        Me.Label2.Size = New System.Drawing.Size(93, 30)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Ciudad"
         '
         'PbxLogo
         '
         Me.PbxLogo.Image = CType(resources.GetObject("PbxLogo.Image"), System.Drawing.Image)
-        Me.PbxLogo.Location = New System.Drawing.Point(-2, -3)
+        Me.PbxLogo.Location = New System.Drawing.Point(-4, 0)
+        Me.PbxLogo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PbxLogo.Name = "PbxLogo"
-        Me.PbxLogo.Size = New System.Drawing.Size(231, 119)
+        Me.PbxLogo.Size = New System.Drawing.Size(308, 146)
         Me.PbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PbxLogo.TabIndex = 30
         Me.PbxLogo.TabStop = False
@@ -96,9 +99,10 @@ Partial Class FrmCiudad
         Me.Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), System.Drawing.Image)
         Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Location = New System.Drawing.Point(228, 0)
+        Me.Panel1.Location = New System.Drawing.Point(304, 0)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(574, 119)
+        Me.Panel1.Size = New System.Drawing.Size(765, 146)
         Me.Panel1.TabIndex = 31
         '
         'Label1
@@ -107,19 +111,21 @@ Partial Class FrmCiudad
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft JhengHei", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.Info
-        Me.Label1.Location = New System.Drawing.Point(206, 47)
+        Me.Label1.Location = New System.Drawing.Point(275, 58)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(164, 27)
+        Me.Label1.Size = New System.Drawing.Size(209, 34)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Gestión Ciudad"
         '
         'TpDatos
         '
         Me.TpDatos.Controls.Add(Me.EpMensaje)
-        Me.TpDatos.Location = New System.Drawing.Point(4, 30)
+        Me.TpDatos.Location = New System.Drawing.Point(4, 34)
+        Me.TpDatos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TpDatos.Name = "TpDatos"
-        Me.TpDatos.Padding = New System.Windows.Forms.Padding(3)
-        Me.TpDatos.Size = New System.Drawing.Size(796, 294)
+        Me.TpDatos.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TpDatos.Size = New System.Drawing.Size(1064, 366)
         Me.TpDatos.TabIndex = 2
         Me.TpDatos.Text = "Datos de la ciudad"
         Me.TpDatos.UseVisualStyleBackColor = True
@@ -137,9 +143,11 @@ Partial Class FrmCiudad
         Me.EpMensaje.Controls.Add(Me.Label5)
         Me.EpMensaje.Controls.Add(Me.TxtCodCiudad)
         Me.EpMensaje.Font = New System.Drawing.Font("Microsoft JhengHei", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.EpMensaje.Location = New System.Drawing.Point(-4, 0)
+        Me.EpMensaje.Location = New System.Drawing.Point(-5, 0)
+        Me.EpMensaje.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.EpMensaje.Name = "EpMensaje"
-        Me.EpMensaje.Size = New System.Drawing.Size(804, 298)
+        Me.EpMensaje.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.EpMensaje.Size = New System.Drawing.Size(1072, 367)
         Me.EpMensaje.TabIndex = 34
         Me.EpMensaje.TabStop = False
         '
@@ -151,9 +159,10 @@ Partial Class FrmCiudad
         Me.BtnSalir.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnSalir.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.BtnSalir.Image = CType(resources.GetObject("BtnSalir.Image"), System.Drawing.Image)
-        Me.BtnSalir.Location = New System.Drawing.Point(638, 230)
+        Me.BtnSalir.Location = New System.Drawing.Point(851, 283)
+        Me.BtnSalir.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BtnSalir.Name = "BtnSalir"
-        Me.BtnSalir.Size = New System.Drawing.Size(111, 44)
+        Me.BtnSalir.Size = New System.Drawing.Size(148, 54)
         Me.BtnSalir.TabIndex = 23
         Me.BtnSalir.Text = "Salir"
         Me.BtnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
@@ -167,9 +176,10 @@ Partial Class FrmCiudad
         Me.BtnCancelar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnCancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.BtnCancelar.Image = CType(resources.GetObject("BtnCancelar.Image"), System.Drawing.Image)
-        Me.BtnCancelar.Location = New System.Drawing.Point(502, 230)
+        Me.BtnCancelar.Location = New System.Drawing.Point(669, 283)
+        Me.BtnCancelar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BtnCancelar.Name = "BtnCancelar"
-        Me.BtnCancelar.Size = New System.Drawing.Size(111, 44)
+        Me.BtnCancelar.Size = New System.Drawing.Size(148, 54)
         Me.BtnCancelar.TabIndex = 24
         Me.BtnCancelar.Text = "Cancelar"
         Me.BtnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
@@ -184,9 +194,10 @@ Partial Class FrmCiudad
         Me.BtnGuardar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnGuardar.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.BtnGuardar.Image = CType(resources.GetObject("BtnGuardar.Image"), System.Drawing.Image)
-        Me.BtnGuardar.Location = New System.Drawing.Point(191, 230)
+        Me.BtnGuardar.Location = New System.Drawing.Point(255, 283)
+        Me.BtnGuardar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BtnGuardar.Name = "BtnGuardar"
-        Me.BtnGuardar.Size = New System.Drawing.Size(111, 44)
+        Me.BtnGuardar.Size = New System.Drawing.Size(148, 54)
         Me.BtnGuardar.TabIndex = 20
         Me.BtnGuardar.Text = "Guardar"
         Me.BtnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
@@ -201,9 +212,10 @@ Partial Class FrmCiudad
         Me.BtnModificar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnModificar.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.BtnModificar.Image = CType(resources.GetObject("BtnModificar.Image"), System.Drawing.Image)
-        Me.BtnModificar.Location = New System.Drawing.Point(344, 230)
+        Me.BtnModificar.Location = New System.Drawing.Point(459, 283)
+        Me.BtnModificar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BtnModificar.Name = "BtnModificar"
-        Me.BtnModificar.Size = New System.Drawing.Size(111, 44)
+        Me.BtnModificar.Size = New System.Drawing.Size(148, 54)
         Me.BtnModificar.TabIndex = 21
         Me.BtnModificar.Text = "Modificar"
         Me.BtnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
@@ -218,9 +230,10 @@ Partial Class FrmCiudad
         Me.BtnNuevo.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnNuevo.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.BtnNuevo.Image = CType(resources.GetObject("BtnNuevo.Image"), System.Drawing.Image)
-        Me.BtnNuevo.Location = New System.Drawing.Point(37, 230)
+        Me.BtnNuevo.Location = New System.Drawing.Point(49, 283)
+        Me.BtnNuevo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BtnNuevo.Name = "BtnNuevo"
-        Me.BtnNuevo.Size = New System.Drawing.Size(111, 44)
+        Me.BtnNuevo.Size = New System.Drawing.Size(148, 54)
         Me.BtnNuevo.TabIndex = 22
         Me.BtnNuevo.Text = "Nuevo"
         Me.BtnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
@@ -228,19 +241,21 @@ Partial Class FrmCiudad
         '
         'TxtNombreCiudad
         '
-        Me.TxtNombreCiudad.Location = New System.Drawing.Point(301, 162)
+        Me.TxtNombreCiudad.Location = New System.Drawing.Point(401, 199)
+        Me.TxtNombreCiudad.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TxtNombreCiudad.Multiline = True
         Me.TxtNombreCiudad.Name = "TxtNombreCiudad"
-        Me.TxtNombreCiudad.Size = New System.Drawing.Size(190, 23)
+        Me.TxtNombreCiudad.Size = New System.Drawing.Size(252, 27)
         Me.TxtNombreCiudad.TabIndex = 19
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(306, 125)
+        Me.Label6.Location = New System.Drawing.Point(408, 154)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(170, 20)
+        Me.Label6.Size = New System.Drawing.Size(213, 25)
         Me.Label6.TabIndex = 8
         Me.Label6.Text = "Nombre de la Ciudad"
         '
@@ -248,20 +263,22 @@ Partial Class FrmCiudad
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(306, 42)
+        Me.Label5.Location = New System.Drawing.Point(408, 52)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(162, 20)
+        Me.Label5.Size = New System.Drawing.Size(204, 25)
         Me.Label5.TabIndex = 7
         Me.Label5.Text = "Codigo de la Ciudad"
         '
         'TxtCodCiudad
         '
         Me.TxtCodCiudad.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.TxtCodCiudad.Location = New System.Drawing.Point(301, 77)
+        Me.TxtCodCiudad.Location = New System.Drawing.Point(401, 95)
+        Me.TxtCodCiudad.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TxtCodCiudad.Multiline = True
         Me.TxtCodCiudad.Name = "TxtCodCiudad"
         Me.TxtCodCiudad.ReadOnly = True
-        Me.TxtCodCiudad.Size = New System.Drawing.Size(190, 23)
+        Me.TxtCodCiudad.Size = New System.Drawing.Size(252, 27)
         Me.TxtCodCiudad.TabIndex = 0
         '
         'TbMenu
@@ -269,19 +286,21 @@ Partial Class FrmCiudad
         Me.TbMenu.Controls.Add(Me.TpDatos)
         Me.TbMenu.Controls.Add(Me.TbListado)
         Me.TbMenu.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TbMenu.Location = New System.Drawing.Point(-2, 154)
+        Me.TbMenu.Location = New System.Drawing.Point(-3, 190)
+        Me.TbMenu.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TbMenu.Name = "TbMenu"
         Me.TbMenu.SelectedIndex = 0
-        Me.TbMenu.Size = New System.Drawing.Size(804, 328)
+        Me.TbMenu.Size = New System.Drawing.Size(1072, 404)
         Me.TbMenu.TabIndex = 1
         '
         'TbListado
         '
         Me.TbListado.Controls.Add(Me.LsvCiudades)
-        Me.TbListado.Location = New System.Drawing.Point(4, 30)
+        Me.TbListado.Location = New System.Drawing.Point(4, 34)
+        Me.TbListado.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TbListado.Name = "TbListado"
-        Me.TbListado.Padding = New System.Windows.Forms.Padding(3)
-        Me.TbListado.Size = New System.Drawing.Size(796, 294)
+        Me.TbListado.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TbListado.Size = New System.Drawing.Size(1064, 366)
         Me.TbListado.TabIndex = 3
         Me.TbListado.Text = "Listado de ciudades"
         Me.TbListado.UseVisualStyleBackColor = True
@@ -293,9 +312,10 @@ Partial Class FrmCiudad
         Me.LsvCiudades.Font = New System.Drawing.Font("Microsoft JhengHei", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LsvCiudades.FullRowSelect = True
         Me.LsvCiudades.GridLines = True
-        Me.LsvCiudades.Location = New System.Drawing.Point(202, 30)
+        Me.LsvCiudades.Location = New System.Drawing.Point(269, 37)
+        Me.LsvCiudades.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.LsvCiudades.Name = "LsvCiudades"
-        Me.LsvCiudades.Size = New System.Drawing.Size(407, 227)
+        Me.LsvCiudades.Size = New System.Drawing.Size(541, 278)
         Me.LsvCiudades.TabIndex = 0
         Me.LsvCiudades.UseCompatibleStateImageBehavior = False
         Me.LsvCiudades.View = System.Windows.Forms.View.Details
@@ -310,37 +330,39 @@ Partial Class FrmCiudad
         Me.ChNombreCiudad.Text = "Nombre Ciudad"
         Me.ChNombreCiudad.Width = 266
         '
-        'EpMensajeCiudad
-        '
-        Me.EpMensajeCiudad.ContainerControl = Me
-        '
         'CmsOpciones
         '
+        Me.CmsOpciones.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.CmsOpciones.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditarToolStripMenuItem, Me.EliminarToolStripMenuItem})
         Me.CmsOpciones.Name = "CmsOpciones"
-        Me.CmsOpciones.Size = New System.Drawing.Size(118, 48)
+        Me.CmsOpciones.Size = New System.Drawing.Size(133, 52)
         '
         'EditarToolStripMenuItem
         '
         Me.EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
-        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(132, 24)
         Me.EditarToolStripMenuItem.Text = "Editar"
         '
         'EliminarToolStripMenuItem
         '
         Me.EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
-        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(132, 24)
         Me.EliminarToolStripMenuItem.Text = "Eliminar"
+        '
+        'EpMensajeCiudad
+        '
+        Me.EpMensajeCiudad.ContainerControl = Me
         '
         'FrmCiudad
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 481)
+        Me.ClientSize = New System.Drawing.Size(1067, 592)
         Me.Controls.Add(Me.TbMenu)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.PbxLogo)
         Me.Controls.Add(Me.Panel1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "FrmCiudad"
         Me.Text = "Gestión de Ciudades"
         Me.Panel2.ResumeLayout(False)
@@ -353,8 +375,8 @@ Partial Class FrmCiudad
         Me.EpMensaje.PerformLayout()
         Me.TbMenu.ResumeLayout(False)
         Me.TbListado.ResumeLayout(False)
-        CType(Me.EpMensajeCiudad, System.ComponentModel.ISupportInitialize).EndInit()
         Me.CmsOpciones.ResumeLayout(False)
+        CType(Me.EpMensajeCiudad, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
