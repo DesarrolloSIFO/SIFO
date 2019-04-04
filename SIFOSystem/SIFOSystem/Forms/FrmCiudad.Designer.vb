@@ -146,6 +146,7 @@ Partial Class FrmCiudad
         'BtnSalir
         '
         Me.BtnSalir.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.BtnSalir.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnSalir.FlatAppearance.BorderSize = 0
         Me.BtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnSalir.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -154,7 +155,7 @@ Partial Class FrmCiudad
         Me.BtnSalir.Location = New System.Drawing.Point(638, 230)
         Me.BtnSalir.Name = "BtnSalir"
         Me.BtnSalir.Size = New System.Drawing.Size(111, 44)
-        Me.BtnSalir.TabIndex = 23
+        Me.BtnSalir.TabIndex = 6
         Me.BtnSalir.Text = "Salir"
         Me.BtnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.BtnSalir.UseVisualStyleBackColor = False
@@ -162,6 +163,7 @@ Partial Class FrmCiudad
         'BtnCancelar
         '
         Me.BtnCancelar.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.BtnCancelar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnCancelar.FlatAppearance.BorderSize = 0
         Me.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnCancelar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -170,7 +172,7 @@ Partial Class FrmCiudad
         Me.BtnCancelar.Location = New System.Drawing.Point(502, 230)
         Me.BtnCancelar.Name = "BtnCancelar"
         Me.BtnCancelar.Size = New System.Drawing.Size(111, 44)
-        Me.BtnCancelar.TabIndex = 24
+        Me.BtnCancelar.TabIndex = 5
         Me.BtnCancelar.Text = "Cancelar"
         Me.BtnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.BtnCancelar.UseVisualStyleBackColor = False
@@ -179,6 +181,7 @@ Partial Class FrmCiudad
         '
         Me.BtnGuardar.BackColor = System.Drawing.SystemColors.HotTrack
         Me.BtnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.BtnGuardar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnGuardar.FlatAppearance.BorderSize = 0
         Me.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnGuardar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -187,7 +190,7 @@ Partial Class FrmCiudad
         Me.BtnGuardar.Location = New System.Drawing.Point(191, 230)
         Me.BtnGuardar.Name = "BtnGuardar"
         Me.BtnGuardar.Size = New System.Drawing.Size(111, 44)
-        Me.BtnGuardar.TabIndex = 20
+        Me.BtnGuardar.TabIndex = 3
         Me.BtnGuardar.Text = "Guardar"
         Me.BtnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.BtnGuardar.UseVisualStyleBackColor = False
@@ -196,6 +199,7 @@ Partial Class FrmCiudad
         '
         Me.BtnModificar.BackColor = System.Drawing.SystemColors.HotTrack
         Me.BtnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnModificar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnModificar.FlatAppearance.BorderSize = 0
         Me.BtnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnModificar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -204,7 +208,7 @@ Partial Class FrmCiudad
         Me.BtnModificar.Location = New System.Drawing.Point(344, 230)
         Me.BtnModificar.Name = "BtnModificar"
         Me.BtnModificar.Size = New System.Drawing.Size(111, 44)
-        Me.BtnModificar.TabIndex = 21
+        Me.BtnModificar.TabIndex = 4
         Me.BtnModificar.Text = "Modificar"
         Me.BtnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.BtnModificar.UseVisualStyleBackColor = False
@@ -213,6 +217,7 @@ Partial Class FrmCiudad
         '
         Me.BtnNuevo.BackColor = System.Drawing.SystemColors.HotTrack
         Me.BtnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.BtnNuevo.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnNuevo.FlatAppearance.BorderSize = 0
         Me.BtnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnNuevo.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -221,7 +226,7 @@ Partial Class FrmCiudad
         Me.BtnNuevo.Location = New System.Drawing.Point(37, 230)
         Me.BtnNuevo.Name = "BtnNuevo"
         Me.BtnNuevo.Size = New System.Drawing.Size(111, 44)
-        Me.BtnNuevo.TabIndex = 22
+        Me.BtnNuevo.TabIndex = 2
         Me.BtnNuevo.Text = "Nuevo"
         Me.BtnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.BtnNuevo.UseVisualStyleBackColor = False
@@ -232,7 +237,7 @@ Partial Class FrmCiudad
         Me.TxtNombreCiudad.Multiline = True
         Me.TxtNombreCiudad.Name = "TxtNombreCiudad"
         Me.TxtNombreCiudad.Size = New System.Drawing.Size(190, 23)
-        Me.TxtNombreCiudad.TabIndex = 19
+        Me.TxtNombreCiudad.TabIndex = 1
         '
         'Label6
         '
@@ -342,6 +347,7 @@ Partial Class FrmCiudad
         Me.Controls.Add(Me.PbxLogo)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "FrmCiudad"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Gestión de Ciudades"
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
