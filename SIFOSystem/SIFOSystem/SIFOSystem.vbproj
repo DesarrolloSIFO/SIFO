@@ -138,10 +138,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Forms\Prueba2.Designer.vb">
-      <DependentUpon>Prueba2.vb</DependentUpon>
+    <Compile Include="Forms\FrmCargoEmpleado.Designer.vb">
+      <DependentUpon>FrmCargoEmpleado.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Prueba2.vb">
+    <Compile Include="Forms\FrmCargoEmpleado.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -176,8 +176,8 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Prueba2.resx">
-      <DependentUpon>Prueba2.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmCargoEmpleado.resx">
+      <DependentUpon>FrmCargoEmpleado.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
