@@ -57,9 +57,10 @@ Partial Class Form
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(231, Byte), Integer))
         Me.Panel2.Controls.Add(Me.Label2)
-        Me.Panel2.Location = New System.Drawing.Point(-2, 116)
+        Me.Panel2.Location = New System.Drawing.Point(-3, 143)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(801, 37)
+        Me.Panel2.Size = New System.Drawing.Size(1068, 46)
         Me.Panel2.TabIndex = 28
         '
         'Label2
@@ -67,18 +68,20 @@ Partial Class Form
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft JhengHei", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label2.Location = New System.Drawing.Point(386, 7)
+        Me.Label2.Location = New System.Drawing.Point(515, 9)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(75, 24)
+        Me.Label2.Size = New System.Drawing.Size(97, 30)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Factura"
         '
         'PbxLogo
         '
         Me.PbxLogo.Image = CType(resources.GetObject("PbxLogo.Image"), System.Drawing.Image)
-        Me.PbxLogo.Location = New System.Drawing.Point(-2, -3)
+        Me.PbxLogo.Location = New System.Drawing.Point(-3, -4)
+        Me.PbxLogo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PbxLogo.Name = "PbxLogo"
-        Me.PbxLogo.Size = New System.Drawing.Size(231, 122)
+        Me.PbxLogo.Size = New System.Drawing.Size(308, 150)
         Me.PbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PbxLogo.TabIndex = 26
         Me.PbxLogo.TabStop = False
@@ -89,9 +92,10 @@ Partial Class Form
         Me.Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), System.Drawing.Image)
         Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Location = New System.Drawing.Point(228, -2)
+        Me.Panel1.Location = New System.Drawing.Point(304, -2)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(571, 123)
+        Me.Panel1.Size = New System.Drawing.Size(761, 151)
         Me.Panel1.TabIndex = 27
         '
         'Label1
@@ -100,9 +104,10 @@ Partial Class Form
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft JhengHei", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.Info
-        Me.Label1.Location = New System.Drawing.Point(217, 50)
+        Me.Label1.Location = New System.Drawing.Point(289, 62)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(161, 27)
+        Me.Label1.Size = New System.Drawing.Size(204, 34)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Detalle Factura"
         '
@@ -127,9 +132,11 @@ Partial Class Form
         Me.GbxExamen.Controls.Add(Me.TextBox2)
         Me.GbxExamen.Controls.Add(Me.TextBox1)
         Me.GbxExamen.Font = New System.Drawing.Font("Microsoft JhengHei", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GbxExamen.Location = New System.Drawing.Point(8, 159)
+        Me.GbxExamen.Location = New System.Drawing.Point(11, 196)
+        Me.GbxExamen.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GbxExamen.Name = "GbxExamen"
-        Me.GbxExamen.Size = New System.Drawing.Size(783, 320)
+        Me.GbxExamen.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GbxExamen.Size = New System.Drawing.Size(1044, 394)
         Me.GbxExamen.TabIndex = 29
         Me.GbxExamen.TabStop = False
         Me.GbxExamen.Text = "DATOS DE FACTURA"
@@ -142,9 +149,10 @@ Partial Class Form
         Me.BtnLimpiar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnLimpiar.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.BtnLimpiar.Image = CType(resources.GetObject("BtnLimpiar.Image"), System.Drawing.Image)
-        Me.BtnLimpiar.Location = New System.Drawing.Point(632, 261)
+        Me.BtnLimpiar.Location = New System.Drawing.Point(843, 321)
+        Me.BtnLimpiar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BtnLimpiar.Name = "BtnLimpiar"
-        Me.BtnLimpiar.Size = New System.Drawing.Size(112, 44)
+        Me.BtnLimpiar.Size = New System.Drawing.Size(149, 54)
         Me.BtnLimpiar.TabIndex = 19
         Me.BtnLimpiar.Text = "Limpiar"
         Me.BtnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
@@ -159,9 +167,10 @@ Partial Class Form
         Me.BtnAgregar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnAgregar.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.BtnAgregar.Image = CType(resources.GetObject("BtnAgregar.Image"), System.Drawing.Image)
-        Me.BtnAgregar.Location = New System.Drawing.Point(498, 261)
+        Me.BtnAgregar.Location = New System.Drawing.Point(549, 321)
+        Me.BtnAgregar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BtnAgregar.Name = "BtnAgregar"
-        Me.BtnAgregar.Size = New System.Drawing.Size(112, 44)
+        Me.BtnAgregar.Size = New System.Drawing.Size(149, 54)
         Me.BtnAgregar.TabIndex = 18
         Me.BtnAgregar.Text = "Agregar"
         Me.BtnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
@@ -170,18 +179,20 @@ Partial Class Form
         'ComboBox3
         '
         Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(55, 234)
+        Me.ComboBox3.Location = New System.Drawing.Point(73, 288)
+        Me.ComboBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(334, 25)
+        Me.ComboBox3.Size = New System.Drawing.Size(444, 29)
         Me.ComboBox3.TabIndex = 17
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(53, 75)
+        Me.Label3.Location = New System.Drawing.Point(71, 92)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(133, 20)
+        Me.Label3.Size = New System.Drawing.Size(165, 25)
         Me.Label3.TabIndex = 16
         Me.Label3.Text = "Nombre Cliente "
         '
@@ -189,9 +200,10 @@ Partial Class Form
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(491, 133)
+        Me.Label11.Location = New System.Drawing.Point(655, 164)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(142, 20)
+        Me.Label11.Size = New System.Drawing.Size(177, 25)
         Me.Label11.TabIndex = 13
         Me.Label11.Text = "Fecha De Examen"
         '
@@ -199,9 +211,10 @@ Partial Class Form
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(491, 75)
+        Me.Label10.Location = New System.Drawing.Point(655, 92)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(86, 20)
+        Me.Label10.Size = New System.Drawing.Size(108, 25)
         Me.Label10.TabIndex = 12
         Me.Label10.Text = "Id Usuario"
         '
@@ -209,9 +222,10 @@ Partial Class Form
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(491, 20)
+        Me.Label9.Location = New System.Drawing.Point(655, 25)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(63, 20)
+        Me.Label9.Size = New System.Drawing.Size(79, 25)
         Me.Label9.TabIndex = 11
         Me.Label9.Text = "Ciudad"
         '
@@ -219,9 +233,10 @@ Partial Class Form
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(53, 201)
+        Me.Label8.Location = New System.Drawing.Point(71, 247)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(106, 20)
+        Me.Label8.Size = New System.Drawing.Size(133, 25)
         Me.Label8.TabIndex = 10
         Me.Label8.Text = "Tipo Examen"
         '
@@ -229,9 +244,10 @@ Partial Class Form
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(53, 133)
+        Me.Label7.Location = New System.Drawing.Point(71, 164)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(171, 20)
+        Me.Label7.Size = New System.Drawing.Size(214, 25)
         Me.Label7.TabIndex = 9
         Me.Label7.Text = "Numero de identidad"
         '
@@ -239,75 +255,84 @@ Partial Class Form
         '
         Me.Lbl.AutoSize = True
         Me.Lbl.Font = New System.Drawing.Font("Microsoft JhengHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lbl.Location = New System.Drawing.Point(53, 75)
+        Me.Lbl.Location = New System.Drawing.Point(71, 92)
+        Me.Lbl.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Lbl.Name = "Lbl"
-        Me.Lbl.Size = New System.Drawing.Size(0, 16)
+        Me.Lbl.Size = New System.Drawing.Size(0, 19)
         Me.Lbl.TabIndex = 8
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(53, 20)
+        Me.Label5.Location = New System.Drawing.Point(71, 25)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(128, 20)
+        Me.Label5.Size = New System.Drawing.Size(161, 25)
         Me.Label5.TabIndex = 7
         Me.Label5.Text = "Codigo Factura "
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(494, 160)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(659, 197)
+        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(250, 25)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(332, 29)
         Me.DateTimePicker1.TabIndex = 6
         '
         'ComboBox2
         '
         Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(494, 100)
+        Me.ComboBox2.Location = New System.Drawing.Point(659, 123)
+        Me.ComboBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(250, 25)
+        Me.ComboBox2.Size = New System.Drawing.Size(332, 29)
         Me.ComboBox2.TabIndex = 5
         '
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(494, 45)
+        Me.ComboBox1.Location = New System.Drawing.Point(659, 55)
+        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(250, 25)
+        Me.ComboBox1.Size = New System.Drawing.Size(332, 29)
         Me.ComboBox1.TabIndex = 4
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(53, 158)
+        Me.TextBox3.Location = New System.Drawing.Point(71, 194)
+        Me.TextBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(336, 25)
+        Me.TextBox3.Size = New System.Drawing.Size(447, 29)
         Me.TextBox3.TabIndex = 2
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(53, 98)
+        Me.TextBox2.Location = New System.Drawing.Point(71, 121)
+        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(336, 25)
+        Me.TextBox2.Size = New System.Drawing.Size(447, 29)
         Me.TextBox2.TabIndex = 1
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(53, 42)
+        Me.TextBox1.Location = New System.Drawing.Point(71, 52)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(336, 25)
+        Me.TextBox1.Size = New System.Drawing.Size(447, 29)
         Me.TextBox1.TabIndex = 0
         '
         'Form
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ClientSize = New System.Drawing.Size(803, 491)
+        Me.ClientSize = New System.Drawing.Size(1071, 604)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.GbxExamen)
         Me.Controls.Add(Me.PbxLogo)
         Me.Controls.Add(Me.Panel1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "Form"
         Me.Text = "Factura "
         Me.Panel2.ResumeLayout(False)
