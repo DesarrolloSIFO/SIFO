@@ -1,5 +1,6 @@
 ﻿Imports System.Data.SqlClient
-Public Class FrmCiudad
+Public Class FrmFactura
+
     Private Sub InvestigarCorrelativoCiudad()
         If Cn.State = ConnectionState.Open Then
             Cn.Close()
