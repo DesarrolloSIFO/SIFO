@@ -30,10 +30,20 @@ Partial Class FrmTipoExamen
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabExamenCliente = New System.Windows.Forms.TabControl()
         Me.TbExamenCliente = New System.Windows.Forms.TabPage()
-        Me.TbListadoExamenCliente = New System.Windows.Forms.TabPage()
         Me.GbxExamen = New System.Windows.Forms.GroupBox()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.BtnLimpiar = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.BtnAgregar = New System.Windows.Forms.Button()
+        Me.TxtDistanciaPupilar = New System.Windows.Forms.TextBox()
+        Me.TxtAdicion = New System.Windows.Forms.TextBox()
+        Me.TxtOI = New System.Windows.Forms.TextBox()
+        Me.TxtOD = New System.Windows.Forms.TextBox()
+        Me.TxtNumIdenCliente = New System.Windows.Forms.TextBox()
+        Me.TxtCodExamenCliente = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -44,14 +54,7 @@ Partial Class FrmTipoExamen
         Me.DtpFechaExamen = New System.Windows.Forms.DateTimePicker()
         Me.CboUsuario = New System.Windows.Forms.ComboBox()
         Me.CboTipoExamen = New System.Windows.Forms.ComboBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.TxtCodExamenCliente = New System.Windows.Forms.TextBox()
-        Me.TxtNumIdenCliente = New System.Windows.Forms.TextBox()
-        Me.TxtOD = New System.Windows.Forms.TextBox()
-        Me.TxtOI = New System.Windows.Forms.TextBox()
-        Me.TxtAdicion = New System.Windows.Forms.TextBox()
-        Me.TxtDistanciaPupilar = New System.Windows.Forms.TextBox()
+        Me.TbListadoExamenCliente = New System.Windows.Forms.TabPage()
         Me.LsvExamenCliente = New System.Windows.Forms.ListView()
         Me.CHCodigoExamenCliente = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.CHNumIdentCliente = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -67,18 +70,17 @@ Partial Class FrmTipoExamen
         Me.Panel1.SuspendLayout()
         Me.TabExamenCliente.SuspendLayout()
         Me.TbExamenCliente.SuspendLayout()
-        Me.TbListadoExamenCliente.SuspendLayout()
         Me.GbxExamen.SuspendLayout()
+        Me.TbListadoExamenCliente.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(231, Byte), Integer))
         Me.Panel2.Controls.Add(Me.Label2)
-        Me.Panel2.Location = New System.Drawing.Point(7, 138)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel2.Location = New System.Drawing.Point(5, 112)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1055, 55)
+        Me.Panel2.Size = New System.Drawing.Size(802, 45)
         Me.Panel2.TabIndex = 18
         '
         'Label2
@@ -86,20 +88,18 @@ Partial Class FrmTipoExamen
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft JhengHei", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label2.Location = New System.Drawing.Point(459, 12)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(344, 10)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(188, 30)
+        Me.Label2.Size = New System.Drawing.Size(149, 24)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Examen Cliente"
         '
         'PbxLogo
         '
         Me.PbxLogo.Image = CType(resources.GetObject("PbxLogo.Image"), System.Drawing.Image)
-        Me.PbxLogo.Location = New System.Drawing.Point(7, 0)
-        Me.PbxLogo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PbxLogo.Location = New System.Drawing.Point(5, 0)
         Me.PbxLogo.Name = "PbxLogo"
-        Me.PbxLogo.Size = New System.Drawing.Size(308, 145)
+        Me.PbxLogo.Size = New System.Drawing.Size(231, 118)
         Me.PbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PbxLogo.TabIndex = 16
         Me.PbxLogo.TabStop = False
@@ -110,10 +110,9 @@ Partial Class FrmTipoExamen
         Me.Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), System.Drawing.Image)
         Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Location = New System.Drawing.Point(315, -1)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel1.Location = New System.Drawing.Point(236, -1)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(765, 148)
+        Me.Panel1.Size = New System.Drawing.Size(574, 120)
         Me.Panel1.TabIndex = 17
         '
         'Label1
@@ -122,10 +121,9 @@ Partial Class FrmTipoExamen
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft JhengHei", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.Info
-        Me.Label1.Location = New System.Drawing.Point(289, 60)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(217, 49)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(313, 34)
+        Me.Label1.Size = New System.Drawing.Size(245, 27)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Gestión Examen Cliente"
         '
@@ -133,37 +131,34 @@ Partial Class FrmTipoExamen
         '
         Me.TabExamenCliente.Controls.Add(Me.TbExamenCliente)
         Me.TabExamenCliente.Controls.Add(Me.TbListadoExamenCliente)
-        Me.TabExamenCliente.Location = New System.Drawing.Point(7, 200)
+        Me.TabExamenCliente.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TabExamenCliente.Location = New System.Drawing.Point(5, 162)
+        Me.TabExamenCliente.Margin = New System.Windows.Forms.Padding(2)
         Me.TabExamenCliente.Name = "TabExamenCliente"
         Me.TabExamenCliente.SelectedIndex = 0
-        Me.TabExamenCliente.Size = New System.Drawing.Size(1055, 432)
+        Me.TabExamenCliente.Size = New System.Drawing.Size(791, 388)
         Me.TabExamenCliente.TabIndex = 19
         '
         'TbExamenCliente
         '
         Me.TbExamenCliente.Controls.Add(Me.GbxExamen)
-        Me.TbExamenCliente.Location = New System.Drawing.Point(4, 25)
+        Me.TbExamenCliente.Location = New System.Drawing.Point(4, 30)
+        Me.TbExamenCliente.Margin = New System.Windows.Forms.Padding(2)
         Me.TbExamenCliente.Name = "TbExamenCliente"
-        Me.TbExamenCliente.Padding = New System.Windows.Forms.Padding(3)
-        Me.TbExamenCliente.Size = New System.Drawing.Size(1047, 403)
+        Me.TbExamenCliente.Padding = New System.Windows.Forms.Padding(2)
+        Me.TbExamenCliente.Size = New System.Drawing.Size(783, 354)
         Me.TbExamenCliente.TabIndex = 0
         Me.TbExamenCliente.Text = "Examen Cliente"
         Me.TbExamenCliente.UseVisualStyleBackColor = True
         '
-        'TbListadoExamenCliente
-        '
-        Me.TbListadoExamenCliente.Controls.Add(Me.LsvExamenCliente)
-        Me.TbListadoExamenCliente.Location = New System.Drawing.Point(4, 25)
-        Me.TbListadoExamenCliente.Name = "TbListadoExamenCliente"
-        Me.TbListadoExamenCliente.Padding = New System.Windows.Forms.Padding(3)
-        Me.TbListadoExamenCliente.Size = New System.Drawing.Size(1047, 403)
-        Me.TbListadoExamenCliente.TabIndex = 1
-        Me.TbListadoExamenCliente.Text = "Listado"
-        Me.TbListadoExamenCliente.UseVisualStyleBackColor = True
-        '
         'GbxExamen
         '
         Me.GbxExamen.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.GbxExamen.Controls.Add(Me.Button3)
+        Me.GbxExamen.Controls.Add(Me.BtnLimpiar)
+        Me.GbxExamen.Controls.Add(Me.Button2)
+        Me.GbxExamen.Controls.Add(Me.Button1)
+        Me.GbxExamen.Controls.Add(Me.BtnAgregar)
         Me.GbxExamen.Controls.Add(Me.TxtDistanciaPupilar)
         Me.GbxExamen.Controls.Add(Me.TxtAdicion)
         Me.GbxExamen.Controls.Add(Me.TxtOI)
@@ -172,8 +167,6 @@ Partial Class FrmTipoExamen
         Me.GbxExamen.Controls.Add(Me.TxtCodExamenCliente)
         Me.GbxExamen.Controls.Add(Me.Label4)
         Me.GbxExamen.Controls.Add(Me.Label3)
-        Me.GbxExamen.Controls.Add(Me.BtnLimpiar)
-        Me.GbxExamen.Controls.Add(Me.BtnAgregar)
         Me.GbxExamen.Controls.Add(Me.Label11)
         Me.GbxExamen.Controls.Add(Me.Label10)
         Me.GbxExamen.Controls.Add(Me.Label9)
@@ -185,13 +178,27 @@ Partial Class FrmTipoExamen
         Me.GbxExamen.Controls.Add(Me.CboUsuario)
         Me.GbxExamen.Controls.Add(Me.CboTipoExamen)
         Me.GbxExamen.Font = New System.Drawing.Font("Microsoft JhengHei", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GbxExamen.Location = New System.Drawing.Point(0, 4)
-        Me.GbxExamen.Margin = New System.Windows.Forms.Padding(4)
+        Me.GbxExamen.Location = New System.Drawing.Point(0, 3)
         Me.GbxExamen.Name = "GbxExamen"
-        Me.GbxExamen.Padding = New System.Windows.Forms.Padding(4)
-        Me.GbxExamen.Size = New System.Drawing.Size(1044, 395)
+        Me.GbxExamen.Size = New System.Drawing.Size(783, 370)
         Me.GbxExamen.TabIndex = 26
         Me.GbxExamen.TabStop = False
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
+        Me.Button3.Location = New System.Drawing.Point(641, 299)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(112, 44)
+        Me.Button3.TabIndex = 29
+        Me.Button3.Text = "Salir"
+        Me.Button3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Button3.UseVisualStyleBackColor = False
         '
         'BtnLimpiar
         '
@@ -201,14 +208,47 @@ Partial Class FrmTipoExamen
         Me.BtnLimpiar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnLimpiar.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.BtnLimpiar.Image = CType(resources.GetObject("BtnLimpiar.Image"), System.Drawing.Image)
-        Me.BtnLimpiar.Location = New System.Drawing.Point(842, 317)
-        Me.BtnLimpiar.Margin = New System.Windows.Forms.Padding(4)
+        Me.BtnLimpiar.Location = New System.Drawing.Point(496, 299)
         Me.BtnLimpiar.Name = "BtnLimpiar"
-        Me.BtnLimpiar.Size = New System.Drawing.Size(149, 54)
-        Me.BtnLimpiar.TabIndex = 17
+        Me.BtnLimpiar.Size = New System.Drawing.Size(112, 44)
+        Me.BtnLimpiar.TabIndex = 30
         Me.BtnLimpiar.Text = "Limpiar"
         Me.BtnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.BtnLimpiar.UseVisualStyleBackColor = False
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
+        Me.Button2.Location = New System.Drawing.Point(189, 299)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(112, 44)
+        Me.Button2.TabIndex = 26
+        Me.Button2.Text = "Guardar"
+        Me.Button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.Location = New System.Drawing.Point(342, 299)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(112, 44)
+        Me.Button1.TabIndex = 27
+        Me.Button1.Text = "Modificar"
+        Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'BtnAgregar
         '
@@ -219,23 +259,89 @@ Partial Class FrmTipoExamen
         Me.BtnAgregar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnAgregar.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.BtnAgregar.Image = CType(resources.GetObject("BtnAgregar.Image"), System.Drawing.Image)
-        Me.BtnAgregar.Location = New System.Drawing.Point(664, 317)
-        Me.BtnAgregar.Margin = New System.Windows.Forms.Padding(4)
+        Me.BtnAgregar.Location = New System.Drawing.Point(35, 299)
         Me.BtnAgregar.Name = "BtnAgregar"
-        Me.BtnAgregar.Size = New System.Drawing.Size(149, 54)
-        Me.BtnAgregar.TabIndex = 16
+        Me.BtnAgregar.Size = New System.Drawing.Size(112, 44)
+        Me.BtnAgregar.TabIndex = 28
         Me.BtnAgregar.Text = "Agregar"
         Me.BtnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.BtnAgregar.UseVisualStyleBackColor = False
+        '
+        'TxtDistanciaPupilar
+        '
+        Me.TxtDistanciaPupilar.Location = New System.Drawing.Point(227, 237)
+        Me.TxtDistanciaPupilar.Margin = New System.Windows.Forms.Padding(2)
+        Me.TxtDistanciaPupilar.Name = "TxtDistanciaPupilar"
+        Me.TxtDistanciaPupilar.Size = New System.Drawing.Size(193, 25)
+        Me.TxtDistanciaPupilar.TabIndex = 25
+        '
+        'TxtAdicion
+        '
+        Me.TxtAdicion.Location = New System.Drawing.Point(227, 195)
+        Me.TxtAdicion.Margin = New System.Windows.Forms.Padding(2)
+        Me.TxtAdicion.Name = "TxtAdicion"
+        Me.TxtAdicion.Size = New System.Drawing.Size(193, 25)
+        Me.TxtAdicion.TabIndex = 24
+        '
+        'TxtOI
+        '
+        Me.TxtOI.Location = New System.Drawing.Point(227, 148)
+        Me.TxtOI.Margin = New System.Windows.Forms.Padding(2)
+        Me.TxtOI.Name = "TxtOI"
+        Me.TxtOI.Size = New System.Drawing.Size(193, 25)
+        Me.TxtOI.TabIndex = 23
+        '
+        'TxtOD
+        '
+        Me.TxtOD.Location = New System.Drawing.Point(227, 102)
+        Me.TxtOD.Margin = New System.Windows.Forms.Padding(2)
+        Me.TxtOD.Name = "TxtOD"
+        Me.TxtOD.Size = New System.Drawing.Size(193, 25)
+        Me.TxtOD.TabIndex = 22
+        '
+        'TxtNumIdenCliente
+        '
+        Me.TxtNumIdenCliente.Location = New System.Drawing.Point(228, 56)
+        Me.TxtNumIdenCliente.Margin = New System.Windows.Forms.Padding(2)
+        Me.TxtNumIdenCliente.Name = "TxtNumIdenCliente"
+        Me.TxtNumIdenCliente.Size = New System.Drawing.Size(192, 25)
+        Me.TxtNumIdenCliente.TabIndex = 21
+        '
+        'TxtCodExamenCliente
+        '
+        Me.TxtCodExamenCliente.Location = New System.Drawing.Point(227, 11)
+        Me.TxtCodExamenCliente.Margin = New System.Windows.Forms.Padding(2)
+        Me.TxtCodExamenCliente.Name = "TxtCodExamenCliente"
+        Me.TxtCodExamenCliente.Size = New System.Drawing.Size(193, 25)
+        Me.TxtCodExamenCliente.TabIndex = 20
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft JhengHei", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(97, 237)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(125, 19)
+        Me.Label4.TabIndex = 19
+        Me.Label4.Text = "Distancia Pupilar"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft JhengHei", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(190, 106)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(32, 19)
+        Me.Label3.TabIndex = 18
+        Me.Label3.Text = "OD"
         '
         'Label11
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft JhengHei", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(659, 216)
-        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label11.Location = New System.Drawing.Point(494, 176)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(167, 24)
+        Me.Label11.Size = New System.Drawing.Size(130, 19)
         Me.Label11.TabIndex = 13
         Me.Label11.Text = "Fecha De Examen"
         '
@@ -243,10 +349,9 @@ Partial Class FrmTipoExamen
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft JhengHei", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(659, 124)
-        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label10.Location = New System.Drawing.Point(494, 101)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(79, 24)
+        Me.Label10.Size = New System.Drawing.Size(63, 19)
         Me.Label10.TabIndex = 12
         Me.Label10.Text = "Usuario"
         '
@@ -254,10 +359,9 @@ Partial Class FrmTipoExamen
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft JhengHei", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(655, 25)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label9.Location = New System.Drawing.Point(491, 20)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(125, 24)
+        Me.Label9.Size = New System.Drawing.Size(97, 19)
         Me.Label9.TabIndex = 11
         Me.Label9.Text = "Tipo Examen"
         '
@@ -265,10 +369,9 @@ Partial Class FrmTipoExamen
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft JhengHei", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(262, 186)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label8.Location = New System.Drawing.Point(196, 151)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(30, 24)
+        Me.Label8.Size = New System.Drawing.Size(25, 19)
         Me.Label8.TabIndex = 10
         Me.Label8.Text = "OI"
         '
@@ -276,10 +379,9 @@ Partial Class FrmTipoExamen
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft JhengHei", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(14, 73)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Location = New System.Drawing.Point(10, 59)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(273, 24)
+        Me.Label7.Size = New System.Drawing.Size(213, 19)
         Me.Label7.TabIndex = 9
         Me.Label7.Text = "Numero de identidad Cliente"
         '
@@ -287,10 +389,9 @@ Partial Class FrmTipoExamen
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft JhengHei", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(212, 246)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Location = New System.Drawing.Point(159, 200)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(78, 24)
+        Me.Label6.Size = New System.Drawing.Size(62, 19)
         Me.Label6.TabIndex = 8
         Me.Label6.Text = "Adicion"
         '
@@ -298,10 +399,9 @@ Partial Class FrmTipoExamen
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft JhengHei", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(67, 13)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(50, 11)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(220, 24)
+        Me.Label5.Size = New System.Drawing.Size(171, 19)
         Me.Label5.TabIndex = 7
         Me.Label5.Text = "Codigo Examen Cliente"
         '
@@ -309,101 +409,48 @@ Partial Class FrmTipoExamen
         '
         Me.DtpFechaExamen.CalendarFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DtpFechaExamen.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DtpFechaExamen.Location = New System.Drawing.Point(663, 251)
-        Me.DtpFechaExamen.Margin = New System.Windows.Forms.Padding(4)
+        Me.DtpFechaExamen.Location = New System.Drawing.Point(497, 204)
         Me.DtpFechaExamen.Name = "DtpFechaExamen"
-        Me.DtpFechaExamen.Size = New System.Drawing.Size(173, 29)
+        Me.DtpFechaExamen.Size = New System.Drawing.Size(131, 25)
         Me.DtpFechaExamen.TabIndex = 6
         '
         'CboUsuario
         '
         Me.CboUsuario.FormattingEnabled = True
-        Me.CboUsuario.Location = New System.Drawing.Point(663, 153)
-        Me.CboUsuario.Margin = New System.Windows.Forms.Padding(4)
+        Me.CboUsuario.Location = New System.Drawing.Point(497, 124)
         Me.CboUsuario.Name = "CboUsuario"
-        Me.CboUsuario.Size = New System.Drawing.Size(332, 29)
+        Me.CboUsuario.Size = New System.Drawing.Size(250, 25)
         Me.CboUsuario.TabIndex = 5
         '
         'CboTipoExamen
         '
         Me.CboTipoExamen.FormattingEnabled = True
-        Me.CboTipoExamen.Location = New System.Drawing.Point(659, 53)
-        Me.CboTipoExamen.Margin = New System.Windows.Forms.Padding(4)
+        Me.CboTipoExamen.Location = New System.Drawing.Point(494, 43)
         Me.CboTipoExamen.Name = "CboTipoExamen"
-        Me.CboTipoExamen.Size = New System.Drawing.Size(332, 29)
+        Me.CboTipoExamen.Size = New System.Drawing.Size(250, 25)
         Me.CboTipoExamen.TabIndex = 4
         '
-        'Label3
+        'TbListadoExamenCliente
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft JhengHei", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(253, 130)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(39, 24)
-        Me.Label3.TabIndex = 18
-        Me.Label3.Text = "OD"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft JhengHei", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(129, 292)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(158, 24)
-        Me.Label4.TabIndex = 19
-        Me.Label4.Text = "Distancia Pupilar"
-        '
-        'TxtCodExamenCliente
-        '
-        Me.TxtCodExamenCliente.Location = New System.Drawing.Point(303, 13)
-        Me.TxtCodExamenCliente.Name = "TxtCodExamenCliente"
-        Me.TxtCodExamenCliente.Size = New System.Drawing.Size(256, 29)
-        Me.TxtCodExamenCliente.TabIndex = 20
-        '
-        'TxtNumIdenCliente
-        '
-        Me.TxtNumIdenCliente.Location = New System.Drawing.Point(304, 69)
-        Me.TxtNumIdenCliente.Name = "TxtNumIdenCliente"
-        Me.TxtNumIdenCliente.Size = New System.Drawing.Size(255, 29)
-        Me.TxtNumIdenCliente.TabIndex = 21
-        '
-        'TxtOD
-        '
-        Me.TxtOD.Location = New System.Drawing.Point(303, 126)
-        Me.TxtOD.Name = "TxtOD"
-        Me.TxtOD.Size = New System.Drawing.Size(256, 29)
-        Me.TxtOD.TabIndex = 22
-        '
-        'TxtOI
-        '
-        Me.TxtOI.Location = New System.Drawing.Point(303, 182)
-        Me.TxtOI.Name = "TxtOI"
-        Me.TxtOI.Size = New System.Drawing.Size(256, 29)
-        Me.TxtOI.TabIndex = 23
-        '
-        'TxtAdicion
-        '
-        Me.TxtAdicion.Location = New System.Drawing.Point(303, 240)
-        Me.TxtAdicion.Name = "TxtAdicion"
-        Me.TxtAdicion.Size = New System.Drawing.Size(256, 29)
-        Me.TxtAdicion.TabIndex = 24
-        '
-        'TxtDistanciaPupilar
-        '
-        Me.TxtDistanciaPupilar.Location = New System.Drawing.Point(303, 292)
-        Me.TxtDistanciaPupilar.Name = "TxtDistanciaPupilar"
-        Me.TxtDistanciaPupilar.Size = New System.Drawing.Size(256, 29)
-        Me.TxtDistanciaPupilar.TabIndex = 25
+        Me.TbListadoExamenCliente.Controls.Add(Me.LsvExamenCliente)
+        Me.TbListadoExamenCliente.Location = New System.Drawing.Point(4, 30)
+        Me.TbListadoExamenCliente.Margin = New System.Windows.Forms.Padding(2)
+        Me.TbListadoExamenCliente.Name = "TbListadoExamenCliente"
+        Me.TbListadoExamenCliente.Padding = New System.Windows.Forms.Padding(2)
+        Me.TbListadoExamenCliente.Size = New System.Drawing.Size(783, 354)
+        Me.TbListadoExamenCliente.TabIndex = 1
+        Me.TbListadoExamenCliente.Text = "Listado"
+        Me.TbListadoExamenCliente.UseVisualStyleBackColor = True
         '
         'LsvExamenCliente
         '
         Me.LsvExamenCliente.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.CHCodigoExamenCliente, Me.CHNumIdentCliente, Me.CHFechaExamen, Me.CHOD, Me.CHOI, Me.CHAdicion, Me.CHDistanciaPupilar, Me.CHTipoExamen, Me.CHIdUsuario})
+        Me.LsvExamenCliente.Font = New System.Drawing.Font("Microsoft JhengHei", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LsvExamenCliente.GridLines = True
-        Me.LsvExamenCliente.Location = New System.Drawing.Point(6, 6)
+        Me.LsvExamenCliente.Location = New System.Drawing.Point(4, 5)
+        Me.LsvExamenCliente.Margin = New System.Windows.Forms.Padding(2)
         Me.LsvExamenCliente.Name = "LsvExamenCliente"
-        Me.LsvExamenCliente.Size = New System.Drawing.Size(1035, 391)
+        Me.LsvExamenCliente.Size = New System.Drawing.Size(777, 353)
         Me.LsvExamenCliente.TabIndex = 0
         Me.LsvExamenCliente.UseCompatibleStateImageBehavior = False
         Me.LsvExamenCliente.View = System.Windows.Forms.View.Details
@@ -454,15 +501,14 @@ Partial Class FrmTipoExamen
         '
         'FrmTipoExamen
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ClientSize = New System.Drawing.Size(1067, 632)
+        Me.ClientSize = New System.Drawing.Size(800, 561)
         Me.Controls.Add(Me.TabExamenCliente)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.PbxLogo)
         Me.Controls.Add(Me.Panel1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "FrmTipoExamen"
         Me.Text = "Examen Cliente "
         Me.Panel2.ResumeLayout(False)
@@ -472,9 +518,9 @@ Partial Class FrmTipoExamen
         Me.Panel1.PerformLayout()
         Me.TabExamenCliente.ResumeLayout(False)
         Me.TbExamenCliente.ResumeLayout(False)
-        Me.TbListadoExamenCliente.ResumeLayout(False)
         Me.GbxExamen.ResumeLayout(False)
         Me.GbxExamen.PerformLayout()
+        Me.TbListadoExamenCliente.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -494,8 +540,6 @@ Partial Class FrmTipoExamen
     Friend WithEvents TxtCodExamenCliente As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents BtnLimpiar As Button
-    Friend WithEvents BtnAgregar As Button
     Friend WithEvents Label11 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Label9 As Label
@@ -517,5 +561,10 @@ Partial Class FrmTipoExamen
     Friend WithEvents CHDistanciaPupilar As ColumnHeader
     Friend WithEvents CHTipoExamen As ColumnHeader
     Friend WithEvents CHIdUsuario As ColumnHeader
-    End Sub
+    Friend WithEvents Button3 As Button
+    Friend WithEvents BtnLimpiar As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents BtnAgregar As Button
+
 End Class

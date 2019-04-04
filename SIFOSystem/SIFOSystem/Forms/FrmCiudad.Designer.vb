@@ -22,23 +22,38 @@ Partial Class FrmCiudad
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmCiudad))
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PbxLogo = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.GbCategoriaProducto = New System.Windows.Forms.GroupBox()
+        Me.TpDatos = New System.Windows.Forms.TabPage()
+        Me.EpMensaje = New System.Windows.Forms.GroupBox()
+        Me.BtnSalir = New System.Windows.Forms.Button()
+        Me.BtnCancelar = New System.Windows.Forms.Button()
+        Me.BtnGuardar = New System.Windows.Forms.Button()
+        Me.BtnModificar = New System.Windows.Forms.Button()
+        Me.BtnNuevo = New System.Windows.Forms.Button()
+        Me.TxtNombreCiudad = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TxtCodCiudad = New System.Windows.Forms.TextBox()
-        Me.BtnLimpiar = New System.Windows.Forms.Button()
-        Me.BtnAgregar = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TbMenu = New System.Windows.Forms.TabControl()
+        Me.TbListado = New System.Windows.Forms.TabPage()
+        Me.LsvCiudades = New System.Windows.Forms.ListView()
+        Me.ChCodigoCiudad = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChNombreCiudad = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.EpMensajeCiudad = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.Panel2.SuspendLayout()
         CType(Me.PbxLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
-        Me.GbCategoriaProducto.SuspendLayout()
+        Me.TpDatos.SuspendLayout()
+        Me.EpMensaje.SuspendLayout()
+        Me.TbMenu.SuspendLayout()
+        Me.TbListado.SuspendLayout()
+        CType(Me.EpMensajeCiudad, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel2
@@ -94,28 +109,132 @@ Partial Class FrmCiudad
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Gestión Ciudad"
         '
-        'GbCategoriaProducto
+        'TpDatos
         '
-        Me.GbCategoriaProducto.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.GbCategoriaProducto.Controls.Add(Me.TextBox1)
-        Me.GbCategoriaProducto.Controls.Add(Me.BtnLimpiar)
-        Me.GbCategoriaProducto.Controls.Add(Me.BtnAgregar)
-        Me.GbCategoriaProducto.Controls.Add(Me.Label6)
-        Me.GbCategoriaProducto.Controls.Add(Me.Label5)
-        Me.GbCategoriaProducto.Controls.Add(Me.TxtCodCiudad)
-        Me.GbCategoriaProducto.Font = New System.Drawing.Font("Microsoft JhengHei", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GbCategoriaProducto.Location = New System.Drawing.Point(-2, 159)
-        Me.GbCategoriaProducto.Name = "GbCategoriaProducto"
-        Me.GbCategoriaProducto.Size = New System.Drawing.Size(804, 288)
-        Me.GbCategoriaProducto.TabIndex = 33
-        Me.GbCategoriaProducto.TabStop = False
-        Me.GbCategoriaProducto.Text = "Datos de la ciudad"
+        Me.TpDatos.Controls.Add(Me.EpMensaje)
+        Me.TpDatos.Location = New System.Drawing.Point(4, 30)
+        Me.TpDatos.Name = "TpDatos"
+        Me.TpDatos.Padding = New System.Windows.Forms.Padding(3)
+        Me.TpDatos.Size = New System.Drawing.Size(796, 294)
+        Me.TpDatos.TabIndex = 2
+        Me.TpDatos.Text = "Datos de la ciudad"
+        Me.TpDatos.UseVisualStyleBackColor = True
+        '
+        'EpMensaje
+        '
+        Me.EpMensaje.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.EpMensaje.Controls.Add(Me.BtnSalir)
+        Me.EpMensaje.Controls.Add(Me.BtnCancelar)
+        Me.EpMensaje.Controls.Add(Me.BtnGuardar)
+        Me.EpMensaje.Controls.Add(Me.BtnModificar)
+        Me.EpMensaje.Controls.Add(Me.BtnNuevo)
+        Me.EpMensaje.Controls.Add(Me.TxtNombreCiudad)
+        Me.EpMensaje.Controls.Add(Me.Label6)
+        Me.EpMensaje.Controls.Add(Me.Label5)
+        Me.EpMensaje.Controls.Add(Me.TxtCodCiudad)
+        Me.EpMensaje.Font = New System.Drawing.Font("Microsoft JhengHei", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.EpMensaje.Location = New System.Drawing.Point(-4, 0)
+        Me.EpMensaje.Name = "EpMensaje"
+        Me.EpMensaje.Size = New System.Drawing.Size(804, 298)
+        Me.EpMensaje.TabIndex = 34
+        Me.EpMensaje.TabStop = False
+        '
+        'BtnSalir
+        '
+        Me.BtnSalir.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.BtnSalir.FlatAppearance.BorderSize = 0
+        Me.BtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnSalir.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnSalir.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnSalir.Image = CType(resources.GetObject("BtnSalir.Image"), System.Drawing.Image)
+        Me.BtnSalir.Location = New System.Drawing.Point(638, 230)
+        Me.BtnSalir.Name = "BtnSalir"
+        Me.BtnSalir.Size = New System.Drawing.Size(111, 44)
+        Me.BtnSalir.TabIndex = 23
+        Me.BtnSalir.Text = "Salir"
+        Me.BtnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.BtnSalir.UseVisualStyleBackColor = False
+        '
+        'BtnCancelar
+        '
+        Me.BtnCancelar.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.BtnCancelar.FlatAppearance.BorderSize = 0
+        Me.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnCancelar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnCancelar.Image = CType(resources.GetObject("BtnCancelar.Image"), System.Drawing.Image)
+        Me.BtnCancelar.Location = New System.Drawing.Point(502, 230)
+        Me.BtnCancelar.Name = "BtnCancelar"
+        Me.BtnCancelar.Size = New System.Drawing.Size(111, 44)
+        Me.BtnCancelar.TabIndex = 24
+        Me.BtnCancelar.Text = "Cancelar"
+        Me.BtnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.BtnCancelar.UseVisualStyleBackColor = False
+        '
+        'BtnGuardar
+        '
+        Me.BtnGuardar.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.BtnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.BtnGuardar.FlatAppearance.BorderSize = 0
+        Me.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnGuardar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnGuardar.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnGuardar.Image = CType(resources.GetObject("BtnGuardar.Image"), System.Drawing.Image)
+        Me.BtnGuardar.Location = New System.Drawing.Point(191, 230)
+        Me.BtnGuardar.Name = "BtnGuardar"
+        Me.BtnGuardar.Size = New System.Drawing.Size(111, 44)
+        Me.BtnGuardar.TabIndex = 20
+        Me.BtnGuardar.Text = "Guardar"
+        Me.BtnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.BtnGuardar.UseVisualStyleBackColor = False
+        '
+        'BtnModificar
+        '
+        Me.BtnModificar.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.BtnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnModificar.FlatAppearance.BorderSize = 0
+        Me.BtnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnModificar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnModificar.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnModificar.Image = CType(resources.GetObject("BtnModificar.Image"), System.Drawing.Image)
+        Me.BtnModificar.Location = New System.Drawing.Point(344, 230)
+        Me.BtnModificar.Name = "BtnModificar"
+        Me.BtnModificar.Size = New System.Drawing.Size(111, 44)
+        Me.BtnModificar.TabIndex = 21
+        Me.BtnModificar.Text = "Modificar"
+        Me.BtnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.BtnModificar.UseVisualStyleBackColor = False
+        '
+        'BtnNuevo
+        '
+        Me.BtnNuevo.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.BtnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.BtnNuevo.FlatAppearance.BorderSize = 0
+        Me.BtnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnNuevo.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnNuevo.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnNuevo.Image = CType(resources.GetObject("BtnNuevo.Image"), System.Drawing.Image)
+        Me.BtnNuevo.Location = New System.Drawing.Point(37, 230)
+        Me.BtnNuevo.Name = "BtnNuevo"
+        Me.BtnNuevo.Size = New System.Drawing.Size(111, 44)
+        Me.BtnNuevo.TabIndex = 22
+        Me.BtnNuevo.Text = "Nuevo"
+        Me.BtnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.BtnNuevo.UseVisualStyleBackColor = False
+        '
+        'TxtNombreCiudad
+        '
+        Me.TxtNombreCiudad.Location = New System.Drawing.Point(301, 162)
+        Me.TxtNombreCiudad.Multiline = True
+        Me.TxtNombreCiudad.Name = "TxtNombreCiudad"
+        Me.TxtNombreCiudad.Size = New System.Drawing.Size(190, 23)
+        Me.TxtNombreCiudad.TabIndex = 19
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(173, 133)
+        Me.Label6.Location = New System.Drawing.Point(306, 125)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(170, 20)
         Me.Label6.TabIndex = 8
@@ -125,7 +244,7 @@ Partial Class FrmCiudad
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(173, 50)
+        Me.Label5.Location = New System.Drawing.Point(306, 42)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(162, 20)
         Me.Label5.TabIndex = 7
@@ -133,62 +252,71 @@ Partial Class FrmCiudad
         '
         'TxtCodCiudad
         '
-        Me.TxtCodCiudad.Location = New System.Drawing.Point(168, 85)
+        Me.TxtCodCiudad.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.TxtCodCiudad.Location = New System.Drawing.Point(301, 77)
         Me.TxtCodCiudad.Multiline = True
         Me.TxtCodCiudad.Name = "TxtCodCiudad"
+        Me.TxtCodCiudad.ReadOnly = True
         Me.TxtCodCiudad.Size = New System.Drawing.Size(190, 23)
         Me.TxtCodCiudad.TabIndex = 0
         '
-        'BtnLimpiar
+        'TbMenu
         '
-        Me.BtnLimpiar.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.BtnLimpiar.FlatAppearance.BorderSize = 0
-        Me.BtnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnLimpiar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnLimpiar.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.BtnLimpiar.Image = CType(resources.GetObject("BtnLimpiar.Image"), System.Drawing.Image)
-        Me.BtnLimpiar.Location = New System.Drawing.Point(633, 223)
-        Me.BtnLimpiar.Name = "BtnLimpiar"
-        Me.BtnLimpiar.Size = New System.Drawing.Size(112, 44)
-        Me.BtnLimpiar.TabIndex = 18
-        Me.BtnLimpiar.Text = "Limpiar"
-        Me.BtnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.BtnLimpiar.UseVisualStyleBackColor = False
+        Me.TbMenu.Controls.Add(Me.TpDatos)
+        Me.TbMenu.Controls.Add(Me.TbListado)
+        Me.TbMenu.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TbMenu.Location = New System.Drawing.Point(-2, 154)
+        Me.TbMenu.Name = "TbMenu"
+        Me.TbMenu.SelectedIndex = 0
+        Me.TbMenu.Size = New System.Drawing.Size(804, 328)
+        Me.TbMenu.TabIndex = 1
         '
-        'BtnAgregar
+        'TbListado
         '
-        Me.BtnAgregar.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.BtnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.BtnAgregar.FlatAppearance.BorderSize = 0
-        Me.BtnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnAgregar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnAgregar.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.BtnAgregar.Image = CType(resources.GetObject("BtnAgregar.Image"), System.Drawing.Image)
-        Me.BtnAgregar.Location = New System.Drawing.Point(499, 223)
-        Me.BtnAgregar.Name = "BtnAgregar"
-        Me.BtnAgregar.Size = New System.Drawing.Size(112, 44)
-        Me.BtnAgregar.TabIndex = 17
-        Me.BtnAgregar.Text = "Agregar"
-        Me.BtnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.BtnAgregar.UseVisualStyleBackColor = False
+        Me.TbListado.Controls.Add(Me.LsvCiudades)
+        Me.TbListado.Location = New System.Drawing.Point(4, 30)
+        Me.TbListado.Name = "TbListado"
+        Me.TbListado.Padding = New System.Windows.Forms.Padding(3)
+        Me.TbListado.Size = New System.Drawing.Size(796, 294)
+        Me.TbListado.TabIndex = 3
+        Me.TbListado.Text = "Listado de ciudades"
+        Me.TbListado.UseVisualStyleBackColor = True
         '
-        'TextBox1
+        'LsvCiudades
         '
-        Me.TextBox1.Location = New System.Drawing.Point(168, 170)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(190, 23)
-        Me.TextBox1.TabIndex = 19
+        Me.LsvCiudades.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ChCodigoCiudad, Me.ChNombreCiudad})
+        Me.LsvCiudades.Font = New System.Drawing.Font("Microsoft JhengHei", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LsvCiudades.GridLines = True
+        Me.LsvCiudades.Location = New System.Drawing.Point(202, 30)
+        Me.LsvCiudades.Name = "LsvCiudades"
+        Me.LsvCiudades.Size = New System.Drawing.Size(407, 227)
+        Me.LsvCiudades.TabIndex = 0
+        Me.LsvCiudades.UseCompatibleStateImageBehavior = False
+        Me.LsvCiudades.View = System.Windows.Forms.View.Details
+        '
+        'ChCodigoCiudad
+        '
+        Me.ChCodigoCiudad.Text = "Código Ciudad"
+        Me.ChCodigoCiudad.Width = 137
+        '
+        'ChNombreCiudad
+        '
+        Me.ChNombreCiudad.Text = "Nombre Ciudad"
+        Me.ChNombreCiudad.Width = 266
+        '
+        'EpMensajeCiudad
+        '
+        Me.EpMensajeCiudad.ContainerControl = Me
         '
         'FrmCiudad
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(800, 481)
+        Me.Controls.Add(Me.TbMenu)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.PbxLogo)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.GbCategoriaProducto)
         Me.Name = "FrmCiudad"
         Me.Text = "Gestión de Ciudades"
         Me.Panel2.ResumeLayout(False)
@@ -196,8 +324,12 @@ Partial Class FrmCiudad
         CType(Me.PbxLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        Me.GbCategoriaProducto.ResumeLayout(False)
-        Me.GbCategoriaProducto.PerformLayout()
+        Me.TpDatos.ResumeLayout(False)
+        Me.EpMensaje.ResumeLayout(False)
+        Me.EpMensaje.PerformLayout()
+        Me.TbMenu.ResumeLayout(False)
+        Me.TbListado.ResumeLayout(False)
+        CType(Me.EpMensajeCiudad, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -207,11 +339,21 @@ Partial Class FrmCiudad
     Friend WithEvents PbxLogo As PictureBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
-    Friend WithEvents GbCategoriaProducto As GroupBox
+    Friend WithEvents TpDatos As TabPage
+    Friend WithEvents EpMensaje As GroupBox
+    Friend WithEvents BtnSalir As Button
+    Friend WithEvents BtnCancelar As Button
+    Friend WithEvents BtnGuardar As Button
+    Friend WithEvents BtnModificar As Button
+    Friend WithEvents BtnNuevo As Button
+    Friend WithEvents TxtNombreCiudad As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents TxtCodCiudad As TextBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents BtnLimpiar As Button
-    Friend WithEvents BtnAgregar As Button
+    Friend WithEvents TbMenu As TabControl
+    Friend WithEvents TbListado As TabPage
+    Friend WithEvents LsvCiudades As ListView
+    Friend WithEvents ChCodigoCiudad As ColumnHeader
+    Friend WithEvents ChNombreCiudad As ColumnHeader
+    Friend WithEvents EpMensajeCiudad As ErrorProvider
 End Class
