@@ -32,7 +32,7 @@ Public Class FrmCategoria
                 End If
             End If
         Catch ex As Exception
-            MessageBox.Show("Error al Consultar los Datos", "SIFOSYSTEM", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("Error al Consultar los Datos", "SIFO", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Finally
             Cn.Close()
         End Try
@@ -84,12 +84,12 @@ Public Class FrmCategoria
                     .Parameters.Add("@Descripcion", SqlDbType.NVarChar, 300).Value = TxtDescripcion.Text
                     .ExecuteNonQuery()
 
-                    MessageBox.Show("Registro realizado Satisfactoriamente", "SIFOSYSTEM", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    MessageBox.Show("Registro realizado Satisfactoriamente", "SIFO", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
                 End With
             End Using
         Catch ex As Exception
-            MessageBox.Show("Error al insertar categoria", "SIFOSYSTEM", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Error al insertar categoria", "SIFO", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Finally
             Cn.Close()
         End Try
@@ -115,12 +115,12 @@ Public Class FrmCategoria
                     .Parameters.Add("@IdCategoria", SqlDbType.Int).Value = TxtCodCategoria.Text
                     .ExecuteNonQuery()
 
-                    MessageBox.Show("Registro Actualizado Satisfactoriamente", "SIFOSYSTEM", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    MessageBox.Show("Registro Actualizado Satisfactoriamente", "SIFO", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
                 End With
             End Using
         Catch ex As Exception
-            MessageBox.Show("Error al actualizar la categoria", "SIFOSYSTEM", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Error al actualizar la categoria", "SIFO", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Finally
             Cn.Close()
         End Try
@@ -150,7 +150,7 @@ Public Class FrmCategoria
                     End With
                 End While
             Catch ex As Exception
-                MessageBox.Show("Error al Mostrar las categorias", "SIFOSYSTEM", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Error al Mostrar las categorias", "SIFO", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Finally
                 Cn.Close()
             End Try
@@ -207,12 +207,12 @@ Public Class FrmCategoria
                     .Parameters.Add("@IdCategoria", SqlDbType.Int).Value = Id
                     .ExecuteNonQuery()
 
-                    MessageBox.Show("Categoria Eliminada Satisfactoriamente", "SIFOSYSTEM", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    MessageBox.Show("Categoria Eliminada Satisfactoriamente", "SIFO", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
                 End With
             End Using
         Catch ex As Exception
-            MessageBox.Show("Error al elimnar la categoria" + ex.Message, "SIFOSYSTEM", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Error al elimnar la categoria" + ex.Message, "SIFO", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Finally
             Cn.Close()
         End Try
@@ -228,6 +228,9 @@ Public Class FrmCategoria
         If TxtNombreCategoria.Text = Nothing And TxtDescripcion.Text = Nothing Then
             EpMensaje.SetError(TxtNombreCategoria, "Primero debe ingresar datos")
             TxtNombreCategoria.Focus()
+            TxtNombreCategoria.BackColor = Color.LightBlue
+            TxtDescripcion.BackColor = Color.LightBlue
+
             Estado = False
         ElseIf TxtNombreCategoria.Text = Nothing Then
             EpMensaje.SetError(TxtNombreCategoria, "Ingrese el nombre de la categoria")
@@ -244,4 +247,18 @@ Public Class FrmCategoria
         End If
         Return Estado
     End Function
+
+    Private Sub TxtNombreCategoria_TextChanged(sender As Object, e As EventArgs) Handles TxtNombreCategoria.TextChanged
+        If TxtNombreCategoria.Text <> Nothing Then
+            EpMensaje.SetError(TxtNombreCategoria, "")
+            TxtNombreCategoria.BackColor = Color.White
+        End If
+    End Sub
+
+    Private Sub TxtDescripcion_TextChanged(sender As Object, e As EventArgs) Handles TxtDescripcion.TextChanged
+        If TxtDescripcion.Text <> Nothing Then
+            EpMensaje.SetError(TxtDescripcion, "")
+            TxtDescripcion.BackColor = Color.White
+        End If
+    End Sub
 End Class
