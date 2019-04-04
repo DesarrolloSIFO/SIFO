@@ -1,7 +1,7 @@
 ﻿Public Class FrmGestión
     Public Prueba2 = FrmFactura
 
-    Private Sub PnlAgregar_Click(sender As Object, e As EventArgs) Handles PnlAgregar.Click
+    Private Sub PnlAgregar_Click(sender As Object, e As EventArgs)
         GbxDatos.Visible = True
         PnlClientes.Visible = False
         BtnMostrarMenos.Visible = True
@@ -9,7 +9,7 @@
         Height = 598
     End Sub
 
-    Private Sub PnlMostrar_Click(sender As Object, e As EventArgs) Handles PnlMostrar.Click
+    Private Sub PnlMostrar_Click(sender As Object, e As EventArgs)
         GbxDatos.Visible = False
         PnlClientes.Visible = True
         BtnMostrarMenos.Visible = True

@@ -30,8 +30,6 @@ Partial Class Form
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GbxExamen = New System.Windows.Forms.GroupBox()
-        Me.BtnLimpiar = New System.Windows.Forms.Button()
-        Me.BtnAgregar = New System.Windows.Forms.Button()
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -47,6 +45,11 @@ Partial Class Form
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.BtnLimpiar = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.BtnAgregar = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         CType(Me.PbxLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -109,7 +112,10 @@ Partial Class Form
         'GbxExamen
         '
         Me.GbxExamen.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.GbxExamen.Controls.Add(Me.Button3)
         Me.GbxExamen.Controls.Add(Me.BtnLimpiar)
+        Me.GbxExamen.Controls.Add(Me.Button2)
+        Me.GbxExamen.Controls.Add(Me.Button1)
         Me.GbxExamen.Controls.Add(Me.BtnAgregar)
         Me.GbxExamen.Controls.Add(Me.ComboBox3)
         Me.GbxExamen.Controls.Add(Me.Label3)
@@ -129,43 +135,10 @@ Partial Class Form
         Me.GbxExamen.Font = New System.Drawing.Font("Microsoft JhengHei", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GbxExamen.Location = New System.Drawing.Point(8, 159)
         Me.GbxExamen.Name = "GbxExamen"
-        Me.GbxExamen.Size = New System.Drawing.Size(783, 320)
+        Me.GbxExamen.Size = New System.Drawing.Size(783, 347)
         Me.GbxExamen.TabIndex = 29
         Me.GbxExamen.TabStop = False
         Me.GbxExamen.Text = "DATOS DE FACTURA"
-        '
-        'BtnLimpiar
-        '
-        Me.BtnLimpiar.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.BtnLimpiar.FlatAppearance.BorderSize = 0
-        Me.BtnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnLimpiar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnLimpiar.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.BtnLimpiar.Image = CType(resources.GetObject("BtnLimpiar.Image"), System.Drawing.Image)
-        Me.BtnLimpiar.Location = New System.Drawing.Point(632, 261)
-        Me.BtnLimpiar.Name = "BtnLimpiar"
-        Me.BtnLimpiar.Size = New System.Drawing.Size(112, 44)
-        Me.BtnLimpiar.TabIndex = 19
-        Me.BtnLimpiar.Text = "Limpiar"
-        Me.BtnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.BtnLimpiar.UseVisualStyleBackColor = False
-        '
-        'BtnAgregar
-        '
-        Me.BtnAgregar.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.BtnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.BtnAgregar.FlatAppearance.BorderSize = 0
-        Me.BtnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnAgregar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnAgregar.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.BtnAgregar.Image = CType(resources.GetObject("BtnAgregar.Image"), System.Drawing.Image)
-        Me.BtnAgregar.Location = New System.Drawing.Point(498, 261)
-        Me.BtnAgregar.Name = "BtnAgregar"
-        Me.BtnAgregar.Size = New System.Drawing.Size(112, 44)
-        Me.BtnAgregar.TabIndex = 18
-        Me.BtnAgregar.Text = "Agregar"
-        Me.BtnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.BtnAgregar.UseVisualStyleBackColor = False
         '
         'ComboBox3
         '
@@ -298,12 +271,95 @@ Partial Class Form
         Me.TextBox1.Size = New System.Drawing.Size(336, 25)
         Me.TextBox1.TabIndex = 0
         '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
+        Me.Button3.Location = New System.Drawing.Point(639, 288)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(112, 44)
+        Me.Button3.TabIndex = 21
+        Me.Button3.Text = "Salir"
+        Me.Button3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Button3.UseVisualStyleBackColor = False
+        '
+        'BtnLimpiar
+        '
+        Me.BtnLimpiar.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.BtnLimpiar.FlatAppearance.BorderSize = 0
+        Me.BtnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnLimpiar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnLimpiar.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnLimpiar.Image = CType(resources.GetObject("BtnLimpiar.Image"), System.Drawing.Image)
+        Me.BtnLimpiar.Location = New System.Drawing.Point(503, 288)
+        Me.BtnLimpiar.Name = "BtnLimpiar"
+        Me.BtnLimpiar.Size = New System.Drawing.Size(112, 44)
+        Me.BtnLimpiar.TabIndex = 22
+        Me.BtnLimpiar.Text = "Limpiar"
+        Me.BtnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.BtnLimpiar.UseVisualStyleBackColor = False
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
+        Me.Button2.Location = New System.Drawing.Point(192, 288)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(112, 44)
+        Me.Button2.TabIndex = 18
+        Me.Button2.Text = "Guardar"
+        Me.Button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.Location = New System.Drawing.Point(345, 288)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(112, 44)
+        Me.Button1.TabIndex = 19
+        Me.Button1.Text = "Modificar"
+        Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'BtnAgregar
+        '
+        Me.BtnAgregar.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.BtnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.BtnAgregar.FlatAppearance.BorderSize = 0
+        Me.BtnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnAgregar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnAgregar.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnAgregar.Image = CType(resources.GetObject("BtnAgregar.Image"), System.Drawing.Image)
+        Me.BtnAgregar.Location = New System.Drawing.Point(38, 288)
+        Me.BtnAgregar.Name = "BtnAgregar"
+        Me.BtnAgregar.Size = New System.Drawing.Size(112, 44)
+        Me.BtnAgregar.TabIndex = 20
+        Me.BtnAgregar.Text = "Agregar"
+        Me.BtnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.BtnAgregar.UseVisualStyleBackColor = False
+        '
         'Form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ClientSize = New System.Drawing.Size(803, 491)
+        Me.ClientSize = New System.Drawing.Size(803, 518)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.GbxExamen)
         Me.Controls.Add(Me.PbxLogo)
@@ -342,6 +398,9 @@ Partial Class Form
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents ComboBox3 As ComboBox
+    Friend WithEvents Button3 As Button
     Friend WithEvents BtnLimpiar As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button1 As Button
     Friend WithEvents BtnAgregar As Button
 End Class

@@ -29,12 +29,15 @@ Partial Class FrmCiudad
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GbCategoriaProducto = New System.Windows.Forms.GroupBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TxtCodCiudad = New System.Windows.Forms.TextBox()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.BtnLimpiar = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.BtnAgregar = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Panel2.SuspendLayout()
         CType(Me.PbxLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -97,9 +100,12 @@ Partial Class FrmCiudad
         'GbCategoriaProducto
         '
         Me.GbCategoriaProducto.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.GbCategoriaProducto.Controls.Add(Me.TextBox1)
+        Me.GbCategoriaProducto.Controls.Add(Me.Button3)
         Me.GbCategoriaProducto.Controls.Add(Me.BtnLimpiar)
+        Me.GbCategoriaProducto.Controls.Add(Me.Button2)
+        Me.GbCategoriaProducto.Controls.Add(Me.Button1)
         Me.GbCategoriaProducto.Controls.Add(Me.BtnAgregar)
+        Me.GbCategoriaProducto.Controls.Add(Me.TextBox1)
         Me.GbCategoriaProducto.Controls.Add(Me.Label6)
         Me.GbCategoriaProducto.Controls.Add(Me.Label5)
         Me.GbCategoriaProducto.Controls.Add(Me.TxtCodCiudad)
@@ -111,11 +117,19 @@ Partial Class FrmCiudad
         Me.GbCategoriaProducto.TabStop = False
         Me.GbCategoriaProducto.Text = "Datos de la ciudad"
         '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(301, 162)
+        Me.TextBox1.Multiline = True
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(190, 23)
+        Me.TextBox1.TabIndex = 19
+        '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(173, 133)
+        Me.Label6.Location = New System.Drawing.Point(306, 125)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(170, 20)
         Me.Label6.TabIndex = 8
@@ -125,7 +139,7 @@ Partial Class FrmCiudad
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(173, 50)
+        Me.Label5.Location = New System.Drawing.Point(306, 42)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(162, 20)
         Me.Label5.TabIndex = 7
@@ -133,11 +147,27 @@ Partial Class FrmCiudad
         '
         'TxtCodCiudad
         '
-        Me.TxtCodCiudad.Location = New System.Drawing.Point(168, 85)
+        Me.TxtCodCiudad.Location = New System.Drawing.Point(301, 77)
         Me.TxtCodCiudad.Multiline = True
         Me.TxtCodCiudad.Name = "TxtCodCiudad"
         Me.TxtCodCiudad.Size = New System.Drawing.Size(190, 23)
         Me.TxtCodCiudad.TabIndex = 0
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
+        Me.Button3.Location = New System.Drawing.Point(638, 230)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(111, 44)
+        Me.Button3.TabIndex = 23
+        Me.Button3.Text = "Salir"
+        Me.Button3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Button3.UseVisualStyleBackColor = False
         '
         'BtnLimpiar
         '
@@ -147,13 +177,47 @@ Partial Class FrmCiudad
         Me.BtnLimpiar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnLimpiar.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.BtnLimpiar.Image = CType(resources.GetObject("BtnLimpiar.Image"), System.Drawing.Image)
-        Me.BtnLimpiar.Location = New System.Drawing.Point(633, 223)
+        Me.BtnLimpiar.Location = New System.Drawing.Point(502, 230)
         Me.BtnLimpiar.Name = "BtnLimpiar"
-        Me.BtnLimpiar.Size = New System.Drawing.Size(112, 44)
-        Me.BtnLimpiar.TabIndex = 18
+        Me.BtnLimpiar.Size = New System.Drawing.Size(111, 44)
+        Me.BtnLimpiar.TabIndex = 24
         Me.BtnLimpiar.Text = "Limpiar"
         Me.BtnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.BtnLimpiar.UseVisualStyleBackColor = False
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
+        Me.Button2.Location = New System.Drawing.Point(191, 230)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(111, 44)
+        Me.Button2.TabIndex = 20
+        Me.Button2.Text = "Guardar"
+        Me.Button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.Location = New System.Drawing.Point(344, 230)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(111, 44)
+        Me.Button1.TabIndex = 21
+        Me.Button1.Text = "Modificar"
+        Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'BtnAgregar
         '
@@ -164,21 +228,13 @@ Partial Class FrmCiudad
         Me.BtnAgregar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnAgregar.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.BtnAgregar.Image = CType(resources.GetObject("BtnAgregar.Image"), System.Drawing.Image)
-        Me.BtnAgregar.Location = New System.Drawing.Point(499, 223)
+        Me.BtnAgregar.Location = New System.Drawing.Point(37, 230)
         Me.BtnAgregar.Name = "BtnAgregar"
-        Me.BtnAgregar.Size = New System.Drawing.Size(112, 44)
-        Me.BtnAgregar.TabIndex = 17
+        Me.BtnAgregar.Size = New System.Drawing.Size(111, 44)
+        Me.BtnAgregar.TabIndex = 22
         Me.BtnAgregar.Text = "Agregar"
         Me.BtnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.BtnAgregar.UseVisualStyleBackColor = False
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(168, 170)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(190, 23)
-        Me.TextBox1.TabIndex = 19
         '
         'FrmCiudad
         '
@@ -212,6 +268,9 @@ Partial Class FrmCiudad
     Friend WithEvents Label5 As Label
     Friend WithEvents TxtCodCiudad As TextBox
     Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Button3 As Button
     Friend WithEvents BtnLimpiar As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button1 As Button
     Friend WithEvents BtnAgregar As Button
 End Class
