@@ -25,33 +25,44 @@ Partial Class FrmUsuario
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmUsuario))
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.GbxExamen = New System.Windows.Forms.GroupBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Lbl = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.PbxLogo = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.BtnLimpiar = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.BtnAgregar = New System.Windows.Forms.Button()
+        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.TpDatos = New System.Windows.Forms.TabPage()
+        Me.GbxExamen = New System.Windows.Forms.GroupBox()
+        Me.BtnSalir = New System.Windows.Forms.Button()
+        Me.BtnCancelar = New System.Windows.Forms.Button()
+        Me.BtnGuardar = New System.Windows.Forms.Button()
+        Me.BtnModificar = New System.Windows.Forms.Button()
+        Me.BtnNuevo = New System.Windows.Forms.Button()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Lblnombre = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.LblContraseña = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Lbl = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.CboActivo = New System.Windows.Forms.ComboBox()
+        Me.TxtContraseña = New System.Windows.Forms.TextBox()
+        Me.TxtNombre = New System.Windows.Forms.TextBox()
+        Me.TxtIdentidad = New System.Windows.Forms.TextBox()
+        Me.TxtCodigo = New System.Windows.Forms.TextBox()
+        Me.TpListado = New System.Windows.Forms.TabPage()
+        Me.LsvListado = New System.Windows.Forms.ListView()
+        Me.ChCodigo = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChIdentidad = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChNombre = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChContraseña = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChActivo = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChFecha = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Panel2.SuspendLayout()
-        Me.GbxExamen.SuspendLayout()
         CType(Me.PbxLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        Me.TabControl1.SuspendLayout()
+        Me.TpDatos.SuspendLayout()
+        Me.GbxExamen.SuspendLayout()
+        Me.TpListado.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel2
@@ -73,157 +84,6 @@ Partial Class FrmUsuario
         Me.Label2.Size = New System.Drawing.Size(88, 24)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Usuarios"
-        '
-        'GbxExamen
-        '
-        Me.GbxExamen.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.GbxExamen.Controls.Add(Me.Button3)
-        Me.GbxExamen.Controls.Add(Me.BtnLimpiar)
-        Me.GbxExamen.Controls.Add(Me.Button2)
-        Me.GbxExamen.Controls.Add(Me.Button1)
-        Me.GbxExamen.Controls.Add(Me.BtnAgregar)
-        Me.GbxExamen.Controls.Add(Me.Label4)
-        Me.GbxExamen.Controls.Add(Me.Label3)
-        Me.GbxExamen.Controls.Add(Me.Label11)
-        Me.GbxExamen.Controls.Add(Me.Label9)
-        Me.GbxExamen.Controls.Add(Me.Label8)
-        Me.GbxExamen.Controls.Add(Me.Label7)
-        Me.GbxExamen.Controls.Add(Me.Lbl)
-        Me.GbxExamen.Controls.Add(Me.Label5)
-        Me.GbxExamen.Controls.Add(Me.DateTimePicker1)
-        Me.GbxExamen.Controls.Add(Me.ComboBox1)
-        Me.GbxExamen.Controls.Add(Me.TextBox4)
-        Me.GbxExamen.Controls.Add(Me.TextBox3)
-        Me.GbxExamen.Controls.Add(Me.TextBox2)
-        Me.GbxExamen.Controls.Add(Me.TextBox1)
-        Me.GbxExamen.Font = New System.Drawing.Font("Microsoft JhengHei", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GbxExamen.Location = New System.Drawing.Point(5, 158)
-        Me.GbxExamen.Name = "GbxExamen"
-        Me.GbxExamen.Size = New System.Drawing.Size(783, 341)
-        Me.GbxExamen.TabIndex = 33
-        Me.GbxExamen.TabStop = False
-        Me.GbxExamen.Text = "Datos del usuario"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(53, 19)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(126, 20)
-        Me.Label4.TabIndex = 17
-        Me.Label4.Text = "Codigo Usuario"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(49, 133)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(155, 20)
-        Me.Label3.TabIndex = 16
-        Me.Label3.Text = "Nombre de usuario"
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(491, 103)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(53, 20)
-        Me.Label11.TabIndex = 13
-        Me.Label11.Text = "Fecha"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(491, 20)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(56, 20)
-        Me.Label9.TabIndex = 11
-        Me.Label9.Text = "Activo"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(53, 201)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(96, 20)
-        Me.Label8.TabIndex = 10
-        Me.Label8.Text = "Contrasena"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(53, 75)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(171, 20)
-        Me.Label7.TabIndex = 9
-        Me.Label7.Text = "Numero de identidad"
-        '
-        'Lbl
-        '
-        Me.Lbl.AutoSize = True
-        Me.Lbl.Font = New System.Drawing.Font("Microsoft JhengHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lbl.Location = New System.Drawing.Point(53, 75)
-        Me.Lbl.Name = "Lbl"
-        Me.Lbl.Size = New System.Drawing.Size(0, 16)
-        Me.Lbl.TabIndex = 8
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft JhengHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(53, 20)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(0, 16)
-        Me.Label5.TabIndex = 7
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(494, 133)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(250, 25)
-        Me.DateTimePicker1.TabIndex = 6
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(494, 46)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(250, 25)
-        Me.ComboBox1.TabIndex = 4
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(53, 226)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(336, 25)
-        Me.TextBox4.TabIndex = 3
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(53, 155)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(336, 25)
-        Me.TextBox3.TabIndex = 2
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(53, 100)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(336, 25)
-        Me.TextBox2.TabIndex = 1
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(53, 44)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(336, 25)
-        Me.TextBox1.TabIndex = 0
         '
         'PbxLogo
         '
@@ -258,135 +118,353 @@ Partial Class FrmUsuario
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Gestión Usuario"
         '
-        'Button3
+        'TabControl1
         '
-        Me.Button3.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.Button3.FlatAppearance.BorderSize = 0
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
-        Me.Button3.Location = New System.Drawing.Point(634, 282)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(112, 44)
-        Me.Button3.TabIndex = 21
-        Me.Button3.Text = "Salir"
-        Me.Button3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.TabControl1.Controls.Add(Me.TpDatos)
+        Me.TabControl1.Controls.Add(Me.TpListado)
+        Me.TabControl1.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TabControl1.Location = New System.Drawing.Point(0, 153)
+        Me.TabControl1.Name = "TabControl1"
+        Me.TabControl1.SelectedIndex = 0
+        Me.TabControl1.Size = New System.Drawing.Size(803, 380)
+        Me.TabControl1.TabIndex = 33
         '
-        'BtnLimpiar
+        'TpDatos
         '
-        Me.BtnLimpiar.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.BtnLimpiar.FlatAppearance.BorderSize = 0
-        Me.BtnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnLimpiar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnLimpiar.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.BtnLimpiar.Image = CType(resources.GetObject("BtnLimpiar.Image"), System.Drawing.Image)
-        Me.BtnLimpiar.Location = New System.Drawing.Point(498, 282)
-        Me.BtnLimpiar.Name = "BtnLimpiar"
-        Me.BtnLimpiar.Size = New System.Drawing.Size(112, 44)
-        Me.BtnLimpiar.TabIndex = 22
-        Me.BtnLimpiar.Text = "Limpiar"
-        Me.BtnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.BtnLimpiar.UseVisualStyleBackColor = False
+        Me.TpDatos.Controls.Add(Me.GbxExamen)
+        Me.TpDatos.Location = New System.Drawing.Point(4, 30)
+        Me.TpDatos.Name = "TpDatos"
+        Me.TpDatos.Padding = New System.Windows.Forms.Padding(3)
+        Me.TpDatos.Size = New System.Drawing.Size(795, 346)
+        Me.TpDatos.TabIndex = 0
+        Me.TpDatos.Text = "Datos del Usuario"
+        Me.TpDatos.UseVisualStyleBackColor = True
         '
-        'Button2
+        'GbxExamen
         '
-        Me.Button2.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
-        Me.Button2.Location = New System.Drawing.Point(187, 282)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(112, 44)
-        Me.Button2.TabIndex = 18
-        Me.Button2.Text = "Guardar"
-        Me.Button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.GbxExamen.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.GbxExamen.Controls.Add(Me.BtnSalir)
+        Me.GbxExamen.Controls.Add(Me.BtnCancelar)
+        Me.GbxExamen.Controls.Add(Me.BtnGuardar)
+        Me.GbxExamen.Controls.Add(Me.BtnModificar)
+        Me.GbxExamen.Controls.Add(Me.BtnNuevo)
+        Me.GbxExamen.Controls.Add(Me.Label4)
+        Me.GbxExamen.Controls.Add(Me.Lblnombre)
+        Me.GbxExamen.Controls.Add(Me.Label9)
+        Me.GbxExamen.Controls.Add(Me.LblContraseña)
+        Me.GbxExamen.Controls.Add(Me.Label7)
+        Me.GbxExamen.Controls.Add(Me.Lbl)
+        Me.GbxExamen.Controls.Add(Me.Label5)
+        Me.GbxExamen.Controls.Add(Me.CboActivo)
+        Me.GbxExamen.Controls.Add(Me.TxtContraseña)
+        Me.GbxExamen.Controls.Add(Me.TxtNombre)
+        Me.GbxExamen.Controls.Add(Me.TxtIdentidad)
+        Me.GbxExamen.Controls.Add(Me.TxtCodigo)
+        Me.GbxExamen.Font = New System.Drawing.Font("Microsoft JhengHei", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GbxExamen.Location = New System.Drawing.Point(6, -3)
+        Me.GbxExamen.Name = "GbxExamen"
+        Me.GbxExamen.Size = New System.Drawing.Size(783, 341)
+        Me.GbxExamen.TabIndex = 34
+        Me.GbxExamen.TabStop = False
         '
-        'Button1
+        'BtnSalir
         '
-        Me.Button1.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.Location = New System.Drawing.Point(340, 282)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(112, 44)
-        Me.Button1.TabIndex = 19
-        Me.Button1.Text = "Modificar"
-        Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.BtnSalir.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.BtnSalir.FlatAppearance.BorderSize = 0
+        Me.BtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnSalir.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnSalir.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnSalir.Image = CType(resources.GetObject("BtnSalir.Image"), System.Drawing.Image)
+        Me.BtnSalir.Location = New System.Drawing.Point(638, 282)
+        Me.BtnSalir.Name = "BtnSalir"
+        Me.BtnSalir.Size = New System.Drawing.Size(112, 44)
+        Me.BtnSalir.TabIndex = 21
+        Me.BtnSalir.Text = "Salir"
+        Me.BtnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.BtnSalir.UseVisualStyleBackColor = False
         '
-        'BtnAgregar
+        'BtnCancelar
         '
-        Me.BtnAgregar.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.BtnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.BtnAgregar.FlatAppearance.BorderSize = 0
-        Me.BtnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnAgregar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnAgregar.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.BtnAgregar.Image = CType(resources.GetObject("BtnAgregar.Image"), System.Drawing.Image)
-        Me.BtnAgregar.Location = New System.Drawing.Point(33, 282)
-        Me.BtnAgregar.Name = "BtnAgregar"
-        Me.BtnAgregar.Size = New System.Drawing.Size(112, 44)
-        Me.BtnAgregar.TabIndex = 20
-        Me.BtnAgregar.Text = "Agregar"
-        Me.BtnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.BtnAgregar.UseVisualStyleBackColor = False
+        Me.BtnCancelar.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.BtnCancelar.FlatAppearance.BorderSize = 0
+        Me.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnCancelar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnCancelar.Image = CType(resources.GetObject("BtnCancelar.Image"), System.Drawing.Image)
+        Me.BtnCancelar.Location = New System.Drawing.Point(496, 282)
+        Me.BtnCancelar.Name = "BtnCancelar"
+        Me.BtnCancelar.Size = New System.Drawing.Size(112, 44)
+        Me.BtnCancelar.TabIndex = 22
+        Me.BtnCancelar.Text = "Cancelar"
+        Me.BtnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.BtnCancelar.UseVisualStyleBackColor = False
+        '
+        'BtnGuardar
+        '
+        Me.BtnGuardar.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.BtnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.BtnGuardar.FlatAppearance.BorderSize = 0
+        Me.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnGuardar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnGuardar.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnGuardar.Image = CType(resources.GetObject("BtnGuardar.Image"), System.Drawing.Image)
+        Me.BtnGuardar.Location = New System.Drawing.Point(187, 282)
+        Me.BtnGuardar.Name = "BtnGuardar"
+        Me.BtnGuardar.Size = New System.Drawing.Size(112, 44)
+        Me.BtnGuardar.TabIndex = 18
+        Me.BtnGuardar.Text = "Guardar"
+        Me.BtnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.BtnGuardar.UseVisualStyleBackColor = False
+        '
+        'BtnModificar
+        '
+        Me.BtnModificar.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.BtnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnModificar.FlatAppearance.BorderSize = 0
+        Me.BtnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnModificar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnModificar.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnModificar.Image = CType(resources.GetObject("BtnModificar.Image"), System.Drawing.Image)
+        Me.BtnModificar.Location = New System.Drawing.Point(340, 282)
+        Me.BtnModificar.Name = "BtnModificar"
+        Me.BtnModificar.Size = New System.Drawing.Size(112, 44)
+        Me.BtnModificar.TabIndex = 19
+        Me.BtnModificar.Text = "Modificar"
+        Me.BtnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.BtnModificar.UseVisualStyleBackColor = False
+        '
+        'BtnNuevo
+        '
+        Me.BtnNuevo.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.BtnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.BtnNuevo.FlatAppearance.BorderSize = 0
+        Me.BtnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnNuevo.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnNuevo.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnNuevo.Image = CType(resources.GetObject("BtnNuevo.Image"), System.Drawing.Image)
+        Me.BtnNuevo.Location = New System.Drawing.Point(33, 282)
+        Me.BtnNuevo.Name = "BtnNuevo"
+        Me.BtnNuevo.Size = New System.Drawing.Size(112, 44)
+        Me.BtnNuevo.TabIndex = 20
+        Me.BtnNuevo.Text = "Nuevo"
+        Me.BtnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.BtnNuevo.UseVisualStyleBackColor = False
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(53, 19)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(126, 20)
+        Me.Label4.TabIndex = 17
+        Me.Label4.Text = "Codigo Usuario"
+        '
+        'Lblnombre
+        '
+        Me.Lblnombre.AutoSize = True
+        Me.Lblnombre.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lblnombre.Location = New System.Drawing.Point(49, 133)
+        Me.Lblnombre.Name = "Lblnombre"
+        Me.Lblnombre.Size = New System.Drawing.Size(155, 20)
+        Me.Lblnombre.TabIndex = 16
+        Me.Lblnombre.Text = "Nombre de usuario"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(492, 105)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(56, 20)
+        Me.Label9.TabIndex = 11
+        Me.Label9.Text = "Activo"
+        '
+        'LblContraseña
+        '
+        Me.LblContraseña.AutoSize = True
+        Me.LblContraseña.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblContraseña.Location = New System.Drawing.Point(53, 201)
+        Me.LblContraseña.Name = "LblContraseña"
+        Me.LblContraseña.Size = New System.Drawing.Size(96, 20)
+        Me.LblContraseña.TabIndex = 10
+        Me.LblContraseña.Text = "Contrasena"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(53, 75)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(171, 20)
+        Me.Label7.TabIndex = 9
+        Me.Label7.Text = "Numero de identidad"
+        '
+        'Lbl
+        '
+        Me.Lbl.AutoSize = True
+        Me.Lbl.Font = New System.Drawing.Font("Microsoft JhengHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lbl.Location = New System.Drawing.Point(53, 75)
+        Me.Lbl.Name = "Lbl"
+        Me.Lbl.Size = New System.Drawing.Size(0, 16)
+        Me.Lbl.TabIndex = 8
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft JhengHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(53, 20)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(0, 16)
+        Me.Label5.TabIndex = 7
+        '
+        'CboActivo
+        '
+        Me.CboActivo.FormattingEnabled = True
+        Me.CboActivo.Location = New System.Drawing.Point(495, 142)
+        Me.CboActivo.Name = "CboActivo"
+        Me.CboActivo.Size = New System.Drawing.Size(250, 25)
+        Me.CboActivo.TabIndex = 4
+        '
+        'TxtContraseña
+        '
+        Me.TxtContraseña.Location = New System.Drawing.Point(53, 226)
+        Me.TxtContraseña.Name = "TxtContraseña"
+        Me.TxtContraseña.Size = New System.Drawing.Size(336, 25)
+        Me.TxtContraseña.TabIndex = 3
+        '
+        'TxtNombre
+        '
+        Me.TxtNombre.Location = New System.Drawing.Point(53, 155)
+        Me.TxtNombre.Name = "TxtNombre"
+        Me.TxtNombre.Size = New System.Drawing.Size(336, 25)
+        Me.TxtNombre.TabIndex = 2
+        '
+        'TxtIdentidad
+        '
+        Me.TxtIdentidad.Location = New System.Drawing.Point(53, 100)
+        Me.TxtIdentidad.Name = "TxtIdentidad"
+        Me.TxtIdentidad.Size = New System.Drawing.Size(336, 25)
+        Me.TxtIdentidad.TabIndex = 1
+        '
+        'TxtCodigo
+        '
+        Me.TxtCodigo.Location = New System.Drawing.Point(53, 44)
+        Me.TxtCodigo.Name = "TxtCodigo"
+        Me.TxtCodigo.Size = New System.Drawing.Size(336, 25)
+        Me.TxtCodigo.TabIndex = 0
+        '
+        'TpListado
+        '
+        Me.TpListado.Controls.Add(Me.LsvListado)
+        Me.TpListado.Location = New System.Drawing.Point(4, 30)
+        Me.TpListado.Name = "TpListado"
+        Me.TpListado.Padding = New System.Windows.Forms.Padding(3)
+        Me.TpListado.Size = New System.Drawing.Size(795, 346)
+        Me.TpListado.TabIndex = 1
+        Me.TpListado.Text = "Listado de Usuarios"
+        Me.TpListado.UseVisualStyleBackColor = True
+        '
+        'LsvListado
+        '
+        Me.LsvListado.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ChCodigo, Me.ChIdentidad, Me.ChNombre, Me.ChContraseña, Me.ChActivo, Me.ChFecha})
+        Me.LsvListado.Font = New System.Drawing.Font("Microsoft JhengHei", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LsvListado.FullRowSelect = True
+        Me.LsvListado.GridLines = True
+        Me.LsvListado.Location = New System.Drawing.Point(-2, 0)
+        Me.LsvListado.Name = "LsvListado"
+        Me.LsvListado.Size = New System.Drawing.Size(797, 335)
+        Me.LsvListado.TabIndex = 0
+        Me.LsvListado.UseCompatibleStateImageBehavior = False
+        Me.LsvListado.View = System.Windows.Forms.View.Details
+        '
+        'ChCodigo
+        '
+        Me.ChCodigo.Text = "Código de usuario"
+        Me.ChCodigo.Width = 124
+        '
+        'ChIdentidad
+        '
+        Me.ChIdentidad.Text = "Número de identidad"
+        Me.ChIdentidad.Width = 163
+        '
+        'ChNombre
+        '
+        Me.ChNombre.Text = "Nombre usuario"
+        Me.ChNombre.Width = 144
+        '
+        'ChContraseña
+        '
+        Me.ChContraseña.Text = "Contraseña"
+        Me.ChContraseña.Width = 146
+        '
+        'ChActivo
+        '
+        Me.ChActivo.Text = "Activo"
+        Me.ChActivo.Width = 63
+        '
+        'ChFecha
+        '
+        Me.ChFecha.Text = "Fecha"
+        Me.ChFecha.Width = 143
         '
         'FrmUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ClientSize = New System.Drawing.Size(800, 511)
+        Me.ClientSize = New System.Drawing.Size(800, 529)
+        Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.Panel2)
-        Me.Controls.Add(Me.GbxExamen)
         Me.Controls.Add(Me.PbxLogo)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "FrmUsuario"
         Me.Text = "USUARIO"
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        Me.GbxExamen.ResumeLayout(False)
-        Me.GbxExamen.PerformLayout()
         CType(Me.PbxLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.TabControl1.ResumeLayout(False)
+        Me.TpDatos.ResumeLayout(False)
+        Me.GbxExamen.ResumeLayout(False)
+        Me.GbxExamen.PerformLayout()
+        Me.TpListado.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label2 As Label
-    Friend WithEvents GbxExamen As GroupBox
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label11 As Label
-    Friend WithEvents Label9 As Label
-    Friend WithEvents Label8 As Label
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Lbl As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents PbxLogo As PictureBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
+    Friend WithEvents TabControl1 As TabControl
+    Friend WithEvents TpDatos As TabPage
+    Friend WithEvents GbxExamen As GroupBox
+    Friend WithEvents BtnSalir As Button
+    Friend WithEvents BtnCancelar As Button
+    Friend WithEvents BtnGuardar As Button
+    Friend WithEvents BtnModificar As Button
+    Friend WithEvents BtnNuevo As Button
     Friend WithEvents Label4 As Label
-    Friend WithEvents Button3 As Button
-    Friend WithEvents BtnLimpiar As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents BtnAgregar As Button
+    Friend WithEvents Lblnombre As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents LblContraseña As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Lbl As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents CboActivo As ComboBox
+    Friend WithEvents TxtContraseña As TextBox
+    Friend WithEvents TxtNombre As TextBox
+    Friend WithEvents TxtIdentidad As TextBox
+    Friend WithEvents TxtCodigo As TextBox
+    Friend WithEvents TpListado As TabPage
+    Friend WithEvents LsvListado As ListView
+    Friend WithEvents ChCodigo As ColumnHeader
+    Friend WithEvents ChIdentidad As ColumnHeader
+    Friend WithEvents ChNombre As ColumnHeader
+    Friend WithEvents ChContraseña As ColumnHeader
+    Friend WithEvents ChActivo As ColumnHeader
+    Friend WithEvents ChFecha As ColumnHeader
 End Class
