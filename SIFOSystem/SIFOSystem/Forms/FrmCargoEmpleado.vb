@@ -7,7 +7,7 @@ Public Class FrmCargoEmpleado
         End If
 
         Try
-            Dim ListaCargos As New SqlCommand("Sp_InvestigarCorrelativoCargo", Cn)
+            Dim ListaCargos As New SqlCommand("Sp_InvestigarCorrelativoCargoEmpleado", Cn)
             ListaCargos.CommandType = CommandType.StoredProcedure
             Dim ListarCargosR As SqlDataReader
             Cn.Open()
