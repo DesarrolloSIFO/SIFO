@@ -65,6 +65,7 @@ Partial Class FrmCategoria
         '
         Me.TpCategorias.Controls.Add(Me.TpCategoria)
         Me.TpCategorias.Controls.Add(Me.TpListado)
+        Me.TpCategorias.Font = New System.Drawing.Font("Microsoft JhengHei", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TpCategorias.Location = New System.Drawing.Point(1, 156)
         Me.TpCategorias.Name = "TpCategorias"
         Me.TpCategorias.SelectedIndex = 0
@@ -84,12 +85,12 @@ Partial Class FrmCategoria
         Me.TpCategoria.Controls.Add(Me.Label5)
         Me.TpCategoria.Controls.Add(Me.TxtDescripcion)
         Me.TpCategoria.Controls.Add(Me.TxtCodCategoria)
-        Me.TpCategoria.Location = New System.Drawing.Point(4, 22)
+        Me.TpCategoria.Location = New System.Drawing.Point(4, 28)
         Me.TpCategoria.Name = "TpCategoria"
         Me.TpCategoria.Padding = New System.Windows.Forms.Padding(3)
-        Me.TpCategoria.Size = New System.Drawing.Size(787, 344)
+        Me.TpCategoria.Size = New System.Drawing.Size(787, 338)
         Me.TpCategoria.TabIndex = 0
-        Me.TpCategoria.Text = "Datos _Categoria"
+        Me.TpCategoria.Text = "Datos  Categoria"
         Me.TpCategoria.UseVisualStyleBackColor = True
         '
         'BtnGuardar
@@ -113,7 +114,7 @@ Partial Class FrmCategoria
         '
         Me.TxtNombreCategoria.Location = New System.Drawing.Point(46, 118)
         Me.TxtNombreCategoria.Name = "TxtNombreCategoria"
-        Me.TxtNombreCategoria.Size = New System.Drawing.Size(230, 20)
+        Me.TxtNombreCategoria.Size = New System.Drawing.Size(230, 27)
         Me.TxtNombreCategoria.TabIndex = 27
         '
         'BtnSalir
@@ -225,7 +226,7 @@ Partial Class FrmCategoria
         Me.TxtCodCategoria.Enabled = False
         Me.TxtCodCategoria.Location = New System.Drawing.Point(46, 67)
         Me.TxtCodCategoria.Name = "TxtCodCategoria"
-        Me.TxtCodCategoria.Size = New System.Drawing.Size(192, 20)
+        Me.TxtCodCategoria.Size = New System.Drawing.Size(192, 27)
         Me.TxtCodCategoria.TabIndex = 17
         '
         'TpListado
@@ -244,9 +245,9 @@ Partial Class FrmCategoria
         Me.LsvCategorias.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ChIdCategoria, Me.ChCategoria, Me.ChDescripcion})
         Me.LsvCategorias.FullRowSelect = True
         Me.LsvCategorias.GridLines = True
-        Me.LsvCategorias.Location = New System.Drawing.Point(-1, 0)
+        Me.LsvCategorias.Location = New System.Drawing.Point(0, 0)
         Me.LsvCategorias.Name = "LsvCategorias"
-        Me.LsvCategorias.Size = New System.Drawing.Size(661, 338)
+        Me.LsvCategorias.Size = New System.Drawing.Size(783, 338)
         Me.LsvCategorias.TabIndex = 0
         Me.LsvCategorias.UseCompatibleStateImageBehavior = False
         Me.LsvCategorias.View = System.Windows.Forms.View.Details
@@ -254,6 +255,7 @@ Partial Class FrmCategoria
         'ChIdCategoria
         '
         Me.ChIdCategoria.Text = "Id Categoria"
+        Me.ChIdCategoria.Width = 96
         '
         'ChCategoria
         '
@@ -265,7 +267,7 @@ Partial Class FrmCategoria
         '
         Me.ChDescripcion.Text = "Descripcion"
         Me.ChDescripcion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ChDescripcion.Width = 400
+        Me.ChDescripcion.Width = 475
         '
         'Panel2
         '
