@@ -21,7 +21,6 @@ Partial Class Form
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
-    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form))
         Me.Panel2 = New System.Windows.Forms.Panel()

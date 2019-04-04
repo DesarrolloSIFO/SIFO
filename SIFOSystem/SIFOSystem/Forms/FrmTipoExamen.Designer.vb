@@ -31,6 +31,11 @@ Partial Class FrmTipoExamen
         Me.TabExamenCliente = New System.Windows.Forms.TabControl()
         Me.TbExamenCliente = New System.Windows.Forms.TabPage()
         Me.GbxExamen = New System.Windows.Forms.GroupBox()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.BtnLimpiar = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.BtnAgregar = New System.Windows.Forms.Button()
         Me.TxtDistanciaPupilar = New System.Windows.Forms.TextBox()
         Me.TxtAdicion = New System.Windows.Forms.TextBox()
         Me.TxtOI = New System.Windows.Forms.TextBox()
@@ -60,11 +65,6 @@ Partial Class FrmTipoExamen
         Me.CHDistanciaPupilar = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.CHTipoExamen = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.CHIdUsuario = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.BtnLimpiar = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.BtnAgregar = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         CType(Me.PbxLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -80,7 +80,7 @@ Partial Class FrmTipoExamen
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Location = New System.Drawing.Point(5, 112)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(791, 45)
+        Me.Panel2.Size = New System.Drawing.Size(802, 45)
         Me.Panel2.TabIndex = 18
         '
         'Label2
@@ -131,8 +131,9 @@ Partial Class FrmTipoExamen
         '
         Me.TabExamenCliente.Controls.Add(Me.TbExamenCliente)
         Me.TabExamenCliente.Controls.Add(Me.TbListadoExamenCliente)
+        Me.TabExamenCliente.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabExamenCliente.Location = New System.Drawing.Point(5, 162)
-        Me.TabExamenCliente.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabExamenCliente.Margin = New System.Windows.Forms.Padding(2)
         Me.TabExamenCliente.Name = "TabExamenCliente"
         Me.TabExamenCliente.SelectedIndex = 0
         Me.TabExamenCliente.Size = New System.Drawing.Size(791, 388)
@@ -141,11 +142,11 @@ Partial Class FrmTipoExamen
         'TbExamenCliente
         '
         Me.TbExamenCliente.Controls.Add(Me.GbxExamen)
-        Me.TbExamenCliente.Location = New System.Drawing.Point(4, 22)
-        Me.TbExamenCliente.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TbExamenCliente.Location = New System.Drawing.Point(4, 30)
+        Me.TbExamenCliente.Margin = New System.Windows.Forms.Padding(2)
         Me.TbExamenCliente.Name = "TbExamenCliente"
-        Me.TbExamenCliente.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.TbExamenCliente.Size = New System.Drawing.Size(783, 362)
+        Me.TbExamenCliente.Padding = New System.Windows.Forms.Padding(2)
+        Me.TbExamenCliente.Size = New System.Drawing.Size(783, 354)
         Me.TbExamenCliente.TabIndex = 0
         Me.TbExamenCliente.Text = "Examen Cliente"
         Me.TbExamenCliente.UseVisualStyleBackColor = True
@@ -183,10 +184,93 @@ Partial Class FrmTipoExamen
         Me.GbxExamen.TabIndex = 26
         Me.GbxExamen.TabStop = False
         '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
+        Me.Button3.Location = New System.Drawing.Point(641, 299)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(112, 44)
+        Me.Button3.TabIndex = 29
+        Me.Button3.Text = "Salir"
+        Me.Button3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Button3.UseVisualStyleBackColor = False
+        '
+        'BtnLimpiar
+        '
+        Me.BtnLimpiar.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.BtnLimpiar.FlatAppearance.BorderSize = 0
+        Me.BtnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnLimpiar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnLimpiar.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnLimpiar.Image = CType(resources.GetObject("BtnLimpiar.Image"), System.Drawing.Image)
+        Me.BtnLimpiar.Location = New System.Drawing.Point(496, 299)
+        Me.BtnLimpiar.Name = "BtnLimpiar"
+        Me.BtnLimpiar.Size = New System.Drawing.Size(112, 44)
+        Me.BtnLimpiar.TabIndex = 30
+        Me.BtnLimpiar.Text = "Limpiar"
+        Me.BtnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.BtnLimpiar.UseVisualStyleBackColor = False
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
+        Me.Button2.Location = New System.Drawing.Point(189, 299)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(112, 44)
+        Me.Button2.TabIndex = 26
+        Me.Button2.Text = "Guardar"
+        Me.Button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.Location = New System.Drawing.Point(342, 299)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(112, 44)
+        Me.Button1.TabIndex = 27
+        Me.Button1.Text = "Modificar"
+        Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'BtnAgregar
+        '
+        Me.BtnAgregar.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.BtnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.BtnAgregar.FlatAppearance.BorderSize = 0
+        Me.BtnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnAgregar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnAgregar.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnAgregar.Image = CType(resources.GetObject("BtnAgregar.Image"), System.Drawing.Image)
+        Me.BtnAgregar.Location = New System.Drawing.Point(35, 299)
+        Me.BtnAgregar.Name = "BtnAgregar"
+        Me.BtnAgregar.Size = New System.Drawing.Size(112, 44)
+        Me.BtnAgregar.TabIndex = 28
+        Me.BtnAgregar.Text = "Agregar"
+        Me.BtnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.BtnAgregar.UseVisualStyleBackColor = False
+        '
         'TxtDistanciaPupilar
         '
         Me.TxtDistanciaPupilar.Location = New System.Drawing.Point(227, 237)
-        Me.TxtDistanciaPupilar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TxtDistanciaPupilar.Margin = New System.Windows.Forms.Padding(2)
         Me.TxtDistanciaPupilar.Name = "TxtDistanciaPupilar"
         Me.TxtDistanciaPupilar.Size = New System.Drawing.Size(193, 25)
         Me.TxtDistanciaPupilar.TabIndex = 25
@@ -194,7 +278,7 @@ Partial Class FrmTipoExamen
         'TxtAdicion
         '
         Me.TxtAdicion.Location = New System.Drawing.Point(227, 195)
-        Me.TxtAdicion.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TxtAdicion.Margin = New System.Windows.Forms.Padding(2)
         Me.TxtAdicion.Name = "TxtAdicion"
         Me.TxtAdicion.Size = New System.Drawing.Size(193, 25)
         Me.TxtAdicion.TabIndex = 24
@@ -202,7 +286,7 @@ Partial Class FrmTipoExamen
         'TxtOI
         '
         Me.TxtOI.Location = New System.Drawing.Point(227, 148)
-        Me.TxtOI.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TxtOI.Margin = New System.Windows.Forms.Padding(2)
         Me.TxtOI.Name = "TxtOI"
         Me.TxtOI.Size = New System.Drawing.Size(193, 25)
         Me.TxtOI.TabIndex = 23
@@ -210,7 +294,7 @@ Partial Class FrmTipoExamen
         'TxtOD
         '
         Me.TxtOD.Location = New System.Drawing.Point(227, 102)
-        Me.TxtOD.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TxtOD.Margin = New System.Windows.Forms.Padding(2)
         Me.TxtOD.Name = "TxtOD"
         Me.TxtOD.Size = New System.Drawing.Size(193, 25)
         Me.TxtOD.TabIndex = 22
@@ -218,7 +302,7 @@ Partial Class FrmTipoExamen
         'TxtNumIdenCliente
         '
         Me.TxtNumIdenCliente.Location = New System.Drawing.Point(228, 56)
-        Me.TxtNumIdenCliente.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TxtNumIdenCliente.Margin = New System.Windows.Forms.Padding(2)
         Me.TxtNumIdenCliente.Name = "TxtNumIdenCliente"
         Me.TxtNumIdenCliente.Size = New System.Drawing.Size(192, 25)
         Me.TxtNumIdenCliente.TabIndex = 21
@@ -226,7 +310,7 @@ Partial Class FrmTipoExamen
         'TxtCodExamenCliente
         '
         Me.TxtCodExamenCliente.Location = New System.Drawing.Point(227, 11)
-        Me.TxtCodExamenCliente.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TxtCodExamenCliente.Margin = New System.Windows.Forms.Padding(2)
         Me.TxtCodExamenCliente.Name = "TxtCodExamenCliente"
         Me.TxtCodExamenCliente.Size = New System.Drawing.Size(193, 25)
         Me.TxtCodExamenCliente.TabIndex = 20
@@ -349,11 +433,11 @@ Partial Class FrmTipoExamen
         'TbListadoExamenCliente
         '
         Me.TbListadoExamenCliente.Controls.Add(Me.LsvExamenCliente)
-        Me.TbListadoExamenCliente.Location = New System.Drawing.Point(4, 22)
-        Me.TbListadoExamenCliente.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TbListadoExamenCliente.Location = New System.Drawing.Point(4, 30)
+        Me.TbListadoExamenCliente.Margin = New System.Windows.Forms.Padding(2)
         Me.TbListadoExamenCliente.Name = "TbListadoExamenCliente"
-        Me.TbListadoExamenCliente.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.TbListadoExamenCliente.Size = New System.Drawing.Size(783, 362)
+        Me.TbListadoExamenCliente.Padding = New System.Windows.Forms.Padding(2)
+        Me.TbListadoExamenCliente.Size = New System.Drawing.Size(783, 354)
         Me.TbListadoExamenCliente.TabIndex = 1
         Me.TbListadoExamenCliente.Text = "Listado"
         Me.TbListadoExamenCliente.UseVisualStyleBackColor = True
@@ -361,9 +445,10 @@ Partial Class FrmTipoExamen
         'LsvExamenCliente
         '
         Me.LsvExamenCliente.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.CHCodigoExamenCliente, Me.CHNumIdentCliente, Me.CHFechaExamen, Me.CHOD, Me.CHOI, Me.CHAdicion, Me.CHDistanciaPupilar, Me.CHTipoExamen, Me.CHIdUsuario})
+        Me.LsvExamenCliente.Font = New System.Drawing.Font("Microsoft JhengHei", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LsvExamenCliente.GridLines = True
         Me.LsvExamenCliente.Location = New System.Drawing.Point(4, 5)
-        Me.LsvExamenCliente.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.LsvExamenCliente.Margin = New System.Windows.Forms.Padding(2)
         Me.LsvExamenCliente.Name = "LsvExamenCliente"
         Me.LsvExamenCliente.Size = New System.Drawing.Size(777, 353)
         Me.LsvExamenCliente.TabIndex = 0
@@ -413,89 +498,6 @@ Partial Class FrmTipoExamen
         '
         Me.CHIdUsuario.Text = "Usuario"
         Me.CHIdUsuario.Width = 100
-        '
-        'Button3
-        '
-        Me.Button3.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.Button3.FlatAppearance.BorderSize = 0
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
-        Me.Button3.Location = New System.Drawing.Point(641, 299)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(112, 44)
-        Me.Button3.TabIndex = 29
-        Me.Button3.Text = "Salir"
-        Me.Button3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.Button3.UseVisualStyleBackColor = False
-        '
-        'BtnLimpiar
-        '
-        Me.BtnLimpiar.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.BtnLimpiar.FlatAppearance.BorderSize = 0
-        Me.BtnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnLimpiar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnLimpiar.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.BtnLimpiar.Image = CType(resources.GetObject("BtnLimpiar.Image"), System.Drawing.Image)
-        Me.BtnLimpiar.Location = New System.Drawing.Point(496, 299)
-        Me.BtnLimpiar.Name = "BtnLimpiar"
-        Me.BtnLimpiar.Size = New System.Drawing.Size(112, 44)
-        Me.BtnLimpiar.TabIndex = 30
-        Me.BtnLimpiar.Text = "Limpiar"
-        Me.BtnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.BtnLimpiar.UseVisualStyleBackColor = False
-        '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
-        Me.Button2.Location = New System.Drawing.Point(189, 299)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(112, 44)
-        Me.Button2.TabIndex = 26
-        Me.Button2.Text = "Guardar"
-        Me.Button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.Button2.UseVisualStyleBackColor = False
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.Location = New System.Drawing.Point(342, 299)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(112, 44)
-        Me.Button1.TabIndex = 27
-        Me.Button1.Text = "Modificar"
-        Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.Button1.UseVisualStyleBackColor = False
-        '
-        'BtnAgregar
-        '
-        Me.BtnAgregar.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.BtnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.BtnAgregar.FlatAppearance.BorderSize = 0
-        Me.BtnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnAgregar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnAgregar.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.BtnAgregar.Image = CType(resources.GetObject("BtnAgregar.Image"), System.Drawing.Image)
-        Me.BtnAgregar.Location = New System.Drawing.Point(35, 299)
-        Me.BtnAgregar.Name = "BtnAgregar"
-        Me.BtnAgregar.Size = New System.Drawing.Size(112, 44)
-        Me.BtnAgregar.TabIndex = 28
-        Me.BtnAgregar.Text = "Agregar"
-        Me.BtnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.BtnAgregar.UseVisualStyleBackColor = False
         '
         'FrmTipoExamen
         '
@@ -564,5 +566,5 @@ Partial Class FrmTipoExamen
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents BtnAgregar As Button
-    End Sub
+
 End Class
