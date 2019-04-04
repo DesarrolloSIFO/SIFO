@@ -74,6 +74,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion\Conexion.vb" />
+    <Compile Include="Forms\FrmCargoEmpleado.Designer.vb">
+      <DependentUpon>FrmCargoEmpleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmCargoEmpleado.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\FrmEmpleado.Designer.vb">
       <DependentUpon>FrmEmpleado.vb</DependentUpon>
     </Compile>
@@ -138,14 +144,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Forms\FrmCargoEmpleado.Designer.vb">
-      <DependentUpon>FrmCargoEmpleado.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\FrmCargoEmpleado.vb">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Forms\FrmCargoEmpleado.resx">
+      <DependentUpon>FrmCargoEmpleado.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmCategoria.resx">
       <DependentUpon>FrmCategoria.vb</DependentUpon>
     </EmbeddedResource>
@@ -175,9 +178,6 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmCargoEmpleado.resx">
-      <DependentUpon>FrmCargoEmpleado.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -1,23 +1,23 @@
 ﻿Imports System.Data.SqlClient
-Public Class FrmFactura
 
-    Private Sub InvestigarCorrelativoCiudad()
+Public Class FrmCargoEmpleado
+    Private Sub InvestigarCorrelativoCargo()
         If Cn.State = ConnectionState.Open Then
             Cn.Close()
         End If
 
         Try
-            Dim ListaCiudad As New SqlCommand("Sp_InvestigarCorrelativoCiudad", Cn)
-            ListaCiudad.CommandType = CommandType.StoredProcedure
-            Dim ListarCiudadR As SqlDataReader
+            Dim ListaCargos As New SqlCommand("Sp_InvestigarCorrelativoCargoEmpleado", Cn)
+            ListaCargos.CommandType = CommandType.StoredProcedure
+            Dim ListarCargosR As SqlDataReader
             Cn.Open()
-            ListarCiudadR = ListaCiudad.ExecuteReader()
+            ListarCargosR = ListaCargos.ExecuteReader()
 
-            If ListarCiudadR.Read = True Then
-                If ListarCiudadR("IdCiudad") Is "" Then
-                    TxtCodCiudad.Text = 1
+            If ListarCargosR.Read = True Then
+                If ListarCargosR("IdCargoEmpleado") Is "" Then
+                    TxtCodCargo.Text = 1
                 Else
-                    TxtCodCiudad.Text = ListarCiudadR("IdCiudad").ToString
+                    TxtCodCargo.Text = ListarCargosR("IdCargoEmpleado").ToString
                 End If
             End If
 
@@ -28,7 +28,7 @@ Public Class FrmFactura
         End Try
     End Sub
 
-    Private Sub GuardarCiudad()
+    Private Sub GuardarCargoEmpleado()
         If Cn.State = ConnectionState.Open Then
             Cn.Close()
         End If
@@ -37,11 +37,11 @@ Public Class FrmFactura
             Cn.Open()
             Using Cmd As New SqlCommand
                 With Cmd
-                    .CommandText = "Sp_InsertarCiudad"
+                    .CommandText = "Sp_InsertarCargoEmpleado"
                     .CommandType = CommandType.StoredProcedure
                     .Connection = Cn
 
-                    .Parameters.Add("@NombreCiudad", SqlDbType.NVarChar, 40).Value = TxtNombreCiudad.Text
+                    .Parameters.Add("@CargoEmpleado", SqlDbType.NVarChar, 40).Value = TxtCargoEmpleado.Text
                     .ExecuteNonQuery()
 
                     MessageBox.Show("Registro almacenado satisfactoriamente", "SIFO", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -50,14 +50,14 @@ Public Class FrmFactura
             End Using
 
         Catch ex As Exception
-            MessageBox.Show("Error al insertar la ciudad" + ex.Message, "SIFO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Error al insertar el cargo" + ex.Message, "SIFO", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Finally
             Cn.Close()
         End Try
     End Sub
 
 
-    Private Sub ActualizarCiudad()
+    Private Sub ActualizarCargoEmpleado()
         If Cn.State = ConnectionState.Open Then
             Cn.Close()
         End If
@@ -66,12 +66,12 @@ Public Class FrmFactura
             Cn.Open()
             Using Cmd As New SqlCommand
                 With Cmd
-                    .CommandText = "Sp_ActualizarCiudad"
+                    .CommandText = "Sp_ActualizarCargoEmpleado"
                     .CommandType = CommandType.StoredProcedure
                     .Connection = Cn
 
-                    .Parameters.Add("@NombreCiudad", SqlDbType.NVarChar, 40).Value = TxtNombreCiudad.Text
-                    .Parameters.Add("@IdCiudad", SqlDbType.Int).Value = CInt(TxtCodCiudad.Text)
+                    .Parameters.Add("@CargoEmpleado", SqlDbType.NVarChar, 40).Value = TxtCargoEmpleado.Text
+                    .Parameters.Add("@IdCargoEmpleado", SqlDbType.Int).Value = CInt(TxtCodCargo.Text)
                     .ExecuteNonQuery()
 
                     MessageBox.Show("Registro actualizado satisfactoriamente", "SIFO", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -80,13 +80,13 @@ Public Class FrmFactura
             End Using
 
         Catch ex As Exception
-            MessageBox.Show("Error al actualizar la ciudad" + ex.Message, "SIFO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Error al actualizar el Cargo" + ex.Message, "SIFO", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Finally
             Cn.Close()
         End Try
     End Sub
 
-    Private Sub EliminarCiudad()
+    Private Sub EliminarCargoEmpleado()
         If Cn.State = ConnectionState.Open Then
             Cn.Close()
         End If
@@ -95,13 +95,13 @@ Public Class FrmFactura
             Cn.Open()
             Using Cmd As New SqlCommand
                 With Cmd
-                    .CommandText = "Sp_EliminarCiudad"
+                    .CommandText = "Sp_EliminarCargoEmpleado"
                     .CommandType = CommandType.StoredProcedure
                     .Connection = Cn
 
                     Dim Id As Integer
-                    Id = CInt(LsvCiudades.FocusedItem.SubItems(0).Text)
-                    .Parameters.Add("@IdCiudad", SqlDbType.Int).Value = Id
+                    Id = CInt(LsvCargos.FocusedItem.SubItems(0).Text)
+                    .Parameters.Add("@IdCargoEmpleado", SqlDbType.Int).Value = Id
                     .ExecuteNonQuery()
 
                     MessageBox.Show("Registro eliminado satisfactoriamente", "SIFO", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -110,7 +110,7 @@ Public Class FrmFactura
             End Using
 
         Catch ex As Exception
-            MessageBox.Show("Error al eliminar la ciudad", "SIFO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Error al eliminar el Cargo", "SIFO", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Finally
             Cn.Close()
         End Try
@@ -119,28 +119,28 @@ Public Class FrmFactura
     Private Function ValidarTextBox()
         Dim Estado As Boolean
 
-        If TxtNombreCiudad.Text = Nothing Then
-            EpMensajeCiudad.SetError(TxtNombreCiudad, "Tiene que ingresar la ciudad")
-            TxtNombreCiudad.Focus()
-            TxtNombreCiudad.BackColor = Color.LightBlue
+        If TxtCargoEmpleado.Text = Nothing Then
+            EpMensajeCargo.SetError(TxtCargoEmpleado, "Tiene que ingresar el Cargo")
+            TxtCargoEmpleado.Focus()
+            TxtCargoEmpleado.BackColor = Color.LightBlue
             Estado = False
         Else
             Estado = True
-            EpMensajeCiudad.SetError(TxtNombreCiudad, "")
+            EpMensajeCargo.SetError(TxtCargoEmpleado, "")
 
         End If
         Return Estado
     End Function
 
     Private Sub Limpiar()
-        TxtCodCiudad.Text = Nothing
-        TxtNombreCiudad.Text = Nothing
+        TxtCodCargo.Text = Nothing
+        TxtCargoEmpleado.Text = Nothing
     End Sub
 
-    Private Sub TxtNombreCiudad_TextChanged(sender As Object, e As EventArgs) Handles TxtNombreCiudad.TextChanged
-        If TxtNombreCiudad.Text <> Nothing Then
-            EpMensajeCiudad.SetError(TxtNombreCiudad, "")
-            TxtNombreCiudad.BackColor = Color.White
+    Private Sub TxtCargoEmpleado_TextChanged(sender As Object, e As EventArgs) Handles TxtCargoEmpleado.TextChanged
+        If TxtCargoEmpleado.Text <> Nothing Then
+            EpMensajeCargo.SetError(TxtCargoEmpleado, "")
+            TxtCargoEmpleado.BackColor = Color.White
         End If
     End Sub
 
@@ -154,25 +154,25 @@ Public Class FrmFactura
 
             Try
                 With CMd
-                    .CommandText = "Sp_MostrarCiudad"
+                    .CommandText = "Sp_MostrarCargoEmpleado"
                     .CommandType = CommandType.StoredProcedure
                     .Connection = Cn
 
                 End With
 
-                Dim VerCiudad As SqlDataReader
-                VerCiudad = CMd.ExecuteReader
+                Dim VerCargos As SqlDataReader
+                VerCargos = CMd.ExecuteReader
 
-                LsvCiudades.Items.Clear()
-                While VerCiudad.Read = True
-                    With LsvCiudades.Items.Add(VerCiudad("IdCiudad").ToString)
-                        .SubItems.Add(VerCiudad("NombreCiudad").ToString)
+                LsvCargos.Items.Clear()
+                While VerCargos.Read = True
+                    With LsvCargos.Items.Add(VerCargos("IdCargoEmpleado").ToString)
+                        .SubItems.Add(VerCargos("CargoEmpleado").ToString)
                     End With
                 End While
 
             Catch ex As Exception
 
-                MessageBox.Show("Error al mostrar las ciudades" + ex.Message, "SIFO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Error al mostrar los Cargos" + ex.Message, "SIFO", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Finally
                 Cn.Close()
 
@@ -189,16 +189,16 @@ Public Class FrmFactura
 
     Private Sub BtnNuevo_Click(sender As Object, e As EventArgs) Handles BtnNuevo.Click
         HabilitarBotones(False, True, False, True)
-        InvestigarCorrelativoCiudad()
+        InvestigarCorrelativoCargo()
 
-        TxtNombreCiudad.Focus()
+        TxtCargoEmpleado.Focus()
     End Sub
 
     Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
         HabilitarBotones(True, False, False, False)
         If ValidarTextBox() = True Then
-            If ExisteCiudad() = False Then
-                GuardarCiudad()
+            If ExisteCargo() = False Then
+                GuardarCargoEmpleado()
                 HabilitarBotones(True, False, False, False)
                 MostrarTodo()
                 Limpiar()
@@ -209,7 +209,7 @@ Public Class FrmFactura
     Private Sub BtnModificar_Click(sender As Object, e As EventArgs) Handles BtnModificar.Click
         If ValidarTextBox() = True Then
             HabilitarBotones(True, False, False, True)
-            ActualizarCiudad()
+            ActualizarCargoEmpleado()
             MostrarTodo()
             Limpiar()
         End If
@@ -226,14 +226,14 @@ Public Class FrmFactura
     End Sub
 
     Private Sub EditarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EditarToolStripMenuItem.Click
-        TxtCodCiudad.Text = LsvCiudades.FocusedItem.SubItems(0).Text
-        TxtNombreCiudad.Text = LsvCiudades.FocusedItem.SubItems(1).Text
+        TxtCodCargo.Text = LsvCargos.FocusedItem.SubItems(0).Text
+        TxtCargoEmpleado.Text = LsvCargos.FocusedItem.SubItems(1).Text
         TbMenu.SelectedIndex = 0
         HabilitarBotones(False, False, True, True)
     End Sub
 
     Private Sub EliminarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EliminarToolStripMenuItem.Click
-        EliminarCiudad()
+        EliminarCargoEmpleado()
         MostrarTodo()
 
         HabilitarBotones(True, False, False, False)
@@ -243,7 +243,7 @@ Public Class FrmFactura
         MostrarTodo()
     End Sub
 
-    Private Function ExisteCiudad() As Boolean
+    Private Function ExisteCargo() As Boolean
         If Cn.State = ConnectionState.Open Then
             Cn.Close()
         End If
@@ -253,11 +253,11 @@ Public Class FrmFactura
             Cn.Open()
             Using Cmd As New SqlCommand
                 With Cmd
-                    .CommandText = "Sp_ExisteCiudad"
+                    .CommandText = "Sp_ExisteCargo"
                     .CommandType = CommandType.StoredProcedure
                     .Connection = Cn
 
-                    .Parameters.Add("@NombreCiudad", SqlDbType.NVarChar, 40).Value = TxtNombreCiudad.Text.Trim
+                    .Parameters.Add("@CargoEmpleado", SqlDbType.NVarChar, 40).Value = TxtCargoEmpleado.Text.Trim
 
                 End With
 
@@ -265,7 +265,7 @@ Public Class FrmFactura
 
                 If Existe <> 0 Then
                     Estado = True
-                    MessageBox.Show("Ya esta esta registrado la ciudad" + " " + TxtNombreCiudad.Text, "SIFO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    MessageBox.Show("Ya esta esta registrado el cargo" + " " + TxtCargoEmpleado.Text, "SIFO", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     Limpiar()
                 End If
 
