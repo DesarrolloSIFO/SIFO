@@ -177,7 +177,7 @@ Public Class FrmCategoria
         TxtNombreCategoria.Focus()
         HabilitarBotones(False, False, True, True)
 
-        TabPage1.Show()
+        TpCategorias.SelectedIndex = 0
 
     End Sub
 

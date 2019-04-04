@@ -24,8 +24,8 @@ Partial Class FrmCategoria
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmCategoria))
-        Me.TabControl1 = New System.Windows.Forms.TabControl()
-        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.TpCategorias = New System.Windows.Forms.TabControl()
+        Me.TpCategoria = New System.Windows.Forms.TabPage()
         Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.TxtNombreCategoria = New System.Windows.Forms.TextBox()
         Me.BtnSalir = New System.Windows.Forms.Button()
@@ -37,7 +37,7 @@ Partial Class FrmCategoria
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TxtDescripcion = New System.Windows.Forms.TextBox()
         Me.TxtCodCategoria = New System.Windows.Forms.TextBox()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.TpListado = New System.Windows.Forms.TabPage()
         Me.LsvCategorias = New System.Windows.Forms.ListView()
         Me.ChIdCategoria = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChCategoria = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -51,9 +51,9 @@ Partial Class FrmCategoria
         Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EpMensaje = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.TabControl1.SuspendLayout()
-        Me.TabPage1.SuspendLayout()
-        Me.TabPage2.SuspendLayout()
+        Me.TpCategorias.SuspendLayout()
+        Me.TpCategoria.SuspendLayout()
+        Me.TpListado.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.PbxLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -61,36 +61,36 @@ Partial Class FrmCategoria
         CType(Me.EpMensaje, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'TabControl1
+        'TpCategorias
         '
-        Me.TabControl1.Controls.Add(Me.TabPage1)
-        Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Location = New System.Drawing.Point(1, 156)
-        Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(795, 370)
-        Me.TabControl1.TabIndex = 37
+        Me.TpCategorias.Controls.Add(Me.TpCategoria)
+        Me.TpCategorias.Controls.Add(Me.TpListado)
+        Me.TpCategorias.Location = New System.Drawing.Point(1, 156)
+        Me.TpCategorias.Name = "TpCategorias"
+        Me.TpCategorias.SelectedIndex = 0
+        Me.TpCategorias.Size = New System.Drawing.Size(795, 370)
+        Me.TpCategorias.TabIndex = 37
         '
-        'TabPage1
+        'TpCategoria
         '
-        Me.TabPage1.Controls.Add(Me.BtnGuardar)
-        Me.TabPage1.Controls.Add(Me.TxtNombreCategoria)
-        Me.TabPage1.Controls.Add(Me.BtnSalir)
-        Me.TabPage1.Controls.Add(Me.BtnCancelar)
-        Me.TabPage1.Controls.Add(Me.BtnModificar)
-        Me.TabPage1.Controls.Add(Me.BtnAgregar)
-        Me.TabPage1.Controls.Add(Me.Label7)
-        Me.TabPage1.Controls.Add(Me.Label6)
-        Me.TabPage1.Controls.Add(Me.Label5)
-        Me.TabPage1.Controls.Add(Me.TxtDescripcion)
-        Me.TabPage1.Controls.Add(Me.TxtCodCategoria)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(787, 344)
-        Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "Datos _Categoria"
-        Me.TabPage1.UseVisualStyleBackColor = True
+        Me.TpCategoria.Controls.Add(Me.BtnGuardar)
+        Me.TpCategoria.Controls.Add(Me.TxtNombreCategoria)
+        Me.TpCategoria.Controls.Add(Me.BtnSalir)
+        Me.TpCategoria.Controls.Add(Me.BtnCancelar)
+        Me.TpCategoria.Controls.Add(Me.BtnModificar)
+        Me.TpCategoria.Controls.Add(Me.BtnAgregar)
+        Me.TpCategoria.Controls.Add(Me.Label7)
+        Me.TpCategoria.Controls.Add(Me.Label6)
+        Me.TpCategoria.Controls.Add(Me.Label5)
+        Me.TpCategoria.Controls.Add(Me.TxtDescripcion)
+        Me.TpCategoria.Controls.Add(Me.TxtCodCategoria)
+        Me.TpCategoria.Location = New System.Drawing.Point(4, 22)
+        Me.TpCategoria.Name = "TpCategoria"
+        Me.TpCategoria.Padding = New System.Windows.Forms.Padding(3)
+        Me.TpCategoria.Size = New System.Drawing.Size(787, 344)
+        Me.TpCategoria.TabIndex = 0
+        Me.TpCategoria.Text = "Datos _Categoria"
+        Me.TpCategoria.UseVisualStyleBackColor = True
         '
         'BtnGuardar
         '
@@ -228,16 +228,16 @@ Partial Class FrmCategoria
         Me.TxtCodCategoria.Size = New System.Drawing.Size(192, 20)
         Me.TxtCodCategoria.TabIndex = 17
         '
-        'TabPage2
+        'TpListado
         '
-        Me.TabPage2.Controls.Add(Me.LsvCategorias)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(787, 344)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "Listado"
-        Me.TabPage2.UseVisualStyleBackColor = True
+        Me.TpListado.Controls.Add(Me.LsvCategorias)
+        Me.TpListado.Location = New System.Drawing.Point(4, 22)
+        Me.TpListado.Name = "TpListado"
+        Me.TpListado.Padding = New System.Windows.Forms.Padding(3)
+        Me.TpListado.Size = New System.Drawing.Size(787, 344)
+        Me.TpListado.TabIndex = 1
+        Me.TpListado.Text = "Listado"
+        Me.TpListado.UseVisualStyleBackColor = True
         '
         'LsvCategorias
         '
@@ -350,17 +350,17 @@ Partial Class FrmCategoria
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.ClientSize = New System.Drawing.Size(800, 530)
         Me.ContextMenuStrip = Me.CmsOpciones
-        Me.Controls.Add(Me.TabControl1)
+        Me.Controls.Add(Me.TpCategorias)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.PbxLogo)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "FrmCategoria"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Gestión Categoría"
-        Me.TabControl1.ResumeLayout(False)
-        Me.TabPage1.ResumeLayout(False)
-        Me.TabPage1.PerformLayout()
-        Me.TabPage2.ResumeLayout(False)
+        Me.TpCategorias.ResumeLayout(False)
+        Me.TpCategoria.ResumeLayout(False)
+        Me.TpCategoria.PerformLayout()
+        Me.TpListado.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         CType(Me.PbxLogo, System.ComponentModel.ISupportInitialize).EndInit()
@@ -372,8 +372,8 @@ Partial Class FrmCategoria
 
     End Sub
 
-    Friend WithEvents TabControl1 As TabControl
-    Friend WithEvents TabPage1 As TabPage
+    Friend WithEvents TpCategorias As TabControl
+    Friend WithEvents TpCategoria As TabPage
     Friend WithEvents BtnGuardar As Button
     Friend WithEvents TxtNombreCategoria As TextBox
     Friend WithEvents BtnSalir As Button
@@ -385,7 +385,7 @@ Partial Class FrmCategoria
     Friend WithEvents Label5 As Label
     Friend WithEvents TxtDescripcion As TextBox
     Friend WithEvents TxtCodCategoria As TextBox
-    Friend WithEvents TabPage2 As TabPage
+    Friend WithEvents TpListado As TabPage
     Friend WithEvents LsvCategorias As ListView
     Friend WithEvents ChIdCategoria As ColumnHeader
     Friend WithEvents ChCategoria As ColumnHeader
