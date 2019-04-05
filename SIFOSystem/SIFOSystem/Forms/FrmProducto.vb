@@ -79,7 +79,7 @@ Public Class FrmProducto
                     .CommandType = CommandType.StoredProcedure
                     .Connection = Cn
 
-                    ' Enviar el parámetro del nombre del genero musical
+                    ' Enviar el parámet
 
                     .Parameters.Add("@NombreProducto", SqlDbType.NVarChar, 50).Value = TxtNombreProducto.Text
                     .Parameters.Add("@PrecioCosto", SqlDbType.Money).Value = TxtPrecioCosto.Text
