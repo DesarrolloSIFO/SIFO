@@ -110,7 +110,7 @@ Public Class FrmCargoEmpleado
             End Using
 
         Catch ex As Exception
-            MessageBox.Show("Error al eliminar el Cargo", "SIFO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Error al eliminar el Cargo" + ex.Message, "SIFO", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Finally
             Cn.Close()
         End Try

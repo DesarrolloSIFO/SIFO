@@ -232,10 +232,10 @@ Partial Class FrmCategoria
         'TpListado
         '
         Me.TpListado.Controls.Add(Me.LsvCategorias)
-        Me.TpListado.Location = New System.Drawing.Point(4, 22)
+        Me.TpListado.Location = New System.Drawing.Point(4, 28)
         Me.TpListado.Name = "TpListado"
         Me.TpListado.Padding = New System.Windows.Forms.Padding(3)
-        Me.TpListado.Size = New System.Drawing.Size(787, 344)
+        Me.TpListado.Size = New System.Drawing.Size(787, 338)
         Me.TpListado.TabIndex = 1
         Me.TpListado.Text = "Listado"
         Me.TpListado.UseVisualStyleBackColor = True
