@@ -22,6 +22,7 @@ Partial Class FrmEmpleado
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmEmpleado))
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -29,6 +30,14 @@ Partial Class FrmEmpleado
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GbxExamen = New System.Windows.Forms.GroupBox()
+        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.TpDatosEmpleado = New System.Windows.Forms.TabPage()
+        Me.TpListadoEmpleado = New System.Windows.Forms.TabPage()
+        Me.BtnSalir = New System.Windows.Forms.Button()
+        Me.BtnCancelar = New System.Windows.Forms.Button()
+        Me.BtnGuardar = New System.Windows.Forms.Button()
+        Me.BtnModificar = New System.Windows.Forms.Button()
+        Me.BtnAgregar = New System.Windows.Forms.Button()
         Me.TxtDireccion = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.CboCargoEmpleado = New System.Windows.Forms.ComboBox()
@@ -47,17 +56,31 @@ Partial Class FrmEmpleado
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TxtNombres = New System.Windows.Forms.TextBox()
+        Me.TxtNombre = New System.Windows.Forms.TextBox()
         Me.TxtNumIdent = New System.Windows.Forms.TextBox()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.BtnLimpiar = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.BtnAgregar = New System.Windows.Forms.Button()
+        Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.LsvEmpleados = New System.Windows.Forms.ListView()
+        Me.ChNumeroIdentidad = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChNombre = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChApellidos = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChDireccion = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChTelefono = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChFechaNacimiento = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChSexo = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChCiudad = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChCargoEmpleado = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChFechaContratacion = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel2.SuspendLayout()
         CType(Me.PbxLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.GbxExamen.SuspendLayout()
+        Me.TabControl1.SuspendLayout()
+        Me.TpDatosEmpleado.SuspendLayout()
+        Me.TpListadoEmpleado.SuspendLayout()
+        Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel2
@@ -116,278 +139,136 @@ Partial Class FrmEmpleado
         'GbxExamen
         '
         Me.GbxExamen.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.GbxExamen.Controls.Add(Me.Button3)
-        Me.GbxExamen.Controls.Add(Me.BtnLimpiar)
-        Me.GbxExamen.Controls.Add(Me.Button2)
-        Me.GbxExamen.Controls.Add(Me.Button1)
-        Me.GbxExamen.Controls.Add(Me.BtnAgregar)
-        Me.GbxExamen.Controls.Add(Me.TxtDireccion)
-        Me.GbxExamen.Controls.Add(Me.Label8)
-        Me.GbxExamen.Controls.Add(Me.CboCargoEmpleado)
-        Me.GbxExamen.Controls.Add(Me.CboCiudad)
-        Me.GbxExamen.Controls.Add(Me.CboSexo)
-        Me.GbxExamen.Controls.Add(Me.Label12)
-        Me.GbxExamen.Controls.Add(Me.Label4)
-        Me.GbxExamen.Controls.Add(Me.Label3)
-        Me.GbxExamen.Controls.Add(Me.DtpFechaContra)
-        Me.GbxExamen.Controls.Add(Me.DtpFechaNac)
-        Me.GbxExamen.Controls.Add(Me.TxtTelefono)
-        Me.GbxExamen.Controls.Add(Me.TxtApellidos)
-        Me.GbxExamen.Controls.Add(Me.Label11)
-        Me.GbxExamen.Controls.Add(Me.Label10)
-        Me.GbxExamen.Controls.Add(Me.Label9)
-        Me.GbxExamen.Controls.Add(Me.Label7)
-        Me.GbxExamen.Controls.Add(Me.Label6)
-        Me.GbxExamen.Controls.Add(Me.Label5)
-        Me.GbxExamen.Controls.Add(Me.TxtNombres)
-        Me.GbxExamen.Controls.Add(Me.TxtNumIdent)
+        Me.GbxExamen.Controls.Add(Me.TabControl1)
         Me.GbxExamen.Font = New System.Drawing.Font("Microsoft JhengHei", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GbxExamen.Location = New System.Drawing.Point(-2, 159)
         Me.GbxExamen.Name = "GbxExamen"
         Me.GbxExamen.Size = New System.Drawing.Size(791, 431)
         Me.GbxExamen.TabIndex = 33
         Me.GbxExamen.TabStop = False
-        Me.GbxExamen.Text = "Datos del empleado"
         '
-        'TxtDireccion
+        'TabControl1
         '
-        Me.TxtDireccion.Location = New System.Drawing.Point(53, 268)
-        Me.TxtDireccion.Multiline = True
-        Me.TxtDireccion.Name = "TxtDireccion"
-        Me.TxtDireccion.Size = New System.Drawing.Size(393, 58)
-        Me.TxtDireccion.TabIndex = 28
+        Me.TabControl1.Controls.Add(Me.TpDatosEmpleado)
+        Me.TabControl1.Controls.Add(Me.TpListadoEmpleado)
+        Me.TabControl1.Location = New System.Drawing.Point(3, 0)
+        Me.TabControl1.Name = "TabControl1"
+        Me.TabControl1.SelectedIndex = 0
+        Me.TabControl1.Size = New System.Drawing.Size(800, 431)
+        Me.TabControl1.TabIndex = 0
         '
-        'Label8
+        'TpDatosEmpleado
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(53, 246)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(80, 20)
-        Me.Label8.TabIndex = 27
-        Me.Label8.Text = "Dirección"
+        Me.TpDatosEmpleado.Controls.Add(Me.BtnSalir)
+        Me.TpDatosEmpleado.Controls.Add(Me.BtnCancelar)
+        Me.TpDatosEmpleado.Controls.Add(Me.BtnGuardar)
+        Me.TpDatosEmpleado.Controls.Add(Me.BtnModificar)
+        Me.TpDatosEmpleado.Controls.Add(Me.BtnAgregar)
+        Me.TpDatosEmpleado.Controls.Add(Me.TxtDireccion)
+        Me.TpDatosEmpleado.Controls.Add(Me.Label8)
+        Me.TpDatosEmpleado.Controls.Add(Me.CboCargoEmpleado)
+        Me.TpDatosEmpleado.Controls.Add(Me.CboCiudad)
+        Me.TpDatosEmpleado.Controls.Add(Me.CboSexo)
+        Me.TpDatosEmpleado.Controls.Add(Me.Label12)
+        Me.TpDatosEmpleado.Controls.Add(Me.Label4)
+        Me.TpDatosEmpleado.Controls.Add(Me.Label3)
+        Me.TpDatosEmpleado.Controls.Add(Me.DtpFechaContra)
+        Me.TpDatosEmpleado.Controls.Add(Me.DtpFechaNac)
+        Me.TpDatosEmpleado.Controls.Add(Me.TxtTelefono)
+        Me.TpDatosEmpleado.Controls.Add(Me.TxtApellidos)
+        Me.TpDatosEmpleado.Controls.Add(Me.Label11)
+        Me.TpDatosEmpleado.Controls.Add(Me.Label10)
+        Me.TpDatosEmpleado.Controls.Add(Me.Label9)
+        Me.TpDatosEmpleado.Controls.Add(Me.Label7)
+        Me.TpDatosEmpleado.Controls.Add(Me.Label6)
+        Me.TpDatosEmpleado.Controls.Add(Me.Label5)
+        Me.TpDatosEmpleado.Controls.Add(Me.TxtNombre)
+        Me.TpDatosEmpleado.Controls.Add(Me.TxtNumIdent)
+        Me.TpDatosEmpleado.Location = New System.Drawing.Point(4, 26)
+        Me.TpDatosEmpleado.Name = "TpDatosEmpleado"
+        Me.TpDatosEmpleado.Padding = New System.Windows.Forms.Padding(3)
+        Me.TpDatosEmpleado.Size = New System.Drawing.Size(792, 401)
+        Me.TpDatosEmpleado.TabIndex = 0
+        Me.TpDatosEmpleado.Text = "Datos de los empleados"
+        Me.TpDatosEmpleado.UseVisualStyleBackColor = True
         '
-        'CboCargoEmpleado
+        'TpListadoEmpleado
         '
-        Me.CboCargoEmpleado.FormattingEnabled = True
-        Me.CboCargoEmpleado.Location = New System.Drawing.Point(528, 271)
-        Me.CboCargoEmpleado.Name = "CboCargoEmpleado"
-        Me.CboCargoEmpleado.Size = New System.Drawing.Size(200, 25)
-        Me.CboCargoEmpleado.TabIndex = 26
+        Me.TpListadoEmpleado.Controls.Add(Me.LsvEmpleados)
+        Me.TpListadoEmpleado.Controls.Add(Me.ListView1)
+        Me.TpListadoEmpleado.Location = New System.Drawing.Point(4, 26)
+        Me.TpListadoEmpleado.Name = "TpListadoEmpleado"
+        Me.TpListadoEmpleado.Padding = New System.Windows.Forms.Padding(3)
+        Me.TpListadoEmpleado.Size = New System.Drawing.Size(792, 401)
+        Me.TpListadoEmpleado.TabIndex = 1
+        Me.TpListadoEmpleado.Text = "Listado De Empleados"
+        Me.TpListadoEmpleado.UseVisualStyleBackColor = True
         '
-        'CboCiudad
+        'BtnSalir
         '
-        Me.CboCiudad.FormattingEnabled = True
-        Me.CboCiudad.Location = New System.Drawing.Point(528, 212)
-        Me.CboCiudad.Name = "CboCiudad"
-        Me.CboCiudad.Size = New System.Drawing.Size(200, 25)
-        Me.CboCiudad.TabIndex = 25
+        Me.BtnSalir.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.BtnSalir.FlatAppearance.BorderSize = 0
+        Me.BtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnSalir.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnSalir.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnSalir.Image = CType(resources.GetObject("BtnSalir.Image"), System.Drawing.Image)
+        Me.BtnSalir.Location = New System.Drawing.Point(641, 355)
+        Me.BtnSalir.Name = "BtnSalir"
+        Me.BtnSalir.Size = New System.Drawing.Size(112, 44)
+        Me.BtnSalir.TabIndex = 57
+        Me.BtnSalir.Text = "Salir"
+        Me.BtnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.BtnSalir.UseVisualStyleBackColor = False
         '
-        'CboSexo
+        'BtnCancelar
         '
-        Me.CboSexo.FormattingEnabled = True
-        Me.CboSexo.Location = New System.Drawing.Point(528, 155)
-        Me.CboSexo.Name = "CboSexo"
-        Me.CboSexo.Size = New System.Drawing.Size(200, 25)
-        Me.CboSexo.TabIndex = 24
+        Me.BtnCancelar.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.BtnCancelar.FlatAppearance.BorderSize = 0
+        Me.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnCancelar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnCancelar.Image = CType(resources.GetObject("BtnCancelar.Image"), System.Drawing.Image)
+        Me.BtnCancelar.Location = New System.Drawing.Point(505, 355)
+        Me.BtnCancelar.Name = "BtnCancelar"
+        Me.BtnCancelar.Size = New System.Drawing.Size(112, 44)
+        Me.BtnCancelar.TabIndex = 58
+        Me.BtnCancelar.Text = "Cancelar"
+        Me.BtnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.BtnCancelar.UseVisualStyleBackColor = False
         '
-        'Label12
+        'BtnGuardar
         '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(528, 246)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(59, 20)
-        Me.Label12.TabIndex = 23
-        Me.Label12.Text = "Cargo "
+        Me.BtnGuardar.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.BtnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.BtnGuardar.FlatAppearance.BorderSize = 0
+        Me.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnGuardar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnGuardar.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnGuardar.Image = CType(resources.GetObject("BtnGuardar.Image"), System.Drawing.Image)
+        Me.BtnGuardar.Location = New System.Drawing.Point(194, 355)
+        Me.BtnGuardar.Name = "BtnGuardar"
+        Me.BtnGuardar.Size = New System.Drawing.Size(112, 44)
+        Me.BtnGuardar.TabIndex = 54
+        Me.BtnGuardar.Text = "Guardar"
+        Me.BtnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.BtnGuardar.UseVisualStyleBackColor = False
         '
-        'Label4
+        'BtnModificar
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(525, 189)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(63, 20)
-        Me.Label4.TabIndex = 22
-        Me.Label4.Text = "Ciudad"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(528, 133)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(45, 20)
-        Me.Label3.TabIndex = 21
-        Me.Label3.Text = "Sexo"
-        '
-        'DtpFechaContra
-        '
-        Me.DtpFechaContra.Location = New System.Drawing.Point(528, 98)
-        Me.DtpFechaContra.Name = "DtpFechaContra"
-        Me.DtpFechaContra.Size = New System.Drawing.Size(200, 25)
-        Me.DtpFechaContra.TabIndex = 20
-        '
-        'DtpFechaNac
-        '
-        Me.DtpFechaNac.Location = New System.Drawing.Point(528, 42)
-        Me.DtpFechaNac.Name = "DtpFechaNac"
-        Me.DtpFechaNac.Size = New System.Drawing.Size(200, 25)
-        Me.DtpFechaNac.TabIndex = 19
-        '
-        'TxtTelefono
-        '
-        Me.TxtTelefono.Location = New System.Drawing.Point(53, 211)
-        Me.TxtTelefono.Name = "TxtTelefono"
-        Me.TxtTelefono.Size = New System.Drawing.Size(267, 25)
-        Me.TxtTelefono.TabIndex = 18
-        '
-        'TxtApellidos
-        '
-        Me.TxtApellidos.Location = New System.Drawing.Point(53, 155)
-        Me.TxtApellidos.Name = "TxtApellidos"
-        Me.TxtApellidos.Size = New System.Drawing.Size(267, 25)
-        Me.TxtApellidos.TabIndex = 16
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(530, 75)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(183, 20)
-        Me.Label11.TabIndex = 13
-        Me.Label11.Text = "Fecha  de Contratación"
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(528, 20)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(168, 20)
-        Me.Label10.TabIndex = 12
-        Me.Label10.Text = "Fecha de Nacimiento"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(53, 189)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(75, 20)
-        Me.Label9.TabIndex = 11
-        Me.Label9.Text = "Teléfono"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(53, 133)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(78, 20)
-        Me.Label7.TabIndex = 9
-        Me.Label7.Text = "Apellidos"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(53, 75)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(79, 20)
-        Me.Label6.TabIndex = 8
-        Me.Label6.Text = "Nombres"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(53, 20)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(172, 20)
-        Me.Label5.TabIndex = 7
-        Me.Label5.Text = "Número de Identidad"
-        '
-        'TxtNombres
-        '
-        Me.TxtNombres.Location = New System.Drawing.Point(53, 97)
-        Me.TxtNombres.Name = "TxtNombres"
-        Me.TxtNombres.Size = New System.Drawing.Size(267, 25)
-        Me.TxtNombres.TabIndex = 1
-        '
-        'TxtNumIdent
-        '
-        Me.TxtNumIdent.Location = New System.Drawing.Point(53, 41)
-        Me.TxtNumIdent.Name = "TxtNumIdent"
-        Me.TxtNumIdent.Size = New System.Drawing.Size(267, 25)
-        Me.TxtNumIdent.TabIndex = 0
-        '
-        'Button3
-        '
-        Me.Button3.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.Button3.FlatAppearance.BorderSize = 0
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
-        Me.Button3.Location = New System.Drawing.Point(648, 373)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(112, 44)
-        Me.Button3.TabIndex = 32
-        Me.Button3.Text = "Salir"
-        Me.Button3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.Button3.UseVisualStyleBackColor = False
-        '
-        'BtnLimpiar
-        '
-        Me.BtnLimpiar.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.BtnLimpiar.FlatAppearance.BorderSize = 0
-        Me.BtnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnLimpiar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnLimpiar.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.BtnLimpiar.Image = CType(resources.GetObject("BtnLimpiar.Image"), System.Drawing.Image)
-        Me.BtnLimpiar.Location = New System.Drawing.Point(512, 373)
-        Me.BtnLimpiar.Name = "BtnLimpiar"
-        Me.BtnLimpiar.Size = New System.Drawing.Size(112, 44)
-        Me.BtnLimpiar.TabIndex = 33
-        Me.BtnLimpiar.Text = "Limpiar"
-        Me.BtnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.BtnLimpiar.UseVisualStyleBackColor = False
-        '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
-        Me.Button2.Location = New System.Drawing.Point(201, 373)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(112, 44)
-        Me.Button2.TabIndex = 29
-        Me.Button2.Text = "Guardar"
-        Me.Button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.Button2.UseVisualStyleBackColor = False
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.Location = New System.Drawing.Point(354, 373)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(112, 44)
-        Me.Button1.TabIndex = 30
-        Me.Button1.Text = "Modificar"
-        Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.BtnModificar.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.BtnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnModificar.FlatAppearance.BorderSize = 0
+        Me.BtnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnModificar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnModificar.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnModificar.Image = CType(resources.GetObject("BtnModificar.Image"), System.Drawing.Image)
+        Me.BtnModificar.Location = New System.Drawing.Point(347, 355)
+        Me.BtnModificar.Name = "BtnModificar"
+        Me.BtnModificar.Size = New System.Drawing.Size(112, 44)
+        Me.BtnModificar.TabIndex = 55
+        Me.BtnModificar.Text = "Modificar"
+        Me.BtnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.BtnModificar.UseVisualStyleBackColor = False
         '
         'BtnAgregar
         '
@@ -398,13 +279,279 @@ Partial Class FrmEmpleado
         Me.BtnAgregar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnAgregar.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.BtnAgregar.Image = CType(resources.GetObject("BtnAgregar.Image"), System.Drawing.Image)
-        Me.BtnAgregar.Location = New System.Drawing.Point(47, 373)
+        Me.BtnAgregar.Location = New System.Drawing.Point(40, 355)
         Me.BtnAgregar.Name = "BtnAgregar"
         Me.BtnAgregar.Size = New System.Drawing.Size(112, 44)
-        Me.BtnAgregar.TabIndex = 31
+        Me.BtnAgregar.TabIndex = 56
         Me.BtnAgregar.Text = "Agregar"
         Me.BtnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.BtnAgregar.UseVisualStyleBackColor = False
+        '
+        'TxtDireccion
+        '
+        Me.TxtDireccion.Location = New System.Drawing.Point(46, 250)
+        Me.TxtDireccion.Multiline = True
+        Me.TxtDireccion.Name = "TxtDireccion"
+        Me.TxtDireccion.Size = New System.Drawing.Size(393, 58)
+        Me.TxtDireccion.TabIndex = 53
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(46, 228)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(80, 20)
+        Me.Label8.TabIndex = 52
+        Me.Label8.Text = "Dirección"
+        '
+        'CboCargoEmpleado
+        '
+        Me.CboCargoEmpleado.FormattingEnabled = True
+        Me.CboCargoEmpleado.Location = New System.Drawing.Point(521, 253)
+        Me.CboCargoEmpleado.Name = "CboCargoEmpleado"
+        Me.CboCargoEmpleado.Size = New System.Drawing.Size(200, 25)
+        Me.CboCargoEmpleado.TabIndex = 51
+        '
+        'CboCiudad
+        '
+        Me.CboCiudad.FormattingEnabled = True
+        Me.CboCiudad.Location = New System.Drawing.Point(521, 194)
+        Me.CboCiudad.Name = "CboCiudad"
+        Me.CboCiudad.Size = New System.Drawing.Size(200, 25)
+        Me.CboCiudad.TabIndex = 50
+        '
+        'CboSexo
+        '
+        Me.CboSexo.FormattingEnabled = True
+        Me.CboSexo.Location = New System.Drawing.Point(521, 137)
+        Me.CboSexo.Name = "CboSexo"
+        Me.CboSexo.Size = New System.Drawing.Size(200, 25)
+        Me.CboSexo.TabIndex = 49
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(521, 228)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(59, 20)
+        Me.Label12.TabIndex = 48
+        Me.Label12.Text = "Cargo "
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(518, 171)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(63, 20)
+        Me.Label4.TabIndex = 47
+        Me.Label4.Text = "Ciudad"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(521, 115)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(45, 20)
+        Me.Label3.TabIndex = 46
+        Me.Label3.Text = "Sexo"
+        '
+        'DtpFechaContra
+        '
+        Me.DtpFechaContra.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DtpFechaContra.Location = New System.Drawing.Point(521, 80)
+        Me.DtpFechaContra.Name = "DtpFechaContra"
+        Me.DtpFechaContra.Size = New System.Drawing.Size(200, 25)
+        Me.DtpFechaContra.TabIndex = 45
+        '
+        'DtpFechaNac
+        '
+        Me.DtpFechaNac.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DtpFechaNac.Location = New System.Drawing.Point(521, 24)
+        Me.DtpFechaNac.Name = "DtpFechaNac"
+        Me.DtpFechaNac.Size = New System.Drawing.Size(200, 25)
+        Me.DtpFechaNac.TabIndex = 44
+        '
+        'TxtTelefono
+        '
+        Me.TxtTelefono.Location = New System.Drawing.Point(46, 193)
+        Me.TxtTelefono.Name = "TxtTelefono"
+        Me.TxtTelefono.Size = New System.Drawing.Size(267, 25)
+        Me.TxtTelefono.TabIndex = 43
+        '
+        'TxtApellidos
+        '
+        Me.TxtApellidos.Location = New System.Drawing.Point(46, 137)
+        Me.TxtApellidos.Name = "TxtApellidos"
+        Me.TxtApellidos.Size = New System.Drawing.Size(267, 25)
+        Me.TxtApellidos.TabIndex = 42
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(523, 57)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(183, 20)
+        Me.Label11.TabIndex = 41
+        Me.Label11.Text = "Fecha  de Contratación"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(521, 2)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(168, 20)
+        Me.Label10.TabIndex = 40
+        Me.Label10.Text = "Fecha de Nacimiento"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(46, 171)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(75, 20)
+        Me.Label9.TabIndex = 39
+        Me.Label9.Text = "Teléfono"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(46, 115)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(78, 20)
+        Me.Label7.TabIndex = 38
+        Me.Label7.Text = "Apellidos"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(46, 57)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(72, 20)
+        Me.Label6.TabIndex = 37
+        Me.Label6.Text = "Nombre"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(46, 2)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(172, 20)
+        Me.Label5.TabIndex = 36
+        Me.Label5.Text = "Número de Identidad"
+        '
+        'TxtNombre
+        '
+        Me.TxtNombre.Location = New System.Drawing.Point(46, 79)
+        Me.TxtNombre.Name = "TxtNombre"
+        Me.TxtNombre.Size = New System.Drawing.Size(267, 25)
+        Me.TxtNombre.TabIndex = 35
+        '
+        'TxtNumIdent
+        '
+        Me.TxtNumIdent.Location = New System.Drawing.Point(46, 23)
+        Me.TxtNumIdent.Name = "TxtNumIdent"
+        Me.TxtNumIdent.Size = New System.Drawing.Size(267, 25)
+        Me.TxtNumIdent.TabIndex = 34
+        '
+        'ListView1
+        '
+        Me.ListView1.Location = New System.Drawing.Point(3, 0)
+        Me.ListView1.Name = "ListView1"
+        Me.ListView1.Size = New System.Drawing.Size(786, 395)
+        Me.ListView1.TabIndex = 0
+        Me.ListView1.UseCompatibleStateImageBehavior = False
+        '
+        'LsvEmpleados
+        '
+        Me.LsvEmpleados.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ChNumeroIdentidad, Me.ChNombre, Me.ChApellidos, Me.ChDireccion, Me.ChTelefono, Me.ChFechaNacimiento, Me.ChFechaContratacion, Me.ChSexo, Me.ChCiudad, Me.ChCargoEmpleado})
+        Me.LsvEmpleados.Location = New System.Drawing.Point(7, 0)
+        Me.LsvEmpleados.Name = "LsvEmpleados"
+        Me.LsvEmpleados.Size = New System.Drawing.Size(777, 384)
+        Me.LsvEmpleados.TabIndex = 1
+        Me.LsvEmpleados.UseCompatibleStateImageBehavior = False
+        Me.LsvEmpleados.View = System.Windows.Forms.View.Details
+        '
+        'ChNumeroIdentidad
+        '
+        Me.ChNumeroIdentidad.Text = "Identidad"
+        Me.ChNumeroIdentidad.Width = 150
+        '
+        'ChNombre
+        '
+        Me.ChNombre.Text = "Nombre"
+        Me.ChNombre.Width = 150
+        '
+        'ChApellidos
+        '
+        Me.ChApellidos.Text = "Apellidos"
+        Me.ChApellidos.Width = 150
+        '
+        'ChDireccion
+        '
+        Me.ChDireccion.Text = "Direccion"
+        Me.ChDireccion.Width = 200
+        '
+        'ChTelefono
+        '
+        Me.ChTelefono.Text = "Telefono"
+        Me.ChTelefono.Width = 150
+        '
+        'ChFechaNacimiento
+        '
+        Me.ChFechaNacimiento.Text = "Fecha Nacimiento"
+        Me.ChFechaNacimiento.Width = 150
+        '
+        'ChSexo
+        '
+        Me.ChSexo.DisplayIndex = 6
+        Me.ChSexo.Text = "Sexo"
+        Me.ChSexo.Width = 100
+        '
+        'ChCiudad
+        '
+        Me.ChCiudad.DisplayIndex = 7
+        Me.ChCiudad.Text = "Ciudad"
+        Me.ChCiudad.Width = 150
+        '
+        'ChCargoEmpleado
+        '
+        Me.ChCargoEmpleado.DisplayIndex = 8
+        Me.ChCargoEmpleado.Text = "Cargo Empleado"
+        Me.ChCargoEmpleado.Width = 150
+        '
+        'ChFechaContratacion
+        '
+        Me.ChFechaContratacion.DisplayIndex = 9
+        Me.ChFechaContratacion.Text = "FechaContratacion"
+        Me.ChFechaContratacion.Width = 150
+        '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditarToolStripMenuItem, Me.EliminarToolStripMenuItem})
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(181, 70)
+        '
+        'EditarToolStripMenuItem
+        '
+        Me.EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
+        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.EditarToolStripMenuItem.Text = "Editar"
+        '
+        'EliminarToolStripMenuItem
+        '
+        Me.EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
+        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.EliminarToolStripMenuItem.Text = "Eliminar"
         '
         'FrmEmpleado
         '
@@ -424,7 +571,11 @@ Partial Class FrmEmpleado
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.GbxExamen.ResumeLayout(False)
-        Me.GbxExamen.PerformLayout()
+        Me.TabControl1.ResumeLayout(False)
+        Me.TpDatosEmpleado.ResumeLayout(False)
+        Me.TpDatosEmpleado.PerformLayout()
+        Me.TpListadoEmpleado.ResumeLayout(False)
+        Me.ContextMenuStrip1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -435,14 +586,13 @@ Partial Class FrmEmpleado
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents GbxExamen As GroupBox
-    Friend WithEvents Label11 As Label
-    Friend WithEvents Label10 As Label
-    Friend WithEvents Label9 As Label
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents TxtNombres As TextBox
-    Friend WithEvents TxtNumIdent As TextBox
+    Friend WithEvents TabControl1 As TabControl
+    Friend WithEvents TpDatosEmpleado As TabPage
+    Friend WithEvents BtnSalir As Button
+    Friend WithEvents BtnCancelar As Button
+    Friend WithEvents BtnGuardar As Button
+    Friend WithEvents BtnModificar As Button
+    Friend WithEvents BtnAgregar As Button
     Friend WithEvents TxtDireccion As TextBox
     Friend WithEvents Label8 As Label
     Friend WithEvents CboCargoEmpleado As ComboBox
@@ -455,9 +605,28 @@ Partial Class FrmEmpleado
     Friend WithEvents DtpFechaNac As DateTimePicker
     Friend WithEvents TxtTelefono As TextBox
     Friend WithEvents TxtApellidos As TextBox
-    Friend WithEvents Button3 As Button
-    Friend WithEvents BtnLimpiar As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents BtnAgregar As Button
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents TxtNombre As TextBox
+    Friend WithEvents TxtNumIdent As TextBox
+    Friend WithEvents TpListadoEmpleado As TabPage
+    Friend WithEvents LsvEmpleados As ListView
+    Friend WithEvents ChNumeroIdentidad As ColumnHeader
+    Friend WithEvents ChNombre As ColumnHeader
+    Friend WithEvents ChApellidos As ColumnHeader
+    Friend WithEvents ChDireccion As ColumnHeader
+    Friend WithEvents ChTelefono As ColumnHeader
+    Friend WithEvents ChFechaNacimiento As ColumnHeader
+    Friend WithEvents ChSexo As ColumnHeader
+    Friend WithEvents ChCiudad As ColumnHeader
+    Friend WithEvents ChCargoEmpleado As ColumnHeader
+    Friend WithEvents ListView1 As ListView
+    Friend WithEvents ChFechaContratacion As ColumnHeader
+    Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
+    Friend WithEvents EditarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EliminarToolStripMenuItem As ToolStripMenuItem
 End Class
