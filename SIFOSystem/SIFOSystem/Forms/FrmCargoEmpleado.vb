@@ -7,7 +7,7 @@ Public Class FrmCargoEmpleado
         End If
 
         Try
-            Dim ListaCargos As New SqlCommand("Sp_InvestigarCorrelativoCargoEmpleado", Cn)
+            Dim ListaCargos As New SqlCommand("Sp_InvestigarCorrelativoCaragoEmpleado", Cn)
             ListaCargos.CommandType = CommandType.StoredProcedure
             Dim ListarCargosR As SqlDataReader
             Cn.Open()
@@ -41,7 +41,7 @@ Public Class FrmCargoEmpleado
                     .CommandType = CommandType.StoredProcedure
                     .Connection = Cn
 
-                    .Parameters.Add("@CargoEmpleado", SqlDbType.NVarChar, 40).Value = TxtCargoEmpleado.Text
+                    .Parameters.Add("@CargoEmpleado", SqlDbType.NVarChar, 70).Value = TxtCargoEmpleado.Text
                     .ExecuteNonQuery()
 
                     MessageBox.Show("Registro almacenado satisfactoriamente", "SIFO", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -70,7 +70,7 @@ Public Class FrmCargoEmpleado
                     .CommandType = CommandType.StoredProcedure
                     .Connection = Cn
 
-                    .Parameters.Add("@CargoEmpleado", SqlDbType.NVarChar, 40).Value = TxtCargoEmpleado.Text
+                    .Parameters.Add("@CargoEmpleado", SqlDbType.NVarChar, 70).Value = TxtCargoEmpleado.Text
                     .Parameters.Add("@IdCargoEmpleado", SqlDbType.Int).Value = CInt(TxtCodCargo.Text)
                     .ExecuteNonQuery()
 
@@ -110,7 +110,7 @@ Public Class FrmCargoEmpleado
             End Using
 
         Catch ex As Exception
-            MessageBox.Show("Error al eliminar el Cargo", "SIFO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Error al eliminar el Cargo" + ex.Message, "SIFO", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Finally
             Cn.Close()
         End Try
@@ -151,7 +151,6 @@ Public Class FrmCargoEmpleado
 
         Using CMd As New SqlCommand
             Cn.Open()
-
             Try
                 With CMd
                     .CommandText = "Sp_MostrarCargoEmpleado"
@@ -175,7 +174,6 @@ Public Class FrmCargoEmpleado
                 MessageBox.Show("Error al mostrar los Cargos" + ex.Message, "SIFO", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Finally
                 Cn.Close()
-
             End Try
         End Using
     End Sub
@@ -257,7 +255,7 @@ Public Class FrmCargoEmpleado
                     .CommandType = CommandType.StoredProcedure
                     .Connection = Cn
 
-                    .Parameters.Add("@CargoEmpleado", SqlDbType.NVarChar, 40).Value = TxtCargoEmpleado.Text.Trim
+                    .Parameters.Add("@CargoEmpleado", SqlDbType.NVarChar, 70).Value = TxtCargoEmpleado.Text.Trim
 
                 End With
 

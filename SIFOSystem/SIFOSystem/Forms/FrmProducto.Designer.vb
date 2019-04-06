@@ -28,7 +28,15 @@ Partial Class FrmProducto
         Me.PbxLogo = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.TpDatosProducto = New System.Windows.Forms.TabPage()
+        Me.TpListado = New System.Windows.Forms.TabPage()
         Me.GbxExamen = New System.Windows.Forms.GroupBox()
+        Me.BtnSalir = New System.Windows.Forms.Button()
+        Me.BtnLimpiar = New System.Windows.Forms.Button()
+        Me.BtnGuardar = New System.Windows.Forms.Button()
+        Me.BtnModificar = New System.Windows.Forms.Button()
+        Me.BtnAgregar = New System.Windows.Forms.Button()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -36,21 +44,26 @@ Partial Class FrmProducto
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.BtnLimpiar = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.BtnAgregar = New System.Windows.Forms.Button()
+        Me.DtpTiempo = New System.Windows.Forms.DateTimePicker()
+        Me.CboCategoria = New System.Windows.Forms.ComboBox()
+        Me.CboStock = New System.Windows.Forms.ComboBox()
+        Me.TxtPrecioVenta = New System.Windows.Forms.TextBox()
+        Me.TxtPrecioCosto = New System.Windows.Forms.TextBox()
+        Me.TxtCodigoProducto = New System.Windows.Forms.TextBox()
+        Me.TxtNombreProducto = New System.Windows.Forms.TextBox()
+        Me.LsvMostrarProducto = New System.Windows.Forms.ListView()
+        Me.ChIdProducto = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChNombreProducto = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChPrecioCosto = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChPrecioVenta = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChStock = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChCategoria = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Panel2.SuspendLayout()
         CType(Me.PbxLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        Me.TabControl1.SuspendLayout()
+        Me.TpDatosProducto.SuspendLayout()
+        Me.TpListado.SuspendLayout()
         Me.GbxExamen.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -107,13 +120,45 @@ Partial Class FrmProducto
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Gestión Producto"
         '
+        'TabControl1
+        '
+        Me.TabControl1.Controls.Add(Me.TpDatosProducto)
+        Me.TabControl1.Controls.Add(Me.TpListado)
+        Me.TabControl1.Location = New System.Drawing.Point(12, 159)
+        Me.TabControl1.Name = "TabControl1"
+        Me.TabControl1.SelectedIndex = 0
+        Me.TabControl1.Size = New System.Drawing.Size(799, 369)
+        Me.TabControl1.TabIndex = 29
+        '
+        'TpDatosProducto
+        '
+        Me.TpDatosProducto.Controls.Add(Me.GbxExamen)
+        Me.TpDatosProducto.Location = New System.Drawing.Point(4, 22)
+        Me.TpDatosProducto.Name = "TpDatosProducto"
+        Me.TpDatosProducto.Padding = New System.Windows.Forms.Padding(3)
+        Me.TpDatosProducto.Size = New System.Drawing.Size(791, 343)
+        Me.TpDatosProducto.TabIndex = 0
+        Me.TpDatosProducto.Text = "Datos del Producto"
+        Me.TpDatosProducto.UseVisualStyleBackColor = True
+        '
+        'TpListado
+        '
+        Me.TpListado.Controls.Add(Me.LsvMostrarProducto)
+        Me.TpListado.Location = New System.Drawing.Point(4, 22)
+        Me.TpListado.Name = "TpListado"
+        Me.TpListado.Padding = New System.Windows.Forms.Padding(3)
+        Me.TpListado.Size = New System.Drawing.Size(791, 343)
+        Me.TpListado.TabIndex = 1
+        Me.TpListado.Text = "Listado"
+        Me.TpListado.UseVisualStyleBackColor = True
+        '
         'GbxExamen
         '
         Me.GbxExamen.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.GbxExamen.Controls.Add(Me.Button3)
+        Me.GbxExamen.Controls.Add(Me.BtnSalir)
         Me.GbxExamen.Controls.Add(Me.BtnLimpiar)
-        Me.GbxExamen.Controls.Add(Me.Button2)
-        Me.GbxExamen.Controls.Add(Me.Button1)
+        Me.GbxExamen.Controls.Add(Me.BtnGuardar)
+        Me.GbxExamen.Controls.Add(Me.BtnModificar)
         Me.GbxExamen.Controls.Add(Me.BtnAgregar)
         Me.GbxExamen.Controls.Add(Me.Label11)
         Me.GbxExamen.Controls.Add(Me.Label10)
@@ -122,20 +167,102 @@ Partial Class FrmProducto
         Me.GbxExamen.Controls.Add(Me.Label7)
         Me.GbxExamen.Controls.Add(Me.Label6)
         Me.GbxExamen.Controls.Add(Me.Label5)
-        Me.GbxExamen.Controls.Add(Me.DateTimePicker1)
-        Me.GbxExamen.Controls.Add(Me.ComboBox2)
-        Me.GbxExamen.Controls.Add(Me.ComboBox1)
-        Me.GbxExamen.Controls.Add(Me.TextBox4)
-        Me.GbxExamen.Controls.Add(Me.TextBox3)
-        Me.GbxExamen.Controls.Add(Me.TextBox2)
-        Me.GbxExamen.Controls.Add(Me.TextBox1)
+        Me.GbxExamen.Controls.Add(Me.DtpTiempo)
+        Me.GbxExamen.Controls.Add(Me.CboCategoria)
+        Me.GbxExamen.Controls.Add(Me.CboStock)
+        Me.GbxExamen.Controls.Add(Me.TxtPrecioVenta)
+        Me.GbxExamen.Controls.Add(Me.TxtPrecioCosto)
+        Me.GbxExamen.Controls.Add(Me.TxtCodigoProducto)
+        Me.GbxExamen.Controls.Add(Me.TxtNombreProducto)
         Me.GbxExamen.Font = New System.Drawing.Font("Microsoft JhengHei", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GbxExamen.Location = New System.Drawing.Point(-2, 159)
+        Me.GbxExamen.Location = New System.Drawing.Point(3, 4)
         Me.GbxExamen.Name = "GbxExamen"
-        Me.GbxExamen.Size = New System.Drawing.Size(783, 339)
-        Me.GbxExamen.TabIndex = 29
+        Me.GbxExamen.Size = New System.Drawing.Size(783, 336)
+        Me.GbxExamen.TabIndex = 30
         Me.GbxExamen.TabStop = False
-        Me.GbxExamen.Text = "Datos del producto"
+        '
+        'BtnSalir
+        '
+        Me.BtnSalir.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.BtnSalir.FlatAppearance.BorderSize = 0
+        Me.BtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnSalir.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnSalir.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnSalir.Image = CType(resources.GetObject("BtnSalir.Image"), System.Drawing.Image)
+        Me.BtnSalir.Location = New System.Drawing.Point(643, 278)
+        Me.BtnSalir.Name = "BtnSalir"
+        Me.BtnSalir.Size = New System.Drawing.Size(112, 44)
+        Me.BtnSalir.TabIndex = 19
+        Me.BtnSalir.Text = "Salir"
+        Me.BtnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.BtnSalir.UseVisualStyleBackColor = False
+        '
+        'BtnLimpiar
+        '
+        Me.BtnLimpiar.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.BtnLimpiar.FlatAppearance.BorderSize = 0
+        Me.BtnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnLimpiar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnLimpiar.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnLimpiar.Image = CType(resources.GetObject("BtnLimpiar.Image"), System.Drawing.Image)
+        Me.BtnLimpiar.Location = New System.Drawing.Point(500, 278)
+        Me.BtnLimpiar.Name = "BtnLimpiar"
+        Me.BtnLimpiar.Size = New System.Drawing.Size(112, 44)
+        Me.BtnLimpiar.TabIndex = 20
+        Me.BtnLimpiar.Text = "Limpiar"
+        Me.BtnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.BtnLimpiar.UseVisualStyleBackColor = False
+        '
+        'BtnGuardar
+        '
+        Me.BtnGuardar.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.BtnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.BtnGuardar.FlatAppearance.BorderSize = 0
+        Me.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnGuardar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnGuardar.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnGuardar.Image = CType(resources.GetObject("BtnGuardar.Image"), System.Drawing.Image)
+        Me.BtnGuardar.Location = New System.Drawing.Point(192, 278)
+        Me.BtnGuardar.Name = "BtnGuardar"
+        Me.BtnGuardar.Size = New System.Drawing.Size(112, 44)
+        Me.BtnGuardar.TabIndex = 16
+        Me.BtnGuardar.Text = "Guardar"
+        Me.BtnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.BtnGuardar.UseVisualStyleBackColor = False
+        '
+        'BtnModificar
+        '
+        Me.BtnModificar.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.BtnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnModificar.FlatAppearance.BorderSize = 0
+        Me.BtnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnModificar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnModificar.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnModificar.Image = CType(resources.GetObject("BtnModificar.Image"), System.Drawing.Image)
+        Me.BtnModificar.Location = New System.Drawing.Point(345, 278)
+        Me.BtnModificar.Name = "BtnModificar"
+        Me.BtnModificar.Size = New System.Drawing.Size(112, 44)
+        Me.BtnModificar.TabIndex = 17
+        Me.BtnModificar.Text = "Modificar"
+        Me.BtnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.BtnModificar.UseVisualStyleBackColor = False
+        '
+        'BtnAgregar
+        '
+        Me.BtnAgregar.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.BtnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.BtnAgregar.FlatAppearance.BorderSize = 0
+        Me.BtnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnAgregar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnAgregar.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnAgregar.Image = CType(resources.GetObject("BtnAgregar.Image"), System.Drawing.Image)
+        Me.BtnAgregar.Location = New System.Drawing.Point(38, 278)
+        Me.BtnAgregar.Name = "BtnAgregar"
+        Me.BtnAgregar.Size = New System.Drawing.Size(112, 44)
+        Me.BtnAgregar.TabIndex = 18
+        Me.BtnAgregar.Text = "Agregar"
+        Me.BtnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.BtnAgregar.UseVisualStyleBackColor = False
         '
         'Label11
         '
@@ -153,9 +280,9 @@ Partial Class FrmProducto
         Me.Label10.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.Location = New System.Drawing.Point(491, 77)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(142, 20)
+        Me.Label10.Size = New System.Drawing.Size(83, 20)
         Me.Label10.TabIndex = 12
-        Me.Label10.Text = "Código Categoría"
+        Me.Label10.Text = "Categoría"
         '
         'Label9
         '
@@ -207,150 +334,108 @@ Partial Class FrmProducto
         Me.Label5.TabIndex = 7
         Me.Label5.Text = "Nombre Producto "
         '
-        'DateTimePicker1
+        'DtpTiempo
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(494, 161)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(250, 25)
-        Me.DateTimePicker1.TabIndex = 6
+        Me.DtpTiempo.Location = New System.Drawing.Point(494, 161)
+        Me.DtpTiempo.Name = "DtpTiempo"
+        Me.DtpTiempo.Size = New System.Drawing.Size(250, 25)
+        Me.DtpTiempo.TabIndex = 6
         '
-        'ComboBox2
+        'CboCategoria
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(494, 100)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(250, 25)
-        Me.ComboBox2.TabIndex = 5
+        Me.CboCategoria.FormattingEnabled = True
+        Me.CboCategoria.Location = New System.Drawing.Point(494, 100)
+        Me.CboCategoria.Name = "CboCategoria"
+        Me.CboCategoria.Size = New System.Drawing.Size(250, 25)
+        Me.CboCategoria.TabIndex = 5
         '
-        'ComboBox1
+        'CboStock
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(494, 43)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(250, 25)
-        Me.ComboBox1.TabIndex = 4
+        Me.CboStock.FormattingEnabled = True
+        Me.CboStock.Location = New System.Drawing.Point(494, 43)
+        Me.CboStock.Name = "CboStock"
+        Me.CboStock.Size = New System.Drawing.Size(250, 25)
+        Me.CboStock.TabIndex = 4
         '
-        'TextBox4
+        'TxtPrecioVenta
         '
-        Me.TextBox4.Location = New System.Drawing.Point(53, 224)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(274, 25)
-        Me.TextBox4.TabIndex = 3
+        Me.TxtPrecioVenta.Location = New System.Drawing.Point(53, 224)
+        Me.TxtPrecioVenta.Name = "TxtPrecioVenta"
+        Me.TxtPrecioVenta.Size = New System.Drawing.Size(274, 25)
+        Me.TxtPrecioVenta.TabIndex = 3
         '
-        'TextBox3
+        'TxtPrecioCosto
         '
-        Me.TextBox3.Location = New System.Drawing.Point(53, 157)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(274, 25)
-        Me.TextBox3.TabIndex = 2
+        Me.TxtPrecioCosto.Location = New System.Drawing.Point(53, 157)
+        Me.TxtPrecioCosto.Name = "TxtPrecioCosto"
+        Me.TxtPrecioCosto.Size = New System.Drawing.Size(274, 25)
+        Me.TxtPrecioCosto.TabIndex = 2
         '
-        'TextBox2
+        'TxtCodigoProducto
         '
-        Me.TextBox2.Location = New System.Drawing.Point(53, 98)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(336, 25)
-        Me.TextBox2.TabIndex = 1
+        Me.TxtCodigoProducto.Location = New System.Drawing.Point(53, 98)
+        Me.TxtCodigoProducto.Name = "TxtCodigoProducto"
+        Me.TxtCodigoProducto.ReadOnly = True
+        Me.TxtCodigoProducto.Size = New System.Drawing.Size(336, 25)
+        Me.TxtCodigoProducto.TabIndex = 1
         '
-        'TextBox1
+        'TxtNombreProducto
         '
-        Me.TextBox1.Location = New System.Drawing.Point(53, 43)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(336, 25)
-        Me.TextBox1.TabIndex = 0
+        Me.TxtNombreProducto.Location = New System.Drawing.Point(53, 43)
+        Me.TxtNombreProducto.Name = "TxtNombreProducto"
+        Me.TxtNombreProducto.Size = New System.Drawing.Size(336, 25)
+        Me.TxtNombreProducto.TabIndex = 0
         '
-        'Button3
+        'LsvMostrarProducto
         '
-        Me.Button3.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.Button3.FlatAppearance.BorderSize = 0
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
-        Me.Button3.Location = New System.Drawing.Point(643, 278)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(112, 44)
-        Me.Button3.TabIndex = 19
-        Me.Button3.Text = "Salir"
-        Me.Button3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.LsvMostrarProducto.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ChIdProducto, Me.ChNombreProducto, Me.ChPrecioCosto, Me.ChPrecioVenta, Me.ChStock, Me.ChCategoria})
+        Me.LsvMostrarProducto.GridLines = True
+        Me.LsvMostrarProducto.Location = New System.Drawing.Point(9, 8)
+        Me.LsvMostrarProducto.Name = "LsvMostrarProducto"
+        Me.LsvMostrarProducto.Size = New System.Drawing.Size(772, 320)
+        Me.LsvMostrarProducto.TabIndex = 0
+        Me.LsvMostrarProducto.UseCompatibleStateImageBehavior = False
+        Me.LsvMostrarProducto.View = System.Windows.Forms.View.Details
         '
-        'BtnLimpiar
+        'ChIdProducto
         '
-        Me.BtnLimpiar.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.BtnLimpiar.FlatAppearance.BorderSize = 0
-        Me.BtnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnLimpiar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnLimpiar.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.BtnLimpiar.Image = CType(resources.GetObject("BtnLimpiar.Image"), System.Drawing.Image)
-        Me.BtnLimpiar.Location = New System.Drawing.Point(500, 278)
-        Me.BtnLimpiar.Name = "BtnLimpiar"
-        Me.BtnLimpiar.Size = New System.Drawing.Size(112, 44)
-        Me.BtnLimpiar.TabIndex = 20
-        Me.BtnLimpiar.Text = "Limpiar"
-        Me.BtnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.BtnLimpiar.UseVisualStyleBackColor = False
+        Me.ChIdProducto.Text = "Código Producto"
+        Me.ChIdProducto.Width = 92
         '
-        'Button2
+        'ChNombreProducto
         '
-        Me.Button2.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
-        Me.Button2.Location = New System.Drawing.Point(192, 278)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(112, 44)
-        Me.Button2.TabIndex = 16
-        Me.Button2.Text = "Guardar"
-        Me.Button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.ChNombreProducto.Text = "Nombre Producto"
+        Me.ChNombreProducto.Width = 198
         '
-        'Button1
+        'ChPrecioCosto
         '
-        Me.Button1.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.Location = New System.Drawing.Point(345, 278)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(112, 44)
-        Me.Button1.TabIndex = 17
-        Me.Button1.Text = "Modificar"
-        Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.ChPrecioCosto.Text = "Precio Costo"
+        Me.ChPrecioCosto.Width = 84
         '
-        'BtnAgregar
+        'ChPrecioVenta
         '
-        Me.BtnAgregar.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.BtnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.BtnAgregar.FlatAppearance.BorderSize = 0
-        Me.BtnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnAgregar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnAgregar.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.BtnAgregar.Image = CType(resources.GetObject("BtnAgregar.Image"), System.Drawing.Image)
-        Me.BtnAgregar.Location = New System.Drawing.Point(38, 278)
-        Me.BtnAgregar.Name = "BtnAgregar"
-        Me.BtnAgregar.Size = New System.Drawing.Size(112, 44)
-        Me.BtnAgregar.TabIndex = 18
-        Me.BtnAgregar.Text = "Agregar"
-        Me.BtnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.BtnAgregar.UseVisualStyleBackColor = False
+        Me.ChPrecioVenta.Text = "Precio Venta"
+        Me.ChPrecioVenta.Width = 84
+        '
+        'ChStock
+        '
+        Me.ChStock.Text = "Stock"
+        '
+        'ChCategoria
+        '
+        Me.ChCategoria.Text = "Categoria"
+        Me.ChCategoria.Width = 109
         '
         'FrmProducto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ClientSize = New System.Drawing.Size(805, 510)
+        Me.ClientSize = New System.Drawing.Size(817, 537)
+        Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.PbxLogo)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.GbxExamen)
         Me.Name = "FrmProducto"
         Me.Text = "Form1"
         Me.Panel2.ResumeLayout(False)
@@ -358,6 +443,9 @@ Partial Class FrmProducto
         CType(Me.PbxLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.TabControl1.ResumeLayout(False)
+        Me.TpDatosProducto.ResumeLayout(False)
+        Me.TpListado.ResumeLayout(False)
         Me.GbxExamen.ResumeLayout(False)
         Me.GbxExamen.PerformLayout()
         Me.ResumeLayout(False)
@@ -369,7 +457,14 @@ Partial Class FrmProducto
     Friend WithEvents PbxLogo As PictureBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
+    Friend WithEvents TabControl1 As TabControl
+    Friend WithEvents TpDatosProducto As TabPage
     Friend WithEvents GbxExamen As GroupBox
+    Friend WithEvents BtnSalir As Button
+    Friend WithEvents BtnLimpiar As Button
+    Friend WithEvents BtnGuardar As Button
+    Friend WithEvents BtnModificar As Button
+    Friend WithEvents BtnAgregar As Button
     Friend WithEvents Label11 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Label9 As Label
@@ -377,16 +472,19 @@ Partial Class FrmProducto
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Button3 As Button
-    Friend WithEvents BtnLimpiar As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents BtnAgregar As Button
+    Friend WithEvents DtpTiempo As DateTimePicker
+    Friend WithEvents CboCategoria As ComboBox
+    Friend WithEvents CboStock As ComboBox
+    Friend WithEvents TxtPrecioVenta As TextBox
+    Friend WithEvents TxtPrecioCosto As TextBox
+    Friend WithEvents TxtCodigoProducto As TextBox
+    Friend WithEvents TxtNombreProducto As TextBox
+    Friend WithEvents TpListado As TabPage
+    Friend WithEvents LsvMostrarProducto As ListView
+    Friend WithEvents ChIdProducto As ColumnHeader
+    Friend WithEvents ChNombreProducto As ColumnHeader
+    Friend WithEvents ChPrecioCosto As ColumnHeader
+    Friend WithEvents ChPrecioVenta As ColumnHeader
+    Friend WithEvents ChStock As ColumnHeader
+    Friend WithEvents ChCategoria As ColumnHeader
 End Class
