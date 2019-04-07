@@ -50,6 +50,12 @@ Partial Class FrmProducto
         Me.TxtCodigoProducto = New System.Windows.Forms.TextBox()
         Me.TxtNombreProducto = New System.Windows.Forms.TextBox()
         Me.TpListado = New System.Windows.Forms.TabPage()
+        Me.TxtPorNombre = New System.Windows.Forms.TextBox()
+        Me.RdbPorNombre = New System.Windows.Forms.RadioButton()
+        Me.BtnBuscar = New System.Windows.Forms.Button()
+        Me.TxtBuscarPorCodigo = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.RdbPorCodigo = New System.Windows.Forms.RadioButton()
         Me.LsvProducto = New System.Windows.Forms.ListView()
         Me.ChIdProducto = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChNombreProducto = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -60,6 +66,7 @@ Partial Class FrmProducto
         Me.CMSOpciones = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EpMensage = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.Panel2.SuspendLayout()
         CType(Me.PbxLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -68,6 +75,7 @@ Partial Class FrmProducto
         Me.GbxExamen.SuspendLayout()
         Me.TpListado.SuspendLayout()
         Me.CMSOpciones.SuspendLayout()
+        CType(Me.EpMensage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel2
@@ -130,7 +138,7 @@ Partial Class FrmProducto
         Me.TcOpcion.Location = New System.Drawing.Point(12, 159)
         Me.TcOpcion.Name = "TcOpcion"
         Me.TcOpcion.SelectedIndex = 0
-        Me.TcOpcion.Size = New System.Drawing.Size(799, 369)
+        Me.TcOpcion.Size = New System.Drawing.Size(799, 383)
         Me.TcOpcion.TabIndex = 29
         '
         'TpDatosProducto
@@ -139,7 +147,7 @@ Partial Class FrmProducto
         Me.TpDatosProducto.Location = New System.Drawing.Point(4, 22)
         Me.TpDatosProducto.Name = "TpDatosProducto"
         Me.TpDatosProducto.Padding = New System.Windows.Forms.Padding(3)
-        Me.TpDatosProducto.Size = New System.Drawing.Size(791, 343)
+        Me.TpDatosProducto.Size = New System.Drawing.Size(791, 357)
         Me.TpDatosProducto.TabIndex = 0
         Me.TpDatosProducto.Text = "Datos del Producto"
         Me.TpDatosProducto.UseVisualStyleBackColor = True
@@ -360,14 +368,75 @@ Partial Class FrmProducto
         '
         'TpListado
         '
+        Me.TpListado.Controls.Add(Me.TxtPorNombre)
+        Me.TpListado.Controls.Add(Me.RdbPorNombre)
+        Me.TpListado.Controls.Add(Me.BtnBuscar)
+        Me.TpListado.Controls.Add(Me.TxtBuscarPorCodigo)
+        Me.TpListado.Controls.Add(Me.Label3)
+        Me.TpListado.Controls.Add(Me.RdbPorCodigo)
         Me.TpListado.Controls.Add(Me.LsvProducto)
         Me.TpListado.Location = New System.Drawing.Point(4, 22)
         Me.TpListado.Name = "TpListado"
         Me.TpListado.Padding = New System.Windows.Forms.Padding(3)
-        Me.TpListado.Size = New System.Drawing.Size(791, 343)
+        Me.TpListado.Size = New System.Drawing.Size(791, 357)
         Me.TpListado.TabIndex = 1
         Me.TpListado.Text = "Listado"
         Me.TpListado.UseVisualStyleBackColor = True
+        '
+        'TxtPorNombre
+        '
+        Me.TxtPorNombre.Location = New System.Drawing.Point(52, 9)
+        Me.TxtPorNombre.Name = "TxtPorNombre"
+        Me.TxtPorNombre.Size = New System.Drawing.Size(396, 20)
+        Me.TxtPorNombre.TabIndex = 6
+        '
+        'RdbPorNombre
+        '
+        Me.RdbPorNombre.AutoSize = True
+        Me.RdbPorNombre.Location = New System.Drawing.Point(662, 72)
+        Me.RdbPorNombre.Name = "RdbPorNombre"
+        Me.RdbPorNombre.Size = New System.Drawing.Size(114, 17)
+        Me.RdbPorNombre.TabIndex = 5
+        Me.RdbPorNombre.TabStop = True
+        Me.RdbPorNombre.Text = "Buscar por nombre"
+        Me.RdbPorNombre.UseVisualStyleBackColor = True
+        '
+        'BtnBuscar
+        '
+        Me.BtnBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnBuscar.Location = New System.Drawing.Point(454, 9)
+        Me.BtnBuscar.Name = "BtnBuscar"
+        Me.BtnBuscar.Size = New System.Drawing.Size(37, 23)
+        Me.BtnBuscar.TabIndex = 4
+        Me.BtnBuscar.Text = "..."
+        Me.BtnBuscar.UseVisualStyleBackColor = True
+        '
+        'TxtBuscarPorCodigo
+        '
+        Me.TxtBuscarPorCodigo.Location = New System.Drawing.Point(52, 9)
+        Me.TxtBuscarPorCodigo.Name = "TxtBuscarPorCodigo"
+        Me.TxtBuscarPorCodigo.Size = New System.Drawing.Size(396, 20)
+        Me.TxtBuscarPorCodigo.TabIndex = 3
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(6, 12)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(40, 13)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "Buscar"
+        '
+        'RdbPorCodigo
+        '
+        Me.RdbPorCodigo.AutoSize = True
+        Me.RdbPorCodigo.Location = New System.Drawing.Point(662, 39)
+        Me.RdbPorCodigo.Name = "RdbPorCodigo"
+        Me.RdbPorCodigo.Size = New System.Drawing.Size(111, 17)
+        Me.RdbPorCodigo.TabIndex = 1
+        Me.RdbPorCodigo.TabStop = True
+        Me.RdbPorCodigo.Text = "Buscar por código"
+        Me.RdbPorCodigo.UseVisualStyleBackColor = True
         '
         'LsvProducto
         '
@@ -375,9 +444,9 @@ Partial Class FrmProducto
         Me.LsvProducto.ContextMenuStrip = Me.CMSOpciones
         Me.LsvProducto.FullRowSelect = True
         Me.LsvProducto.GridLines = True
-        Me.LsvProducto.Location = New System.Drawing.Point(85, 6)
+        Me.LsvProducto.Location = New System.Drawing.Point(3, 39)
         Me.LsvProducto.Name = "LsvProducto"
-        Me.LsvProducto.Size = New System.Drawing.Size(634, 322)
+        Me.LsvProducto.Size = New System.Drawing.Size(634, 315)
         Me.LsvProducto.TabIndex = 0
         Me.LsvProducto.UseCompatibleStateImageBehavior = False
         Me.LsvProducto.View = System.Windows.Forms.View.Details
@@ -429,12 +498,16 @@ Partial Class FrmProducto
         Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
         Me.EliminarToolStripMenuItem.Text = "Eliminar"
         '
+        'EpMensage
+        '
+        Me.EpMensage.ContainerControl = Me
+        '
         'FrmProducto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ClientSize = New System.Drawing.Size(817, 537)
+        Me.ClientSize = New System.Drawing.Size(817, 554)
         Me.Controls.Add(Me.TcOpcion)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.PbxLogo)
@@ -451,7 +524,9 @@ Partial Class FrmProducto
         Me.GbxExamen.ResumeLayout(False)
         Me.GbxExamen.PerformLayout()
         Me.TpListado.ResumeLayout(False)
+        Me.TpListado.PerformLayout()
         Me.CMSOpciones.ResumeLayout(False)
+        CType(Me.EpMensage, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -492,4 +567,11 @@ Partial Class FrmProducto
     Friend WithEvents CMSOpciones As ContextMenuStrip
     Friend WithEvents EditarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EliminarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents TxtPorNombre As TextBox
+    Friend WithEvents RdbPorNombre As RadioButton
+    Friend WithEvents BtnBuscar As Button
+    Friend WithEvents TxtBuscarPorCodigo As TextBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents RdbPorCodigo As RadioButton
+    Friend WithEvents EpMensage As ErrorProvider
 End Class
