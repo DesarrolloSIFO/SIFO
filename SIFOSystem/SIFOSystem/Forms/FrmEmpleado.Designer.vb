@@ -30,9 +30,8 @@ Partial Class FrmEmpleado
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GbxExamen = New System.Windows.Forms.GroupBox()
-        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.TcEmpleados = New System.Windows.Forms.TabControl()
         Me.TpDatosEmpleado = New System.Windows.Forms.TabPage()
-        Me.TpListadoEmpleado = New System.Windows.Forms.TabPage()
         Me.BtnSalir = New System.Windows.Forms.Button()
         Me.BtnCancelar = New System.Windows.Forms.Button()
         Me.BtnGuardar = New System.Windows.Forms.Button()
@@ -58,7 +57,7 @@ Partial Class FrmEmpleado
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TxtNombre = New System.Windows.Forms.TextBox()
         Me.TxtNumIdent = New System.Windows.Forms.TextBox()
-        Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.TpListadoEmpleado = New System.Windows.Forms.TabPage()
         Me.LsvEmpleados = New System.Windows.Forms.ListView()
         Me.ChNumeroIdentidad = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChNombre = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -66,21 +65,22 @@ Partial Class FrmEmpleado
         Me.ChDireccion = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChTelefono = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChFechaNacimiento = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChFechaContratacion = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChSexo = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChCiudad = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChCargoEmpleado = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ChFechaContratacion = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.CmOpciones = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel2.SuspendLayout()
         CType(Me.PbxLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.GbxExamen.SuspendLayout()
-        Me.TabControl1.SuspendLayout()
+        Me.TcEmpleados.SuspendLayout()
         Me.TpDatosEmpleado.SuspendLayout()
         Me.TpListadoEmpleado.SuspendLayout()
-        Me.ContextMenuStrip1.SuspendLayout()
+        Me.CmOpciones.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel2
@@ -139,7 +139,7 @@ Partial Class FrmEmpleado
         'GbxExamen
         '
         Me.GbxExamen.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.GbxExamen.Controls.Add(Me.TabControl1)
+        Me.GbxExamen.Controls.Add(Me.TcEmpleados)
         Me.GbxExamen.Font = New System.Drawing.Font("Microsoft JhengHei", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GbxExamen.Location = New System.Drawing.Point(-2, 159)
         Me.GbxExamen.Name = "GbxExamen"
@@ -147,15 +147,15 @@ Partial Class FrmEmpleado
         Me.GbxExamen.TabIndex = 33
         Me.GbxExamen.TabStop = False
         '
-        'TabControl1
+        'TcEmpleados
         '
-        Me.TabControl1.Controls.Add(Me.TpDatosEmpleado)
-        Me.TabControl1.Controls.Add(Me.TpListadoEmpleado)
-        Me.TabControl1.Location = New System.Drawing.Point(3, 0)
-        Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(800, 431)
-        Me.TabControl1.TabIndex = 0
+        Me.TcEmpleados.Controls.Add(Me.TpDatosEmpleado)
+        Me.TcEmpleados.Controls.Add(Me.TpListadoEmpleado)
+        Me.TcEmpleados.Location = New System.Drawing.Point(3, 0)
+        Me.TcEmpleados.Name = "TcEmpleados"
+        Me.TcEmpleados.SelectedIndex = 0
+        Me.TcEmpleados.Size = New System.Drawing.Size(800, 431)
+        Me.TcEmpleados.TabIndex = 0
         '
         'TpDatosEmpleado
         '
@@ -191,18 +191,6 @@ Partial Class FrmEmpleado
         Me.TpDatosEmpleado.TabIndex = 0
         Me.TpDatosEmpleado.Text = "Datos de los empleados"
         Me.TpDatosEmpleado.UseVisualStyleBackColor = True
-        '
-        'TpListadoEmpleado
-        '
-        Me.TpListadoEmpleado.Controls.Add(Me.LsvEmpleados)
-        Me.TpListadoEmpleado.Controls.Add(Me.ListView1)
-        Me.TpListadoEmpleado.Location = New System.Drawing.Point(4, 26)
-        Me.TpListadoEmpleado.Name = "TpListadoEmpleado"
-        Me.TpListadoEmpleado.Padding = New System.Windows.Forms.Padding(3)
-        Me.TpListadoEmpleado.Size = New System.Drawing.Size(792, 401)
-        Me.TpListadoEmpleado.TabIndex = 1
-        Me.TpListadoEmpleado.Text = "Listado De Empleados"
-        Me.TpListadoEmpleado.UseVisualStyleBackColor = True
         '
         'BtnSalir
         '
@@ -463,17 +451,23 @@ Partial Class FrmEmpleado
         Me.TxtNumIdent.Size = New System.Drawing.Size(267, 25)
         Me.TxtNumIdent.TabIndex = 34
         '
-        'ListView1
+        'TpListadoEmpleado
         '
-        Me.ListView1.Location = New System.Drawing.Point(3, 0)
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(786, 395)
-        Me.ListView1.TabIndex = 0
-        Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.TpListadoEmpleado.Controls.Add(Me.LsvEmpleados)
+        Me.TpListadoEmpleado.Controls.Add(Me.ListView1)
+        Me.TpListadoEmpleado.Location = New System.Drawing.Point(4, 26)
+        Me.TpListadoEmpleado.Name = "TpListadoEmpleado"
+        Me.TpListadoEmpleado.Padding = New System.Windows.Forms.Padding(3)
+        Me.TpListadoEmpleado.Size = New System.Drawing.Size(792, 401)
+        Me.TpListadoEmpleado.TabIndex = 1
+        Me.TpListadoEmpleado.Text = "Listado De Empleados"
+        Me.TpListadoEmpleado.UseVisualStyleBackColor = True
         '
         'LsvEmpleados
         '
         Me.LsvEmpleados.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ChNumeroIdentidad, Me.ChNombre, Me.ChApellidos, Me.ChDireccion, Me.ChTelefono, Me.ChFechaNacimiento, Me.ChFechaContratacion, Me.ChSexo, Me.ChCiudad, Me.ChCargoEmpleado})
+        Me.LsvEmpleados.FullRowSelect = True
+        Me.LsvEmpleados.GridLines = True
         Me.LsvEmpleados.Location = New System.Drawing.Point(7, 0)
         Me.LsvEmpleados.Name = "LsvEmpleados"
         Me.LsvEmpleados.Size = New System.Drawing.Size(777, 384)
@@ -511,6 +505,12 @@ Partial Class FrmEmpleado
         Me.ChFechaNacimiento.Text = "Fecha Nacimiento"
         Me.ChFechaNacimiento.Width = 150
         '
+        'ChFechaContratacion
+        '
+        Me.ChFechaContratacion.DisplayIndex = 9
+        Me.ChFechaContratacion.Text = "FechaContratacion"
+        Me.ChFechaContratacion.Width = 150
+        '
         'ChSexo
         '
         Me.ChSexo.DisplayIndex = 6
@@ -529,28 +529,30 @@ Partial Class FrmEmpleado
         Me.ChCargoEmpleado.Text = "Cargo Empleado"
         Me.ChCargoEmpleado.Width = 150
         '
-        'ChFechaContratacion
+        'ListView1
         '
-        Me.ChFechaContratacion.DisplayIndex = 9
-        Me.ChFechaContratacion.Text = "FechaContratacion"
-        Me.ChFechaContratacion.Width = 150
+        Me.ListView1.Location = New System.Drawing.Point(3, 0)
+        Me.ListView1.Name = "ListView1"
+        Me.ListView1.Size = New System.Drawing.Size(786, 395)
+        Me.ListView1.TabIndex = 0
+        Me.ListView1.UseCompatibleStateImageBehavior = False
         '
-        'ContextMenuStrip1
+        'CmOpciones
         '
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditarToolStripMenuItem, Me.EliminarToolStripMenuItem})
-        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(181, 70)
+        Me.CmOpciones.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditarToolStripMenuItem, Me.EliminarToolStripMenuItem})
+        Me.CmOpciones.Name = "ContextMenuStrip1"
+        Me.CmOpciones.Size = New System.Drawing.Size(118, 48)
         '
         'EditarToolStripMenuItem
         '
         Me.EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
-        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
         Me.EditarToolStripMenuItem.Text = "Editar"
         '
         'EliminarToolStripMenuItem
         '
         Me.EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
-        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
         Me.EliminarToolStripMenuItem.Text = "Eliminar"
         '
         'FrmEmpleado
@@ -559,6 +561,7 @@ Partial Class FrmEmpleado
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.ClientSize = New System.Drawing.Size(800, 602)
+        Me.ContextMenuStrip = Me.CmOpciones
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.PbxLogo)
         Me.Controls.Add(Me.Panel1)
@@ -571,11 +574,11 @@ Partial Class FrmEmpleado
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.GbxExamen.ResumeLayout(False)
-        Me.TabControl1.ResumeLayout(False)
+        Me.TcEmpleados.ResumeLayout(False)
         Me.TpDatosEmpleado.ResumeLayout(False)
         Me.TpDatosEmpleado.PerformLayout()
         Me.TpListadoEmpleado.ResumeLayout(False)
-        Me.ContextMenuStrip1.ResumeLayout(False)
+        Me.CmOpciones.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -586,7 +589,7 @@ Partial Class FrmEmpleado
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents GbxExamen As GroupBox
-    Friend WithEvents TabControl1 As TabControl
+    Friend WithEvents TcEmpleados As TabControl
     Friend WithEvents TpDatosEmpleado As TabPage
     Friend WithEvents BtnSalir As Button
     Friend WithEvents BtnCancelar As Button
@@ -626,7 +629,7 @@ Partial Class FrmEmpleado
     Friend WithEvents ChCargoEmpleado As ColumnHeader
     Friend WithEvents ListView1 As ListView
     Friend WithEvents ChFechaContratacion As ColumnHeader
-    Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
+    Friend WithEvents CmOpciones As ContextMenuStrip
     Friend WithEvents EditarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EliminarToolStripMenuItem As ToolStripMenuItem
 End Class

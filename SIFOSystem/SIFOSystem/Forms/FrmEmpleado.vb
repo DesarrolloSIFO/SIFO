@@ -150,13 +150,7 @@ Public Class FrmEmpleado
         HabilitarBotones(True, False, False, False)
         Limpiar()
     End Sub
-    Private Sub Limpiar()
-        TxtNumIdent.Clear()
-        TxtNombre.Clear()
-        TxtApellidos.Clear()
-        TxtTelefono.Clear()
-        TxtDireccion.Clear()
-    End Sub
+
     Private Sub MostrarTodo()
         If Cn.State = ConnectionState.Open Then
             Cn.Close()
@@ -200,6 +194,7 @@ Public Class FrmEmpleado
         GuardarEmpleado()
         HabilitarBotones(True, False, False, False)
         MostrarTodo()
+        Limpiar()
     End Sub
 
     Private Sub BtnAgregar_Click_1(sender As Object, e As EventArgs) Handles BtnAgregar.Click
@@ -215,5 +210,81 @@ Public Class FrmEmpleado
 
     Private Sub FrmEmpleado_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MostrarTodo()
+    End Sub
+
+    Private Sub BtnModificar_Click(sender As Object, e As EventArgs) Handles BtnModificar.Click
+        HabilitarBotones(True, False, False, False)
+
+        ActualizarEmpleado()
+        Limpiar()
+
+        MostrarTodo()
+    End Sub
+    Private Sub Limpiar()
+        TxtNumIdent.Clear()
+        TxtNombre.Clear()
+        TxtApellidos.Clear()
+        TxtTelefono.Clear()
+        TxtDireccion.Clear()
+        CboCargoEmpleado.Text = Nothing
+        CboCiudad.Text = Nothing
+        CboSexo.Text = Nothing
+    End Sub
+
+    Private Sub EditarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EditarToolStripMenuItem.Click
+        LlenarComboCargoEmpleado()
+        LlenarComboCiudad()
+        LlenarComboSexo()
+        TxtNumIdent.Text = LsvEmpleados.FocusedItem.SubItems(0).Text
+        TxtNombre.Text = LsvEmpleados.FocusedItem.SubItems(1).Text
+        TxtApellidos.Text = LsvEmpleados.FocusedItem.SubItems(2).Text
+        TxtDireccion.Text = LsvEmpleados.FocusedItem.SubItems(3).Text
+        TxtTelefono.Text = LsvEmpleados.FocusedItem.SubItems(4).Text
+        CboSexo.Text = LsvEmpleados.FocusedItem.SubItems(7).Text
+        CboCiudad.Text = LsvEmpleados.FocusedItem.SubItems(8).Text
+        CboCargoEmpleado.Text = LsvEmpleados.FocusedItem.SubItems(9).Text
+
+        TxtNombre.Focus()
+        HabilitarBotones(False, False, True, True)
+
+
+        TcEmpleados.SelectedIndex = 0
+    End Sub
+    Private Sub ActualizarEmpleado()
+        If Cn.State = ConnectionState.Open Then
+            Cn.Close()
+        End If
+
+        Try
+            Cn.Open()
+            Using Cmd As New SqlCommand
+                With Cmd
+                    .CommandText = "Sp_ActualizarEmpleado"
+                    .CommandType = CommandType.StoredProcedure
+                    .Connection = Cn
+
+
+                    ' Enviar el parametro del nombre del empleado
+                    .Parameters.Add("@NumIdentEmpleado", SqlDbType.VarChar, 15).Value = TxtNumIdent.Text
+                    .Parameters.Add("@Nombre", SqlDbType.NVarChar, 50).Value = TxtNombre.Text
+                    .Parameters.Add("@Apellidos", SqlDbType.NVarChar, 50).Value = TxtApellidos.Text
+                    .Parameters.Add("@Direccion", SqlDbType.NVarChar, 300).Value = TxtDireccion.Text
+                    .Parameters.Add("@Telefono", SqlDbType.VarChar, 9).Value = TxtTelefono.Text
+                    .Parameters.Add("@FechaNacimiento", SqlDbType.Date).Value = DtpFechaNac.Value.ToShortDateString
+                    .Parameters.Add("@FechaContratacion", SqlDbType.Date).Value = DtpFechaContra.Value.ToShortDateString
+                    .Parameters.Add("@IdCiudad", SqlDbType.Int).Value = CInt(CboCiudad.SelectedValue)
+                    .Parameters.Add("@IdSexo", SqlDbType.Int).Value = CInt(CboSexo.SelectedValue)
+                    .Parameters.Add("@IdCargoEmpleado", SqlDbType.Int).Value = CInt(CboCargoEmpleado.SelectedValue)
+                    .ExecuteNonQuery()
+
+                    MessageBox.Show("Registro Actualizado Satisfactoriamente", "SIFO", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+                End With
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Error al actualizar la categoria", "SIFO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Finally
+            Cn.Close()
+        End Try
     End Sub
 End Class
