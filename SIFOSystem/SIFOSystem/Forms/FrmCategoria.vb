@@ -17,7 +17,7 @@ Public Class FrmCategoria
         End If
 
         Try
-            Dim ListarGenero As New SqlCommand("Sp_InvestigarCorrelativoCategoria", Cn)
+            Dim ListarGenero As New SqlCommand("Sp_InvestigarCorrelativoCaterogia", Cn)
             ListarGenero.CommandType = CommandType.StoredProcedure
 
             Dim ListarGeneroR As SqlDataReader
@@ -32,14 +32,13 @@ Public Class FrmCategoria
                 End If
             End If
         Catch ex As Exception
-            MessageBox.Show("Error al Consultar los Datos", "SIFO", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("Error al Consultar los Datos en investigar correlativo" + ex.Message, "SIFO", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Finally
             Cn.Close()
         End Try
     End Sub
 
     Private Sub BtnAgregar_Click_1(sender As Object, e As EventArgs) Handles BtnAgregar.Click
-
         HabilitarBotones(False, True, False, True)
         InvestigarCorrelativo()
         TxtNombreCategoria.Focus()
@@ -139,18 +138,18 @@ Public Class FrmCategoria
                     .Connection = Cn
                 End With
 
-                Dim VerGenero As SqlDataReader
-                VerGenero = CMd.ExecuteReader()
+                Dim vercategorias As SqlDataReader
+                vercategorias = CMd.ExecuteReader()
 
                 LsvCategorias.Items.Clear()
-                While VerGenero.Read = True
-                    With LsvCategorias.Items.Add(VerGenero("IdCategoria").ToString)
-                        .SubItems.Add(VerGenero("NombreCategoria").ToString)
-                        .SubItems.Add(VerGenero("Descripcion").ToString)
+                While vercategorias.Read = True
+                    With LsvCategorias.Items.Add(vercategorias("IdCategoria").ToString)
+                        .SubItems.Add(vercategorias("NombreCategoria").ToString)
+                        .SubItems.Add(vercategorias("Descripcion").ToString)
                     End With
                 End While
             Catch ex As Exception
-                MessageBox.Show("Error al Mostrar las categorias", "SIFO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Error al Mostrar las categorias" + ex.Message, "SIFO", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Finally
                 Cn.Close()
             End Try
@@ -260,5 +259,49 @@ Public Class FrmCategoria
             EpMensaje.SetError(TxtDescripcion, "")
             TxtDescripcion.BackColor = Color.White
         End If
+    End Sub
+    Private Sub BuscarCategoriaPorNombre()
+        If Cn.State = ConnectionState.Open Then
+            Cn.Close()
+        End If
+
+        Using CMd As New SqlCommand
+            Cn.Open()
+
+            Try
+                With CMd
+                    .CommandText = "Sp_MostrarXCategoriaPorNombre"
+                    .CommandType = CommandType.StoredProcedure
+                    .Connection = Cn
+
+                    .Parameters.Add("@Busqueda", SqlDbType.NVarChar, 50).Value = TxtBuscarCategoria.Text
+
+                End With
+
+                Dim VerCategorias As SqlDataReader
+                VerCategorias = CMd.ExecuteReader
+
+                LsvCategorias.Items.Clear()
+                While VerCategorias.Read = True
+                    With LsvCategorias.Items.Add(VerCategorias("IdCategoria").ToString)
+                        .SubItems.Add(VerCategorias("NombreCategoria").ToString)
+                        .SubItems.Add(VerCategorias("Descripcion").ToString)
+
+
+                    End With
+                End While
+
+            Catch ex As Exception
+
+                MessageBox.Show("Error al mostrar la categoria" + ex.Message, "SIFO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Finally
+                Cn.Close()
+
+            End Try
+        End Using
+    End Sub
+
+    Private Sub TxtBuscarCategoria_TextChanged(sender As Object, e As EventArgs) Handles TxtBuscarCategoria.TextChanged
+        BuscarCategoriaPorNombre()
     End Sub
 End Class
