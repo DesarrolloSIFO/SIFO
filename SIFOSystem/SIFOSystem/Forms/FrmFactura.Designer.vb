@@ -22,13 +22,14 @@ Partial Class Form
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form))
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PbxLogo = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.TpMenuFact = New System.Windows.Forms.TabControl()
         Me.TbDetalleFactura = New System.Windows.Forms.TabPage()
         Me.GbxExamen = New System.Windows.Forms.GroupBox()
         Me.BtnSalir = New System.Windows.Forms.Button()
@@ -52,16 +53,21 @@ Partial Class Form
         Me.CHCodDetalle = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.CHNumeroIdentidad = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChTipoExamen = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.CHCiudad = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.CHUsuario = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.CHFecha = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.CHIdUsuario = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.CmsOpcionesFactura = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EpMensajeFact = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.Panel2.SuspendLayout()
         CType(Me.PbxLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
-        Me.TabControl1.SuspendLayout()
+        Me.TpMenuFact.SuspendLayout()
         Me.TbDetalleFactura.SuspendLayout()
         Me.GbxExamen.SuspendLayout()
         Me.TbListadoFactura.SuspendLayout()
+        Me.CmsOpcionesFactura.SuspendLayout()
+        CType(Me.EpMensajeFact, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel2
@@ -122,15 +128,15 @@ Partial Class Form
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Detalle Factura"
         '
-        'TabControl1
+        'TpMenuFact
         '
-        Me.TabControl1.Controls.Add(Me.TbDetalleFactura)
-        Me.TabControl1.Controls.Add(Me.TbListadoFactura)
-        Me.TabControl1.Location = New System.Drawing.Point(-3, 196)
-        Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(1075, 409)
-        Me.TabControl1.TabIndex = 29
+        Me.TpMenuFact.Controls.Add(Me.TbDetalleFactura)
+        Me.TpMenuFact.Controls.Add(Me.TbListadoFactura)
+        Me.TpMenuFact.Location = New System.Drawing.Point(-3, 196)
+        Me.TpMenuFact.Name = "TpMenuFact"
+        Me.TpMenuFact.SelectedIndex = 0
+        Me.TpMenuFact.Size = New System.Drawing.Size(1075, 409)
+        Me.TpMenuFact.TabIndex = 29
         '
         'TbDetalleFactura
         '
@@ -196,7 +202,7 @@ Partial Class Form
         Me.BtnCancelar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnCancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.BtnCancelar.Image = CType(resources.GetObject("BtnCancelar.Image"), System.Drawing.Image)
-        Me.BtnCancelar.Location = New System.Drawing.Point(664, 291)
+        Me.BtnCancelar.Location = New System.Drawing.Point(654, 291)
         Me.BtnCancelar.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnCancelar.Name = "BtnCancelar"
         Me.BtnCancelar.Size = New System.Drawing.Size(149, 54)
@@ -305,7 +311,7 @@ Partial Class Form
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(71, 105)
+        Me.Label7.Location = New System.Drawing.Point(70, 101)
         Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(214, 25)
@@ -331,7 +337,7 @@ Partial Class Form
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(161, 25)
         Me.Label5.TabIndex = 7
-        Me.Label5.Text = "Codigo Factura "
+        Me.Label5.Text = "Código Factura "
         '
         'DtpFechaFactura
         '
@@ -353,7 +359,7 @@ Partial Class Form
         '
         'TxtNumIdentCliente
         '
-        Me.TxtNumIdentCliente.Location = New System.Drawing.Point(71, 135)
+        Me.TxtNumIdentCliente.Location = New System.Drawing.Point(70, 131)
         Me.TxtNumIdentCliente.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtNumIdentCliente.Name = "TxtNumIdentCliente"
         Me.TxtNumIdentCliente.Size = New System.Drawing.Size(447, 29)
@@ -380,7 +386,8 @@ Partial Class Form
         '
         'LsvDetalleFac
         '
-        Me.LsvDetalleFac.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.CHCodDetalle, Me.CHNumeroIdentidad, Me.ChTipoExamen, Me.CHCiudad, Me.CHUsuario, Me.CHFecha})
+        Me.LsvDetalleFac.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.CHCodDetalle, Me.CHNumeroIdentidad, Me.ChTipoExamen, Me.CHFecha, Me.CHIdUsuario})
+        Me.LsvDetalleFac.ContextMenuStrip = Me.CmsOpcionesFactura
         Me.LsvDetalleFac.FullRowSelect = True
         Me.LsvDetalleFac.GridLines = True
         Me.LsvDetalleFac.Location = New System.Drawing.Point(3, 6)
@@ -402,23 +409,41 @@ Partial Class Form
         '
         'ChTipoExamen
         '
-        Me.ChTipoExamen.Text = "TipoExamen"
+        Me.ChTipoExamen.Text = "Tipo Examen"
         Me.ChTipoExamen.Width = 150
-        '
-        'CHCiudad
-        '
-        Me.CHCiudad.Text = "Ciudad"
-        Me.CHCiudad.Width = 100
-        '
-        'CHUsuario
-        '
-        Me.CHUsuario.Text = "Usuario"
-        Me.CHUsuario.Width = 100
         '
         'CHFecha
         '
         Me.CHFecha.Text = "Fecha"
         Me.CHFecha.Width = 100
+        '
+        'CHIdUsuario
+        '
+        Me.CHIdUsuario.Text = "Usuario"
+        Me.CHIdUsuario.Width = 100
+        '
+        'CmsOpcionesFactura
+        '
+        Me.CmsOpcionesFactura.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.CmsOpcionesFactura.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditarToolStripMenuItem, Me.EliminarToolStripMenuItem})
+        Me.CmsOpcionesFactura.Name = "CmsOpcionesFactura"
+        Me.CmsOpcionesFactura.Size = New System.Drawing.Size(133, 52)
+        '
+        'EditarToolStripMenuItem
+        '
+        Me.EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
+        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(132, 24)
+        Me.EditarToolStripMenuItem.Text = "Editar"
+        '
+        'EliminarToolStripMenuItem
+        '
+        Me.EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
+        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(132, 24)
+        Me.EliminarToolStripMenuItem.Text = "Eliminar"
+        '
+        'EpMensajeFact
+        '
+        Me.EpMensajeFact.ContainerControl = Me
         '
         'Form
         '
@@ -426,7 +451,7 @@ Partial Class Form
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.ClientSize = New System.Drawing.Size(1071, 615)
-        Me.Controls.Add(Me.TabControl1)
+        Me.Controls.Add(Me.TpMenuFact)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.PbxLogo)
         Me.Controls.Add(Me.Panel1)
@@ -438,11 +463,13 @@ Partial Class Form
         CType(Me.PbxLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        Me.TabControl1.ResumeLayout(False)
+        Me.TpMenuFact.ResumeLayout(False)
         Me.TbDetalleFactura.ResumeLayout(False)
         Me.GbxExamen.ResumeLayout(False)
         Me.GbxExamen.PerformLayout()
         Me.TbListadoFactura.ResumeLayout(False)
+        Me.CmsOpcionesFactura.ResumeLayout(False)
+        CType(Me.EpMensajeFact, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -452,7 +479,7 @@ Partial Class Form
     Friend WithEvents PbxLogo As PictureBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
-    Friend WithEvents TabControl1 As TabControl
+    Friend WithEvents TpMenuFact As TabControl
     Friend WithEvents TbDetalleFactura As TabPage
     Friend WithEvents TbListadoFactura As TabPage
     Friend WithEvents GbxExamen As GroupBox
@@ -476,7 +503,10 @@ Partial Class Form
     Friend WithEvents CHCodDetalle As ColumnHeader
     Friend WithEvents CHNumeroIdentidad As ColumnHeader
     Friend WithEvents ChTipoExamen As ColumnHeader
-    Friend WithEvents CHCiudad As ColumnHeader
-    Friend WithEvents CHUsuario As ColumnHeader
     Friend WithEvents CHFecha As ColumnHeader
+    Friend WithEvents CHIdUsuario As ColumnHeader
+    Friend WithEvents CmsOpcionesFactura As ContextMenuStrip
+    Friend WithEvents EditarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EliminarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EpMensajeFact As ErrorProvider
 End Class
