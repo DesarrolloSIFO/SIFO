@@ -22,49 +22,60 @@ Partial Class FrmProducto
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmProducto))
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PbxLogo = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.TcOpcion = New System.Windows.Forms.TabControl()
         Me.TpDatosProducto = New System.Windows.Forms.TabPage()
-        Me.TpListado = New System.Windows.Forms.TabPage()
         Me.GbxExamen = New System.Windows.Forms.GroupBox()
+        Me.TxtStock = New System.Windows.Forms.TextBox()
         Me.BtnSalir = New System.Windows.Forms.Button()
         Me.BtnLimpiar = New System.Windows.Forms.Button()
         Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.BtnModificar = New System.Windows.Forms.Button()
         Me.BtnAgregar = New System.Windows.Forms.Button()
-        Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.DtpTiempo = New System.Windows.Forms.DateTimePicker()
         Me.CboCategoria = New System.Windows.Forms.ComboBox()
-        Me.CboStock = New System.Windows.Forms.ComboBox()
         Me.TxtPrecioVenta = New System.Windows.Forms.TextBox()
         Me.TxtPrecioCosto = New System.Windows.Forms.TextBox()
         Me.TxtCodigoProducto = New System.Windows.Forms.TextBox()
         Me.TxtNombreProducto = New System.Windows.Forms.TextBox()
-        Me.LsvMostrarProducto = New System.Windows.Forms.ListView()
+        Me.TpListado = New System.Windows.Forms.TabPage()
+        Me.TxtPorNombre = New System.Windows.Forms.TextBox()
+        Me.RdbPorNombre = New System.Windows.Forms.RadioButton()
+        Me.BtnBuscar = New System.Windows.Forms.Button()
+        Me.TxtBuscarPorCodigo = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.RdbPorCodigo = New System.Windows.Forms.RadioButton()
+        Me.LsvProducto = New System.Windows.Forms.ListView()
         Me.ChIdProducto = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChNombreProducto = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChPrecioCosto = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChPrecioVenta = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChStock = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChCategoria = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.CMSOpciones = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EpMensage = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.Panel2.SuspendLayout()
         CType(Me.PbxLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
-        Me.TabControl1.SuspendLayout()
+        Me.TcOpcion.SuspendLayout()
         Me.TpDatosProducto.SuspendLayout()
-        Me.TpListado.SuspendLayout()
         Me.GbxExamen.SuspendLayout()
+        Me.TpListado.SuspendLayout()
+        Me.CMSOpciones.SuspendLayout()
+        CType(Me.EpMensage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel2
@@ -120,15 +131,15 @@ Partial Class FrmProducto
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Gestión Producto"
         '
-        'TabControl1
+        'TcOpcion
         '
-        Me.TabControl1.Controls.Add(Me.TpDatosProducto)
-        Me.TabControl1.Controls.Add(Me.TpListado)
-        Me.TabControl1.Location = New System.Drawing.Point(12, 159)
-        Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(799, 369)
-        Me.TabControl1.TabIndex = 29
+        Me.TcOpcion.Controls.Add(Me.TpDatosProducto)
+        Me.TcOpcion.Controls.Add(Me.TpListado)
+        Me.TcOpcion.Location = New System.Drawing.Point(12, 159)
+        Me.TcOpcion.Name = "TcOpcion"
+        Me.TcOpcion.SelectedIndex = 0
+        Me.TcOpcion.Size = New System.Drawing.Size(799, 383)
+        Me.TcOpcion.TabIndex = 29
         '
         'TpDatosProducto
         '
@@ -136,40 +147,27 @@ Partial Class FrmProducto
         Me.TpDatosProducto.Location = New System.Drawing.Point(4, 22)
         Me.TpDatosProducto.Name = "TpDatosProducto"
         Me.TpDatosProducto.Padding = New System.Windows.Forms.Padding(3)
-        Me.TpDatosProducto.Size = New System.Drawing.Size(791, 343)
+        Me.TpDatosProducto.Size = New System.Drawing.Size(791, 357)
         Me.TpDatosProducto.TabIndex = 0
         Me.TpDatosProducto.Text = "Datos del Producto"
         Me.TpDatosProducto.UseVisualStyleBackColor = True
         '
-        'TpListado
-        '
-        Me.TpListado.Controls.Add(Me.LsvMostrarProducto)
-        Me.TpListado.Location = New System.Drawing.Point(4, 22)
-        Me.TpListado.Name = "TpListado"
-        Me.TpListado.Padding = New System.Windows.Forms.Padding(3)
-        Me.TpListado.Size = New System.Drawing.Size(791, 343)
-        Me.TpListado.TabIndex = 1
-        Me.TpListado.Text = "Listado"
-        Me.TpListado.UseVisualStyleBackColor = True
-        '
         'GbxExamen
         '
         Me.GbxExamen.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.GbxExamen.Controls.Add(Me.TxtStock)
         Me.GbxExamen.Controls.Add(Me.BtnSalir)
         Me.GbxExamen.Controls.Add(Me.BtnLimpiar)
         Me.GbxExamen.Controls.Add(Me.BtnGuardar)
         Me.GbxExamen.Controls.Add(Me.BtnModificar)
         Me.GbxExamen.Controls.Add(Me.BtnAgregar)
-        Me.GbxExamen.Controls.Add(Me.Label11)
         Me.GbxExamen.Controls.Add(Me.Label10)
         Me.GbxExamen.Controls.Add(Me.Label9)
         Me.GbxExamen.Controls.Add(Me.Label8)
         Me.GbxExamen.Controls.Add(Me.Label7)
         Me.GbxExamen.Controls.Add(Me.Label6)
         Me.GbxExamen.Controls.Add(Me.Label5)
-        Me.GbxExamen.Controls.Add(Me.DtpTiempo)
         Me.GbxExamen.Controls.Add(Me.CboCategoria)
-        Me.GbxExamen.Controls.Add(Me.CboStock)
         Me.GbxExamen.Controls.Add(Me.TxtPrecioVenta)
         Me.GbxExamen.Controls.Add(Me.TxtPrecioCosto)
         Me.GbxExamen.Controls.Add(Me.TxtCodigoProducto)
@@ -180,6 +178,13 @@ Partial Class FrmProducto
         Me.GbxExamen.Size = New System.Drawing.Size(783, 336)
         Me.GbxExamen.TabIndex = 30
         Me.GbxExamen.TabStop = False
+        '
+        'TxtStock
+        '
+        Me.TxtStock.Location = New System.Drawing.Point(484, 43)
+        Me.TxtStock.Name = "TxtStock"
+        Me.TxtStock.Size = New System.Drawing.Size(250, 25)
+        Me.TxtStock.TabIndex = 21
         '
         'BtnSalir
         '
@@ -264,21 +269,11 @@ Partial Class FrmProducto
         Me.BtnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.BtnAgregar.UseVisualStyleBackColor = False
         '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(491, 133)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(57, 20)
-        Me.Label11.TabIndex = 13
-        Me.Label11.Text = "Fecha "
-        '
         'Label10
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(491, 77)
+        Me.Label10.Location = New System.Drawing.Point(481, 87)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(83, 20)
         Me.Label10.TabIndex = 12
@@ -288,7 +283,7 @@ Partial Class FrmProducto
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(491, 20)
+        Me.Label9.Location = New System.Drawing.Point(481, 20)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(51, 20)
         Me.Label9.TabIndex = 11
@@ -318,7 +313,7 @@ Partial Class FrmProducto
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(53, 75)
+        Me.Label6.Location = New System.Drawing.Point(53, 21)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(138, 20)
         Me.Label6.TabIndex = 8
@@ -328,34 +323,19 @@ Partial Class FrmProducto
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(53, 20)
+        Me.Label5.Location = New System.Drawing.Point(53, 82)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(150, 20)
         Me.Label5.TabIndex = 7
         Me.Label5.Text = "Nombre Producto "
         '
-        'DtpTiempo
-        '
-        Me.DtpTiempo.Location = New System.Drawing.Point(494, 161)
-        Me.DtpTiempo.Name = "DtpTiempo"
-        Me.DtpTiempo.Size = New System.Drawing.Size(250, 25)
-        Me.DtpTiempo.TabIndex = 6
-        '
         'CboCategoria
         '
         Me.CboCategoria.FormattingEnabled = True
-        Me.CboCategoria.Location = New System.Drawing.Point(494, 100)
+        Me.CboCategoria.Location = New System.Drawing.Point(484, 110)
         Me.CboCategoria.Name = "CboCategoria"
         Me.CboCategoria.Size = New System.Drawing.Size(250, 25)
         Me.CboCategoria.TabIndex = 5
-        '
-        'CboStock
-        '
-        Me.CboStock.FormattingEnabled = True
-        Me.CboStock.Location = New System.Drawing.Point(494, 43)
-        Me.CboStock.Name = "CboStock"
-        Me.CboStock.Size = New System.Drawing.Size(250, 25)
-        Me.CboStock.TabIndex = 4
         '
         'TxtPrecioVenta
         '
@@ -373,7 +353,7 @@ Partial Class FrmProducto
         '
         'TxtCodigoProducto
         '
-        Me.TxtCodigoProducto.Location = New System.Drawing.Point(53, 98)
+        Me.TxtCodigoProducto.Location = New System.Drawing.Point(53, 43)
         Me.TxtCodigoProducto.Name = "TxtCodigoProducto"
         Me.TxtCodigoProducto.ReadOnly = True
         Me.TxtCodigoProducto.Size = New System.Drawing.Size(336, 25)
@@ -381,21 +361,95 @@ Partial Class FrmProducto
         '
         'TxtNombreProducto
         '
-        Me.TxtNombreProducto.Location = New System.Drawing.Point(53, 43)
+        Me.TxtNombreProducto.Location = New System.Drawing.Point(53, 105)
         Me.TxtNombreProducto.Name = "TxtNombreProducto"
         Me.TxtNombreProducto.Size = New System.Drawing.Size(336, 25)
         Me.TxtNombreProducto.TabIndex = 0
         '
-        'LsvMostrarProducto
+        'TpListado
         '
-        Me.LsvMostrarProducto.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ChIdProducto, Me.ChNombreProducto, Me.ChPrecioCosto, Me.ChPrecioVenta, Me.ChStock, Me.ChCategoria})
-        Me.LsvMostrarProducto.GridLines = True
-        Me.LsvMostrarProducto.Location = New System.Drawing.Point(9, 8)
-        Me.LsvMostrarProducto.Name = "LsvMostrarProducto"
-        Me.LsvMostrarProducto.Size = New System.Drawing.Size(772, 320)
-        Me.LsvMostrarProducto.TabIndex = 0
-        Me.LsvMostrarProducto.UseCompatibleStateImageBehavior = False
-        Me.LsvMostrarProducto.View = System.Windows.Forms.View.Details
+        Me.TpListado.Controls.Add(Me.TxtPorNombre)
+        Me.TpListado.Controls.Add(Me.RdbPorNombre)
+        Me.TpListado.Controls.Add(Me.BtnBuscar)
+        Me.TpListado.Controls.Add(Me.TxtBuscarPorCodigo)
+        Me.TpListado.Controls.Add(Me.Label3)
+        Me.TpListado.Controls.Add(Me.RdbPorCodigo)
+        Me.TpListado.Controls.Add(Me.LsvProducto)
+        Me.TpListado.Location = New System.Drawing.Point(4, 22)
+        Me.TpListado.Name = "TpListado"
+        Me.TpListado.Padding = New System.Windows.Forms.Padding(3)
+        Me.TpListado.Size = New System.Drawing.Size(791, 357)
+        Me.TpListado.TabIndex = 1
+        Me.TpListado.Text = "Listado"
+        Me.TpListado.UseVisualStyleBackColor = True
+        '
+        'TxtPorNombre
+        '
+        Me.TxtPorNombre.Location = New System.Drawing.Point(52, 9)
+        Me.TxtPorNombre.Name = "TxtPorNombre"
+        Me.TxtPorNombre.Size = New System.Drawing.Size(396, 20)
+        Me.TxtPorNombre.TabIndex = 6
+        '
+        'RdbPorNombre
+        '
+        Me.RdbPorNombre.AutoSize = True
+        Me.RdbPorNombre.Location = New System.Drawing.Point(662, 72)
+        Me.RdbPorNombre.Name = "RdbPorNombre"
+        Me.RdbPorNombre.Size = New System.Drawing.Size(114, 17)
+        Me.RdbPorNombre.TabIndex = 5
+        Me.RdbPorNombre.TabStop = True
+        Me.RdbPorNombre.Text = "Buscar por nombre"
+        Me.RdbPorNombre.UseVisualStyleBackColor = True
+        '
+        'BtnBuscar
+        '
+        Me.BtnBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnBuscar.Location = New System.Drawing.Point(454, 9)
+        Me.BtnBuscar.Name = "BtnBuscar"
+        Me.BtnBuscar.Size = New System.Drawing.Size(37, 23)
+        Me.BtnBuscar.TabIndex = 4
+        Me.BtnBuscar.Text = "..."
+        Me.BtnBuscar.UseVisualStyleBackColor = True
+        '
+        'TxtBuscarPorCodigo
+        '
+        Me.TxtBuscarPorCodigo.Location = New System.Drawing.Point(52, 9)
+        Me.TxtBuscarPorCodigo.Name = "TxtBuscarPorCodigo"
+        Me.TxtBuscarPorCodigo.Size = New System.Drawing.Size(396, 20)
+        Me.TxtBuscarPorCodigo.TabIndex = 3
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(6, 12)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(40, 13)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "Buscar"
+        '
+        'RdbPorCodigo
+        '
+        Me.RdbPorCodigo.AutoSize = True
+        Me.RdbPorCodigo.Location = New System.Drawing.Point(662, 39)
+        Me.RdbPorCodigo.Name = "RdbPorCodigo"
+        Me.RdbPorCodigo.Size = New System.Drawing.Size(111, 17)
+        Me.RdbPorCodigo.TabIndex = 1
+        Me.RdbPorCodigo.TabStop = True
+        Me.RdbPorCodigo.Text = "Buscar por código"
+        Me.RdbPorCodigo.UseVisualStyleBackColor = True
+        '
+        'LsvProducto
+        '
+        Me.LsvProducto.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ChIdProducto, Me.ChNombreProducto, Me.ChPrecioCosto, Me.ChPrecioVenta, Me.ChStock, Me.ChCategoria})
+        Me.LsvProducto.ContextMenuStrip = Me.CMSOpciones
+        Me.LsvProducto.FullRowSelect = True
+        Me.LsvProducto.GridLines = True
+        Me.LsvProducto.Location = New System.Drawing.Point(3, 39)
+        Me.LsvProducto.Name = "LsvProducto"
+        Me.LsvProducto.Size = New System.Drawing.Size(634, 315)
+        Me.LsvProducto.TabIndex = 0
+        Me.LsvProducto.UseCompatibleStateImageBehavior = False
+        Me.LsvProducto.View = System.Windows.Forms.View.Details
         '
         'ChIdProducto
         '
@@ -426,13 +480,35 @@ Partial Class FrmProducto
         Me.ChCategoria.Text = "Categoria"
         Me.ChCategoria.Width = 109
         '
+        'CMSOpciones
+        '
+        Me.CMSOpciones.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditarToolStripMenuItem, Me.EliminarToolStripMenuItem})
+        Me.CMSOpciones.Name = "CMSOpciones"
+        Me.CMSOpciones.Size = New System.Drawing.Size(118, 48)
+        '
+        'EditarToolStripMenuItem
+        '
+        Me.EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
+        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.EditarToolStripMenuItem.Text = "Editar"
+        '
+        'EliminarToolStripMenuItem
+        '
+        Me.EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
+        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.EliminarToolStripMenuItem.Text = "Eliminar"
+        '
+        'EpMensage
+        '
+        Me.EpMensage.ContainerControl = Me
+        '
         'FrmProducto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ClientSize = New System.Drawing.Size(817, 537)
-        Me.Controls.Add(Me.TabControl1)
+        Me.ClientSize = New System.Drawing.Size(817, 554)
+        Me.Controls.Add(Me.TcOpcion)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.PbxLogo)
         Me.Controls.Add(Me.Panel1)
@@ -443,11 +519,14 @@ Partial Class FrmProducto
         CType(Me.PbxLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        Me.TabControl1.ResumeLayout(False)
+        Me.TcOpcion.ResumeLayout(False)
         Me.TpDatosProducto.ResumeLayout(False)
-        Me.TpListado.ResumeLayout(False)
         Me.GbxExamen.ResumeLayout(False)
         Me.GbxExamen.PerformLayout()
+        Me.TpListado.ResumeLayout(False)
+        Me.TpListado.PerformLayout()
+        Me.CMSOpciones.ResumeLayout(False)
+        CType(Me.EpMensage, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -457,7 +536,7 @@ Partial Class FrmProducto
     Friend WithEvents PbxLogo As PictureBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
-    Friend WithEvents TabControl1 As TabControl
+    Friend WithEvents TcOpcion As TabControl
     Friend WithEvents TpDatosProducto As TabPage
     Friend WithEvents GbxExamen As GroupBox
     Friend WithEvents BtnSalir As Button
@@ -465,26 +544,34 @@ Partial Class FrmProducto
     Friend WithEvents BtnGuardar As Button
     Friend WithEvents BtnModificar As Button
     Friend WithEvents BtnAgregar As Button
-    Friend WithEvents Label11 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents DtpTiempo As DateTimePicker
     Friend WithEvents CboCategoria As ComboBox
-    Friend WithEvents CboStock As ComboBox
     Friend WithEvents TxtPrecioVenta As TextBox
     Friend WithEvents TxtPrecioCosto As TextBox
     Friend WithEvents TxtCodigoProducto As TextBox
     Friend WithEvents TxtNombreProducto As TextBox
     Friend WithEvents TpListado As TabPage
-    Friend WithEvents LsvMostrarProducto As ListView
+    Friend WithEvents LsvProducto As ListView
     Friend WithEvents ChIdProducto As ColumnHeader
     Friend WithEvents ChNombreProducto As ColumnHeader
     Friend WithEvents ChPrecioCosto As ColumnHeader
     Friend WithEvents ChPrecioVenta As ColumnHeader
     Friend WithEvents ChStock As ColumnHeader
     Friend WithEvents ChCategoria As ColumnHeader
+    Friend WithEvents TxtStock As TextBox
+    Friend WithEvents CMSOpciones As ContextMenuStrip
+    Friend WithEvents EditarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EliminarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents TxtPorNombre As TextBox
+    Friend WithEvents RdbPorNombre As RadioButton
+    Friend WithEvents BtnBuscar As Button
+    Friend WithEvents TxtBuscarPorCodigo As TextBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents RdbPorCodigo As RadioButton
+    Friend WithEvents EpMensage As ErrorProvider
 End Class
