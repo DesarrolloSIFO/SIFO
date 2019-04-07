@@ -49,12 +49,15 @@ Public Class FrmProducto
                 Da.Fill(Ds, "Categoria")
                 CboCategoria.DataSource = Ds.Tables(0)
 
+
                 CboCategoria.DisplayMember = Ds.Tables(0).Columns("NombreCategoria").ToString
                 CboCategoria.ValueMember = Ds.Tables(0).Columns("IdCategoria").ToString
+
+
                 CboCategoria.Text = "--Select--"
 
             Catch ex As Exception
-                MessageBox.Show("Error al consultar los datos." + ex.Message, "SIFO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Error al llenar los datos." + ex.Message, "SIFO", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Finally
                 Cn.Close()
             End Try
@@ -84,12 +87,13 @@ Public Class FrmProducto
                         .SubItems.Add(VerProducto("PrecioCosto").ToString)
                         .SubItems.Add(VerProducto("PrecioVenta").ToString)
                         .SubItems.Add(VerProducto("Stock").ToString)
-                        .SubItems.Add(VerProducto("Categoria").ToString)
+                        .SubItems.Add(VerProducto("NombreCategoria").ToString)
+
                     End With
                 End While
 
             Catch ex As Exception
-                MessageBox.Show("Error al mostrar los productos los datos." + ex.Message, "SIFO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Error al mostrar los productos." + ex.Message, "SIFO", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Finally
                 Cn.Close()
             End Try
@@ -110,7 +114,7 @@ Public Class FrmProducto
                     .CommandType = CommandType.StoredProcedure
                     .Connection = Cn
 
-                    ' Enviar los parameters
+
 
                     .Parameters.Add("@NombreProducto", SqlDbType.NVarChar, 50).Value = TxtNombreProducto.Text
                     .Parameters.Add("@PrecioCosto", SqlDbType.Money).Value = TxtPrecioCosto.Text
@@ -161,6 +165,7 @@ Public Class FrmProducto
 
     Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
         HabilitarBotones(True, False, False, False)
+        GuardarProducto()
         MostrarTodoProducto()
         Limpiar()
 
@@ -220,4 +225,5 @@ Public Class FrmProducto
         TcOpcion.SelectedIndex = 1
 
     End Sub
+
 End Class
