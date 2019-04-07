@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.SIFOSystem.Form
+            Me.MainForm = Global.SIFOSystem.FrmProducto
         End Sub
     End Class
 End Namespace
