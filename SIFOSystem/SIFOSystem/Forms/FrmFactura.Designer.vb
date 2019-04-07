@@ -28,28 +28,40 @@ Partial Class Form
         Me.PbxLogo = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.TbDetalleFactura = New System.Windows.Forms.TabPage()
         Me.GbxExamen = New System.Windows.Forms.GroupBox()
-        Me.BtnLimpiar = New System.Windows.Forms.Button()
+        Me.BtnSalir = New System.Windows.Forms.Button()
+        Me.BtnCancelar = New System.Windows.Forms.Button()
+        Me.BtnGuardar = New System.Windows.Forms.Button()
+        Me.BtnModificar = New System.Windows.Forms.Button()
         Me.BtnAgregar = New System.Windows.Forms.Button()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.CboTipoExamen = New System.Windows.Forms.ComboBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Lbl = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.DtpFechaFactura = New System.Windows.Forms.DateTimePicker()
+        Me.CboIdUsuario = New System.Windows.Forms.ComboBox()
+        Me.TxtNumIdentCliente = New System.Windows.Forms.TextBox()
+        Me.TxtCodFactura = New System.Windows.Forms.TextBox()
+        Me.TbListadoFactura = New System.Windows.Forms.TabPage()
+        Me.LsvDetalleFac = New System.Windows.Forms.ListView()
+        Me.CHCodDetalle = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.CHNumeroIdentidad = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChTipoExamen = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.CHCiudad = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.CHUsuario = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.CHFecha = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Panel2.SuspendLayout()
         CType(Me.PbxLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        Me.TabControl1.SuspendLayout()
+        Me.TbDetalleFactura.SuspendLayout()
         Me.GbxExamen.SuspendLayout()
+        Me.TbListadoFactura.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel2
@@ -57,7 +69,7 @@ Partial Class Form
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(231, Byte), Integer))
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Location = New System.Drawing.Point(-3, 143)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1068, 46)
         Me.Panel2.TabIndex = 28
@@ -78,7 +90,7 @@ Partial Class Form
         '
         Me.PbxLogo.Image = CType(resources.GetObject("PbxLogo.Image"), System.Drawing.Image)
         Me.PbxLogo.Location = New System.Drawing.Point(-3, -4)
-        Me.PbxLogo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PbxLogo.Margin = New System.Windows.Forms.Padding(4)
         Me.PbxLogo.Name = "PbxLogo"
         Me.PbxLogo.Size = New System.Drawing.Size(308, 150)
         Me.PbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -92,7 +104,7 @@ Partial Class Form
         Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Location = New System.Drawing.Point(304, -2)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(761, 151)
         Me.Panel1.TabIndex = 27
@@ -110,52 +122,124 @@ Partial Class Form
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Detalle Factura"
         '
+        'TabControl1
+        '
+        Me.TabControl1.Controls.Add(Me.TbDetalleFactura)
+        Me.TabControl1.Controls.Add(Me.TbListadoFactura)
+        Me.TabControl1.Location = New System.Drawing.Point(-3, 196)
+        Me.TabControl1.Name = "TabControl1"
+        Me.TabControl1.SelectedIndex = 0
+        Me.TabControl1.Size = New System.Drawing.Size(1075, 409)
+        Me.TabControl1.TabIndex = 29
+        '
+        'TbDetalleFactura
+        '
+        Me.TbDetalleFactura.Controls.Add(Me.GbxExamen)
+        Me.TbDetalleFactura.Location = New System.Drawing.Point(4, 25)
+        Me.TbDetalleFactura.Name = "TbDetalleFactura"
+        Me.TbDetalleFactura.Padding = New System.Windows.Forms.Padding(3)
+        Me.TbDetalleFactura.Size = New System.Drawing.Size(1067, 380)
+        Me.TbDetalleFactura.TabIndex = 0
+        Me.TbDetalleFactura.Text = "Datos Detalle de Factura"
+        Me.TbDetalleFactura.UseVisualStyleBackColor = True
+        '
         'GbxExamen
         '
         Me.GbxExamen.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.GbxExamen.Controls.Add(Me.BtnLimpiar)
+        Me.GbxExamen.Controls.Add(Me.BtnSalir)
+        Me.GbxExamen.Controls.Add(Me.BtnCancelar)
+        Me.GbxExamen.Controls.Add(Me.BtnGuardar)
+        Me.GbxExamen.Controls.Add(Me.BtnModificar)
         Me.GbxExamen.Controls.Add(Me.BtnAgregar)
-        Me.GbxExamen.Controls.Add(Me.ComboBox3)
-        Me.GbxExamen.Controls.Add(Me.Label3)
+        Me.GbxExamen.Controls.Add(Me.CboTipoExamen)
         Me.GbxExamen.Controls.Add(Me.Label11)
         Me.GbxExamen.Controls.Add(Me.Label10)
-        Me.GbxExamen.Controls.Add(Me.Label9)
         Me.GbxExamen.Controls.Add(Me.Label8)
         Me.GbxExamen.Controls.Add(Me.Label7)
         Me.GbxExamen.Controls.Add(Me.Lbl)
         Me.GbxExamen.Controls.Add(Me.Label5)
-        Me.GbxExamen.Controls.Add(Me.DateTimePicker1)
-        Me.GbxExamen.Controls.Add(Me.ComboBox2)
-        Me.GbxExamen.Controls.Add(Me.ComboBox1)
-        Me.GbxExamen.Controls.Add(Me.TextBox3)
-        Me.GbxExamen.Controls.Add(Me.TextBox2)
-        Me.GbxExamen.Controls.Add(Me.TextBox1)
+        Me.GbxExamen.Controls.Add(Me.DtpFechaFactura)
+        Me.GbxExamen.Controls.Add(Me.CboIdUsuario)
+        Me.GbxExamen.Controls.Add(Me.TxtNumIdentCliente)
+        Me.GbxExamen.Controls.Add(Me.TxtCodFactura)
         Me.GbxExamen.Font = New System.Drawing.Font("Microsoft JhengHei", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GbxExamen.Location = New System.Drawing.Point(11, 196)
-        Me.GbxExamen.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GbxExamen.Location = New System.Drawing.Point(3, 4)
+        Me.GbxExamen.Margin = New System.Windows.Forms.Padding(4)
         Me.GbxExamen.Name = "GbxExamen"
-        Me.GbxExamen.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GbxExamen.Size = New System.Drawing.Size(1044, 394)
-        Me.GbxExamen.TabIndex = 29
+        Me.GbxExamen.Padding = New System.Windows.Forms.Padding(4)
+        Me.GbxExamen.Size = New System.Drawing.Size(1060, 380)
+        Me.GbxExamen.TabIndex = 31
         Me.GbxExamen.TabStop = False
-        Me.GbxExamen.Text = "DATOS DE FACTURA"
         '
-        'BtnLimpiar
+        'BtnSalir
         '
-        Me.BtnLimpiar.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.BtnLimpiar.FlatAppearance.BorderSize = 0
-        Me.BtnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnLimpiar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnLimpiar.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.BtnLimpiar.Image = CType(resources.GetObject("BtnLimpiar.Image"), System.Drawing.Image)
-        Me.BtnLimpiar.Location = New System.Drawing.Point(843, 321)
-        Me.BtnLimpiar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.BtnLimpiar.Name = "BtnLimpiar"
-        Me.BtnLimpiar.Size = New System.Drawing.Size(149, 54)
-        Me.BtnLimpiar.TabIndex = 19
-        Me.BtnLimpiar.Text = "Limpiar"
-        Me.BtnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.BtnLimpiar.UseVisualStyleBackColor = False
+        Me.BtnSalir.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.BtnSalir.FlatAppearance.BorderSize = 0
+        Me.BtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnSalir.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnSalir.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnSalir.Image = CType(resources.GetObject("BtnSalir.Image"), System.Drawing.Image)
+        Me.BtnSalir.Location = New System.Drawing.Point(845, 291)
+        Me.BtnSalir.Margin = New System.Windows.Forms.Padding(4)
+        Me.BtnSalir.Name = "BtnSalir"
+        Me.BtnSalir.Size = New System.Drawing.Size(149, 54)
+        Me.BtnSalir.TabIndex = 42
+        Me.BtnSalir.Text = "Salir"
+        Me.BtnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.BtnSalir.UseVisualStyleBackColor = False
+        '
+        'BtnCancelar
+        '
+        Me.BtnCancelar.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.BtnCancelar.FlatAppearance.BorderSize = 0
+        Me.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnCancelar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnCancelar.Image = CType(resources.GetObject("BtnCancelar.Image"), System.Drawing.Image)
+        Me.BtnCancelar.Location = New System.Drawing.Point(664, 291)
+        Me.BtnCancelar.Margin = New System.Windows.Forms.Padding(4)
+        Me.BtnCancelar.Name = "BtnCancelar"
+        Me.BtnCancelar.Size = New System.Drawing.Size(149, 54)
+        Me.BtnCancelar.TabIndex = 43
+        Me.BtnCancelar.Text = "Limpiar"
+        Me.BtnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.BtnCancelar.UseVisualStyleBackColor = False
+        '
+        'BtnGuardar
+        '
+        Me.BtnGuardar.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.BtnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.BtnGuardar.FlatAppearance.BorderSize = 0
+        Me.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnGuardar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnGuardar.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnGuardar.Image = CType(resources.GetObject("BtnGuardar.Image"), System.Drawing.Image)
+        Me.BtnGuardar.Location = New System.Drawing.Point(249, 291)
+        Me.BtnGuardar.Margin = New System.Windows.Forms.Padding(4)
+        Me.BtnGuardar.Name = "BtnGuardar"
+        Me.BtnGuardar.Size = New System.Drawing.Size(149, 54)
+        Me.BtnGuardar.TabIndex = 39
+        Me.BtnGuardar.Text = "Guardar"
+        Me.BtnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.BtnGuardar.UseVisualStyleBackColor = False
+        '
+        'BtnModificar
+        '
+        Me.BtnModificar.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.BtnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnModificar.FlatAppearance.BorderSize = 0
+        Me.BtnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnModificar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnModificar.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnModificar.Image = CType(resources.GetObject("BtnModificar.Image"), System.Drawing.Image)
+        Me.BtnModificar.Location = New System.Drawing.Point(453, 291)
+        Me.BtnModificar.Margin = New System.Windows.Forms.Padding(4)
+        Me.BtnModificar.Name = "BtnModificar"
+        Me.BtnModificar.Size = New System.Drawing.Size(149, 54)
+        Me.BtnModificar.TabIndex = 40
+        Me.BtnModificar.Text = "Modificar"
+        Me.BtnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.BtnModificar.UseVisualStyleBackColor = False
         '
         'BtnAgregar
         '
@@ -166,73 +250,51 @@ Partial Class Form
         Me.BtnAgregar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnAgregar.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.BtnAgregar.Image = CType(resources.GetObject("BtnAgregar.Image"), System.Drawing.Image)
-        Me.BtnAgregar.Location = New System.Drawing.Point(549, 321)
-        Me.BtnAgregar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnAgregar.Location = New System.Drawing.Point(44, 291)
+        Me.BtnAgregar.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnAgregar.Name = "BtnAgregar"
         Me.BtnAgregar.Size = New System.Drawing.Size(149, 54)
-        Me.BtnAgregar.TabIndex = 18
+        Me.BtnAgregar.TabIndex = 41
         Me.BtnAgregar.Text = "Agregar"
         Me.BtnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.BtnAgregar.UseVisualStyleBackColor = False
         '
-        'ComboBox3
+        'CboTipoExamen
         '
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(73, 288)
-        Me.ComboBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(444, 29)
-        Me.ComboBox3.TabIndex = 17
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(71, 92)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(165, 25)
-        Me.Label3.TabIndex = 16
-        Me.Label3.Text = "Nombre Cliente "
+        Me.CboTipoExamen.FormattingEnabled = True
+        Me.CboTipoExamen.Location = New System.Drawing.Point(73, 209)
+        Me.CboTipoExamen.Margin = New System.Windows.Forms.Padding(4)
+        Me.CboTipoExamen.Name = "CboTipoExamen"
+        Me.CboTipoExamen.Size = New System.Drawing.Size(444, 29)
+        Me.CboTipoExamen.TabIndex = 17
         '
         'Label11
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(655, 164)
+        Me.Label11.Location = New System.Drawing.Point(669, 68)
         Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(177, 25)
+        Me.Label11.Size = New System.Drawing.Size(72, 25)
         Me.Label11.TabIndex = 13
-        Me.Label11.Text = "Fecha De Examen"
+        Me.Label11.Text = "Fecha "
         '
         'Label10
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(655, 92)
+        Me.Label10.Location = New System.Drawing.Point(670, 150)
         Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(108, 25)
         Me.Label10.TabIndex = 12
         Me.Label10.Text = "Id Usuario"
         '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(655, 25)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(79, 25)
-        Me.Label9.TabIndex = 11
-        Me.Label9.Text = "Ciudad"
-        '
         'Label8
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(71, 247)
+        Me.Label8.Location = New System.Drawing.Point(70, 180)
         Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(133, 25)
@@ -243,7 +305,7 @@ Partial Class Form
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(71, 164)
+        Me.Label7.Location = New System.Drawing.Point(71, 105)
         Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(214, 25)
@@ -271,67 +333,104 @@ Partial Class Form
         Me.Label5.TabIndex = 7
         Me.Label5.Text = "Codigo Factura "
         '
-        'DateTimePicker1
+        'DtpFechaFactura
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(659, 197)
-        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(332, 29)
-        Me.DateTimePicker1.TabIndex = 6
+        Me.DtpFechaFactura.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DtpFechaFactura.Location = New System.Drawing.Point(673, 101)
+        Me.DtpFechaFactura.Margin = New System.Windows.Forms.Padding(4)
+        Me.DtpFechaFactura.Name = "DtpFechaFactura"
+        Me.DtpFechaFactura.Size = New System.Drawing.Size(150, 29)
+        Me.DtpFechaFactura.TabIndex = 6
         '
-        'ComboBox2
+        'CboIdUsuario
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(659, 123)
-        Me.ComboBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(332, 29)
-        Me.ComboBox2.TabIndex = 5
+        Me.CboIdUsuario.FormattingEnabled = True
+        Me.CboIdUsuario.Location = New System.Drawing.Point(674, 181)
+        Me.CboIdUsuario.Margin = New System.Windows.Forms.Padding(4)
+        Me.CboIdUsuario.Name = "CboIdUsuario"
+        Me.CboIdUsuario.Size = New System.Drawing.Size(332, 29)
+        Me.CboIdUsuario.TabIndex = 5
         '
-        'ComboBox1
+        'TxtNumIdentCliente
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(659, 55)
-        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(332, 29)
-        Me.ComboBox1.TabIndex = 4
+        Me.TxtNumIdentCliente.Location = New System.Drawing.Point(71, 135)
+        Me.TxtNumIdentCliente.Margin = New System.Windows.Forms.Padding(4)
+        Me.TxtNumIdentCliente.Name = "TxtNumIdentCliente"
+        Me.TxtNumIdentCliente.Size = New System.Drawing.Size(447, 29)
+        Me.TxtNumIdentCliente.TabIndex = 2
         '
-        'TextBox3
+        'TxtCodFactura
         '
-        Me.TextBox3.Location = New System.Drawing.Point(71, 194)
-        Me.TextBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(447, 29)
-        Me.TextBox3.TabIndex = 2
+        Me.TxtCodFactura.Location = New System.Drawing.Point(71, 52)
+        Me.TxtCodFactura.Margin = New System.Windows.Forms.Padding(4)
+        Me.TxtCodFactura.Name = "TxtCodFactura"
+        Me.TxtCodFactura.Size = New System.Drawing.Size(447, 29)
+        Me.TxtCodFactura.TabIndex = 0
         '
-        'TextBox2
+        'TbListadoFactura
         '
-        Me.TextBox2.Location = New System.Drawing.Point(71, 121)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(447, 29)
-        Me.TextBox2.TabIndex = 1
+        Me.TbListadoFactura.Controls.Add(Me.LsvDetalleFac)
+        Me.TbListadoFactura.Location = New System.Drawing.Point(4, 25)
+        Me.TbListadoFactura.Name = "TbListadoFactura"
+        Me.TbListadoFactura.Padding = New System.Windows.Forms.Padding(3)
+        Me.TbListadoFactura.Size = New System.Drawing.Size(1067, 380)
+        Me.TbListadoFactura.TabIndex = 1
+        Me.TbListadoFactura.Text = "Listado"
+        Me.TbListadoFactura.UseVisualStyleBackColor = True
         '
-        'TextBox1
+        'LsvDetalleFac
         '
-        Me.TextBox1.Location = New System.Drawing.Point(71, 52)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(447, 29)
-        Me.TextBox1.TabIndex = 0
+        Me.LsvDetalleFac.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.CHCodDetalle, Me.CHNumeroIdentidad, Me.ChTipoExamen, Me.CHCiudad, Me.CHUsuario, Me.CHFecha})
+        Me.LsvDetalleFac.FullRowSelect = True
+        Me.LsvDetalleFac.GridLines = True
+        Me.LsvDetalleFac.Location = New System.Drawing.Point(3, 6)
+        Me.LsvDetalleFac.Name = "LsvDetalleFac"
+        Me.LsvDetalleFac.Size = New System.Drawing.Size(1061, 368)
+        Me.LsvDetalleFac.TabIndex = 0
+        Me.LsvDetalleFac.UseCompatibleStateImageBehavior = False
+        Me.LsvDetalleFac.View = System.Windows.Forms.View.Details
+        '
+        'CHCodDetalle
+        '
+        Me.CHCodDetalle.Text = "Código Detalle"
+        Me.CHCodDetalle.Width = 100
+        '
+        'CHNumeroIdentidad
+        '
+        Me.CHNumeroIdentidad.Text = "Número de Identidad"
+        Me.CHNumeroIdentidad.Width = 150
+        '
+        'ChTipoExamen
+        '
+        Me.ChTipoExamen.Text = "TipoExamen"
+        Me.ChTipoExamen.Width = 150
+        '
+        'CHCiudad
+        '
+        Me.CHCiudad.Text = "Ciudad"
+        Me.CHCiudad.Width = 100
+        '
+        'CHUsuario
+        '
+        Me.CHUsuario.Text = "Usuario"
+        Me.CHUsuario.Width = 100
+        '
+        'CHFecha
+        '
+        Me.CHFecha.Text = "Fecha"
+        Me.CHFecha.Width = 100
         '
         'Form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ClientSize = New System.Drawing.Size(1071, 604)
+        Me.ClientSize = New System.Drawing.Size(1071, 615)
+        Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.Panel2)
-        Me.Controls.Add(Me.GbxExamen)
         Me.Controls.Add(Me.PbxLogo)
         Me.Controls.Add(Me.Panel1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Form"
         Me.Text = "Factura "
         Me.Panel2.ResumeLayout(False)
@@ -339,8 +438,11 @@ Partial Class Form
         CType(Me.PbxLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.TabControl1.ResumeLayout(False)
+        Me.TbDetalleFactura.ResumeLayout(False)
         Me.GbxExamen.ResumeLayout(False)
         Me.GbxExamen.PerformLayout()
+        Me.TbListadoFactura.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -350,22 +452,31 @@ Partial Class Form
     Friend WithEvents PbxLogo As PictureBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
+    Friend WithEvents TabControl1 As TabControl
+    Friend WithEvents TbDetalleFactura As TabPage
+    Friend WithEvents TbListadoFactura As TabPage
     Friend WithEvents GbxExamen As GroupBox
+    Friend WithEvents BtnSalir As Button
+    Friend WithEvents BtnCancelar As Button
+    Friend WithEvents BtnGuardar As Button
+    Friend WithEvents BtnModificar As Button
+    Friend WithEvents BtnAgregar As Button
+    Friend WithEvents CboTipoExamen As ComboBox
     Friend WithEvents Label11 As Label
     Friend WithEvents Label10 As Label
-    Friend WithEvents Label9 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Lbl As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Label3 As Label
-    Friend WithEvents ComboBox3 As ComboBox
-    Friend WithEvents BtnLimpiar As Button
-    Friend WithEvents BtnAgregar As Button
+    Friend WithEvents DtpFechaFactura As DateTimePicker
+    Friend WithEvents CboIdUsuario As ComboBox
+    Friend WithEvents TxtNumIdentCliente As TextBox
+    Friend WithEvents TxtCodFactura As TextBox
+    Friend WithEvents LsvDetalleFac As ListView
+    Friend WithEvents CHCodDetalle As ColumnHeader
+    Friend WithEvents CHNumeroIdentidad As ColumnHeader
+    Friend WithEvents ChTipoExamen As ColumnHeader
+    Friend WithEvents CHCiudad As ColumnHeader
+    Friend WithEvents CHUsuario As ColumnHeader
+    Friend WithEvents CHFecha As ColumnHeader
 End Class
