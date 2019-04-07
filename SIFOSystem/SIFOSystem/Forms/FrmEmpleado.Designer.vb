@@ -73,6 +73,9 @@ Partial Class FrmEmpleado
         Me.CmOpciones = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.TxtBuscarEmpleado = New System.Windows.Forms.TextBox()
+        Me.EpMensaje = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.Panel2.SuspendLayout()
         CType(Me.PbxLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -81,6 +84,7 @@ Partial Class FrmEmpleado
         Me.TpDatosEmpleado.SuspendLayout()
         Me.TpListadoEmpleado.SuspendLayout()
         Me.CmOpciones.SuspendLayout()
+        CType(Me.EpMensaje, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel2
@@ -189,7 +193,7 @@ Partial Class FrmEmpleado
         Me.TpDatosEmpleado.Padding = New System.Windows.Forms.Padding(3)
         Me.TpDatosEmpleado.Size = New System.Drawing.Size(792, 401)
         Me.TpDatosEmpleado.TabIndex = 0
-        Me.TpDatosEmpleado.Text = "Datos de los empleados"
+        Me.TpDatosEmpleado.Text = "Datos Empleados"
         Me.TpDatosEmpleado.UseVisualStyleBackColor = True
         '
         'BtnSalir
@@ -453,6 +457,8 @@ Partial Class FrmEmpleado
         '
         'TpListadoEmpleado
         '
+        Me.TpListadoEmpleado.Controls.Add(Me.TxtBuscarEmpleado)
+        Me.TpListadoEmpleado.Controls.Add(Me.Label13)
         Me.TpListadoEmpleado.Controls.Add(Me.LsvEmpleados)
         Me.TpListadoEmpleado.Controls.Add(Me.ListView1)
         Me.TpListadoEmpleado.Location = New System.Drawing.Point(4, 26)
@@ -468,9 +474,9 @@ Partial Class FrmEmpleado
         Me.LsvEmpleados.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ChNumeroIdentidad, Me.ChNombre, Me.ChApellidos, Me.ChDireccion, Me.ChTelefono, Me.ChFechaNacimiento, Me.ChFechaContratacion, Me.ChSexo, Me.ChCiudad, Me.ChCargoEmpleado})
         Me.LsvEmpleados.FullRowSelect = True
         Me.LsvEmpleados.GridLines = True
-        Me.LsvEmpleados.Location = New System.Drawing.Point(7, 0)
+        Me.LsvEmpleados.Location = New System.Drawing.Point(7, 79)
         Me.LsvEmpleados.Name = "LsvEmpleados"
-        Me.LsvEmpleados.Size = New System.Drawing.Size(777, 384)
+        Me.LsvEmpleados.Size = New System.Drawing.Size(777, 305)
         Me.LsvEmpleados.TabIndex = 1
         Me.LsvEmpleados.UseCompatibleStateImageBehavior = False
         Me.LsvEmpleados.View = System.Windows.Forms.View.Details
@@ -555,6 +561,26 @@ Partial Class FrmEmpleado
         Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
         Me.EliminarToolStripMenuItem.Text = "Eliminar"
         '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(81, 34)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(49, 17)
+        Me.Label13.TabIndex = 2
+        Me.Label13.Text = "Buscar"
+        '
+        'TxtBuscarEmpleado
+        '
+        Me.TxtBuscarEmpleado.Location = New System.Drawing.Point(157, 31)
+        Me.TxtBuscarEmpleado.Name = "TxtBuscarEmpleado"
+        Me.TxtBuscarEmpleado.Size = New System.Drawing.Size(224, 25)
+        Me.TxtBuscarEmpleado.TabIndex = 3
+        '
+        'EpMensaje
+        '
+        Me.EpMensaje.ContainerControl = Me
+        '
         'FrmEmpleado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -578,7 +604,9 @@ Partial Class FrmEmpleado
         Me.TpDatosEmpleado.ResumeLayout(False)
         Me.TpDatosEmpleado.PerformLayout()
         Me.TpListadoEmpleado.ResumeLayout(False)
+        Me.TpListadoEmpleado.PerformLayout()
         Me.CmOpciones.ResumeLayout(False)
+        CType(Me.EpMensaje, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -632,4 +660,7 @@ Partial Class FrmEmpleado
     Friend WithEvents CmOpciones As ContextMenuStrip
     Friend WithEvents EditarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EliminarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents TxtBuscarEmpleado As TextBox
+    Friend WithEvents Label13 As Label
+    Friend WithEvents EpMensaje As ErrorProvider
 End Class
