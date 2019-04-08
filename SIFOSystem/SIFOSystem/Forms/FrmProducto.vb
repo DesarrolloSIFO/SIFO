@@ -227,56 +227,8 @@ Public Class FrmProducto
         TcOpcion.SelectedIndex = 1
 
     End Sub
-    Private Sub BuscarProductoPorCodigo()
-
-        If Cn.State = ConnectionState.Open Then
-            Cn.Close()
-        End If
-        Using Cmd As New SqlCommand
-            Cn.Open()
-            Try
-                With Cmd
-                    .CommandText = "Sp_BuscarProductoPorCodigo"
-                    .CommandType = CommandType.StoredProcedure
-                    .Connection = Cn
-
-                    .Parameters.Add("@Busqueda", SqlDbType.Char, 4).Value = TxtBuscarPorCodigo.Text
-
-                End With
-
-                Dim VerProducto As SqlDataReader
-                VerProducto = Cmd.ExecuteReader()
-
-                LsvProducto.Items.Clear()
-                While VerProducto.Read = True
-                    With LsvProducto.Items.Add(VerProducto("IdProducto").ToString)
-                        .SubItems.Add(VerProducto("NombreProducto").ToString)
-                        .SubItems.Add(VerProducto("PrecioCosto").ToString)
-                        .SubItems.Add(VerProducto("PrecioVenta").ToString)
-                        .SubItems.Add(VerProducto("Stock").ToString)
-                        .SubItems.Add(VerProducto("NombreCategoria").ToString)
-                    End With
-                End While
-
-            Catch ex As Exception
-                MessageBox.Show("Error al consultar los datos." + ex.Message, "SIFO", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Finally
-                Cn.Close()
-            End Try
-        End Using
-    End Sub
-
-    Private Sub TxtBuscarPorCodigo_TextChanged(sender As Object, e As EventArgs) Handles TxtBuscarPorCodigo.TextChanged
-        BuscarProductoPorCodigo()
 
 
-    End Sub
-
-    Private Sub RdbPorNombre_CheckedChanged(sender As Object, e As EventArgs) Handles RdbPorNombre.CheckedChanged
-        BtnBuscar.Visible = False
-        TxtPorNombre.Visible = True
-        TxtBuscarPorCodigo.Visible = False
-    End Sub
     Private Sub BuscarProductoPorNombre()
 
         If Cn.State = ConnectionState.Open Then
@@ -321,11 +273,6 @@ Public Class FrmProducto
 
     End Sub
 
-    Private Sub RdbPorCodigo_CheckedChanged(sender As Object, e As EventArgs) Handles RdbPorCodigo.CheckedChanged
-        BtnBuscar.Visible = True
-        TxtPorNombre.Visible = False
-        TxtBuscarPorCodigo.Visible = True
-    End Sub
 
     Private Sub EditarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EditarToolStripMenuItem.Click
         TxtCodigoProducto.Text = LsvProducto.FocusedItem.SubItems(0).Text
