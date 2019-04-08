@@ -53,8 +53,10 @@ Partial Class FrmGestión
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TxtNombres = New System.Windows.Forms.TextBox()
         Me.TxtTelefono = New System.Windows.Forms.TextBox()
-        Me.TpListadoClientes = New System.Windows.Forms.TabPage()
-        Me.TxtBuscar = New System.Windows.Forms.TextBox()
+        Me.FrmGestionCliente = New System.Windows.Forms.TabPage()
+        Me.BtnLimpiar = New System.Windows.Forms.Button()
+        Me.RdbPorIdentidad = New System.Windows.Forms.RadioButton()
+        Me.RdbPorNombre = New System.Windows.Forms.RadioButton()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.LsvCliente = New System.Windows.Forms.ListView()
         Me.ChNombre = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -68,6 +70,8 @@ Partial Class FrmGestión
         Me.CmsOpciones = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TxtBuscarPorCodigo = New System.Windows.Forms.TextBox()
+        Me.TxtBuscarPorNombre = New System.Windows.Forms.TextBox()
         Me.EpMensaje = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.Panel2.SuspendLayout()
         CType(Me.PbxLogo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -75,7 +79,7 @@ Partial Class FrmGestión
         Me.TpCliente.SuspendLayout()
         Me.TpDatosCliente.SuspendLayout()
         Me.GbxExamen.SuspendLayout()
-        Me.TpListadoClientes.SuspendLayout()
+        Me.FrmGestionCliente.SuspendLayout()
         Me.CmsOpciones.SuspendLayout()
         CType(Me.EpMensaje, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -136,7 +140,7 @@ Partial Class FrmGestión
         'TpCliente
         '
         Me.TpCliente.Controls.Add(Me.TpDatosCliente)
-        Me.TpCliente.Controls.Add(Me.TpListadoClientes)
+        Me.TpCliente.Controls.Add(Me.FrmGestionCliente)
         Me.TpCliente.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TpCliente.Location = New System.Drawing.Point(-2, 154)
         Me.TpCliente.Name = "TpCliente"
@@ -414,26 +418,63 @@ Partial Class FrmGestión
         Me.TxtTelefono.Size = New System.Drawing.Size(267, 25)
         Me.TxtTelefono.TabIndex = 4
         '
-        'TpListadoClientes
+        'FrmGestionCliente
         '
-        Me.TpListadoClientes.Controls.Add(Me.TxtBuscar)
-        Me.TpListadoClientes.Controls.Add(Me.Label11)
-        Me.TpListadoClientes.Controls.Add(Me.LsvCliente)
-        Me.TpListadoClientes.Location = New System.Drawing.Point(4, 30)
-        Me.TpListadoClientes.Name = "TpListadoClientes"
-        Me.TpListadoClientes.Padding = New System.Windows.Forms.Padding(3)
-        Me.TpListadoClientes.Size = New System.Drawing.Size(805, 427)
-        Me.TpListadoClientes.TabIndex = 1
-        Me.TpListadoClientes.Text = "Listado Clientes"
-        Me.TpListadoClientes.UseVisualStyleBackColor = True
+        Me.FrmGestionCliente.Controls.Add(Me.BtnLimpiar)
+        Me.FrmGestionCliente.Controls.Add(Me.RdbPorIdentidad)
+        Me.FrmGestionCliente.Controls.Add(Me.RdbPorNombre)
+        Me.FrmGestionCliente.Controls.Add(Me.Label11)
+        Me.FrmGestionCliente.Controls.Add(Me.LsvCliente)
+        Me.FrmGestionCliente.Controls.Add(Me.TxtBuscarPorCodigo)
+        Me.FrmGestionCliente.Controls.Add(Me.TxtBuscarPorNombre)
+        Me.FrmGestionCliente.Location = New System.Drawing.Point(4, 30)
+        Me.FrmGestionCliente.Name = "FrmGestionCliente"
+        Me.FrmGestionCliente.Padding = New System.Windows.Forms.Padding(3)
+        Me.FrmGestionCliente.Size = New System.Drawing.Size(805, 427)
+        Me.FrmGestionCliente.TabIndex = 1
+        Me.FrmGestionCliente.Text = "Listado Clientes"
+        Me.FrmGestionCliente.UseVisualStyleBackColor = True
         '
-        'TxtBuscar
+        'BtnLimpiar
         '
-        Me.TxtBuscar.Font = New System.Drawing.Font("Microsoft JhengHei", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtBuscar.Location = New System.Drawing.Point(147, 19)
-        Me.TxtBuscar.Name = "TxtBuscar"
-        Me.TxtBuscar.Size = New System.Drawing.Size(257, 27)
-        Me.TxtBuscar.TabIndex = 2
+        Me.BtnLimpiar.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.BtnLimpiar.FlatAppearance.BorderSize = 0
+        Me.BtnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnLimpiar.Font = New System.Drawing.Font("Microsoft JhengHei", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnLimpiar.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnLimpiar.Image = CType(resources.GetObject("BtnLimpiar.Image"), System.Drawing.Image)
+        Me.BtnLimpiar.Location = New System.Drawing.Point(405, 19)
+        Me.BtnLimpiar.Name = "BtnLimpiar"
+        Me.BtnLimpiar.Size = New System.Drawing.Size(93, 27)
+        Me.BtnLimpiar.TabIndex = 31
+        Me.BtnLimpiar.Text = "Limpiar"
+        Me.BtnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.BtnLimpiar.UseVisualStyleBackColor = False
+        Me.BtnLimpiar.Visible = False
+        '
+        'RdbPorIdentidad
+        '
+        Me.RdbPorIdentidad.AutoSize = True
+        Me.RdbPorIdentidad.Font = New System.Drawing.Font("Microsoft JhengHei", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RdbPorIdentidad.Location = New System.Drawing.Point(533, 31)
+        Me.RdbPorIdentidad.Name = "RdbPorIdentidad"
+        Me.RdbPorIdentidad.Size = New System.Drawing.Size(123, 23)
+        Me.RdbPorIdentidad.TabIndex = 5
+        Me.RdbPorIdentidad.TabStop = True
+        Me.RdbPorIdentidad.Text = "Por identidad"
+        Me.RdbPorIdentidad.UseVisualStyleBackColor = True
+        '
+        'RdbPorNombre
+        '
+        Me.RdbPorNombre.AutoSize = True
+        Me.RdbPorNombre.Font = New System.Drawing.Font("Microsoft JhengHei", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RdbPorNombre.Location = New System.Drawing.Point(533, 8)
+        Me.RdbPorNombre.Name = "RdbPorNombre"
+        Me.RdbPorNombre.Size = New System.Drawing.Size(110, 23)
+        Me.RdbPorNombre.TabIndex = 4
+        Me.RdbPorNombre.TabStop = True
+        Me.RdbPorNombre.Text = "Por nombre"
+        Me.RdbPorNombre.UseVisualStyleBackColor = True
         '
         'Label11
         '
@@ -517,6 +558,24 @@ Partial Class FrmGestión
         Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
         Me.EliminarToolStripMenuItem.Text = "Eliminar"
         '
+        'TxtBuscarPorCodigo
+        '
+        Me.TxtBuscarPorCodigo.Font = New System.Drawing.Font("Microsoft JhengHei", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtBuscarPorCodigo.Location = New System.Drawing.Point(147, 19)
+        Me.TxtBuscarPorCodigo.Name = "TxtBuscarPorCodigo"
+        Me.TxtBuscarPorCodigo.Size = New System.Drawing.Size(258, 27)
+        Me.TxtBuscarPorCodigo.TabIndex = 29
+        Me.TxtBuscarPorCodigo.Visible = False
+        '
+        'TxtBuscarPorNombre
+        '
+        Me.TxtBuscarPorNombre.Font = New System.Drawing.Font("Microsoft JhengHei", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtBuscarPorNombre.Location = New System.Drawing.Point(147, 19)
+        Me.TxtBuscarPorNombre.Name = "TxtBuscarPorNombre"
+        Me.TxtBuscarPorNombre.Size = New System.Drawing.Size(257, 27)
+        Me.TxtBuscarPorNombre.TabIndex = 2
+        Me.TxtBuscarPorNombre.Visible = False
+        '
         'EpMensaje
         '
         Me.EpMensaje.ContainerControl = Me
@@ -543,8 +602,8 @@ Partial Class FrmGestión
         Me.TpDatosCliente.ResumeLayout(False)
         Me.GbxExamen.ResumeLayout(False)
         Me.GbxExamen.PerformLayout()
-        Me.TpListadoClientes.ResumeLayout(False)
-        Me.TpListadoClientes.PerformLayout()
+        Me.FrmGestionCliente.ResumeLayout(False)
+        Me.FrmGestionCliente.PerformLayout()
         Me.CmsOpciones.ResumeLayout(False)
         CType(Me.EpMensaje, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -580,7 +639,7 @@ Partial Class FrmGestión
     Friend WithEvents Label5 As Label
     Friend WithEvents TxtNombres As TextBox
     Friend WithEvents TxtTelefono As TextBox
-    Friend WithEvents TpListadoClientes As TabPage
+    Friend WithEvents FrmGestionCliente As TabPage
     Friend WithEvents LsvCliente As ListView
     Friend WithEvents ChNombre As ColumnHeader
     Friend WithEvents ChApellidos As ColumnHeader
@@ -590,10 +649,14 @@ Partial Class FrmGestión
     Friend WithEvents ChFechaDeNacimiento As ColumnHeader
     Friend WithEvents ChSexo As ColumnHeader
     Friend WithEvents ChCiudad As ColumnHeader
-    Friend WithEvents TxtBuscar As TextBox
+    Friend WithEvents TxtBuscarPorNombre As TextBox
     Friend WithEvents Label11 As Label
     Friend WithEvents CmsOpciones As ContextMenuStrip
     Friend WithEvents EditarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EliminarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EpMensaje As ErrorProvider
+    Friend WithEvents RdbPorIdentidad As RadioButton
+    Friend WithEvents RdbPorNombre As RadioButton
+    Friend WithEvents TxtBuscarPorCodigo As TextBox
+    Friend WithEvents BtnLimpiar As Button
 End Class
