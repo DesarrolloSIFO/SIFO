@@ -59,6 +59,7 @@ Partial Class Form
         Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EpMensajeFact = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.BtnBuscarNumIdentCliente = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         CType(Me.PbxLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -152,6 +153,7 @@ Partial Class Form
         'GbxExamen
         '
         Me.GbxExamen.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.GbxExamen.Controls.Add(Me.BtnBuscarNumIdentCliente)
         Me.GbxExamen.Controls.Add(Me.BtnSalir)
         Me.GbxExamen.Controls.Add(Me.BtnCancelar)
         Me.GbxExamen.Controls.Add(Me.BtnGuardar)
@@ -362,7 +364,7 @@ Partial Class Form
         Me.TxtNumIdentCliente.Location = New System.Drawing.Point(70, 131)
         Me.TxtNumIdentCliente.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtNumIdentCliente.Name = "TxtNumIdentCliente"
-        Me.TxtNumIdentCliente.Size = New System.Drawing.Size(447, 29)
+        Me.TxtNumIdentCliente.Size = New System.Drawing.Size(252, 29)
         Me.TxtNumIdentCliente.TabIndex = 2
         '
         'TxtCodFactura
@@ -445,6 +447,15 @@ Partial Class Form
         '
         Me.EpMensajeFact.ContainerControl = Me
         '
+        'BtnBuscarNumIdentCliente
+        '
+        Me.BtnBuscarNumIdentCliente.Location = New System.Drawing.Point(352, 133)
+        Me.BtnBuscarNumIdentCliente.Name = "BtnBuscarNumIdentCliente"
+        Me.BtnBuscarNumIdentCliente.Size = New System.Drawing.Size(98, 27)
+        Me.BtnBuscarNumIdentCliente.TabIndex = 44
+        Me.BtnBuscarNumIdentCliente.Text = "..."
+        Me.BtnBuscarNumIdentCliente.UseVisualStyleBackColor = True
+        '
         'Form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -509,4 +520,5 @@ Partial Class Form
     Friend WithEvents EditarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EliminarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EpMensajeFact As ErrorProvider
+    Friend WithEvents BtnBuscarNumIdentCliente As Button
 End Class
