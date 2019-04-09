@@ -9,11 +9,11 @@ Imports System.Runtime.InteropServices
 ' Revisar los valores de los atributos del ensamblado
 
 <Assembly: AssemblyTitle("SIFOSystem")>
-<Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("HP Inc.")>
+<Assembly: AssemblyDescription("Sistema para llevar registros del cliente")>
+<Assembly: AssemblyCompany("Engineers Inc.")>
 <Assembly: AssemblyProduct("SIFOSystem")>
 <Assembly: AssemblyCopyright("Copyright © HP Inc. 2019")>
-<Assembly: AssemblyTrademark("")>
+<Assembly: AssemblyTrademark("SIFO")>
 
 <Assembly: ComVisible(False)>
 
