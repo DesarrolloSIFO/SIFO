@@ -9,6 +9,7 @@ Public Class FrmCategoria
         BtnAgregar.Enabled = Nuevo
         BtnGuardar.Enabled = Guardar
         BtnModificar.Enabled = Modificar
+
         BtnCancelar.Enabled = Cancelar
     End Sub
     Private Sub InvestigarCorrelativo()
