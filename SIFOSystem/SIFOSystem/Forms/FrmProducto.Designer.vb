@@ -51,11 +51,7 @@ Partial Class FrmProducto
         Me.TxtNombreProducto = New System.Windows.Forms.TextBox()
         Me.TpListado = New System.Windows.Forms.TabPage()
         Me.TxtPorNombre = New System.Windows.Forms.TextBox()
-        Me.RdbPorNombre = New System.Windows.Forms.RadioButton()
-        Me.BtnBuscar = New System.Windows.Forms.Button()
-        Me.TxtBuscarPorCodigo = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.RdbPorCodigo = New System.Windows.Forms.RadioButton()
         Me.LsvProducto = New System.Windows.Forms.ListView()
         Me.ChIdProducto = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChNombreProducto = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -369,11 +365,7 @@ Partial Class FrmProducto
         'TpListado
         '
         Me.TpListado.Controls.Add(Me.TxtPorNombre)
-        Me.TpListado.Controls.Add(Me.RdbPorNombre)
-        Me.TpListado.Controls.Add(Me.BtnBuscar)
-        Me.TpListado.Controls.Add(Me.TxtBuscarPorCodigo)
         Me.TpListado.Controls.Add(Me.Label3)
-        Me.TpListado.Controls.Add(Me.RdbPorCodigo)
         Me.TpListado.Controls.Add(Me.LsvProducto)
         Me.TpListado.Location = New System.Drawing.Point(4, 22)
         Me.TpListado.Name = "TpListado"
@@ -390,34 +382,6 @@ Partial Class FrmProducto
         Me.TxtPorNombre.Size = New System.Drawing.Size(396, 20)
         Me.TxtPorNombre.TabIndex = 6
         '
-        'RdbPorNombre
-        '
-        Me.RdbPorNombre.AutoSize = True
-        Me.RdbPorNombre.Location = New System.Drawing.Point(662, 72)
-        Me.RdbPorNombre.Name = "RdbPorNombre"
-        Me.RdbPorNombre.Size = New System.Drawing.Size(114, 17)
-        Me.RdbPorNombre.TabIndex = 5
-        Me.RdbPorNombre.TabStop = True
-        Me.RdbPorNombre.Text = "Buscar por nombre"
-        Me.RdbPorNombre.UseVisualStyleBackColor = True
-        '
-        'BtnBuscar
-        '
-        Me.BtnBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnBuscar.Location = New System.Drawing.Point(454, 9)
-        Me.BtnBuscar.Name = "BtnBuscar"
-        Me.BtnBuscar.Size = New System.Drawing.Size(37, 23)
-        Me.BtnBuscar.TabIndex = 4
-        Me.BtnBuscar.Text = "..."
-        Me.BtnBuscar.UseVisualStyleBackColor = True
-        '
-        'TxtBuscarPorCodigo
-        '
-        Me.TxtBuscarPorCodigo.Location = New System.Drawing.Point(52, 9)
-        Me.TxtBuscarPorCodigo.Name = "TxtBuscarPorCodigo"
-        Me.TxtBuscarPorCodigo.Size = New System.Drawing.Size(396, 20)
-        Me.TxtBuscarPorCodigo.TabIndex = 3
-        '
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -426,17 +390,6 @@ Partial Class FrmProducto
         Me.Label3.Size = New System.Drawing.Size(40, 13)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Buscar"
-        '
-        'RdbPorCodigo
-        '
-        Me.RdbPorCodigo.AutoSize = True
-        Me.RdbPorCodigo.Location = New System.Drawing.Point(662, 39)
-        Me.RdbPorCodigo.Name = "RdbPorCodigo"
-        Me.RdbPorCodigo.Size = New System.Drawing.Size(111, 17)
-        Me.RdbPorCodigo.TabIndex = 1
-        Me.RdbPorCodigo.TabStop = True
-        Me.RdbPorCodigo.Text = "Buscar por código"
-        Me.RdbPorCodigo.UseVisualStyleBackColor = True
         '
         'LsvProducto
         '
@@ -512,8 +465,10 @@ Partial Class FrmProducto
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.PbxLogo)
         Me.Controls.Add(Me.Panel1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "FrmProducto"
-        Me.Text = "Form1"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Gestión Producto"
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         CType(Me.PbxLogo, System.ComponentModel.ISupportInitialize).EndInit()
@@ -568,10 +523,6 @@ Partial Class FrmProducto
     Friend WithEvents EditarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EliminarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TxtPorNombre As TextBox
-    Friend WithEvents RdbPorNombre As RadioButton
-    Friend WithEvents BtnBuscar As Button
-    Friend WithEvents TxtBuscarPorCodigo As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents RdbPorCodigo As RadioButton
     Friend WithEvents EpMensage As ErrorProvider
 End Class
