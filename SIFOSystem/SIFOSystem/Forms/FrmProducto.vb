@@ -139,7 +139,7 @@ Public Class FrmProducto
 
     Private Sub FrmProducto_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MostrarTodoProducto()
-
+        HabilitarBotones(True, False, False, False)
     End Sub
 
     Private Sub HabilitarBotones(ByVal Nuevo As Boolean,
@@ -430,4 +430,7 @@ Public Class FrmProducto
         Return Estado
     End Function
 
+    Private Sub BtnSalir_Click(sender As Object, e As EventArgs) Handles BtnSalir.Click
+        Close()
+    End Sub
 End Class

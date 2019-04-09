@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FrmTipoExamen
+Partial Class FrmExamenCliente
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -22,7 +22,7 @@ Partial Class FrmTipoExamen
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmTipoExamen))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmExamenCliente))
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PbxLogo = New System.Windows.Forms.PictureBox()
@@ -31,11 +31,11 @@ Partial Class FrmTipoExamen
         Me.TabExamenCliente = New System.Windows.Forms.TabControl()
         Me.TbExamenCliente = New System.Windows.Forms.TabPage()
         Me.GbxExamen = New System.Windows.Forms.GroupBox()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.BtnLimpiar = New System.Windows.Forms.Button()
+        Me.BtnSalir = New System.Windows.Forms.Button()
+        Me.BtnCancelar = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.BtnAgregar = New System.Windows.Forms.Button()
+        Me.BtnNuevo = New System.Windows.Forms.Button()
         Me.TxtDistanciaPupilar = New System.Windows.Forms.TextBox()
         Me.TxtAdicion = New System.Windows.Forms.TextBox()
         Me.TxtOI = New System.Windows.Forms.TextBox()
@@ -97,7 +97,7 @@ Partial Class FrmTipoExamen
         'PbxLogo
         '
         Me.PbxLogo.Image = CType(resources.GetObject("PbxLogo.Image"), System.Drawing.Image)
-        Me.PbxLogo.Location = New System.Drawing.Point(5, 0)
+        Me.PbxLogo.Location = New System.Drawing.Point(1, 0)
         Me.PbxLogo.Name = "PbxLogo"
         Me.PbxLogo.Size = New System.Drawing.Size(231, 118)
         Me.PbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -110,9 +110,9 @@ Partial Class FrmTipoExamen
         Me.Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), System.Drawing.Image)
         Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Location = New System.Drawing.Point(236, -1)
+        Me.Panel1.Location = New System.Drawing.Point(229, -1)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(574, 120)
+        Me.Panel1.Size = New System.Drawing.Size(581, 120)
         Me.Panel1.TabIndex = 17
         '
         'Label1
@@ -131,7 +131,7 @@ Partial Class FrmTipoExamen
         '
         Me.TabExamenCliente.Controls.Add(Me.TbExamenCliente)
         Me.TabExamenCliente.Controls.Add(Me.TbListadoExamenCliente)
-        Me.TabExamenCliente.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TabExamenCliente.Font = New System.Drawing.Font("Microsoft JhengHei", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabExamenCliente.Location = New System.Drawing.Point(5, 162)
         Me.TabExamenCliente.Margin = New System.Windows.Forms.Padding(2)
         Me.TabExamenCliente.Name = "TabExamenCliente"
@@ -154,11 +154,11 @@ Partial Class FrmTipoExamen
         'GbxExamen
         '
         Me.GbxExamen.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.GbxExamen.Controls.Add(Me.Button3)
-        Me.GbxExamen.Controls.Add(Me.BtnLimpiar)
+        Me.GbxExamen.Controls.Add(Me.BtnSalir)
+        Me.GbxExamen.Controls.Add(Me.BtnCancelar)
         Me.GbxExamen.Controls.Add(Me.Button2)
         Me.GbxExamen.Controls.Add(Me.Button1)
-        Me.GbxExamen.Controls.Add(Me.BtnAgregar)
+        Me.GbxExamen.Controls.Add(Me.BtnNuevo)
         Me.GbxExamen.Controls.Add(Me.TxtDistanciaPupilar)
         Me.GbxExamen.Controls.Add(Me.TxtAdicion)
         Me.GbxExamen.Controls.Add(Me.TxtOI)
@@ -184,37 +184,37 @@ Partial Class FrmTipoExamen
         Me.GbxExamen.TabIndex = 26
         Me.GbxExamen.TabStop = False
         '
-        'Button3
+        'BtnSalir
         '
-        Me.Button3.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.Button3.FlatAppearance.BorderSize = 0
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
-        Me.Button3.Location = New System.Drawing.Point(641, 299)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(112, 44)
-        Me.Button3.TabIndex = 29
-        Me.Button3.Text = "Salir"
-        Me.Button3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.BtnSalir.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.BtnSalir.FlatAppearance.BorderSize = 0
+        Me.BtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnSalir.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnSalir.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnSalir.Image = CType(resources.GetObject("BtnSalir.Image"), System.Drawing.Image)
+        Me.BtnSalir.Location = New System.Drawing.Point(641, 299)
+        Me.BtnSalir.Name = "BtnSalir"
+        Me.BtnSalir.Size = New System.Drawing.Size(112, 44)
+        Me.BtnSalir.TabIndex = 29
+        Me.BtnSalir.Text = "Salir"
+        Me.BtnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.BtnSalir.UseVisualStyleBackColor = False
         '
-        'BtnLimpiar
+        'BtnCancelar
         '
-        Me.BtnLimpiar.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.BtnLimpiar.FlatAppearance.BorderSize = 0
-        Me.BtnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnLimpiar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnLimpiar.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.BtnLimpiar.Image = CType(resources.GetObject("BtnLimpiar.Image"), System.Drawing.Image)
-        Me.BtnLimpiar.Location = New System.Drawing.Point(496, 299)
-        Me.BtnLimpiar.Name = "BtnLimpiar"
-        Me.BtnLimpiar.Size = New System.Drawing.Size(112, 44)
-        Me.BtnLimpiar.TabIndex = 30
-        Me.BtnLimpiar.Text = "Limpiar"
-        Me.BtnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.BtnLimpiar.UseVisualStyleBackColor = False
+        Me.BtnCancelar.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.BtnCancelar.FlatAppearance.BorderSize = 0
+        Me.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnCancelar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnCancelar.Image = CType(resources.GetObject("BtnCancelar.Image"), System.Drawing.Image)
+        Me.BtnCancelar.Location = New System.Drawing.Point(496, 299)
+        Me.BtnCancelar.Name = "BtnCancelar"
+        Me.BtnCancelar.Size = New System.Drawing.Size(112, 44)
+        Me.BtnCancelar.TabIndex = 30
+        Me.BtnCancelar.Text = "Cancelar"
+        Me.BtnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.BtnCancelar.UseVisualStyleBackColor = False
         '
         'Button2
         '
@@ -250,22 +250,22 @@ Partial Class FrmTipoExamen
         Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.Button1.UseVisualStyleBackColor = False
         '
-        'BtnAgregar
+        'BtnNuevo
         '
-        Me.BtnAgregar.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.BtnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.BtnAgregar.FlatAppearance.BorderSize = 0
-        Me.BtnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnAgregar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnAgregar.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.BtnAgregar.Image = CType(resources.GetObject("BtnAgregar.Image"), System.Drawing.Image)
-        Me.BtnAgregar.Location = New System.Drawing.Point(35, 299)
-        Me.BtnAgregar.Name = "BtnAgregar"
-        Me.BtnAgregar.Size = New System.Drawing.Size(112, 44)
-        Me.BtnAgregar.TabIndex = 28
-        Me.BtnAgregar.Text = "Agregar"
-        Me.BtnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.BtnAgregar.UseVisualStyleBackColor = False
+        Me.BtnNuevo.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.BtnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.BtnNuevo.FlatAppearance.BorderSize = 0
+        Me.BtnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnNuevo.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnNuevo.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnNuevo.Image = CType(resources.GetObject("BtnNuevo.Image"), System.Drawing.Image)
+        Me.BtnNuevo.Location = New System.Drawing.Point(35, 299)
+        Me.BtnNuevo.Name = "BtnNuevo"
+        Me.BtnNuevo.Size = New System.Drawing.Size(112, 44)
+        Me.BtnNuevo.TabIndex = 28
+        Me.BtnNuevo.Text = "Nuevo"
+        Me.BtnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.BtnNuevo.UseVisualStyleBackColor = False
         '
         'TxtDistanciaPupilar
         '
@@ -433,11 +433,11 @@ Partial Class FrmTipoExamen
         'TbListadoExamenCliente
         '
         Me.TbListadoExamenCliente.Controls.Add(Me.LsvExamenCliente)
-        Me.TbListadoExamenCliente.Location = New System.Drawing.Point(4, 30)
+        Me.TbListadoExamenCliente.Location = New System.Drawing.Point(4, 28)
         Me.TbListadoExamenCliente.Margin = New System.Windows.Forms.Padding(2)
         Me.TbListadoExamenCliente.Name = "TbListadoExamenCliente"
         Me.TbListadoExamenCliente.Padding = New System.Windows.Forms.Padding(2)
-        Me.TbListadoExamenCliente.Size = New System.Drawing.Size(783, 354)
+        Me.TbListadoExamenCliente.Size = New System.Drawing.Size(783, 356)
         Me.TbListadoExamenCliente.TabIndex = 1
         Me.TbListadoExamenCliente.Text = "Listado"
         Me.TbListadoExamenCliente.UseVisualStyleBackColor = True
@@ -499,7 +499,7 @@ Partial Class FrmTipoExamen
         Me.CHIdUsuario.Text = "Usuario"
         Me.CHIdUsuario.Width = 100
         '
-        'FrmTipoExamen
+        'FrmExamenCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -509,7 +509,10 @@ Partial Class FrmTipoExamen
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.PbxLogo)
         Me.Controls.Add(Me.Panel1)
-        Me.Name = "FrmTipoExamen"
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
+        Me.Name = "FrmExamenCliente"
         Me.Text = "Examen Cliente "
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
@@ -561,10 +564,10 @@ Partial Class FrmTipoExamen
     Friend WithEvents CHDistanciaPupilar As ColumnHeader
     Friend WithEvents CHTipoExamen As ColumnHeader
     Friend WithEvents CHIdUsuario As ColumnHeader
-    Friend WithEvents Button3 As Button
-    Friend WithEvents BtnLimpiar As Button
+    Friend WithEvents BtnSalir As Button
+    Friend WithEvents BtnCancelar As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
-    Friend WithEvents BtnAgregar As Button
+    Friend WithEvents BtnNuevo As Button
 
 End Class

@@ -17,7 +17,7 @@ Public Class FrmCategoria
         End If
 
         Try
-            Dim ListarGenero As New SqlCommand("Sp_InvestigarCorrelativoCaterogia", Cn)
+            Dim ListarGenero As New SqlCommand("Sp_InvestigarCorrelativoCategoria", Cn)
             ListarGenero.CommandType = CommandType.StoredProcedure
 
             Dim ListarGeneroR As SqlDataReader

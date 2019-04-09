@@ -141,7 +141,7 @@ Partial Class FrmGestión
         '
         Me.TpCliente.Controls.Add(Me.TpDatosCliente)
         Me.TpCliente.Controls.Add(Me.FrmGestionCliente)
-        Me.TpCliente.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TpCliente.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TpCliente.Location = New System.Drawing.Point(-2, 154)
         Me.TpCliente.Name = "TpCliente"
         Me.TpCliente.SelectedIndex = 0
@@ -296,6 +296,7 @@ Partial Class FrmGestión
         '
         'CboCiudad
         '
+        Me.CboCiudad.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.CboCiudad.FormattingEnabled = True
         Me.CboCiudad.Location = New System.Drawing.Point(528, 158)
         Me.CboCiudad.Name = "CboCiudad"
@@ -304,6 +305,7 @@ Partial Class FrmGestión
         '
         'CboSexo
         '
+        Me.CboSexo.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.CboSexo.FormattingEnabled = True
         Me.CboSexo.Location = New System.Drawing.Point(528, 101)
         Me.CboSexo.Name = "CboSexo"
@@ -585,11 +587,14 @@ Partial Class FrmGestión
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ClientSize = New System.Drawing.Size(802, 613)
+        Me.ClientSize = New System.Drawing.Size(802, 614)
         Me.Controls.Add(Me.TpCliente)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.PbxLogo)
         Me.Controls.Add(Me.Panel1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
         Me.Name = "FrmGestión"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Gestión de clientes"
