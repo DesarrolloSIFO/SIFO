@@ -22,15 +22,17 @@ Partial Class FrmUsuario
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmUsuario))
-        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.pnl = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PbxLogo = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.TcOpciones = New System.Windows.Forms.TabControl()
         Me.TpDatos = New System.Windows.Forms.TabPage()
         Me.GbxExamen = New System.Windows.Forms.GroupBox()
+        Me.BtnBuscarUsuario = New System.Windows.Forms.Button()
         Me.BtnSalir = New System.Windows.Forms.Button()
         Me.BtnCancelar = New System.Windows.Forms.Button()
         Me.BtnGuardar = New System.Windows.Forms.Button()
@@ -55,24 +57,29 @@ Partial Class FrmUsuario
         Me.ChNombre = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChContraseña = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChActivo = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ChFecha = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.Panel2.SuspendLayout()
+        Me.CmsOpciones = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EpMensaje = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.pnl.SuspendLayout()
         CType(Me.PbxLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
-        Me.TabControl1.SuspendLayout()
+        Me.TcOpciones.SuspendLayout()
         Me.TpDatos.SuspendLayout()
         Me.GbxExamen.SuspendLayout()
         Me.TpListado.SuspendLayout()
+        Me.CmsOpciones.SuspendLayout()
+        CType(Me.EpMensaje, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Panel2
+        'pnl
         '
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(231, Byte), Integer))
-        Me.Panel2.Controls.Add(Me.Label2)
-        Me.Panel2.Location = New System.Drawing.Point(2, 116)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(801, 39)
-        Me.Panel2.TabIndex = 32
+        Me.pnl.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(231, Byte), Integer))
+        Me.pnl.Controls.Add(Me.Label2)
+        Me.pnl.Location = New System.Drawing.Point(2, 116)
+        Me.pnl.Name = "pnl"
+        Me.pnl.Size = New System.Drawing.Size(801, 39)
+        Me.pnl.TabIndex = 32
         '
         'Label2
         '
@@ -118,24 +125,24 @@ Partial Class FrmUsuario
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Gestión Usuario"
         '
-        'TabControl1
+        'TcOpciones
         '
-        Me.TabControl1.Controls.Add(Me.TpDatos)
-        Me.TabControl1.Controls.Add(Me.TpListado)
-        Me.TabControl1.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabControl1.Location = New System.Drawing.Point(0, 153)
-        Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(803, 380)
-        Me.TabControl1.TabIndex = 33
+        Me.TcOpciones.Controls.Add(Me.TpDatos)
+        Me.TcOpciones.Controls.Add(Me.TpListado)
+        Me.TcOpciones.Font = New System.Drawing.Font("Microsoft JhengHei", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TcOpciones.Location = New System.Drawing.Point(0, 153)
+        Me.TcOpciones.Name = "TcOpciones"
+        Me.TcOpciones.SelectedIndex = 0
+        Me.TcOpciones.Size = New System.Drawing.Size(803, 380)
+        Me.TcOpciones.TabIndex = 0
         '
         'TpDatos
         '
         Me.TpDatos.Controls.Add(Me.GbxExamen)
-        Me.TpDatos.Location = New System.Drawing.Point(4, 30)
+        Me.TpDatos.Location = New System.Drawing.Point(4, 28)
         Me.TpDatos.Name = "TpDatos"
         Me.TpDatos.Padding = New System.Windows.Forms.Padding(3)
-        Me.TpDatos.Size = New System.Drawing.Size(795, 346)
+        Me.TpDatos.Size = New System.Drawing.Size(795, 348)
         Me.TpDatos.TabIndex = 0
         Me.TpDatos.Text = "Datos del Usuario"
         Me.TpDatos.UseVisualStyleBackColor = True
@@ -143,6 +150,7 @@ Partial Class FrmUsuario
         'GbxExamen
         '
         Me.GbxExamen.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.GbxExamen.Controls.Add(Me.BtnBuscarUsuario)
         Me.GbxExamen.Controls.Add(Me.BtnSalir)
         Me.GbxExamen.Controls.Add(Me.BtnCancelar)
         Me.GbxExamen.Controls.Add(Me.BtnGuardar)
@@ -166,6 +174,22 @@ Partial Class FrmUsuario
         Me.GbxExamen.Size = New System.Drawing.Size(783, 341)
         Me.GbxExamen.TabIndex = 34
         Me.GbxExamen.TabStop = False
+        '
+        'BtnBuscarUsuario
+        '
+        Me.BtnBuscarUsuario.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.BtnBuscarUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.BtnBuscarUsuario.FlatAppearance.BorderSize = 0
+        Me.BtnBuscarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnBuscarUsuario.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnBuscarUsuario.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnBuscarUsuario.Location = New System.Drawing.Point(323, 100)
+        Me.BtnBuscarUsuario.Name = "BtnBuscarUsuario"
+        Me.BtnBuscarUsuario.Size = New System.Drawing.Size(66, 25)
+        Me.BtnBuscarUsuario.TabIndex = 23
+        Me.BtnBuscarUsuario.Text = "..."
+        Me.BtnBuscarUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.BtnBuscarUsuario.UseVisualStyleBackColor = False
         '
         'BtnSalir
         '
@@ -253,50 +277,50 @@ Partial Class FrmUsuario
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Microsoft JhengHei", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(53, 19)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(126, 20)
+        Me.Label4.Size = New System.Drawing.Size(119, 19)
         Me.Label4.TabIndex = 17
         Me.Label4.Text = "Codigo Usuario"
         '
         'Lblnombre
         '
         Me.Lblnombre.AutoSize = True
-        Me.Lblnombre.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lblnombre.Font = New System.Drawing.Font("Microsoft JhengHei", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lblnombre.Location = New System.Drawing.Point(49, 133)
         Me.Lblnombre.Name = "Lblnombre"
-        Me.Lblnombre.Size = New System.Drawing.Size(155, 20)
+        Me.Lblnombre.Size = New System.Drawing.Size(145, 19)
         Me.Lblnombre.TabIndex = 16
         Me.Lblnombre.Text = "Nombre de usuario"
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Font = New System.Drawing.Font("Microsoft JhengHei", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.Location = New System.Drawing.Point(492, 105)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(56, 20)
+        Me.Label9.Size = New System.Drawing.Size(52, 19)
         Me.Label9.TabIndex = 11
         Me.Label9.Text = "Activo"
         '
         'LblContraseña
         '
         Me.LblContraseña.AutoSize = True
-        Me.LblContraseña.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblContraseña.Font = New System.Drawing.Font("Microsoft JhengHei", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblContraseña.Location = New System.Drawing.Point(53, 201)
         Me.LblContraseña.Name = "LblContraseña"
-        Me.LblContraseña.Size = New System.Drawing.Size(96, 20)
+        Me.LblContraseña.Size = New System.Drawing.Size(88, 19)
         Me.LblContraseña.TabIndex = 10
         Me.LblContraseña.Text = "Contrasena"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Font = New System.Drawing.Font("Microsoft JhengHei", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.Location = New System.Drawing.Point(53, 75)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(171, 20)
+        Me.Label7.Size = New System.Drawing.Size(161, 19)
         Me.Label7.TabIndex = 9
         Me.Label7.Text = "Numero de identidad"
         '
@@ -342,15 +366,19 @@ Partial Class FrmUsuario
         '
         'TxtIdentidad
         '
+        Me.TxtIdentidad.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.TxtIdentidad.Location = New System.Drawing.Point(53, 100)
         Me.TxtIdentidad.Name = "TxtIdentidad"
+        Me.TxtIdentidad.ReadOnly = True
         Me.TxtIdentidad.Size = New System.Drawing.Size(336, 25)
         Me.TxtIdentidad.TabIndex = 1
         '
         'TxtCodigo
         '
+        Me.TxtCodigo.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.TxtCodigo.Location = New System.Drawing.Point(53, 44)
         Me.TxtCodigo.Name = "TxtCodigo"
+        Me.TxtCodigo.ReadOnly = True
         Me.TxtCodigo.Size = New System.Drawing.Size(336, 25)
         Me.TxtCodigo.TabIndex = 0
         '
@@ -367,7 +395,8 @@ Partial Class FrmUsuario
         '
         'LsvListado
         '
-        Me.LsvListado.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ChCodigo, Me.ChIdentidad, Me.ChNombre, Me.ChContraseña, Me.ChActivo, Me.ChFecha})
+        Me.LsvListado.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ChCodigo, Me.ChIdentidad, Me.ChNombre, Me.ChContraseña, Me.ChActivo})
+        Me.LsvListado.ContextMenuStrip = Me.CmsOpciones
         Me.LsvListado.Font = New System.Drawing.Font("Microsoft JhengHei", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LsvListado.FullRowSelect = True
         Me.LsvListado.GridLines = True
@@ -386,27 +415,44 @@ Partial Class FrmUsuario
         'ChIdentidad
         '
         Me.ChIdentidad.Text = "Número de identidad"
-        Me.ChIdentidad.Width = 163
+        Me.ChIdentidad.Width = 189
         '
         'ChNombre
         '
         Me.ChNombre.Text = "Nombre usuario"
-        Me.ChNombre.Width = 144
+        Me.ChNombre.Width = 190
         '
         'ChContraseña
         '
         Me.ChContraseña.Text = "Contraseña"
-        Me.ChContraseña.Width = 146
+        Me.ChContraseña.Width = 221
         '
         'ChActivo
         '
         Me.ChActivo.Text = "Activo"
         Me.ChActivo.Width = 63
         '
-        'ChFecha
+        'CmsOpciones
         '
-        Me.ChFecha.Text = "Fecha"
-        Me.ChFecha.Width = 143
+        Me.CmsOpciones.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditarToolStripMenuItem, Me.EliminarToolStripMenuItem})
+        Me.CmsOpciones.Name = "CmsOpciones"
+        Me.CmsOpciones.Size = New System.Drawing.Size(118, 48)
+        '
+        'EditarToolStripMenuItem
+        '
+        Me.EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
+        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.EditarToolStripMenuItem.Text = "Editar"
+        '
+        'EliminarToolStripMenuItem
+        '
+        Me.EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
+        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.EliminarToolStripMenuItem.Text = "Eliminar"
+        '
+        'EpMensaje
+        '
+        Me.EpMensaje.ContainerControl = Me
         '
         'FrmUsuario
         '
@@ -414,32 +460,38 @@ Partial Class FrmUsuario
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.ClientSize = New System.Drawing.Size(800, 529)
-        Me.Controls.Add(Me.TabControl1)
-        Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.TcOpciones)
+        Me.Controls.Add(Me.pnl)
         Me.Controls.Add(Me.PbxLogo)
         Me.Controls.Add(Me.Panel1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
         Me.Name = "FrmUsuario"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "USUARIO"
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
+        Me.pnl.ResumeLayout(False)
+        Me.pnl.PerformLayout()
         CType(Me.PbxLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        Me.TabControl1.ResumeLayout(False)
+        Me.TcOpciones.ResumeLayout(False)
         Me.TpDatos.ResumeLayout(False)
         Me.GbxExamen.ResumeLayout(False)
         Me.GbxExamen.PerformLayout()
         Me.TpListado.ResumeLayout(False)
+        Me.CmsOpciones.ResumeLayout(False)
+        CType(Me.EpMensaje, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents Panel2 As Panel
+    Friend WithEvents pnl As Panel
     Friend WithEvents Label2 As Label
     Friend WithEvents PbxLogo As PictureBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
-    Friend WithEvents TabControl1 As TabControl
+    Friend WithEvents TcOpciones As TabControl
     Friend WithEvents TpDatos As TabPage
     Friend WithEvents GbxExamen As GroupBox
     Friend WithEvents BtnSalir As Button
@@ -466,5 +518,9 @@ Partial Class FrmUsuario
     Friend WithEvents ChNombre As ColumnHeader
     Friend WithEvents ChContraseña As ColumnHeader
     Friend WithEvents ChActivo As ColumnHeader
-    Friend WithEvents ChFecha As ColumnHeader
+    Friend WithEvents CmsOpciones As ContextMenuStrip
+    Friend WithEvents EditarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EliminarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BtnBuscarUsuario As Button
+    Friend WithEvents EpMensaje As ErrorProvider
 End Class

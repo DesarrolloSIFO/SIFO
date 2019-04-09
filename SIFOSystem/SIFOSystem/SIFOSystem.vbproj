@@ -74,6 +74,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion\Conexion.vb" />
+    <Compile Include="Forms\BuscarUsuario.Designer.vb">
+      <DependentUpon>BuscarUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BuscarUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\FrmCargoEmpleado.Designer.vb">
       <DependentUpon>FrmCargoEmpleado.vb</DependentUpon>
     </Compile>
@@ -117,16 +123,22 @@
     <Compile Include="Forms\FrmProducto.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmTipoExamen.Designer.vb">
-      <DependentUpon>FrmTipoExamen.vb</DependentUpon>
+    <Compile Include="Forms\FrmExamenCliente.Designer.vb">
+      <DependentUpon>FrmExamenCliente.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmTipoExamen.vb">
+    <Compile Include="Forms\FrmExamenCliente.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FrmUsuario.Designer.vb">
       <DependentUpon>FrmUsuario.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MDIPrincipal.Designer.vb">
+      <DependentUpon>MDIPrincipal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MDIPrincipal.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -146,6 +158,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Forms\BuscarUsuario.resx">
+      <DependentUpon>BuscarUsuario.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmCargoEmpleado.resx">
       <DependentUpon>FrmCargoEmpleado.vb</DependentUpon>
     </EmbeddedResource>
@@ -154,6 +169,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmCiudad.resx">
       <DependentUpon>FrmCiudad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmEmpleado.aa.resx">
+      <DependentUpon>FrmEmpleado.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmEmpleado.resx">
       <DependentUpon>FrmEmpleado.vb</DependentUpon>
@@ -167,11 +185,14 @@
     <EmbeddedResource Include="Forms\FrmProducto.resx">
       <DependentUpon>FrmProducto.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmTipoExamen.resx">
-      <DependentUpon>FrmTipoExamen.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmExamenCliente.resx">
+      <DependentUpon>FrmExamenCliente.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmUsuario.resx">
       <DependentUpon>FrmUsuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MDIPrincipal.resx">
+      <DependentUpon>MDIPrincipal.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

@@ -38,6 +38,8 @@ Partial Class FrmCategoria
         Me.TxtDescripcion = New System.Windows.Forms.TextBox()
         Me.TxtCodCategoria = New System.Windows.Forms.TextBox()
         Me.TpListado = New System.Windows.Forms.TabPage()
+        Me.TxtBuscarCategoria = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.LsvCategorias = New System.Windows.Forms.ListView()
         Me.ChIdCategoria = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChCategoria = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -51,8 +53,6 @@ Partial Class FrmCategoria
         Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EpMensaje = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.TxtBuscarCategoria = New System.Windows.Forms.TextBox()
         Me.TpCategorias.SuspendLayout()
         Me.TpCategoria.SuspendLayout()
         Me.TpListado.SuspendLayout()
@@ -67,7 +67,7 @@ Partial Class FrmCategoria
         '
         Me.TpCategorias.Controls.Add(Me.TpCategoria)
         Me.TpCategorias.Controls.Add(Me.TpListado)
-        Me.TpCategorias.Font = New System.Drawing.Font("Microsoft JhengHei", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TpCategorias.Font = New System.Drawing.Font("Microsoft JhengHei", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TpCategorias.Location = New System.Drawing.Point(1, 156)
         Me.TpCategorias.Name = "TpCategorias"
         Me.TpCategorias.SelectedIndex = 0
@@ -87,6 +87,7 @@ Partial Class FrmCategoria
         Me.TpCategoria.Controls.Add(Me.Label5)
         Me.TpCategoria.Controls.Add(Me.TxtDescripcion)
         Me.TpCategoria.Controls.Add(Me.TxtCodCategoria)
+        Me.TpCategoria.Font = New System.Drawing.Font("Microsoft JhengHei", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TpCategoria.Location = New System.Drawing.Point(4, 28)
         Me.TpCategoria.Name = "TpCategoria"
         Me.TpCategoria.Padding = New System.Windows.Forms.Padding(3)
@@ -114,7 +115,7 @@ Partial Class FrmCategoria
         '
         'TxtNombreCategoria
         '
-        Me.TxtNombreCategoria.Location = New System.Drawing.Point(46, 118)
+        Me.TxtNombreCategoria.Location = New System.Drawing.Point(46, 108)
         Me.TxtNombreCategoria.Name = "TxtNombreCategoria"
         Me.TxtNombreCategoria.Size = New System.Drawing.Size(230, 27)
         Me.TxtNombreCategoria.TabIndex = 27
@@ -188,36 +189,36 @@ Partial Class FrmCategoria
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(42, 146)
+        Me.Label7.Font = New System.Drawing.Font("Microsoft JhengHei", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(42, 138)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(97, 20)
+        Me.Label7.Size = New System.Drawing.Size(90, 19)
         Me.Label7.TabIndex = 21
         Me.Label7.Text = "Descripción"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(42, 95)
+        Me.Label6.Font = New System.Drawing.Font("Microsoft JhengHei", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(42, 87)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(190, 20)
+        Me.Label6.Size = New System.Drawing.Size(177, 19)
         Me.Label6.TabIndex = 20
         Me.Label6.Text = "Nombre de la Categoría"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(42, 40)
+        Me.Label5.Font = New System.Drawing.Font("Microsoft JhengHei", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(42, 34)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(165, 20)
+        Me.Label5.Size = New System.Drawing.Size(155, 19)
         Me.Label5.TabIndex = 19
         Me.Label5.Text = "Código de Categoría"
         '
         'TxtDescripcion
         '
-        Me.TxtDescripcion.Location = New System.Drawing.Point(46, 169)
+        Me.TxtDescripcion.Location = New System.Drawing.Point(46, 159)
         Me.TxtDescripcion.Multiline = True
         Me.TxtDescripcion.Name = "TxtDescripcion"
         Me.TxtDescripcion.Size = New System.Drawing.Size(392, 73)
@@ -226,7 +227,7 @@ Partial Class FrmCategoria
         'TxtCodCategoria
         '
         Me.TxtCodCategoria.Enabled = False
-        Me.TxtCodCategoria.Location = New System.Drawing.Point(46, 67)
+        Me.TxtCodCategoria.Location = New System.Drawing.Point(46, 57)
         Me.TxtCodCategoria.Name = "TxtCodCategoria"
         Me.TxtCodCategoria.Size = New System.Drawing.Size(192, 27)
         Me.TxtCodCategoria.TabIndex = 17
@@ -244,9 +245,26 @@ Partial Class FrmCategoria
         Me.TpListado.Text = "Listado"
         Me.TpListado.UseVisualStyleBackColor = True
         '
+        'TxtBuscarCategoria
+        '
+        Me.TxtBuscarCategoria.Location = New System.Drawing.Point(142, 13)
+        Me.TxtBuscarCategoria.Name = "TxtBuscarCategoria"
+        Me.TxtBuscarCategoria.Size = New System.Drawing.Size(292, 27)
+        Me.TxtBuscarCategoria.TabIndex = 2
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(79, 16)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(57, 19)
+        Me.Label3.TabIndex = 1
+        Me.Label3.Text = "Buscar"
+        '
         'LsvCategorias
         '
         Me.LsvCategorias.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ChIdCategoria, Me.ChCategoria, Me.ChDescripcion})
+        Me.LsvCategorias.Font = New System.Drawing.Font("Microsoft JhengHei", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LsvCategorias.FullRowSelect = True
         Me.LsvCategorias.GridLines = True
         Me.LsvCategorias.Location = New System.Drawing.Point(0, 49)
@@ -277,7 +295,7 @@ Partial Class FrmCategoria
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(231, Byte), Integer))
         Me.Panel2.Controls.Add(Me.Label2)
-        Me.Panel2.Location = New System.Drawing.Point(1, 124)
+        Me.Panel2.Location = New System.Drawing.Point(1, 120)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(798, 37)
         Me.Panel2.TabIndex = 36
@@ -297,9 +315,9 @@ Partial Class FrmCategoria
         '
         Me.PbxLogo.BackColor = System.Drawing.Color.Transparent
         Me.PbxLogo.Image = CType(resources.GetObject("PbxLogo.Image"), System.Drawing.Image)
-        Me.PbxLogo.Location = New System.Drawing.Point(4, 8)
+        Me.PbxLogo.Location = New System.Drawing.Point(3, 0)
         Me.PbxLogo.Name = "PbxLogo"
-        Me.PbxLogo.Size = New System.Drawing.Size(230, 117)
+        Me.PbxLogo.Size = New System.Drawing.Size(230, 120)
         Me.PbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PbxLogo.TabIndex = 34
         Me.PbxLogo.TabStop = False
@@ -310,7 +328,7 @@ Partial Class FrmCategoria
         Me.Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), System.Drawing.Image)
         Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Location = New System.Drawing.Point(230, 5)
+        Me.Panel1.Location = New System.Drawing.Point(230, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(566, 120)
         Me.Panel1.TabIndex = 35
@@ -349,22 +367,6 @@ Partial Class FrmCategoria
         '
         Me.EpMensaje.ContainerControl = Me
         '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(79, 16)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(57, 19)
-        Me.Label3.TabIndex = 1
-        Me.Label3.Text = "Buscar"
-        '
-        'TxtBuscarCategoria
-        '
-        Me.TxtBuscarCategoria.Location = New System.Drawing.Point(142, 13)
-        Me.TxtBuscarCategoria.Name = "TxtBuscarCategoria"
-        Me.TxtBuscarCategoria.Size = New System.Drawing.Size(292, 27)
-        Me.TxtBuscarCategoria.TabIndex = 2
-        '
         'FrmCategoria
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -376,6 +378,9 @@ Partial Class FrmCategoria
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.PbxLogo)
         Me.Controls.Add(Me.Panel1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
         Me.Name = "FrmCategoria"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Gestión Categoría"

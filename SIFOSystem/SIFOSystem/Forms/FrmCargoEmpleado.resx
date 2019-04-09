@@ -5988,6 +5988,30 @@
   <metadata name="EpMensajeCargo.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAACMuAAAjLgAAAAAAAAAA
+        AAAAAAAAAAAAAEgsFABGKxYHTC4SSFExEKdWORLkXUIV+2VNGPttWBzkdmUgp35xJEiFeycHg3gmAAAA
+        AAAAAAAAPyAOAE0vEQBLLREYTjARklM0Ee5aPRP/YUgW/2lTGv9wXR7/eGgh/39yJP+GfCfujYcqkpWS
+        LhiTjy0Aj4wsAFIyDwBRMQ8YUzQQsVc6Ev9fRRX/Z1AZ/29bHf93ZiD/fnAk/4R5Jv+Kgin/kIss/5aU
+        L/+dnTKxo6c1GKKlNABYOxIGWTwSkl1BFP9kTBj/bFcc/3VjH/91ZiD/bmMf/3VtIv+KhCr/lpMu/5ua
+        Mf+gojP/pak1/6muNpKrtioGYEYWSWNKF+1qVBr/cV8e/3hpIf9YThn/IR4J/w0MBP8PDwX/Ly4O/3t8
+        J/+kqDX/qK02/6yzN/+3v03tz9WFSWpVG6dvWx3/dmYg/39xJP9bUxr/CwoD/wAAAP8AAAD/AAAA/wAA
+        AP8YGAj/iI0r/7S8Qv/Iz3X/4+e2/+3wz6d1ZSDje20i/4J3Jv+CeSb/JSML/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAB/2FkPf/Z3pv/5+u+/+brvP/j6bLjgHMj+4Z8Jv+OiCv/f3sp/xUVDP8MDA3/FhYW/xUV
+        Ff8DAwP/AAAA/wQEBf9AQi//ucJa/8LOVf/BzU//wM5K+7Svd/u+u4T/yMaR/8PDmP+YmJT/l5eY/3V1
+        df8sLCz/AgIC/wAAAP8AAAD/IyYL/666Ov+9yz//vs1A/8DPQvvm5s3j5+jO/+rq0P/p6s7/q6yh/0tL
+        TP8ODg7/AAAA/wAAAP8AAAD/AAAA/0lPGf+8y0H/wM9C/8LSQ//D1ETj5+jMp+jpzf/g4rb/y9F8/4SK
+        OP8NDgT/AAAA/wAAAP8AAAD/AAAA/xocCf+ZpTX/w9ND/8PTQ//F1kT/xthFp+LkvUnN0YXtuMBN/7O9
+        O/+0vzz/foYr/y4xEP8REgb/ExQH/zk+FP+UoDP/w9RE/8TVRP/G2EX/yNpG7cjbRkm0uU4Gsrs6krS/
+        PP+3wj7/ucU//7zJQP+yvz3/oK03/6SxOf+7ykH/xtZE/8XXRf/H2UX/ydxG/8reR5LK3kcGtsE9ALbB
+        PRi4xD6xusc//7zJQP++zEH/wM9C/8PTQ//F1UT/xddF/8fZRf/J20b/yt5H/8zgSLHM4EgYzOBIAL3K
+        QAC7yEAAusc/GL3KQJK/zULuwdBC/8PTQ//E1UT/xthF/8jbRv/K3Uf/zN9H7s3hSJLN4kgYzeFIANHm
+        SgAAAAAAAAAAAL/OQgC/zkIHwdFDSMPURKfF10Xkx9lF+8ncRvvL3kfkzOBIp83iSEjO40kHzuNIAAAA
+        AAAAAAAA4AcAAMADAACAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAB
+        AADAAwAA4AcAAA==
+</value>
+  </data>
   <metadata name="CmsMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>188, 17</value>
   </metadata>

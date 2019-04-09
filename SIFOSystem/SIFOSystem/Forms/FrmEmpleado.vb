@@ -341,9 +341,6 @@ Public Class FrmEmpleado
         MostrarTodo()
     End Sub
 
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TxtBuscarEmpleado.TextChanged
-        BuscarEmpleadoPorNombre()
-    End Sub
     Private Sub BuscarEmpleadoPorNombre()
         If Cn.State = ConnectionState.Open Then
             Cn.Close()
@@ -469,4 +466,8 @@ Public Class FrmEmpleado
 
         Return Estado
     End Function
+
+    Private Sub TxtBuscarEmpleado_TextChanged(sender As Object, e As EventArgs) Handles TxtBuscarEmpleado.TextChanged
+        BuscarEmpleadoPorNombre()
+    End Sub
 End Class

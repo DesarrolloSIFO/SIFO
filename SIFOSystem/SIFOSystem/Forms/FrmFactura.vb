@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 
-Public Class Form
+Public Class FrmFactura
 
     Private Sub InvestigarCorrelativoFactura()
         If Cn.State = ConnectionState.Open Then
