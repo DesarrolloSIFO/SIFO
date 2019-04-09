@@ -74,10 +74,10 @@ Partial Class FrmCargoEmpleado
         'TpDatos
         '
         Me.TpDatos.Controls.Add(Me.EpMensaje)
-        Me.TpDatos.Location = New System.Drawing.Point(4, 29)
+        Me.TpDatos.Location = New System.Drawing.Point(4, 28)
         Me.TpDatos.Name = "TpDatos"
         Me.TpDatos.Padding = New System.Windows.Forms.Padding(3)
-        Me.TpDatos.Size = New System.Drawing.Size(796, 295)
+        Me.TpDatos.Size = New System.Drawing.Size(796, 296)
         Me.TpDatos.TabIndex = 2
         Me.TpDatos.Text = "Datos del Cargo"
         Me.TpDatos.UseVisualStyleBackColor = True
@@ -279,7 +279,7 @@ Partial Class FrmCargoEmpleado
         'PbxLogo
         '
         Me.PbxLogo.Image = CType(resources.GetObject("PbxLogo.Image"), System.Drawing.Image)
-        Me.PbxLogo.Location = New System.Drawing.Point(-2, -1)
+        Me.PbxLogo.Location = New System.Drawing.Point(-1, -1)
         Me.PbxLogo.Name = "PbxLogo"
         Me.PbxLogo.Size = New System.Drawing.Size(231, 119)
         Me.PbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -336,16 +336,18 @@ Partial Class FrmCargoEmpleado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.ClientSize = New System.Drawing.Size(800, 481)
+        Me.Controls.Add(Me.PbxLogo)
         Me.Controls.Add(Me.TbMenu)
         Me.Controls.Add(Me.Panel2)
-        Me.Controls.Add(Me.PbxLogo)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MaximizeBox = False
         Me.Name = "FrmCargoEmpleado"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmCargoEmpleado"
         Me.TbMenu.ResumeLayout(False)
         Me.TpDatos.ResumeLayout(False)

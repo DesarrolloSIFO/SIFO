@@ -137,6 +137,7 @@ Public Class FrmProducto
 
     Private Sub FrmProducto_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MostrarTodoProducto()
+        HabilitarBotones(True, False, False, False)
 
     End Sub
 

@@ -470,4 +470,21 @@ Public Class FrmEmpleado
     Private Sub TxtBuscarEmpleado_TextChanged(sender As Object, e As EventArgs) Handles TxtBuscarEmpleado.TextChanged
         BuscarEmpleadoPorNombre()
     End Sub
+
+
+    Private Sub TxtNumIdent_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtNumIdent.KeyPress
+        Dim texto As String = TxtNumIdent.Text
+        If TxtNumIdent.Text.Length = 4 Then
+            texto = texto + "-" + e.KeyChar
+            TxtNumIdent.Text = texto
+            e.Handled = True
+            TxtNumIdent.Select(TxtNumIdent.Text.Length, 0)
+
+        ElseIf TxtNumIdent.Text.Length = 9 Then
+            texto = texto + "-" + e.KeyChar
+            TxtNumIdent.Text = texto
+            e.Handled = True
+            TxtNumIdent.Select(TxtNumIdent.Text.Length, 0)
+        End If
+    End Sub
 End Class

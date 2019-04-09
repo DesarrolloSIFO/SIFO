@@ -587,7 +587,7 @@ Public Class FrmGestión
         End If
     End Sub
 
-    Private Sub BtnSeleccionar_Click(sender As Object, e As EventArgs) Handles BtnSeleccionar.Click
+    Private Sub BtnSeleccionar_Click(sender As Object, e As EventArgs)
         FrmTipoExamen.TxtNumIdenCliente.Text = LsvCliente.FocusedItem.SubItems(0).Text
         Close()
     End Sub

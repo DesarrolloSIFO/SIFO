@@ -315,7 +315,7 @@ Partial Class FrmCategoria
         '
         Me.PbxLogo.BackColor = System.Drawing.Color.Transparent
         Me.PbxLogo.Image = CType(resources.GetObject("PbxLogo.Image"), System.Drawing.Image)
-        Me.PbxLogo.Location = New System.Drawing.Point(3, 0)
+        Me.PbxLogo.Location = New System.Drawing.Point(1, 0)
         Me.PbxLogo.Name = "PbxLogo"
         Me.PbxLogo.Size = New System.Drawing.Size(230, 120)
         Me.PbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -382,7 +382,7 @@ Partial Class FrmCategoria
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "FrmCategoria"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Gestión Categoría"
         Me.TpCategorias.ResumeLayout(False)
         Me.TpCategoria.ResumeLayout(False)

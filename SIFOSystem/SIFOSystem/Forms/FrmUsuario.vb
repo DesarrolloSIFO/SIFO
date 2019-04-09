@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Public Class FrmUsuario
-    Private Sub LLenarCboActivo()
+    Public Sub LLenarCboActivo()
         If Cn.State = ConnectionState.Open Then
             Cn.Close()
         End If
@@ -358,4 +358,5 @@ Public Class FrmUsuario
 
         Return EstadoU
     End Function
+
 End Class

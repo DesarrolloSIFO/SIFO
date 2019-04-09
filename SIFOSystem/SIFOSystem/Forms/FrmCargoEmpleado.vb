@@ -7,7 +7,7 @@ Public Class FrmCargoEmpleado
         End If
 
         Try
-            Dim ListaCargos As New SqlCommand("Sp_InvestigarCorrelativoCaragoEmpleado", Cn)
+            Dim ListaCargos As New SqlCommand("Sp_InvestigarCorrelativoCargoEmpleado", Cn)
             ListaCargos.CommandType = CommandType.StoredProcedure
             Dim ListarCargosR As SqlDataReader
             Cn.Open()
@@ -239,6 +239,7 @@ Public Class FrmCargoEmpleado
 
     Private Sub FrmCiudad_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MostrarTodo()
+        HabilitarBotones(True, False, False, False)
     End Sub
 
     Private Function ExisteCargo() As Boolean

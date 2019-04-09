@@ -109,8 +109,8 @@ Public Class MDIPrincipal
     End Sub
 
     Private Sub ExamenesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExamenesToolStripMenuItem.Click
-        FrmExamenCliente.MdiParent = Me
-        FrmExamenCliente.Show()
+        FrmTipoExamen.MdiParent = Me
+        FrmTipoExamen.Show()
     End Sub
 
     Private Sub CargoDeEmpleadoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CargoDeEmpleadoToolStripMenuItem.Click

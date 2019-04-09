@@ -131,6 +131,7 @@ Partial Class FrmProducto
         '
         Me.TcOpcion.Controls.Add(Me.TpDatosProducto)
         Me.TcOpcion.Controls.Add(Me.TpListado)
+        Me.TcOpcion.Font = New System.Drawing.Font("Microsoft JhengHei", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TcOpcion.Location = New System.Drawing.Point(12, 159)
         Me.TcOpcion.Name = "TcOpcion"
         Me.TcOpcion.SelectedIndex = 0
@@ -140,10 +141,10 @@ Partial Class FrmProducto
         'TpDatosProducto
         '
         Me.TpDatosProducto.Controls.Add(Me.GbxExamen)
-        Me.TpDatosProducto.Location = New System.Drawing.Point(4, 22)
+        Me.TpDatosProducto.Location = New System.Drawing.Point(4, 28)
         Me.TpDatosProducto.Name = "TpDatosProducto"
         Me.TpDatosProducto.Padding = New System.Windows.Forms.Padding(3)
-        Me.TpDatosProducto.Size = New System.Drawing.Size(791, 357)
+        Me.TpDatosProducto.Size = New System.Drawing.Size(791, 351)
         Me.TpDatosProducto.TabIndex = 0
         Me.TpDatosProducto.Text = "Datos del Producto"
         Me.TpDatosProducto.UseVisualStyleBackColor = True
@@ -367,19 +368,19 @@ Partial Class FrmProducto
         Me.TpListado.Controls.Add(Me.TxtPorNombre)
         Me.TpListado.Controls.Add(Me.Label3)
         Me.TpListado.Controls.Add(Me.LsvProducto)
-        Me.TpListado.Location = New System.Drawing.Point(4, 22)
+        Me.TpListado.Location = New System.Drawing.Point(4, 28)
         Me.TpListado.Name = "TpListado"
         Me.TpListado.Padding = New System.Windows.Forms.Padding(3)
-        Me.TpListado.Size = New System.Drawing.Size(791, 357)
+        Me.TpListado.Size = New System.Drawing.Size(791, 351)
         Me.TpListado.TabIndex = 1
         Me.TpListado.Text = "Listado"
         Me.TpListado.UseVisualStyleBackColor = True
         '
         'TxtPorNombre
         '
-        Me.TxtPorNombre.Location = New System.Drawing.Point(52, 9)
+        Me.TxtPorNombre.Location = New System.Drawing.Point(69, 9)
         Me.TxtPorNombre.Name = "TxtPorNombre"
-        Me.TxtPorNombre.Size = New System.Drawing.Size(396, 20)
+        Me.TxtPorNombre.Size = New System.Drawing.Size(396, 27)
         Me.TxtPorNombre.TabIndex = 6
         '
         'Label3
@@ -387,7 +388,7 @@ Partial Class FrmProducto
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(6, 12)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(40, 13)
+        Me.Label3.Size = New System.Drawing.Size(57, 19)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Buscar"
         '
@@ -395,11 +396,12 @@ Partial Class FrmProducto
         '
         Me.LsvProducto.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ChIdProducto, Me.ChNombreProducto, Me.ChPrecioCosto, Me.ChPrecioVenta, Me.ChStock, Me.ChCategoria})
         Me.LsvProducto.ContextMenuStrip = Me.CMSOpciones
+        Me.LsvProducto.Font = New System.Drawing.Font("Microsoft JhengHei", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LsvProducto.FullRowSelect = True
         Me.LsvProducto.GridLines = True
-        Me.LsvProducto.Location = New System.Drawing.Point(3, 39)
+        Me.LsvProducto.Location = New System.Drawing.Point(40, 39)
         Me.LsvProducto.Name = "LsvProducto"
-        Me.LsvProducto.Size = New System.Drawing.Size(634, 315)
+        Me.LsvProducto.Size = New System.Drawing.Size(641, 315)
         Me.LsvProducto.TabIndex = 0
         Me.LsvProducto.UseCompatibleStateImageBehavior = False
         Me.LsvProducto.View = System.Windows.Forms.View.Details
@@ -465,7 +467,7 @@ Partial Class FrmProducto
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.PbxLogo)
         Me.Controls.Add(Me.Panel1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmProducto"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Gestión Producto"

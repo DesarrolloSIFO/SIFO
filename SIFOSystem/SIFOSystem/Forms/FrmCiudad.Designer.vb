@@ -83,7 +83,7 @@ Partial Class FrmCiudad
         'PbxLogo
         '
         Me.PbxLogo.Image = CType(resources.GetObject("PbxLogo.Image"), System.Drawing.Image)
-        Me.PbxLogo.Location = New System.Drawing.Point(-3, 0)
+        Me.PbxLogo.Location = New System.Drawing.Point(0, 0)
         Me.PbxLogo.Name = "PbxLogo"
         Me.PbxLogo.Size = New System.Drawing.Size(231, 119)
         Me.PbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -278,10 +278,10 @@ Partial Class FrmCiudad
         'TbListado
         '
         Me.TbListado.Controls.Add(Me.LsvCiudades)
-        Me.TbListado.Location = New System.Drawing.Point(4, 30)
+        Me.TbListado.Location = New System.Drawing.Point(4, 28)
         Me.TbListado.Name = "TbListado"
         Me.TbListado.Padding = New System.Windows.Forms.Padding(3)
-        Me.TbListado.Size = New System.Drawing.Size(796, 294)
+        Me.TbListado.Size = New System.Drawing.Size(796, 296)
         Me.TbListado.TabIndex = 3
         Me.TbListado.Text = "Listado de ciudades"
         Me.TbListado.UseVisualStyleBackColor = True
@@ -337,6 +337,7 @@ Partial Class FrmCiudad
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.ClientSize = New System.Drawing.Size(800, 481)
         Me.Controls.Add(Me.TbMenu)
         Me.Controls.Add(Me.Panel2)
@@ -346,6 +347,7 @@ Partial Class FrmCiudad
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "FrmCiudad"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Gestión de Ciudades"
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()

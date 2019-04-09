@@ -385,10 +385,10 @@ Partial Class FrmUsuario
         'TpListado
         '
         Me.TpListado.Controls.Add(Me.LsvListado)
-        Me.TpListado.Location = New System.Drawing.Point(4, 30)
+        Me.TpListado.Location = New System.Drawing.Point(4, 28)
         Me.TpListado.Name = "TpListado"
         Me.TpListado.Padding = New System.Windows.Forms.Padding(3)
-        Me.TpListado.Size = New System.Drawing.Size(795, 346)
+        Me.TpListado.Size = New System.Drawing.Size(795, 348)
         Me.TpListado.TabIndex = 1
         Me.TpListado.Text = "Listado de Usuarios"
         Me.TpListado.UseVisualStyleBackColor = True

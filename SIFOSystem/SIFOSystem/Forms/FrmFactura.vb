@@ -233,6 +233,7 @@ Public Class FrmFactura
 
     Private Sub Form_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MostrarFacturas()
+        HabilitarBotones(True, False, False, False, True)
     End Sub
 
     Private Sub EliminarFactura()
@@ -272,6 +273,8 @@ Public Class FrmFactura
         CboTipoExamen.Text = LsvDetalleFac.FocusedItem.SubItems(2).Text
         DtpFechaFactura.Value = LsvDetalleFac.FocusedItem.SubItems(3).Text
         CboIdUsuario.Text = LsvDetalleFac.FocusedItem.SubItems(4).Text
+        LlenarComboTipoExamen()
+        LlenarComboUsuario()
 
         TpMenuFact.SelectedIndex = 0
     End Sub
@@ -315,6 +318,6 @@ Public Class FrmFactura
     End Function
 
     Private Sub BtnBuscarNumIdentCliente_Click(sender As Object, e As EventArgs) Handles BtnBuscarNumIdentCliente.Click
-        FrmGestión.ShowDialog()
+        FrmBuscarCliente.ShowDialog()
     End Sub
 End Class

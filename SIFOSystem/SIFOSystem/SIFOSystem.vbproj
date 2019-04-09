@@ -73,11 +73,17 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Conexion\Conexion.vb" />
-    <Compile Include="Forms\BuscarUsuario.Designer.vb">
-      <DependentUpon>BuscarUsuario.vb</DependentUpon>
+    <Compile Include="Forms\FrmBuscarCliente.Designer.vb">
+      <DependentUpon>FrmBuscarCliente.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\BuscarUsuario.vb">
+    <Compile Include="Forms\FrmBuscarCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Conexion\Conexion.vb" />
+    <Compile Include="Forms\FrmBuscarUsuario.Designer.vb">
+      <DependentUpon>FrmBuscarUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmBuscarUsuario.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FrmCargoEmpleado.Designer.vb">
@@ -158,8 +164,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\BuscarUsuario.resx">
-      <DependentUpon>BuscarUsuario.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmBuscarCliente.resx">
+      <DependentUpon>FrmBuscarCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmBuscarUsuario.resx">
+      <DependentUpon>FrmBuscarUsuario.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmCargoEmpleado.resx">
       <DependentUpon>FrmCargoEmpleado.vb</DependentUpon>

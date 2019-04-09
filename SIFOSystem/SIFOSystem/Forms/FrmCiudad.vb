@@ -239,7 +239,7 @@ Public Class FrmCiudad
     End Sub
 
     Private Sub FrmCiudad_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        HabilitarBotones(True, False, False, True)
+        HabilitarBotones(True, False, False, False)
         MostrarTodo()
     End Sub
 
