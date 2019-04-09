@@ -114,8 +114,6 @@ Public Class FrmProducto
                     .CommandType = CommandType.StoredProcedure
                     .Connection = Cn
 
-
-
                     .Parameters.Add("@NombreProducto", SqlDbType.NVarChar, 50).Value = TxtNombreProducto.Text
                     .Parameters.Add("@PrecioCosto", SqlDbType.Money).Value = TxtPrecioCosto.Text
                     .Parameters.Add("@PrecioVenta", SqlDbType.Money).Value = TxtPrecioVenta.Text
@@ -179,10 +177,10 @@ Public Class FrmProducto
         TxtPrecioCosto.Text = Nothing
         TxtPrecioVenta.Text = Nothing
         TxtStock.Text = Nothing
-        CboCategoria.Text = "--Seleccione--"
+        CboCategoria.Text = " "
     End Sub
 
-    Private Sub ActualizarPorducto()
+    Private Sub ActualizarProducto()
         If Cn.State = ConnectionState.Open Then
             Cn.Close()
         End If
@@ -191,37 +189,34 @@ Public Class FrmProducto
             Cn.Open()
             Using Cmd As New SqlCommand
                 With Cmd
-                    .CommandText = "Sp_ActualizarProducto"
+                    .CommandText = "Sp_ActualizarProducto1"
                     .CommandType = CommandType.StoredProcedure
                     .Connection = Cn
 
-                    ' Enviar el parámetro del nombre del genero musical
 
-                    .Parameters.Add("@IdProducto", SqlDbType.Int).Value = CInt(TxtCodigoProducto.Text)
+                    ' Enviar el parametro del nombre de la categoria
+                    .Parameters.Add("@IdProducto", SqlDbType.Int).Value = TxtCodigoProducto.Text
                     .Parameters.Add("@NombreProducto", SqlDbType.NVarChar, 50).Value = TxtNombreProducto.Text
-                    .Parameters.Add("@PrecioCosto", SqlDbType.Money).Value = CInt(TxtPrecioCosto.Text)
-                    .Parameters.Add("@PrecioVenta", SqlDbType.Money).Value = CInt(TxtPrecioVenta.Text)
-                    .Parameters.Add("@Stock", SqlDbType.Int).Value = CInt(TxtStock.Text)
+                    .Parameters.Add("@PrecioCosto", SqlDbType.Money).Value = TxtPrecioCosto.Text
+                    .Parameters.Add("@PrecioVenta", SqlDbType.Money).Value = TxtPrecioVenta.Text
+                    .Parameters.Add("@Stock", SqlDbType.Int).Value = TxtStock.Text
                     .Parameters.Add("@IdCategoria", SqlDbType.Int).Value = CInt(CboCategoria.SelectedValue)
                     .ExecuteNonQuery()
 
                     MessageBox.Show("Registro Actualizado Satisfactoriamente", "SIFO", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-
-
                 End With
             End Using
         Catch ex As Exception
-            MessageBox.Show("Error al actualizar el producto", "SIFO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Error al actualizar el producto" + ex.Message, "SIFO", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Finally
             Cn.Close()
         End Try
-
     End Sub
 
     Private Sub BtnModificar_Click(sender As Object, e As EventArgs) Handles BtnModificar.Click
         HabilitarBotones(True, False, False, True)
-        ActualizarPorducto()
+        ActualizarProducto()
         MostrarTodoProducto()
 
         TcOpcion.SelectedIndex = 1
@@ -281,6 +276,9 @@ Public Class FrmProducto
         TxtPrecioVenta.Text = LsvProducto.FocusedItem.SubItems(3).Text
         TxtStock.Text = LsvProducto.FocusedItem.SubItems(4).Text
         CboCategoria.Text = LsvProducto.FocusedItem.SubItems(5).Text
+        TxtNombreProducto.Focus()
+        LlenarComboBoxCategoria()
+
 
         HabilitarBotones(False, False, True, True)
 
@@ -323,7 +321,7 @@ Public Class FrmProducto
                 End With
             End Using
         Catch ex As Exception
-            MessageBox.Show("Error al insertar los datos del artistas", "SIFO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Error al insertar los datos del producto", "SIFO", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Finally
             Cn.Close()
         End Try
@@ -377,4 +375,14 @@ Public Class FrmProducto
         Return Estado
     End Function
 
+    Private Sub BtnLimpiar_Click(sender As Object, e As EventArgs) Handles BtnLimpiar.Click
+        HabilitarBotones(True, False, False, False)
+        Limpiar()
+
+    End Sub
+
+    Private Sub BtnSalir_Click(sender As Object, e As EventArgs) Handles BtnSalir.Click
+        Close()
+
+    End Sub
 End Class
