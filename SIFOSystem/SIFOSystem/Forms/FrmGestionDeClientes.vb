@@ -154,7 +154,9 @@ Public Class FrmGestión
     Private Sub BtnNuevo_Click(sender As Object, e As EventArgs) Handles BtnNuevo.Click
         HabilitarBotones(False, True, False, True)
         LLenarCboSexo()
+        CboSexo.Text = "--Seleccione--"
         LLenarCboCiudad()
+        CboCiudad.Text = "--Seleccione--"
         TxtNombres.Focus()
     End Sub
 
@@ -187,7 +189,7 @@ Public Class FrmGestión
                     .CommandType = CommandType.StoredProcedure
                     .Connection = Cn
 
-                    .Parameters.Add("@Busqueda", SqlDbType.NVarChar, 50).Value = TxtBuscar.Text
+                    .Parameters.Add("@Busqueda", SqlDbType.NVarChar, 50).Value = TxtBuscarPorNombre.Text
 
                 End With
 
@@ -218,8 +220,54 @@ Public Class FrmGestión
         End Using
     End Sub
 
-    Private Sub TxtBuscar_TextChanged(sender As Object, e As EventArgs) Handles TxtBuscar.TextChanged
+    Private Sub BuscarClientePorIdentidad()
+        If Cn.State = ConnectionState.Open Then
+            Cn.Close()
+        End If
+
+        Using CMd As New SqlCommand
+            Cn.Open()
+
+            Try
+                With CMd
+                    .CommandText = "Sp_MostrarClientePorIdentidad"
+                    .CommandType = CommandType.StoredProcedure
+                    .Connection = Cn
+
+                    .Parameters.Add("@Busqueda", SqlDbType.NVarChar, 50).Value = TxtBuscarPorCodigo.Text
+
+                End With
+
+                Dim VerCliente As SqlDataReader
+                VerCliente = CMd.ExecuteReader
+
+                LsvCliente.Items.Clear()
+                While VerCliente.Read = True
+                    With LsvCliente.Items.Add(VerCliente("Nombre").ToString)
+                        .SubItems.Add(VerCliente("Apellidos").ToString)
+                        .SubItems.Add(VerCliente("NumIdentCliente").ToString)
+                        .SubItems.Add(VerCliente("Telefono").ToString)
+                        .SubItems.Add(VerCliente("Direccion").ToString)
+                        .SubItems.Add(VerCliente("FechaDeNacimiento").ToString)
+                        .SubItems.Add(VerCliente("Sexo").ToString)
+                        .SubItems.Add(VerCliente("NombreCiudad").ToString)
+
+                    End With
+                End While
+
+            Catch ex As Exception
+
+                MessageBox.Show("Error al mostrar el cliente" + ex.Message, "SIFO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Finally
+                Cn.Close()
+
+            End Try
+        End Using
+    End Sub
+
+    Private Sub TxtBuscar_TextChanged(sender As Object, e As EventArgs) Handles TxtBuscarPorNombre.TextChanged
         BuscarClientePorNombre()
+        BtnLimpiar.Visible = True
     End Sub
 
     Private Sub EliminarCliente()
@@ -355,17 +403,22 @@ Public Class FrmGestión
     Private Function ValidarTextBox() As Boolean
         Dim Estado As Boolean
 
-        If TxtNombres.Text = Nothing And TxtApellidos.Text = Nothing And TxtNumIdent.Text = Nothing And TxtDireccion.Text = Nothing Then
+        If TxtNombres.Text = Nothing And TxtApellidos.Text = Nothing And TxtNumIdent.Text = Nothing And TxtDireccion.Text = Nothing And CboSexo.Text = "--Seleccione--" And CboCiudad.Text = "--Seleccione--" Then
             EpMensaje.SetError(TxtNombres, "Tiene que ingresar el nombre")
             EpMensaje.SetError(TxtApellidos, "Tiene que ingresar los apellidos")
             EpMensaje.SetError(TxtNumIdent, "Tiene que ingresar su número de identidad")
             EpMensaje.SetError(TxtDireccion, "Tiene que ingresar la dirección")
+            EpMensaje.SetError(CboSexo, "Tiene que seleccionar su sexo")
+            EpMensaje.SetError(CboCiudad, "Tiene que seleccionar su ciudad")
+
 
             TxtNombres.Focus()
             TxtNombres.BackColor = Color.LightBlue
             TxtApellidos.BackColor = Color.LightBlue
             TxtNumIdent.BackColor = Color.LightBlue
             TxtDireccion.BackColor = Color.LightBlue
+            CboSexo.BackColor = Color.LightBlue
+            CboCiudad.BackColor = Color.LightBlue
 
             Estado = False
 
@@ -393,15 +446,32 @@ Public Class FrmGestión
             TxtDireccion.BackColor = Color.LightBlue
             Estado = False
 
+        ElseIf CboSexo.Text = "--Seleccione--" Then
+            EpMensaje.SetError(CboSexo, "Tiene que seleccionar su sexo")
+            CboSexo.Focus()
+            CboSexo.BackColor = Color.LightBlue
+            Estado = False
+
+        ElseIf CboCiudad.Text = "--Seleccione--" Then
+            EpMensaje.SetError(CboCiudad, "Tiene que seleccionar su sexo")
+            CboCiudad.Focus()
+            CboCiudad.BackColor = Color.LightBlue
+            Estado = False
+
         Else
             EpMensaje.SetError(TxtNombres, "")
             EpMensaje.SetError(TxtApellidos, "")
             EpMensaje.SetError(TxtDireccion, "")
             EpMensaje.SetError(TxtNumIdent, "")
+            EpMensaje.SetError(CboSexo, "")
+            EpMensaje.SetError(CboCiudad, "")
             Estado = True
             Estado = True
             Estado = True
             Estado = True
+            Estado = True
+            Estado = True
+
 
         End If
         Return Estado
@@ -432,6 +502,88 @@ Public Class FrmGestión
         If TxtDireccion.Text <> Nothing Then
             EpMensaje.SetError(TxtDireccion, "")
             TxtDireccion.BackColor = Color.White
+        End If
+    End Sub
+
+    Private Sub TxtNumIdent_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtNumIdent.KeyPress
+        Dim texto As String = TxtNumIdent.Text
+        If TxtNumIdent.Text.Length = 4 Then
+            texto = texto + "-" + e.KeyChar
+            TxtNumIdent.Text = texto
+            e.Handled = True
+            TxtNumIdent.Select(TxtNumIdent.Text.Length, 0)
+
+        ElseIf TxtNumIdent.Text.Length = 9 Then
+            texto = texto + "-" + e.KeyChar
+            TxtNumIdent.Text = texto
+            e.Handled = True
+            TxtNumIdent.Select(TxtNumIdent.Text.Length, 0)
+        End If
+
+
+    End Sub
+
+    Private Sub CboSexo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CboSexo.SelectedIndexChanged
+        If CboSexo.Text <> "--Seleccione--" Then
+            EpMensaje.SetError(CboSexo, "")
+            CboSexo.BackColor = Color.White
+        End If
+    End Sub
+
+    Private Sub CboCiudad_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CboCiudad.SelectedIndexChanged
+        If CboCiudad.Text <> "--Seleccione--" Then
+            EpMensaje.SetError(CboCiudad, "")
+            CboCiudad.BackColor = Color.White
+        End If
+    End Sub
+
+    Private Sub RdbPorNombre_CheckedChanged(sender As Object, e As EventArgs) Handles RdbPorNombre.CheckedChanged
+        TxtBuscarPorNombre.Visible = True
+        TxtBuscarPorNombre.Focus()
+        TxtBuscarPorCodigo.Visible = False
+    End Sub
+
+    Private Sub RdbPorIdentidad_CheckedChanged(sender As Object, e As EventArgs) Handles RdbPorIdentidad.CheckedChanged
+        TxtBuscarPorCodigo.Visible = True
+        TxtBuscarPorCodigo.Focus()
+        TxtBuscarPorNombre.Visible = False
+    End Sub
+
+    Private Sub TxtBuscarPorCodigo_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtBuscarPorCodigo.KeyPress
+
+        If e.KeyChar <> ControlChars.Back Then
+            e.Handled = Not (Char.IsDigit(e.KeyChar) Or e.KeyChar = "-")
+        End If
+
+        Dim texto As String = TxtBuscarPorCodigo.Text
+        If TxtBuscarPorCodigo.Text.Length = 4 Then
+            texto = texto + "-" + e.KeyChar
+            TxtBuscarPorCodigo.Text = texto
+            e.Handled = True
+            TxtBuscarPorCodigo.Select(TxtBuscarPorCodigo.Text.Length, 0)
+
+        ElseIf TxtBuscarPorCodigo.Text.Length = 9 Then
+            texto = texto + "-" + e.KeyChar
+            TxtBuscarPorCodigo.Text = texto
+            e.Handled = True
+            TxtBuscarPorCodigo.Select(TxtBuscarPorCodigo.Text.Length, 0)
+        End If
+    End Sub
+
+    Private Sub TxtBuscarPorCodigo_TextChanged(sender As Object, e As EventArgs) Handles TxtBuscarPorCodigo.TextChanged
+        BuscarClientePorIdentidad()
+        BtnLimpiar.Visible = True
+    End Sub
+
+    Private Sub BtnLimpiar_Click(sender As Object, e As EventArgs) Handles BtnLimpiar.Click
+        TxtBuscarPorCodigo.Clear()
+        TxtBuscarPorNombre.Clear()
+
+        If TxtBuscarPorCodigo.Visible = True Then
+            TxtBuscarPorCodigo.Focus()
+        Else
+            TxtBuscarPorNombre.Focus()
+
         End If
     End Sub
 End Class

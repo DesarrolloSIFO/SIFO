@@ -51,6 +51,8 @@ Partial Class FrmCategoria
         Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EpMensaje = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.TxtBuscarCategoria = New System.Windows.Forms.TextBox()
         Me.TpCategorias.SuspendLayout()
         Me.TpCategoria.SuspendLayout()
         Me.TpListado.SuspendLayout()
@@ -231,6 +233,8 @@ Partial Class FrmCategoria
         '
         'TpListado
         '
+        Me.TpListado.Controls.Add(Me.TxtBuscarCategoria)
+        Me.TpListado.Controls.Add(Me.Label3)
         Me.TpListado.Controls.Add(Me.LsvCategorias)
         Me.TpListado.Location = New System.Drawing.Point(4, 28)
         Me.TpListado.Name = "TpListado"
@@ -245,9 +249,9 @@ Partial Class FrmCategoria
         Me.LsvCategorias.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ChIdCategoria, Me.ChCategoria, Me.ChDescripcion})
         Me.LsvCategorias.FullRowSelect = True
         Me.LsvCategorias.GridLines = True
-        Me.LsvCategorias.Location = New System.Drawing.Point(0, 0)
+        Me.LsvCategorias.Location = New System.Drawing.Point(0, 49)
         Me.LsvCategorias.Name = "LsvCategorias"
-        Me.LsvCategorias.Size = New System.Drawing.Size(783, 338)
+        Me.LsvCategorias.Size = New System.Drawing.Size(783, 289)
         Me.LsvCategorias.TabIndex = 0
         Me.LsvCategorias.UseCompatibleStateImageBehavior = False
         Me.LsvCategorias.View = System.Windows.Forms.View.Details
@@ -345,6 +349,22 @@ Partial Class FrmCategoria
         '
         Me.EpMensaje.ContainerControl = Me
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(79, 16)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(57, 19)
+        Me.Label3.TabIndex = 1
+        Me.Label3.Text = "Buscar"
+        '
+        'TxtBuscarCategoria
+        '
+        Me.TxtBuscarCategoria.Location = New System.Drawing.Point(142, 13)
+        Me.TxtBuscarCategoria.Name = "TxtBuscarCategoria"
+        Me.TxtBuscarCategoria.Size = New System.Drawing.Size(292, 27)
+        Me.TxtBuscarCategoria.TabIndex = 2
+        '
         'FrmCategoria
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -363,6 +383,7 @@ Partial Class FrmCategoria
         Me.TpCategoria.ResumeLayout(False)
         Me.TpCategoria.PerformLayout()
         Me.TpListado.ResumeLayout(False)
+        Me.TpListado.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         CType(Me.PbxLogo, System.ComponentModel.ISupportInitialize).EndInit()
@@ -401,4 +422,6 @@ Partial Class FrmCategoria
     Friend WithEvents EditarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EliminarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EpMensaje As ErrorProvider
+    Friend WithEvents TxtBuscarCategoria As TextBox
+    Friend WithEvents Label3 As Label
 End Class
