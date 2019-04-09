@@ -2,6 +2,33 @@
 
 Public Class FrmFactura
 
+    Private Sub InvestigarCorrelativoFactura()
+        If Cn.State = ConnectionState.Open Then
+            Cn.Close()
+        End If
+
+        Try
+            Dim ListarFactura As New SqlCommand("Sp_InvestigarCorrelativoFactura", Cn)
+            ListarFactura.CommandType = CommandType.StoredProcedure
+
+            Dim ListarFacturaR As SqlDataReader
+            Cn.Open()
+            ListarFacturaR = ListarFactura.ExecuteReader()
+
+            If ListarFacturaR.Read = True Then
+                If ListarFacturaR("IdFactura") Is DBNull.Value Then
+                    TxtCodFactura.Text = 1
+                Else
+                    TxtCodFactura.Text = ListarFacturaR("IdFactura").ToString
+                End If
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Error al Consultar los Datos", "SIFO", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Finally
+            Cn.Close()
+        End Try
+    End Sub
+
     Private Sub MostrarFacturas()
         If Cn.State = ConnectionState.Open Then
             Cn.Close()
@@ -11,7 +38,7 @@ Public Class FrmFactura
             Cn.Open()
             Try
                 With CMd
-                    .CommandText = "Sp_MostrarFactura"
+                    .CommandText = "Sp_MostrarTodoFactura"
                     .CommandType = CommandType.StoredProcedure
                     .Connection = Cn
                 End With
@@ -23,9 +50,9 @@ Public Class FrmFactura
                 While VerFactura.Read = True
                     With LsvDetalleFac.Items.Add(VerFactura("IdFactura").ToString)
                         .SubItems.Add(VerFactura("NumIdentCliente").ToString)
-                        .SubItems.Add(VerFactura("IdTipoExamen").ToString)
+                        .SubItems.Add(VerFactura("TipoExamen").ToString)
                         .SubItems.Add(VerFactura("FechaFactura").ToString)
-                        .SubItems.Add(VerFactura("IdUsuario").ToString)
+                        .SubItems.Add(VerFactura("UserName").ToString)
                     End With
                 End While
             Catch ex As Exception
@@ -87,7 +114,7 @@ Public Class FrmFactura
                 Da.Fill(Ds, "Usuario")
                 CboIdUsuario.DataSource = Ds.Tables(0)
 
-                CboIdUsuario.DisplayMember = Ds.Tables(0).Columns("IdUsuario").ToString
+                CboIdUsuario.DisplayMember = Ds.Tables(0).Columns("UserName").ToString
                 CboIdUsuario.ValueMember = Ds.Tables(0).Columns("IdUsuario").ToString
 
             Catch ex As Exception
@@ -132,6 +159,7 @@ Public Class FrmFactura
 
     Private Sub BtnAgregar_Click(sender As Object, e As EventArgs) Handles BtnAgregar.Click
         HabilitarBotones(False, True, False, True, True)
+        InvestigarCorrelativoFactura()
         LlenarComboTipoExamen()
         LlenarComboUsuario()
     End Sub
@@ -285,4 +313,8 @@ Public Class FrmFactura
         End If
         Return Estado
     End Function
+
+    Private Sub BtnBuscarNumIdentCliente_Click(sender As Object, e As EventArgs) Handles BtnBuscarNumIdentCliente.Click
+        FrmGestión.ShowDialog()
+    End Sub
 End Class

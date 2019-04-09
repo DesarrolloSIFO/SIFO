@@ -73,6 +73,7 @@ Partial Class FrmGestión
         Me.TxtBuscarPorCodigo = New System.Windows.Forms.TextBox()
         Me.TxtBuscarPorNombre = New System.Windows.Forms.TextBox()
         Me.EpMensaje = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.BtnSeleccionar = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         CType(Me.PbxLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -88,9 +89,10 @@ Partial Class FrmGestión
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(231, Byte), Integer))
         Me.Panel2.Controls.Add(Me.Label2)
-        Me.Panel2.Location = New System.Drawing.Point(-2, 113)
+        Me.Panel2.Location = New System.Drawing.Point(-3, 139)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(813, 40)
+        Me.Panel2.Size = New System.Drawing.Size(1084, 49)
         Me.Panel2.TabIndex = 32
         '
         'Label2
@@ -98,18 +100,20 @@ Partial Class FrmGestión
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft JhengHei", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label2.Location = New System.Drawing.Point(366, 9)
+        Me.Label2.Location = New System.Drawing.Point(488, 11)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(74, 24)
+        Me.Label2.Size = New System.Drawing.Size(93, 30)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Cliente"
         '
         'PbxLogo
         '
         Me.PbxLogo.Image = CType(resources.GetObject("PbxLogo.Image"), System.Drawing.Image)
-        Me.PbxLogo.Location = New System.Drawing.Point(-2, -3)
+        Me.PbxLogo.Location = New System.Drawing.Point(-3, -4)
+        Me.PbxLogo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PbxLogo.Name = "PbxLogo"
-        Me.PbxLogo.Size = New System.Drawing.Size(231, 120)
+        Me.PbxLogo.Size = New System.Drawing.Size(308, 148)
         Me.PbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PbxLogo.TabIndex = 30
         Me.PbxLogo.TabStop = False
@@ -120,9 +124,10 @@ Partial Class FrmGestión
         Me.Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), System.Drawing.Image)
         Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Location = New System.Drawing.Point(227, -3)
+        Me.Panel1.Location = New System.Drawing.Point(303, -4)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(574, 123)
+        Me.Panel1.Size = New System.Drawing.Size(765, 151)
         Me.Panel1.TabIndex = 31
         '
         'Label1
@@ -131,9 +136,10 @@ Partial Class FrmGestión
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft JhengHei", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.Info
-        Me.Label1.Location = New System.Drawing.Point(235, 47)
+        Me.Label1.Location = New System.Drawing.Point(313, 58)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(173, 27)
+        Me.Label1.Size = New System.Drawing.Size(219, 34)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Gestión Clientes"
         '
@@ -141,20 +147,22 @@ Partial Class FrmGestión
         '
         Me.TpCliente.Controls.Add(Me.TpDatosCliente)
         Me.TpCliente.Controls.Add(Me.FrmGestionCliente)
-        Me.TpCliente.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TpCliente.Location = New System.Drawing.Point(-2, 154)
+        Me.TpCliente.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TpCliente.Location = New System.Drawing.Point(-3, 190)
+        Me.TpCliente.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TpCliente.Name = "TpCliente"
         Me.TpCliente.SelectedIndex = 0
-        Me.TpCliente.Size = New System.Drawing.Size(813, 461)
+        Me.TpCliente.Size = New System.Drawing.Size(1084, 567)
         Me.TpCliente.TabIndex = 0
         '
         'TpDatosCliente
         '
         Me.TpDatosCliente.Controls.Add(Me.GbxExamen)
-        Me.TpDatosCliente.Location = New System.Drawing.Point(4, 30)
+        Me.TpDatosCliente.Location = New System.Drawing.Point(4, 34)
+        Me.TpDatosCliente.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TpDatosCliente.Name = "TpDatosCliente"
-        Me.TpDatosCliente.Padding = New System.Windows.Forms.Padding(3)
-        Me.TpDatosCliente.Size = New System.Drawing.Size(805, 427)
+        Me.TpDatosCliente.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TpDatosCliente.Size = New System.Drawing.Size(1076, 529)
         Me.TpDatosCliente.TabIndex = 0
         Me.TpDatosCliente.Text = "Datos del Cliente"
         Me.TpDatosCliente.UseVisualStyleBackColor = True
@@ -184,9 +192,11 @@ Partial Class FrmGestión
         Me.GbxExamen.Controls.Add(Me.TxtNombres)
         Me.GbxExamen.Controls.Add(Me.TxtTelefono)
         Me.GbxExamen.Font = New System.Drawing.Font("Microsoft JhengHei", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GbxExamen.Location = New System.Drawing.Point(2, -4)
+        Me.GbxExamen.Location = New System.Drawing.Point(3, -5)
+        Me.GbxExamen.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GbxExamen.Name = "GbxExamen"
-        Me.GbxExamen.Size = New System.Drawing.Size(791, 442)
+        Me.GbxExamen.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GbxExamen.Size = New System.Drawing.Size(1055, 544)
         Me.GbxExamen.TabIndex = 34
         Me.GbxExamen.TabStop = False
         '
@@ -198,9 +208,10 @@ Partial Class FrmGestión
         Me.BtnSalir.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnSalir.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.BtnSalir.Image = CType(resources.GetObject("BtnSalir.Image"), System.Drawing.Image)
-        Me.BtnSalir.Location = New System.Drawing.Point(639, 380)
+        Me.BtnSalir.Location = New System.Drawing.Point(852, 468)
+        Me.BtnSalir.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BtnSalir.Name = "BtnSalir"
-        Me.BtnSalir.Size = New System.Drawing.Size(112, 44)
+        Me.BtnSalir.Size = New System.Drawing.Size(149, 54)
         Me.BtnSalir.TabIndex = 13
         Me.BtnSalir.Text = "Salir"
         Me.BtnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
@@ -215,9 +226,10 @@ Partial Class FrmGestión
         Me.BtnCancelar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnCancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.BtnCancelar.Image = CType(resources.GetObject("BtnCancelar.Image"), System.Drawing.Image)
-        Me.BtnCancelar.Location = New System.Drawing.Point(503, 380)
+        Me.BtnCancelar.Location = New System.Drawing.Point(671, 468)
+        Me.BtnCancelar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BtnCancelar.Name = "BtnCancelar"
-        Me.BtnCancelar.Size = New System.Drawing.Size(112, 44)
+        Me.BtnCancelar.Size = New System.Drawing.Size(149, 54)
         Me.BtnCancelar.TabIndex = 12
         Me.BtnCancelar.Text = "Cancelar"
         Me.BtnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
@@ -233,9 +245,10 @@ Partial Class FrmGestión
         Me.BtnGuardar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnGuardar.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.BtnGuardar.Image = CType(resources.GetObject("BtnGuardar.Image"), System.Drawing.Image)
-        Me.BtnGuardar.Location = New System.Drawing.Point(192, 380)
+        Me.BtnGuardar.Location = New System.Drawing.Point(256, 468)
+        Me.BtnGuardar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BtnGuardar.Name = "BtnGuardar"
-        Me.BtnGuardar.Size = New System.Drawing.Size(112, 44)
+        Me.BtnGuardar.Size = New System.Drawing.Size(149, 54)
         Me.BtnGuardar.TabIndex = 10
         Me.BtnGuardar.Text = "Guardar"
         Me.BtnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
@@ -251,9 +264,10 @@ Partial Class FrmGestión
         Me.BtnModificar.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnModificar.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.BtnModificar.Image = CType(resources.GetObject("BtnModificar.Image"), System.Drawing.Image)
-        Me.BtnModificar.Location = New System.Drawing.Point(345, 380)
+        Me.BtnModificar.Location = New System.Drawing.Point(460, 468)
+        Me.BtnModificar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BtnModificar.Name = "BtnModificar"
-        Me.BtnModificar.Size = New System.Drawing.Size(112, 44)
+        Me.BtnModificar.Size = New System.Drawing.Size(149, 54)
         Me.BtnModificar.TabIndex = 11
         Me.BtnModificar.Text = "Modificar"
         Me.BtnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
@@ -268,9 +282,10 @@ Partial Class FrmGestión
         Me.BtnNuevo.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnNuevo.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.BtnNuevo.Image = CType(resources.GetObject("BtnNuevo.Image"), System.Drawing.Image)
-        Me.BtnNuevo.Location = New System.Drawing.Point(38, 380)
+        Me.BtnNuevo.Location = New System.Drawing.Point(51, 468)
+        Me.BtnNuevo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BtnNuevo.Name = "BtnNuevo"
-        Me.BtnNuevo.Size = New System.Drawing.Size(112, 44)
+        Me.BtnNuevo.Size = New System.Drawing.Size(149, 54)
         Me.BtnNuevo.TabIndex = 9
         Me.BtnNuevo.Text = "Nuevo"
         Me.BtnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
@@ -278,47 +293,50 @@ Partial Class FrmGestión
         '
         'TxtDireccion
         '
-        Me.TxtDireccion.Location = New System.Drawing.Point(53, 281)
+        Me.TxtDireccion.Location = New System.Drawing.Point(71, 346)
+        Me.TxtDireccion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TxtDireccion.Multiline = True
         Me.TxtDireccion.Name = "TxtDireccion"
-        Me.TxtDireccion.Size = New System.Drawing.Size(393, 72)
+        Me.TxtDireccion.Size = New System.Drawing.Size(523, 88)
         Me.TxtDireccion.TabIndex = 5
         '
         'Label8
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(53, 256)
+        Me.Label8.Location = New System.Drawing.Point(71, 315)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(80, 20)
+        Me.Label8.Size = New System.Drawing.Size(100, 25)
         Me.Label8.TabIndex = 27
         Me.Label8.Text = "Dirección"
         '
         'CboCiudad
         '
-        Me.CboCiudad.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.CboCiudad.FormattingEnabled = True
-        Me.CboCiudad.Location = New System.Drawing.Point(528, 158)
+        Me.CboCiudad.Location = New System.Drawing.Point(704, 194)
+        Me.CboCiudad.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.CboCiudad.Name = "CboCiudad"
-        Me.CboCiudad.Size = New System.Drawing.Size(200, 25)
+        Me.CboCiudad.Size = New System.Drawing.Size(265, 29)
         Me.CboCiudad.TabIndex = 8
         '
         'CboSexo
         '
-        Me.CboSexo.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.CboSexo.FormattingEnabled = True
-        Me.CboSexo.Location = New System.Drawing.Point(528, 101)
+        Me.CboSexo.Location = New System.Drawing.Point(704, 124)
+        Me.CboSexo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.CboSexo.Name = "CboSexo"
-        Me.CboSexo.Size = New System.Drawing.Size(200, 25)
+        Me.CboSexo.Size = New System.Drawing.Size(265, 29)
         Me.CboSexo.TabIndex = 7
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(525, 135)
+        Me.Label4.Location = New System.Drawing.Point(700, 166)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(63, 20)
+        Me.Label4.Size = New System.Drawing.Size(79, 25)
         Me.Label4.TabIndex = 22
         Me.Label4.Text = "Ciudad"
         '
@@ -326,9 +344,10 @@ Partial Class FrmGestión
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(528, 79)
+        Me.Label3.Location = New System.Drawing.Point(704, 97)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(45, 20)
+        Me.Label3.Size = New System.Drawing.Size(57, 25)
         Me.Label3.TabIndex = 21
         Me.Label3.Text = "Sexo"
         '
@@ -336,33 +355,37 @@ Partial Class FrmGestión
         '
         Me.DtpFechaNac.CustomFormat = ""
         Me.DtpFechaNac.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DtpFechaNac.Location = New System.Drawing.Point(528, 42)
+        Me.DtpFechaNac.Location = New System.Drawing.Point(704, 52)
+        Me.DtpFechaNac.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.DtpFechaNac.Name = "DtpFechaNac"
-        Me.DtpFechaNac.Size = New System.Drawing.Size(200, 25)
+        Me.DtpFechaNac.Size = New System.Drawing.Size(265, 29)
         Me.DtpFechaNac.TabIndex = 6
         Me.DtpFechaNac.Value = New Date(2019, 4, 8, 0, 0, 0, 0)
         '
         'TxtNumIdent
         '
-        Me.TxtNumIdent.Location = New System.Drawing.Point(53, 162)
+        Me.TxtNumIdent.Location = New System.Drawing.Point(71, 199)
+        Me.TxtNumIdent.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TxtNumIdent.Name = "TxtNumIdent"
-        Me.TxtNumIdent.Size = New System.Drawing.Size(267, 25)
+        Me.TxtNumIdent.Size = New System.Drawing.Size(355, 29)
         Me.TxtNumIdent.TabIndex = 3
         '
         'TxtApellidos
         '
-        Me.TxtApellidos.Location = New System.Drawing.Point(53, 103)
+        Me.TxtApellidos.Location = New System.Drawing.Point(71, 127)
+        Me.TxtApellidos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TxtApellidos.Name = "TxtApellidos"
-        Me.TxtApellidos.Size = New System.Drawing.Size(267, 25)
+        Me.TxtApellidos.Size = New System.Drawing.Size(355, 29)
         Me.TxtApellidos.TabIndex = 2
         '
         'Label10
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(528, 20)
+        Me.Label10.Location = New System.Drawing.Point(704, 25)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(168, 20)
+        Me.Label10.Size = New System.Drawing.Size(210, 25)
         Me.Label10.TabIndex = 12
         Me.Label10.Text = "Fecha de Nacimiento"
         '
@@ -370,9 +393,10 @@ Partial Class FrmGestión
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(53, 198)
+        Me.Label9.Location = New System.Drawing.Point(71, 244)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(75, 20)
+        Me.Label9.Size = New System.Drawing.Size(95, 25)
         Me.Label9.TabIndex = 11
         Me.Label9.Text = "Teléfono"
         '
@@ -380,9 +404,10 @@ Partial Class FrmGestión
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(53, 81)
+        Me.Label7.Location = New System.Drawing.Point(71, 100)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(78, 20)
+        Me.Label7.Size = New System.Drawing.Size(100, 25)
         Me.Label7.TabIndex = 9
         Me.Label7.Text = "Apellidos"
         '
@@ -390,9 +415,10 @@ Partial Class FrmGestión
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(53, 23)
+        Me.Label6.Location = New System.Drawing.Point(71, 28)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(79, 20)
+        Me.Label6.Size = New System.Drawing.Size(100, 25)
         Me.Label6.TabIndex = 8
         Me.Label6.Text = "Nombres"
         '
@@ -400,28 +426,32 @@ Partial Class FrmGestión
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft JhengHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(53, 138)
+        Me.Label5.Location = New System.Drawing.Point(71, 170)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(172, 20)
+        Me.Label5.Size = New System.Drawing.Size(215, 25)
         Me.Label5.TabIndex = 7
         Me.Label5.Text = "Número de Identidad"
         '
         'TxtNombres
         '
-        Me.TxtNombres.Location = New System.Drawing.Point(53, 45)
+        Me.TxtNombres.Location = New System.Drawing.Point(71, 55)
+        Me.TxtNombres.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TxtNombres.Name = "TxtNombres"
-        Me.TxtNombres.Size = New System.Drawing.Size(267, 25)
+        Me.TxtNombres.Size = New System.Drawing.Size(355, 29)
         Me.TxtNombres.TabIndex = 1
         '
         'TxtTelefono
         '
-        Me.TxtTelefono.Location = New System.Drawing.Point(53, 222)
+        Me.TxtTelefono.Location = New System.Drawing.Point(71, 273)
+        Me.TxtTelefono.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TxtTelefono.Name = "TxtTelefono"
-        Me.TxtTelefono.Size = New System.Drawing.Size(267, 25)
+        Me.TxtTelefono.Size = New System.Drawing.Size(355, 29)
         Me.TxtTelefono.TabIndex = 4
         '
         'FrmGestionCliente
         '
+        Me.FrmGestionCliente.Controls.Add(Me.BtnSeleccionar)
         Me.FrmGestionCliente.Controls.Add(Me.BtnLimpiar)
         Me.FrmGestionCliente.Controls.Add(Me.RdbPorIdentidad)
         Me.FrmGestionCliente.Controls.Add(Me.RdbPorNombre)
@@ -429,10 +459,11 @@ Partial Class FrmGestión
         Me.FrmGestionCliente.Controls.Add(Me.LsvCliente)
         Me.FrmGestionCliente.Controls.Add(Me.TxtBuscarPorCodigo)
         Me.FrmGestionCliente.Controls.Add(Me.TxtBuscarPorNombre)
-        Me.FrmGestionCliente.Location = New System.Drawing.Point(4, 30)
+        Me.FrmGestionCliente.Location = New System.Drawing.Point(4, 34)
+        Me.FrmGestionCliente.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.FrmGestionCliente.Name = "FrmGestionCliente"
-        Me.FrmGestionCliente.Padding = New System.Windows.Forms.Padding(3)
-        Me.FrmGestionCliente.Size = New System.Drawing.Size(805, 427)
+        Me.FrmGestionCliente.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.FrmGestionCliente.Size = New System.Drawing.Size(1076, 529)
         Me.FrmGestionCliente.TabIndex = 1
         Me.FrmGestionCliente.Text = "Listado Clientes"
         Me.FrmGestionCliente.UseVisualStyleBackColor = True
@@ -445,9 +476,10 @@ Partial Class FrmGestión
         Me.BtnLimpiar.Font = New System.Drawing.Font("Microsoft JhengHei", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnLimpiar.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.BtnLimpiar.Image = CType(resources.GetObject("BtnLimpiar.Image"), System.Drawing.Image)
-        Me.BtnLimpiar.Location = New System.Drawing.Point(405, 19)
+        Me.BtnLimpiar.Location = New System.Drawing.Point(540, 23)
+        Me.BtnLimpiar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.BtnLimpiar.Name = "BtnLimpiar"
-        Me.BtnLimpiar.Size = New System.Drawing.Size(93, 27)
+        Me.BtnLimpiar.Size = New System.Drawing.Size(124, 33)
         Me.BtnLimpiar.TabIndex = 31
         Me.BtnLimpiar.Text = "Limpiar"
         Me.BtnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
@@ -458,9 +490,10 @@ Partial Class FrmGestión
         '
         Me.RdbPorIdentidad.AutoSize = True
         Me.RdbPorIdentidad.Font = New System.Drawing.Font("Microsoft JhengHei", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RdbPorIdentidad.Location = New System.Drawing.Point(533, 31)
+        Me.RdbPorIdentidad.Location = New System.Drawing.Point(711, 38)
+        Me.RdbPorIdentidad.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.RdbPorIdentidad.Name = "RdbPorIdentidad"
-        Me.RdbPorIdentidad.Size = New System.Drawing.Size(123, 23)
+        Me.RdbPorIdentidad.Size = New System.Drawing.Size(152, 28)
         Me.RdbPorIdentidad.TabIndex = 5
         Me.RdbPorIdentidad.TabStop = True
         Me.RdbPorIdentidad.Text = "Por identidad"
@@ -470,9 +503,10 @@ Partial Class FrmGestión
         '
         Me.RdbPorNombre.AutoSize = True
         Me.RdbPorNombre.Font = New System.Drawing.Font("Microsoft JhengHei", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RdbPorNombre.Location = New System.Drawing.Point(533, 8)
+        Me.RdbPorNombre.Location = New System.Drawing.Point(711, 10)
+        Me.RdbPorNombre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.RdbPorNombre.Name = "RdbPorNombre"
-        Me.RdbPorNombre.Size = New System.Drawing.Size(110, 23)
+        Me.RdbPorNombre.Size = New System.Drawing.Size(138, 28)
         Me.RdbPorNombre.TabIndex = 4
         Me.RdbPorNombre.TabStop = True
         Me.RdbPorNombre.Text = "Por nombre"
@@ -482,9 +516,10 @@ Partial Class FrmGestión
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft JhengHei", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(77, 24)
+        Me.Label11.Location = New System.Drawing.Point(103, 30)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(55, 19)
+        Me.Label11.Size = New System.Drawing.Size(69, 24)
         Me.Label11.TabIndex = 1
         Me.Label11.Text = "Buscar"
         '
@@ -495,9 +530,10 @@ Partial Class FrmGestión
         Me.LsvCliente.Font = New System.Drawing.Font("Microsoft JhengHei", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LsvCliente.FullRowSelect = True
         Me.LsvCliente.GridLines = True
-        Me.LsvCliente.Location = New System.Drawing.Point(0, 60)
+        Me.LsvCliente.Location = New System.Drawing.Point(0, 74)
+        Me.LsvCliente.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.LsvCliente.Name = "LsvCliente"
-        Me.LsvCliente.Size = New System.Drawing.Size(799, 375)
+        Me.LsvCliente.Size = New System.Drawing.Size(1067, 408)
         Me.LsvCliente.TabIndex = 0
         Me.LsvCliente.UseCompatibleStateImageBehavior = False
         Me.LsvCliente.View = System.Windows.Forms.View.Details
@@ -544,37 +580,40 @@ Partial Class FrmGestión
         '
         'CmsOpciones
         '
+        Me.CmsOpciones.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.CmsOpciones.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditarToolStripMenuItem, Me.EliminarToolStripMenuItem})
         Me.CmsOpciones.Name = "CmsOpciones"
-        Me.CmsOpciones.Size = New System.Drawing.Size(118, 48)
+        Me.CmsOpciones.Size = New System.Drawing.Size(133, 52)
         '
         'EditarToolStripMenuItem
         '
         Me.EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
-        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(132, 24)
         Me.EditarToolStripMenuItem.Text = "Editar"
         '
         'EliminarToolStripMenuItem
         '
         Me.EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
-        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(132, 24)
         Me.EliminarToolStripMenuItem.Text = "Eliminar"
         '
         'TxtBuscarPorCodigo
         '
         Me.TxtBuscarPorCodigo.Font = New System.Drawing.Font("Microsoft JhengHei", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtBuscarPorCodigo.Location = New System.Drawing.Point(147, 19)
+        Me.TxtBuscarPorCodigo.Location = New System.Drawing.Point(196, 23)
+        Me.TxtBuscarPorCodigo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TxtBuscarPorCodigo.Name = "TxtBuscarPorCodigo"
-        Me.TxtBuscarPorCodigo.Size = New System.Drawing.Size(258, 27)
+        Me.TxtBuscarPorCodigo.Size = New System.Drawing.Size(343, 32)
         Me.TxtBuscarPorCodigo.TabIndex = 29
         Me.TxtBuscarPorCodigo.Visible = False
         '
         'TxtBuscarPorNombre
         '
         Me.TxtBuscarPorNombre.Font = New System.Drawing.Font("Microsoft JhengHei", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtBuscarPorNombre.Location = New System.Drawing.Point(147, 19)
+        Me.TxtBuscarPorNombre.Location = New System.Drawing.Point(196, 23)
+        Me.TxtBuscarPorNombre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TxtBuscarPorNombre.Name = "TxtBuscarPorNombre"
-        Me.TxtBuscarPorNombre.Size = New System.Drawing.Size(257, 27)
+        Me.TxtBuscarPorNombre.Size = New System.Drawing.Size(341, 32)
         Me.TxtBuscarPorNombre.TabIndex = 2
         Me.TxtBuscarPorNombre.Visible = False
         '
@@ -582,19 +621,27 @@ Partial Class FrmGestión
         '
         Me.EpMensaje.ContainerControl = Me
         '
+        'BtnSeleccionar
+        '
+        Me.BtnSeleccionar.Font = New System.Drawing.Font("Lucida Sans Unicode", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnSeleccionar.Location = New System.Drawing.Point(929, 489)
+        Me.BtnSeleccionar.Name = "BtnSeleccionar"
+        Me.BtnSeleccionar.Size = New System.Drawing.Size(127, 33)
+        Me.BtnSeleccionar.TabIndex = 32
+        Me.BtnSeleccionar.Text = "Seleccionar"
+        Me.BtnSeleccionar.UseVisualStyleBackColor = True
+        '
         'FrmGestión
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ClientSize = New System.Drawing.Size(802, 614)
+        Me.ClientSize = New System.Drawing.Size(1069, 754)
         Me.Controls.Add(Me.TpCliente)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.PbxLogo)
         Me.Controls.Add(Me.Panel1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.MaximizeBox = False
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "FrmGestión"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Gestión de clientes"
@@ -664,4 +711,5 @@ Partial Class FrmGestión
     Friend WithEvents RdbPorNombre As RadioButton
     Friend WithEvents TxtBuscarPorCodigo As TextBox
     Friend WithEvents BtnLimpiar As Button
+    Friend WithEvents BtnSeleccionar As Button
 End Class
