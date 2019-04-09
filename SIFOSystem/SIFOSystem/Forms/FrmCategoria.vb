@@ -8,6 +8,7 @@ Public Class FrmCategoria
                               ByVal Cancelar As Boolean)
         BtnAgregar.Enabled = Nuevo
         BtnGuardar.Enabled = Guardar
+
         BtnModificar.Enabled = Modificar
 
         BtnCancelar.Enabled = Cancelar
