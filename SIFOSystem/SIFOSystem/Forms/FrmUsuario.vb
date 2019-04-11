@@ -30,6 +30,7 @@ Public Class FrmUsuario
         End Using
     End Sub
 
+
     Private Sub MostrarTodo()
         If Cn.State = ConnectionState.Open Then
             Cn.Close()
@@ -166,7 +167,7 @@ Public Class FrmUsuario
         End Try
     End Sub
 
-    Private Sub HabilitarBotones(ByVal Nuevo As Boolean,
+    Public Sub HabilitarBotones(ByVal Nuevo As Boolean,
                            ByVal Guardar As Boolean,
                            ByVal modificar As Boolean,
                            ByVal cancelar As Boolean)
@@ -175,12 +176,19 @@ Public Class FrmUsuario
         BtnModificar.Enabled = modificar
         BtnCancelar.Enabled = cancelar
     End Sub
+    Private Sub Limpiar()
+        TxtCodigo.Clear()
+        TxtIdentidad.Clear()
+        TxtNombre.Clear()
+        TxtContraseña.Clear()
+        CboActivo.Text = Nothing
+    End Sub
 
     Private Sub BtnNuevo_Click(sender As Object, e As EventArgs) Handles BtnNuevo.Click
         HabilitarBotones(False, True, False, True)
         InvestigarCorrelativoUsuario()
         LLenarCboActivo()
-        CboActivo.Text = "--Seleccione--"
+
         TxtIdentidad.Focus()
     End Sub
 
@@ -216,6 +224,7 @@ Public Class FrmUsuario
             If ExisteUsuario() = False Then
                 HabilitarBotones(True, False, False, False)
                 GuardarUsuario()
+                Limpiar()
                 MostrarTodo()
             End If
         End If
@@ -243,6 +252,7 @@ Public Class FrmUsuario
 
     Private Sub BtnBuscarUsuario_Click(sender As Object, e As EventArgs) Handles BtnBuscarUsuario.Click
         FrmBuscarUsuario.Show()
+        HabilitarBotones(False, True, False, True)
         Close()
     End Sub
 
@@ -258,11 +268,14 @@ Public Class FrmUsuario
             HabilitarBotones(True, False, False, True)
             MostrarTodo()
             TcOpciones.SelectedIndex = 1
+            Limpiar()
+
         End If
     End Sub
 
     Private Sub BtnCancelar_Click(sender As Object, e As EventArgs) Handles BtnCancelar.Click
         HabilitarBotones(True, False, False, False)
+        Limpiar()
 
 
     End Sub

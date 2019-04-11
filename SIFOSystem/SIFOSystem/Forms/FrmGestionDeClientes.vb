@@ -154,9 +154,7 @@ Public Class FrmGestión
     Private Sub BtnNuevo_Click(sender As Object, e As EventArgs) Handles BtnNuevo.Click
         HabilitarBotones(False, True, False, True)
         LLenarCboSexo()
-        CboSexo.Text = "--Seleccione--"
         LLenarCboCiudad()
-        CboCiudad.Text = "--Seleccione--"
         TxtNombres.Focus()
     End Sub
 

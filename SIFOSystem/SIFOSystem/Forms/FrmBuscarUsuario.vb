@@ -47,8 +47,7 @@ Public Class FrmBuscarUsuario
     Private Sub BtnModificar_Click(sender As Object, e As EventArgs) Handles BtnModificar.Click
         FrmUsuario.TxtIdentidad.Text = LsvEmpleados.FocusedItem.SubItems(0).Text
         FrmUsuario.InvestigarCorrelativoUsuario()
-        FrmUsuario.CboActivo.Text = "--Seleccione--"
-
+        FrmUsuario.LLenarCboActivo()
         FrmUsuario.Show()
         Close()
 

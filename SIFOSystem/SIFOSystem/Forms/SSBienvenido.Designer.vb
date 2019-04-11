@@ -44,7 +44,7 @@ Partial Class SSBienvenido
         Me.MainLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 243.0!))
         Me.MainLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100.0!))
         Me.MainLayoutPanel.Controls.Add(Me.DetailsLayoutPanel, 1, 1)
-        Me.MainLayoutPanel.Controls.Add(Me.ApplicationTitle, 0, 0)
+        Me.MainLayoutPanel.Controls.Add(Me.ApplicationTitle, 0, 1)
         Me.MainLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.MainLayoutPanel.Location = New System.Drawing.Point(0, 0)
         Me.MainLayoutPanel.Name = "MainLayoutPanel"
@@ -90,17 +90,17 @@ Partial Class SSBienvenido
         Me.Copyright.Name = "Copyright"
         Me.Copyright.Size = New System.Drawing.Size(241, 40)
         Me.Copyright.TabIndex = 2
-        Me.Copyright.Text = "Copyright"
+        Me.Copyright.Text = "Copyright Equipo 1"
         Me.Copyright.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'ApplicationTitle
         '
         Me.ApplicationTitle.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.ApplicationTitle.BackColor = System.Drawing.Color.Transparent
-        Me.ApplicationTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ApplicationTitle.Location = New System.Drawing.Point(3, 3)
+        Me.ApplicationTitle.Font = New System.Drawing.Font("Microsoft JhengHei", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ApplicationTitle.Location = New System.Drawing.Point(3, 218)
         Me.ApplicationTitle.Name = "ApplicationTitle"
-        Me.ApplicationTitle.Size = New System.Drawing.Size(237, 212)
+        Me.ApplicationTitle.Size = New System.Drawing.Size(237, 85)
         Me.ApplicationTitle.TabIndex = 0
         Me.ApplicationTitle.Text = "SIFOSystem"
         Me.ApplicationTitle.TextAlign = System.Drawing.ContentAlignment.BottomLeft
